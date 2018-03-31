@@ -69,7 +69,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Basel Hack
+                    BaselHack
                 </div>
 
                 <div class="links">
