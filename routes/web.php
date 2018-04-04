@@ -17,7 +17,7 @@ Auth::routes();
 Route::get('/', 'Frontend\HomeController@index')->name('home.index');
 
 
-Route::get('/backend/dashboard', 'HomeController@index')->name('dashboard.index');
+Route::get('/backend/dashboard', 'DashboardController@index')->name('dashboard.index');
 Route::get('/backend/members', 'MembersController@index')->name('members.index');
 
 Route::get('/backend/members/create', 'MembersController@create')->name('members.create');
