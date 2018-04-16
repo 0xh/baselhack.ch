@@ -37,7 +37,7 @@
     <section class="py-5 bg-lighter border-top border-bottom" id="scrollToSection">
         <div class="container">
 
-            <h2 class="text-center">Subscribe for our newsletter</h2>
+            <h2 class="text-center">Sign-Up for our newsletter</h2>
 
 
             <div class="d-flex align-items-center justify-content-center mt-4">
