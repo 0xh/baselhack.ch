@@ -2,8 +2,8 @@
 
 namespace Tests\Browser\Tests\Users\Dashboard;
 
-use Smart6ate\Roles\Models\Role;
 use Tests\DuskTestCase;
+use Smart6ate\Roles\Models\Role;
 use App\Domain\Users\Models\User;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
@@ -28,7 +28,6 @@ class DashboardTest extends DuskTestCase
         });
     }
 
-
     /**
      * @test
      * @group user
@@ -52,9 +51,6 @@ class DashboardTest extends DuskTestCase
         });
     }
 
-
-
-
     /**
      * @test
      * @group user
@@ -71,7 +67,6 @@ class DashboardTest extends DuskTestCase
 
         $user->roles()->attach($role);
 
-
         $this->browse(function ($browser) use ($user) {
             $browser->visit('/')
                 ->loginAs($user)
@@ -83,7 +78,6 @@ class DashboardTest extends DuskTestCase
                 ->assertPathIs('/backend/association');
         });
     }
-
 
     /**
      * @test
@@ -101,7 +95,6 @@ class DashboardTest extends DuskTestCase
 
         $user->roles()->attach($role);
 
-
         $this->browse(function ($browser) use ($user) {
             $browser->visit('/')
                 ->loginAs($user)
@@ -113,5 +106,4 @@ class DashboardTest extends DuskTestCase
                 ->assertPathIs('/backend/administrators/users');
         });
     }
-
 }

@@ -2,7 +2,6 @@
 
 namespace Tests\Browser\Tests\Users\Dashboard;
 
-use Smart6ate\Roles\Models\Role;
 use Tests\DuskTestCase;
 use App\Domain\Users\Models\User;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
@@ -29,8 +28,4 @@ class NewsletterTest extends DuskTestCase
                 ->assertSee('Successfully subscribed!');
         });
     }
-
-
-
-
 }

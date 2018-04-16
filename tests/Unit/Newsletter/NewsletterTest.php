@@ -2,8 +2,8 @@
 
 namespace Tests\Unit\Users;
 
-use App\Domain\Association\Models\Newsletter;
 use Tests\TestCase;
+use App\Domain\Association\Models\Newsletter;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class NewsletterTest extends TestCase
@@ -21,6 +21,4 @@ class NewsletterTest extends TestCase
         $newsletter = create(Newsletter::class);
         $this->assertInstanceOf(Newsletter::class, $newsletter);
     }
-
-
 }

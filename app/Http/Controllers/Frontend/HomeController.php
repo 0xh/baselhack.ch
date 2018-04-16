@@ -6,7 +6,6 @@ use App\App\Controllers\Controller;
 
 class HomeController extends Controller
 {
-
     /**
      * Show the application dashboard.
      *

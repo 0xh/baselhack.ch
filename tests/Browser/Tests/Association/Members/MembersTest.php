@@ -2,8 +2,8 @@
 
 namespace Tests\Browser\Tests\Users\Association;
 
-use Smart6ate\Roles\Models\Role;
 use Tests\DuskTestCase;
+use Smart6ate\Roles\Models\Role;
 use App\Domain\Users\Models\User;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
@@ -18,7 +18,6 @@ class MembersTest extends DuskTestCase
      */
     public function a_member_can_access_the_association_dashboard()
     {
-
         $user = create(User::class);
 
         $role = create(Role::class, [
@@ -28,18 +27,14 @@ class MembersTest extends DuskTestCase
 
         $user->roles()->attach($role);
 
-
         $this->browse(function ($browser) use ($user) {
             $browser->visit('/')
                 ->loginAs($user)
                 ->visit('/backend/association')
                 ->assertPathIs('/backend/association')
                 ->assertSee('Members');
-
         });
     }
-
-
 
     /**
      * @test
@@ -65,8 +60,4 @@ class MembersTest extends DuskTestCase
                 ->assertSee('Export to .xls');
         });
     }
-
-
-
-
 }

@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Backend\Administrators\Users;
 
 use Illuminate\Http\Request;
+use Smart6ate\Roles\Models\Role;
 use App\Domain\Users\Models\User;
 use App\App\Controllers\Controller;
 use App\Http\Requests\Administrators\Users\StoreUserRequest;
-use Smart6ate\Roles\Models\Role;
 
 class UsersController extends Controller
 {
@@ -46,7 +46,7 @@ class UsersController extends Controller
     {
         $roles = Role::all();
 
-        return view('backend.administrators.users.edit', compact('user','roles'));
+        return view('backend.administrators.users.edit', compact('user', 'roles'));
     }
 
     public function update(Request $request, User $user)
@@ -78,13 +78,11 @@ class UsersController extends Controller
         return view('backend.administrators.users.archived', compact('users'));
     }
 
-
     public function activate(User $user)
     {
-        $user->update([ 'activated' => true ]);
+        $user->update(['activated' => true]);
 
         toast('User successfully activated!', 'success', 'bottom-right');
-
 
         return back();
     }
@@ -101,12 +99,8 @@ class UsersController extends Controller
 
         toast('User successfully deactivated!', 'success', 'bottom-right');
 
-
         return back();
     }
-
-
-
 
     public function restore($email)
     {

@@ -33,10 +33,8 @@ class UsersTest extends DuskTestCase
                 ->visit('/backend/administrators/users')
                 ->assertPathIs('/backend/administrators/users')
                 ->assertSee('Users');
-
         });
     }
-
 
     /**
      * @test
@@ -60,7 +58,6 @@ class UsersTest extends DuskTestCase
                 ->visit('/backend/administrators/users/archived')
                 ->assertPathIs('/backend/administrators/users/archived')
                 ->assertSee('Archived users');
-
         });
     }
 

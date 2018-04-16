@@ -18,7 +18,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'status','name', 'email', 'password','redirect_email','mobile','github','birthday','member_since','last_authentication',
+        'status', 'name', 'email', 'password', 'redirect_email', 'mobile', 'github', 'birthday', 'member_since', 'last_authentication',
     ];
 
     protected $dates = [
@@ -53,13 +53,8 @@ class User extends Authenticatable
     public function getGitHubLinkAttribute()
     {
         if ($this->github) {
-
-            return 'https://github.com/' . $this->github;
+            return 'https://github.com/'.$this->github;
         }
-
-        return null;
-
-
     }
 
     public function getBaselHackEmailAttribute()
@@ -69,11 +64,10 @@ class User extends Authenticatable
 
         list($firstname, $lastname) = explode(' ', $name);
 
-        $email = strtolower($firstname . '.' . $lastname .  $domain);
+        $email = strtolower($firstname.'.'.$lastname.$domain);
 
         return $email;
     }
-
 
     public function getAvatar()
     {
@@ -88,6 +82,4 @@ class User extends Authenticatable
     {
         return $this->id === $user->id;
     }
-
-
 }

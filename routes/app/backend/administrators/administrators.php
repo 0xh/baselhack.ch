@@ -19,6 +19,5 @@ Route::group(['prefix' => '/administrators', 'namespace' => 'Administrators', 'a
 
         Route::patch('/add/role/{user}', 'RolesController@addRole')->name('add.role');
         Route::patch('/remove/role/{user}', 'RolesController@removeRole')->name('remove.role');
-
     });
 });

@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
 use Smart6ate\Roles\Models\Role;
 
 class RolesTableSeeder extends Seeder
@@ -11,31 +10,28 @@ class RolesTableSeeder extends Seeder
      *
      * @return void
      */
-
     public function run()
     {
         $roles = [
 
             [
-                'title'      => 'developer',
+                'title' => 'developer',
             ],
 
             [
-                'title'      => 'administrator',
+                'title' => 'administrator',
             ],
 
             [
-                'title'      => 'moderator',
+                'title' => 'moderator',
             ],
 
             [
-                'title'      => 'member',
+                'title' => 'member',
             ],
 
         ];
 
         Role::insert($roles);
-
-
     }
 }

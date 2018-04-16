@@ -2,6 +2,7 @@
 
 use Faker\Generator as Faker;
 use App\Domain\Association\Models\Newsletter;
+
 /*
 |--------------------------------------------------------------------------
 | Model Factories
