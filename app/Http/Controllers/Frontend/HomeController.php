@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Frontend;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use App\App\Controllers\Controller;
 
 class HomeController extends Controller
 {
+
     /**
      * Show the application dashboard.
      *

@@ -12,19 +12,15 @@
 */
 
 
-Auth::routes();
 
-Route::get('/', 'Frontend\HomeController@index')->name('home.index');
+Route::get('/', 'Frontend\HomeController@index')->name('frontend.home.index');
+
+Route::post('/newsletter', 'Frontend\Newsletter\NewsletterController@store')->name('frontend.newsletter.store');
 
 
-Route::get('/backend/dashboard', 'DashboardController@index')->name('dashboard.index');
-Route::get('/backend/members', 'MembersController@index')->name('members.index');
+@include 'app/backend/auth/auth.php';
 
-Route::get('/backend/members/create', 'MembersController@create')->name('members.create');
+@include 'app/backend/backend.php';
 
-Route::get('/backend/members/{member}/edit', 'MembersController@edit')->name('members.edit');
-Route::patch('/backend/members/{member}/update', 'MembersController@update')->name('members.update');
 
-Route::get('/backend/members/files', 'MembersController@files')->name('members.files');
-Route::get('/backend/members/webmail', 'MembersController@webmail')->name('members.webmail');
-Route::get('/backend/members/export', 'MembersController@export')->name('members.export');
+

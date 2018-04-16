@@ -1,0 +1,42 @@
+sudo: true
+
+dist: trusty
+
+language: php
+
+addons:
+  chrome: stable
+
+php:
+  - 7.1
+
+services:
+  - redis-server
+  - postgres
+
+before_script:
+   - psql -c 'create database testing;' -U postgres
+
+   - cp .env.travis.testing .env
+   - cp phpunit.travis.xml phpunit.xml
+
+   - php artisan key:generate
+
+   - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
+   - php artisan serve &
+
+install:
+
+   - travis_retry composer install --no-interaction --prefer-dist --no-suggest
+   - travis_retry npm install
+   - npm run prod
+
+script:
+  - phpunit --coverage-clover build/coverage/xm
+  - php artisan dusk
+
+after_script:
+  - php vendor/bin/codacycoverage clover build/coverage/xml
+
+after_success:
+  - chmod +x ./tests.sh; ./tests.sh

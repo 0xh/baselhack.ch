@@ -1,0 +1,44 @@
+.bg-primary {
+    background-color: #000 !important;
+}
+
+
+
+.bg-tertiary {
+    background-color: #192b3f !important;
+}
+
+
+footer hr {
+
+    background-color: white;
+}
+
+
+.footer span {
+    color: #fff;
+}
+
+.newsletter-button
+{
+    background-color: #192b3f !important;
+
+}
+
+
+.btn-primary {
+    color: #fff;
+    background: #192b3f linear-gradient(180deg, #192b3f, #192b3f) repeat-x;
+    background-color: rgb(25, 43, 63);
+    border-color: #192b3f;
+    box-shadow: none;
+}
+
+
+.btn-primary:hover {
+    color: #fff;
+    background: #284565 linear-gradient(180deg, #284565, #284565) repeat-x;
+    background-color: rgb(40, 69, 101);
+    border-color: #192b3f;
+    box-shadow: none;
+}

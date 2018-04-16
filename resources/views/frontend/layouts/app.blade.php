@@ -18,9 +18,10 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800|Roboto:400,500,700" rel="stylesheet">
     <!-- Theme CSS -->
-    <link type="text/css" href="{{ asset('css/frontend/theme.css') }}" rel="stylesheet">
+    <link type="text/css" href="{{ asset('frontend/css/theme.css') }}" rel="stylesheet">
     <!-- Demo CSS - No need to use these in your project -->
-    <link type="text/css" href="{{ asset('css/frontend/demo.css') }}" rel="stylesheet">
+    <link type="text/css" href="{{ asset('frontend/css/demo.css') }}" rel="stylesheet">
+    <link type="text/css" href="{{ asset('frontend/css/style.css') }}" rel="stylesheet">
 
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-L+XK540vkePe55E7PAfByfvW0XpsyYpsifTpgh/w8WvH6asVg/c2zqp0EfZfZTbF" crossorigin="anonymous">
 
@@ -38,24 +39,27 @@
 
 
 
-
     @include('frontend.layouts.partials.footer')
 
 
     <!-- Core -->
-    <script src="{{ asset('js/frontend/jquery.min.js') }}"></script>
-    <script src="{{ asset('js/frontend/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('frontend/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('frontend/js/bootstrap.min.js') }}"></script>
     <!-- FontAwesome 5 -->
-    <script src="{{ asset('js/frontend/fontawesome-all.js') }}" defer></script>
+    <script src="{{ asset('frontend/js/fontawesome-all.js') }}" defer></script>
     <!-- Page plugins -->
-    <script src="{{ asset('js/frontend/bootstrap-select.js') }}"></script>
-    <script src="{{ asset('js/frontend/bootstrap-tagsinput.min.js') }}"></script>
-    <script src="{{ asset('js/frontend/input-mask.min.js') }}"></script>
-    <script src="{{ asset('js/frontend/nouislider.min.js') }}"></script>
-    <script src="{{ asset('js/frontend/textarea-autosize.min.js') }}"></script>
+    <script src="{{ asset('frontend/js/bootstrap-select.js') }}"></script>
+    <script src="{{ asset('jfrontend/js/bootstrap-tagsinput.min.js') }}"></script>
+    <script src="{{ asset('frontend/js/input-mask.min.js') }}"></script>
+    <script src="{{ asset('frontend/js/nouislider.min.js') }}"></script>
+    <script src="{{ asset('frontend/js/textarea-autosize.min.js') }}"></script>
     <!-- Theme JS -->
-    <script src="{{ asset('js/frontend/theme.js') }}"></script>
+    <script src="{{ asset('frontend/js/theme.js') }}"></script>
 
+
+    <script src="https://unpkg.com/sweetalert2@7.18.0/dist/sweetalert2.all.js"></script>
+
+    @include('sweetalert::alert')
 
 </body>
 </html>

@@ -14,7 +14,7 @@
                         <div class="form-group row">
 
                             <div class="col-md-8 offset-md-2">
-                                <input title="E-Mail" id="email" type="email" placeholder="E-Mail" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+                                <input title="{{ __('E-Mail Address') }}" id="email" placeholder="{{ __('E-Mail Address') }}" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
 
                                 @if ($errors->has('email'))
                                     <span class="invalid-feedback">
@@ -25,9 +25,8 @@
                         </div>
 
                         <div class="form-group row">
-
                             <div class="col-md-8 offset-md-2">
-                                <input title="Password" id="password" type="password" placeholder="Password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+                                <input title="{{ __('Password') }}" id="password" placeholder="{{ __('Password') }}" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
 
                                 @if ($errors->has('password'))
                                     <span class="invalid-feedback">
@@ -37,7 +36,7 @@
                             </div>
                         </div>
 
-                    {{--    <div class="form-group row">
+                        <div class="form-group row">
                             <div class="col-md-8 offset-md-2">
                                 <div class="checkbox">
                                     <label>
@@ -45,17 +44,18 @@
                                     </label>
                                 </div>
                             </div>
-                        </div>--}}
+                        </div>
 
                         <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-2">
-                                <button type="submit" class="btn btn-block btn-primary">
+                            <div class="col-md-8 offset-md-2 text-center">
+                                <button dusk="login-button" type="submit" class="btn btn-block btn-primary">
                                     {{ __('Login') }}
                                 </button>
 
-                              {{--  <a class="btn btn-link" href="{{ route('password.request') }}">
+                                <!-- @toDo Test E-Mail & password Reset -->
+                                <a class="btn btn-link mt-2" href="{{ route('password.request') }}">
                                     {{ __('Forgot Your Password?') }}
-                                </a>--}}
+                                </a>
                             </div>
                         </div>
                     </form>

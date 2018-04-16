@@ -4,8 +4,8 @@ use Illuminate\Database\Seeder;
 
 use Smart6ate\Roles\Models\Role;
 
+use App\Domain\Users\Models\User;
 use Carbon\Carbon;
-use App\User;
 
 class UsersTableSeeder extends Seeder
 {
@@ -21,11 +21,24 @@ class UsersTableSeeder extends Seeder
         $users = [
             [
                 'name'       => 'Sebastian Fix',
+                'activated' => true,
                 'email'      => 'sebastian.fix@baselhack.ch',
                 'password'   => bcrypt('UqikZmp928nk7eL&'),
                 'redirect_email'   => 'sebastian.fix@smartgate.ch',
                 'github'   => 'StanBarrows',
-                'status'   => 'Active',
+                'member_status'   => 'active',
+                'created_at' => $now,
+                'updated_at' => $now
+            ],
+
+            [
+                'name'       => 'Matthias Cullmann',
+                'activated' => true,
+                'email'      => 'matthias.cullmann@baselhack.ch',
+                'password'   => bcrypt('baselhack2018$$'),
+                'redirect_email'   => 'matthias.cullmann@baloise.ch',
+                'github'   => 'culmat',
+                'member_status'   => 'active',
                 'created_at' => $now,
                 'updated_at' => $now
             ],

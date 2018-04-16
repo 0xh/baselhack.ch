@@ -10,7 +10,7 @@
 
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('home.index') }}">Home</a>
+                    <a class="nav-link" href="{{ route('frontend.home.index') }}">Home</a>
                 </li>
 
                 <div class="dropdown-divider d-lg-none my-4"></div>

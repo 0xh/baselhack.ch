@@ -29,10 +29,6 @@ class RolesTableSeeder extends Seeder
             ],
 
             [
-                'title'      => 'management',
-            ],
-
-            [
                 'title'      => 'member',
             ],
 
