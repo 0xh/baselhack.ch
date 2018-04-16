@@ -58,7 +58,6 @@
                     <table class="table table-striped">
                         <thead>
                         <tr>
-                            <th>Status</th>
                             <th>Name</th>
                             <th class="">E-Mail</th>
                             <th>GitHub</th>
@@ -69,10 +68,9 @@
 
                         @foreach($members as $member)
                             <tr>
-                                <td>{{ $member->member_status }}</td>
                                 <td>{{ $member->name }}</td>
-                                <td><a target="_blank" href="mailto:{{ $member->redirect_email }}"><i class="fal fa-envelope"></i></a></td>
-                                <td><a target="_blank" href="{{ $member->git_hub_link }}">GitHub</a></td>
+                                <td><a target="_blank" href="mailto:{{ $member->redirect_email }}">{{ $member->redirect_email }}</a></td>
+                                <td><a target="_blank" href="{{ $member->git_hub_link }}"><i class="fab fa-github-alt"></i></a></td>
                                 <td>{{ optional($member->member_since)->diffForHumans() }}</td>
                             </tr>
                         @endforeach

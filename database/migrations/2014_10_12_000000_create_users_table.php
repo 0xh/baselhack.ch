@@ -25,7 +25,7 @@ class CreateUsersTable extends Migration
             $table->date('birthday')->nullable();
 
             $table->string('language')->default('en');
-            $table->string('member_status')->default('passive');
+            $table->string('member_status')->default('active');
 
             $table->dateTime('member_since')->nullable();
             $table->dateTime('last_authentication')->nullable();

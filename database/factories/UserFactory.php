@@ -32,7 +32,7 @@ $factory->define(User::class, function (Faker $faker) {
 
         'language' => 'en',
 
-        'member_status' => 'passive',
+        'member_status' => 'active',
 
         'member_since' => null,
         'last_authentication' => null,
