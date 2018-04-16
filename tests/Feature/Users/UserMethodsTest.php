@@ -21,5 +21,4 @@ class UserMethodsTest extends TestCase
         $user = create(User::class);
         $this->assertNotNull($user->getAvatar());
     }
-
 }

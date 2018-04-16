@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\Backend\Association\Members;
 
-use App\App\Controllers\Controller;
 use App\Domain\Users\Models\User;
-use App\Domain\Users\Models\UserExport;
+use App\App\Controllers\Controller;
 use Maatwebsite\Excel\Facades\Excel;
+use App\Domain\Users\Models\UserExport;
 
 class MembersController extends Controller
 {
@@ -26,32 +26,28 @@ class MembersController extends Controller
      */
     public function index()
     {
-
-        $members = User::orderBy('name','asc')->get();
+        $members = User::orderBy('name', 'asc')->get();
 
         return view('backend.association.members.index', compact('members'));
     }
 
-
     public function create()
     {
-
         return view('backend.association.members.create');
     }
-
 
     public function files()
     {
         $email = auth()->user()->basel_hack_email;
 
-        return redirect()->away('https://baselhack.blaucloud.de/index.php/login' .'?user=' . $email);
+        return redirect()->away('https://baselhack.blaucloud.de/index.php/login'.'?user='.$email);
     }
 
     public function webmail()
     {
         $email = auth()->user()->basel_hack_email;
 
-        return redirect()->away('http://webmail.baselhack.ch/login.php' .'?horde_user=' . $email);
+        return redirect()->away('http://webmail.baselhack.ch/login.php'.'?horde_user='.$email);
     }
 
     public function export()
@@ -59,4 +55,3 @@ class MembersController extends Controller
         return Excel::download(new UserExport(), 'members.xlsx');
     }
 }
-

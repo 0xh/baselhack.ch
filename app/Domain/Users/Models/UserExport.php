@@ -2,14 +2,12 @@
 
 namespace App\Domain\Users\Models;
 
-use Maatwebsite\Excel\Concerns\FromCollection;
-use Maatwebsite\Excel\Concerns\WithHeadings;
 use Maatwebsite\Excel\Concerns\WithMapping;
-use PhpOffice\PhpSpreadsheet\Shared\Date;
+use Maatwebsite\Excel\Concerns\WithHeadings;
+use Maatwebsite\Excel\Concerns\FromCollection;
 
 class UserExport implements FromCollection, WithHeadings, WithMapping
 {
-
     public function headings(): array
     {
         return [
@@ -19,7 +17,7 @@ class UserExport implements FromCollection, WithHeadings, WithMapping
             'Private E-Mail',
             'Mobile',
             'Github',
-            'Member since'
+            'Member since',
         ];
     }
 

@@ -3,10 +3,9 @@
 namespace App\Http\Controllers\Backend\Administrators\Users;
 
 use Illuminate\Http\Request;
+use Smart6ate\Roles\Models\Role;
 use App\Domain\Users\Models\User;
 use App\App\Controllers\Controller;
-use App\Http\Requests\Administrators\Users\StoreUserRequest;
-use Smart6ate\Roles\Models\Role;
 
 class RolesController extends Controller
 {
@@ -27,15 +26,12 @@ class RolesController extends Controller
         return back();
     }
 
-
     public function removeRole(Request $request, User $user)
     {
         $role = Role::find($request->role_id);
-
 
         toast('Role successfully removed!', 'success', 'bottom-right');
 
         return back();
     }
-
 }

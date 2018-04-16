@@ -14,9 +14,5 @@ class PasswordsController extends Controller
     public function index()
     {
         return view('backend.association.passwords.index');
-
     }
-
-
-
 }
