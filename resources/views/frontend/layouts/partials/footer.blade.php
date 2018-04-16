@@ -18,11 +18,20 @@
             </div>
 
             <div class="col-6 col-md">
-                <h5 class="heading h6 text-uppercase font-weight-700 mb-3">Partner & Sponsors</h5>
+                <h5 class="heading h6 text-uppercase font-weight-700 mb-3">Partner</h5>
                 <ul class="list-unstyled text-small">
 
                 </ul>
             </div>
+
+
+            <div class="col-6 col-md">
+                <h5 class="heading h6 text-uppercase font-weight-700 mb-3">Sponsors</h5>
+                <ul class="list-unstyled text-small">
+
+                </ul>
+            </div>
+
 
 
             <div class="col-6 col-md">
@@ -35,7 +44,9 @@
             <div class="col-6 col-md">
                 <h5 class="heading h6 text-uppercase font-weight-700 mb-3">Contact</h5>
                 <ul class="list-unstyled text-small">
+{{--
                     <li><a class="text-muted" target="_blank" href="mailto:event@baselhack.ch">E-Mail</a></li>
+--}}
                 </ul>
             </div>
            <div class="col-6 col-md">
@@ -49,7 +60,7 @@
 
 
         </div>
-        <hr>
+        <hr class="mt-4">
         <div class="d-flex align-items-center">
           <span class="">
             &copy; {{ date("Y") }} BaselHack. All rights reserved.
