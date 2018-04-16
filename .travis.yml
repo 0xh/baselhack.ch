@@ -32,7 +32,7 @@ install:
    - npm run prod
 
 script:
-  - phpunit --coverage-clover build/coverage/xm
+  - phpunit --coverage-clover build/coverage/xml
   - php artisan dusk
 
 after_script:
