@@ -34,7 +34,7 @@ class UsersController extends Controller
             'email' => $request->email,
             'password' => bcrypt(base64_encode(random_bytes(10))),
             'activated' => false,
-            'member_status' => 'active'
+            'member_status' => 'active',
 
         ]);
 
@@ -78,7 +78,6 @@ class UsersController extends Controller
     public function archived()
     {
         $users = User::onlyTrashed()->get();
-
 
         return view('backend.administrators.users.archived', compact('users'));
     }
