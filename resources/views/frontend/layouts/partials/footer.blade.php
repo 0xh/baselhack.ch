@@ -76,7 +76,7 @@
           </span>
 
             <span class="nav ml-auto">
-                <a style="color: whitesmoke;" href="{{ route('login') }}">Member Area</a>
+                <a dusk="login" style="color: whitesmoke;" href="{{ route('login') }}">Member Area</a>
             </span>
 
         </div>
