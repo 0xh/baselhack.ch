@@ -52,7 +52,7 @@ class SecurityTest extends DuskTestCase
                 ->assertSee('Password updated Successfully!')
                 ->click('@logout')
                 ->assertSee('Log-Out Successfully!')
-                ->click('@login')
+                ->clickLink('Member Area')
                 ->type('#email', $user->email)
                 ->type('#password', $password)
                 ->click('@login-button')

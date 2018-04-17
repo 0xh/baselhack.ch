@@ -51,7 +51,7 @@ class LoginController extends Controller
      *
      * @return mixed
      */
-    protected function authenticated(Request $request, $user)
+    protected function authenticated()
     {
         toast('Log-In Successfully!', 'success', 'bottom-right');
     }

@@ -28,7 +28,7 @@ class RolesController extends Controller
 
     public function removeRole(Request $request, User $user)
     {
-        $role = Role::find($request->role_id);
+        Role::find($request->role_id);
 
         toast('Role successfully removed!', 'success', 'bottom-right');
 

@@ -50,10 +50,10 @@ class UsersController extends Controller
         return view('backend.administrators.users.edit', compact('user', 'roles'));
     }
 
-    public function update(Request $request, User $user)
+   /* public function update(Request $request, User $user)
     {
         return back();
-    }
+    }*/
 
     public function delete(User $user)
     {

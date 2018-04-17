@@ -70,7 +70,13 @@
                             <tr>
                                 <td>{{ $member->name }}</td>
                                 <td><a target="_blank" href="mailto:{{ $member->redirect_email }}">{{ $member->redirect_email }}</a></td>
-                                <td><a target="_blank" href="{{ $member->git_hub_link }}"><i class="fab fa-github-alt"></i></a></td>
+                                <td>
+                                    @if($member->git_hub_link)
+                                    <a target="_blank" href="{{ $member->git_hub_link }}"><i class="fab fa-github-alt"></i></a>
+                                    @else
+
+                                    @endif
+                                </td>
                                 <td>{{ optional($member->member_since)->diffForHumans() }}</td>
                             </tr>
                         @endforeach

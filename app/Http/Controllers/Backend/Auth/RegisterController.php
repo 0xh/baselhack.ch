@@ -90,7 +90,7 @@ class RegisterController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function register(Request $request)
+    public function register()
     {
         abort(404);
     }

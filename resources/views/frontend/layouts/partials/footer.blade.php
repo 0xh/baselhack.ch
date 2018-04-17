@@ -10,6 +10,15 @@
                 </div>
             </div>--}}
 
+
+            <div class="col-6 col-md">
+                <h5 class="heading h6 text-uppercase font-weight-700 mb-3">BaselHack</h5>
+                <ul class="list-unstyled text-small">
+
+                </ul>
+            </div>
+
+
             <div class="col-6 col-md">
                 <h5 class="heading h6 text-uppercase font-weight-700 mb-3">Event</h5>
                 <ul class="list-unstyled text-small">
@@ -66,8 +75,8 @@
             &copy; {{ date("Y") }} BaselHack. All rights reserved.
           </span>
 
-            <span class="nav ml-lg-auto">
-                <a dusk="login" style="color: whitesmoke;" href="{{ route('login') }}">Member Area</a>
+            <span class="nav ml-auto">
+                <a style="color: whitesmoke;" href="{{ route('login') }}">Member Area</a>
             </span>
 
         </div>
