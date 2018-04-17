@@ -2,10 +2,8 @@
 
 namespace App\App\Console\Commands;
 
-use App\Domain\Users\Models\User;
-use App\Models\Company;
 use Illuminate\Console\Command;
-use Smart6ate\Roles\Models\Role;
+use App\Domain\Users\Models\User;
 
 class UpdatePasswords extends Command
 {
@@ -40,13 +38,11 @@ class UpdatePasswords extends Command
      */
     public function handle()
     {
-        $activated_user = User::where('activated','=',false)->get();
+        $activated_user = User::where('activated', '=', false)->get();
 
-        foreach($activated_user as $user)
-        {
+        foreach ($activated_user as $user) {
             $user->password = bcrypt(base64_encode(random_bytes(10)));
             $user->save();
         }
-
     }
 }
