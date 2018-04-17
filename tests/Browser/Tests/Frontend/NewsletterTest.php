@@ -17,9 +17,9 @@ class NewsletterTest extends DuskTestCase
      */
     public function a_guet_can_subscribe_for_an_newsletter()
     {
-         create(User::class);
+        create(User::class);
 
-        $this->browse(function ($browser)  {
+        $this->browse(function ($browser) {
             $browser->visit('/')
                 ->assertPathIs('/')
                 ->clear('#email')
