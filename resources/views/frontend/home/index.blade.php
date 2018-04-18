@@ -34,6 +34,30 @@
     </section>
 
 
+
+
+    <section class="slice sct-color-1">
+        <div class="container">
+            <div class="row cols-xs-space cols-sm-space align-items-center">
+                <div class="col-md-4 mx-auto">
+                    <img src="{{ asset('frontend/images/random/about.gif') }}" class="img-center img-fluid rounded z-depth-3">
+                </div>
+                <div class="col-md-6 col-lg-5 ml-lg-auto">
+                    <div class="pr-md-4">
+                        <h3 class="heading heading-3 strong-500">
+                            About BaselHack.
+                        </h3>
+                        <p class="lead text-gray mt-4">
+                            At BaselHack, you will have the opportunity to create software prototypes solutions from a great idea in 34 hours! Bring your coding know-how, meet, connect and collaborate with other tech enthusiasts, innovators, and data and design wizards.
+                            You can work on your own idea or join a team. At the end of the second day of hacking, you will present your idea and prototype to a panel of judges and to all participants. Prizes will be awarded for the best ideas and teams.
+                            Your prototype will be published as OpenSource and may be developed further after the event.                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <section class="py-5 bg-lighter border-top border-bottom" id="scrollToSection">
         <div class="container">
 
@@ -45,13 +69,13 @@
                 <form method="POST" action="{{ route('frontend.newsletter.store') }}"class="heading mt-0 mb-0">
                     @csrf
 
-                        <div class="input-group mb-3">
+                    <div class="input-group mb-3">
 
-                            <input id="email" name="email" type="text" class="form-control" placeholder="E-Mail Address" aria-label="E-Mail Address" aria-describedby="basic-addon2" required>
-                            <div class="input-group-append">
-                                <button dusk="subscribe-for-newsletter-button" class="btn btn-primary newsletter-button" type="submit">subscribe</button>
-                            </div>
+                        <input id="email" name="email" type="text" class="form-control" placeholder="E-Mail Address" aria-label="E-Mail Address" aria-describedby="basic-addon2" required>
+                        <div class="input-group-append">
+                            <button dusk="subscribe-for-newsletter-button" class="btn btn-primary newsletter-button" type="submit">subscribe</button>
                         </div>
+                    </div>
 
 
 
@@ -68,29 +92,98 @@
         </div>
     </section>
 
-    {{--
-        <section class="slice slice-lg bg-cover bg-size--cover" style="background: url('../assets/images/backgrounds/img-2.jpg') center center;">
-            <div class="mask bg-dark alpha-7"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 ml-lg-auto">
-                        <div class="card py-5 px-4 z-depth-3">
-                            <div class="card-body">
-                                <h2 class="heading h2">
-                                    <strong>Design</strong> is thinking made visual.
-                                </h2>
-                                <p class="lead lh-180 mt-4">
-                                    Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna. Ut enim ad minim veniam quis nostrud exercitation.
-                                </p>
-                                <div class="btn-container mt-5">
-                                    <a href="#" class="btn btn-lg btn-primary px-5">Our mission</a>
-                                </div>
+
+    <section class="slice slice-lg" data-delimiter="1">
+        <div class="container">
+            <div class="row cols-xs-space cols-sm-space align-items-center">
+
+                <div class="col-md-6 col-lg-5 ml-lg-auto">
+                    <div class="pr-md-4">
+                        <h3 class="heading h3">
+                            Why you should attend?
+                        </h3>
+                        <div class="lead text-gray mt-4">
+
+                        <ul>
+                            <li>You will meet other tech enthusiasts.</li>
+                            <li>You will build a great prototype in teams over two days.</li>
+                            <li>
+                                You are into coding and you will have the opportunity to showcase your skills.</li>
+                            <li>  Most importantly, you will spend two amazing days!</li>
+                            <li>  And the best thing is: it won't cost you anything. Food and drinks are provided.</li>
+
+                        </ul>
+
+
+
+
+
+                            You won't regret participating in BaselHack! Come and see for yourself.
+
                             </div>
-                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="col-md-4 mx-auto">
+                    <img src="{{ asset('frontend/images/random/why.gif') }}" class="img-center img-fluid rounded z-depth-3">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="slice sct-color-1">
+        <div class="container">
+            <div class="row cols-xs-space cols-sm-space align-items-center">
+                <div class="col-md-4 mx-auto">
+                    <img src="{{ asset('frontend/images/random/who.gif') }}" class="img-center img-fluid rounded z-depth-3">
+                </div>
+                <div class="col-md-6 col-lg-5 ml-lg-auto">
+                    <div class="pr-md-4">
+                        <h3 class="heading heading-3 strong-500">
+                            Who can participate?
+                        </h3>
+                        <p class="lead text-gray mt-4">
+                            Anyone! BaselHack brings together techies, programmers, UX/UI designers, developers, soft-ware engineers, computing veterans, etc. Above all, BaselHack is open to anyone – men, women, students, seniors, cooks, mechanics… any curious and creative minds!                        </p>
                     </div>
                 </div>
             </div>
-        </section>--}}
+        </div>
+    </section>
+
+
+    <section class="slice slice-lg" data-delimiter="1">
+        <div class="container">
+            <div class="row cols-xs-space cols-sm-space align-items-center">
+
+                <div class="col-md-6 col-lg-5 ml-lg-auto">
+                    <div class="pr-md-4">
+                        <h3 class="heading h3">
+                            Who is organizing BaselHack?
+                        </h3>
+                        <p class="lead text-gray mt-4">
+
+                            BaselHack is organized by the non-profit organisation BaselHack.
+                            We are organizing this event out of passion for technology and simply for fun; not to earn money.
+                            Our community is growing. You want to join us? Get in touch!
+
+                        </p>
+
+                    </div>
+                </div>
+
+
+                <div class="col-md-4 mx-auto">
+                    <img src="{{ asset('frontend/images/random/us.gif') }}" class="img-center img-fluid rounded z-depth-3">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
 
 
 @endsection
