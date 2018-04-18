@@ -22,7 +22,7 @@
                     <div class="form-group row">
 
                         <div class="col-md-12">
-                            <input title="Name" id="name" placeholder="Name" type="text" class="form-control{{ $errors->has('namr') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
+                            <input title="Name" id="name" placeholder="Name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
 
                             @if ($errors->has('name'))
                                 <span class="invalid-feedback">

@@ -2,12 +2,10 @@
 <html lang="{{ app()->getLocale() }}">
 <head>
 
-
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Probably the most complete UI kit out there. Multiple functionalities and controls added,  extended color palette and beautiful typography, designed as its own extended version of Bootstrap at  the highest level of quality.                             ">
-    <meta name="author" content="Webpixels">
+    <meta name="description" content="At BaselHack, you will have the opportunity to create software prototypes in 34 hours! Bring your coding know-how, meet, connect and collaborate with other tech enthusiasts, innovators, and data and design wizards.">
+    <meta name="author" content="BaselHack">
 
     <title>{{ config('app.name', 'BaselHack') }}</title>
 

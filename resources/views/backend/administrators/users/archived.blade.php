@@ -18,7 +18,7 @@
                 <table id="" class="table table-striped ">
                     <thead>
                     <tr>
-                        <th class="text-center">Status</th>
+                        <th>Status</th>
                         <th>Name</th>
                         <th>E-Mail Address</th>
                         <th></th>
@@ -28,7 +28,7 @@
 
                     @foreach($users as $user)
                         <tr>
-                            <td class="text-center">
+                            <td>
                                 @if($user->activated)
                                     <img class="" src="{{ asset('backend/images/status/status_activated.png') }}">
                                 @else

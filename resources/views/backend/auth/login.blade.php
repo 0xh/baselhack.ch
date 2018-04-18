@@ -14,7 +14,7 @@
                         <div class="form-group row">
 
                             <div class="col-md-8 offset-md-2">
-                                <input title="{{ __('E-Mail Address') }}" id="email" placeholder="{{ __('E-Mail Address') }}" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+                                <input title="{{ __('E-Mail Address') }}" id="email" placeholder="chuck.norris@baselhack.ch" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
 
                                 @if ($errors->has('email'))
                                     <span class="invalid-feedback">

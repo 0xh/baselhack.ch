@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1523944409">
-  <project timestamp="1523944409">
+<coverage generated="1524075115">
+  <project timestamp="1524075115">
     <package name="App\App\Console\Commands">
       <file name="/home/vagrant/baselhack/web/app/App/Console/Commands/UpdatePasswords.php">
         <class name="App\App\Console\Commands\UpdatePasswords" namespace="App\App\Console\Commands">
