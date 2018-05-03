@@ -6,7 +6,7 @@
         <div class="col-md-12 text-center">
 
 
-            <span> v. {{ config('app.version') }}</span>
+            <span>{{ config('app.version') }}</span>
 
 
         </div>

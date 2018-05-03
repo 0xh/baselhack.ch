@@ -2,8 +2,9 @@
 
 namespace Tests\Unit\Users;
 
+use App\Domain\Events\Models\Newsletter;
 use Tests\TestCase;
-use App\Domain\Association\Models\Newsletter;
+
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class NewsletterTest extends TestCase

@@ -23,11 +23,13 @@ class Kernel extends ConsoleKernel
      *
      * @return void
      *
-     * protected function schedule()
-     * {
-     * // $schedule->command('inspire')
-     * //          ->hourly();
-     * }*/
+    */
+
+    protected function schedule(Schedule $schedule)
+    {
+        $schedule->command('sync:newsletter')->daily();
+    }
+
 
     /**
      * Register the commands for the application.

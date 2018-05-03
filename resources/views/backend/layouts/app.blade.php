@@ -18,12 +18,13 @@
     <!-- Styles -->
     <link href="{{ asset('backend/css/app.css') }}" rel="stylesheet">
 
+
+
     @yield('styles')
 
 </head>
 <body>
 <div id="app">
-
 
     @include('backend.layouts.partials._navigation')
 
@@ -35,9 +36,7 @@
 
     <script src="{{ asset('backend/js/app.js') }}" defer></script>
     <script src="{{ asset('backend/js/retina/retina.min.js') }}" defer></script>
-
     <script src="{{ asset('backend/js/sweetalert/sweetalert.js') }}"></script>
-
     @include('sweetalert::alert')
 
     @yield('scripts')

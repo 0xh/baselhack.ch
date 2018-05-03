@@ -12,13 +12,9 @@ class User extends Authenticatable
 {
     use Notifiable, SoftDeletes, HasRoles, UsersTrait;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
+
     protected $fillable = [
-        'activated', 'name', 'email', 'password', 'redirect_email', 'mobile', 'github', 'birthday', 'member_since', 'member_status', 'last_authentication',
+         'name', 'email', 'password', 'published_at','last_authentication',
     ];
 
     protected $dates = [
@@ -26,7 +22,7 @@ class User extends Authenticatable
         'created_at',
         'updated_at',
         'deleted_at',
-        'member_since',
+        'published_at',
         'last_authentication',
 
         ];
@@ -50,28 +46,10 @@ class User extends Authenticatable
         return 'email';
     }
 
-    public function getGitHubLinkAttribute()
-    {
-        if ($this->github) {
-            return 'https://github.com/'.$this->github;
-        }
-    }
-
-    public function getBaselHackEmailAttribute()
-    {
-        $name = $this->name;
-        $domain = '@baselhack.ch';
-
-        list($firstname, $lastname) = explode(' ', $name);
-
-        $email = strtolower($firstname.'.'.$lastname.$domain);
-
-        return $email;
-    }
-
     public function getAvatar()
     {
-        if (empty($this->avatar)) {
+        if (empty($this->avatar))
+        {
             return 'https://www.gravatar.com/avatar/'.md5($this->email).'x?s=500&d=mm';
         }
 

@@ -48,7 +48,7 @@
 
                     <div class="form-group row mb-0">
                         <div class="col-md-12 text-center">
-                            <button dusk="create-user-button" type="submit" class="btn btn-block btn-primary">
+                            <button type="submit" class="btn btn-block btn-primary">
                                 Create user
                             </button>
 

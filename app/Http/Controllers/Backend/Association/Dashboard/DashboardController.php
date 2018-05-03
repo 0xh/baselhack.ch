@@ -13,6 +13,8 @@ class DashboardController extends Controller
 
     public function index()
     {
-        return view('backend.association.dashboard.index');
+        return redirect()->route('backend.association.members.index');
+
+        //return view('backend.association.dashboard.index');
     }
 }

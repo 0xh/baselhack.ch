@@ -5,4 +5,5 @@ Route::group(['prefix' => 'backend', 'namespace' => 'Backend', 'as' => 'backend.
     @include 'administrators/administrators.php';
     @include 'users/users.php';
     @include 'association/association.php';
+    @include 'events/events.php';
 });

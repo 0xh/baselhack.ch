@@ -4,8 +4,8 @@ namespace App\Http\Controllers\Backend\Users\Settings\Profile;
 
 use App\Domain\Users\Models\User;
 use App\App\Controllers\Controller;
+use App\Http\Requests\Backend\Users\Profile\UpdateProfileRequest;
 use Illuminate\Support\Facades\Auth;
-use App\Http\Requests\Users\Profile\UpdateProfileRequest;
 
 class ProfileController extends Controller
 {
@@ -26,7 +26,7 @@ class ProfileController extends Controller
         if (! $user->isSameAs(Auth::user())) {
             abort(404);
         }
-        $user->update($request->only('name', 'redirect_email'));
+        $user->update($request->only('name', 'email'));
 
         toast('Profile updated Successfully!', 'success', 'bottom-right');
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend\Association\Passwords;
 
 use App\App\Controllers\Controller;
+use App\Domain\Association\Models\Password;
 
 class PasswordsController extends Controller
 {
@@ -13,6 +14,7 @@ class PasswordsController extends Controller
 
     public function index()
     {
-        return view('backend.association.passwords.index');
+        $passwords = Password::all();
+        return view('backend.association.passwords.index', compact('passwords'));
     }
 }

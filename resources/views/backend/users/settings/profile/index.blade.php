@@ -44,12 +44,8 @@
 
                     <div class="form-group row">
 
-
-
                         <div class="col-md-12">
-
-                            <label for="customer_id">BaselHack E-Mail</label>
-
+                            <label for="customer_id">E-Mail</label>
 
                             <input title="E-Mail"
                                    id="email"
@@ -57,7 +53,7 @@
                                    class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}"
                                    name="email"
                                    value="{{ old('email', $user->email) }}"
-                                   required disabled
+                                   required
                             >
 
                             @if ($errors->has('email'))
@@ -71,34 +67,8 @@
 
 
                     <div class="form-group row">
-
-
-
-                        <div class="col-md-12">
-                            <label for="customer_id">Redirect E-Mail</label>
-
-                            <input title="E-Mail"
-                                   id="redirect_email"
-                                   type="email"
-                                   class="form-control{{ $errors->has('redirect_email') ? ' is-invalid' : '' }}"
-                                   name="redirect_email"
-                                   value="{{ old('redirect_email', $user->redirect_email) }}"
-                                   required
-                            >
-
-                            @if ($errors->has('redirect_email'))
-                                <div class="invalid-feedback">
-                                    <strong>{{ $errors->first('redirect_email') }}</strong>
-                                </div>
-                            @endif
-                        </div>
-                    </div>
-
-
-
-                    <div class="form-group row">
                         <div class="col-md-12 text-center">
-                            <button  dusk="update-profile-button" type="submit" class="btn btn-block btn-primary">
+                            <button  type="submit" class="btn btn-block btn-primary">
                                 Update profile
                             </button>
 

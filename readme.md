@@ -10,6 +10,20 @@
 
 </p>
 
+## Functionalty
+
+## Included packages
+
+- [spatie/laravel-newsletter](https://github.com/spatie/laravel-newsletter)
+- [Maatwebsite/Laravel-Excel](https://github.com/Maatwebsite/Laravel-Excel)
+- [realrashid/sweet-alert](https://github.com/realrashid/sweet-alert)
+
+### Development
+
+- [barryvdh/laravel-debugbar](https://github.com/barryvdh/laravel-debugbar)
+- [laravel/browser-kit-testing](https://github.com/laravel/browser-kit-testing)
+- [orangehill/iseed](https://github.com/orangehill/iseed)
+
 ## License
 
 The Website is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).

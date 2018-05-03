@@ -20,11 +20,15 @@
 
                 @else
 
-                    <li class="nav-item"><a href="{{ route('backend.users.dashboard.index') }}" class="nav-link">Dashboard</a></li>
-
                     @role('member')
                     <li class="nav-item"><a href="{{ route('backend.association.dashboard.index') }}" class="nav-link">BaselHack</a></li>
                     @endrole
+
+
+                    @role('events')
+                    <li class="nav-item"><a href="{{ route('backend.events.dashboard.index') }}" class="nav-link">Events</a></li>
+                    @endrole
+
 
                     @role('administrator')
                     <li class="nav-item"><a href="{{ route('backend.administrators.users.index') }}" class="nav-link">Administrator</a></li>
@@ -47,9 +51,7 @@
 
                     <li><a class="nav-link" href="{{ route('backend.users.settings.profile.index') }}"><i class="fal fa-user"></i> <span style="font-size: 12px; font-weight: bold;">{{ auth()->user()->name }}</span></a></li>
 
-                    @role('administrator')
-                    <li><a class="nav-link" href="{{ route('backend.administrators.users.index') }}"><i class="fal fa-unlock-alt"></i></a></li>
-                    @endrole
+
 
                     <li><a dusk="logout"  class="nav-link" href="{{ route('logout') }}"
                            onclick="event.preventDefault();

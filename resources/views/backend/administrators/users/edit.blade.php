@@ -12,7 +12,7 @@
         <div class="card ">
             <div class="card-header">
 
-                @if($user->activated)
+                @if($user->published_at)
                     <img class="mr-2" src="{{ asset('backend/images/status/status_activated.png') }}">
                 @else
                     <img class="mr-2" src="{{ asset('backend/images/status/status_deactivated.png') }}">
@@ -227,7 +227,7 @@
                 @endif
 --}}
 
-                @if($user->activated)
+                @if($user->published_at)
                     <form method="POST" action="{{ route('backend.administrators.users.deactivate', $user) }}">
                         @csrf
 

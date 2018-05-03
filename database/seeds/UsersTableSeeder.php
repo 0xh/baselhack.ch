@@ -19,26 +19,21 @@ class UsersTableSeeder extends Seeder
         $users = [
             [
                 'name' => 'Sebastian Fix',
-                'activated' => true,
-                'email' => 'sebastian.fix@baselhack.ch',
+                'email' => 'sebastian.fix@smartgate.ch',
                 'password' => bcrypt('UqikZmp928nk7eL&'),
-                'redirect_email' => 'sebastian.fix@smartgate.ch',
-                'github' => 'StanBarrows',
-                'member_status' => 'active',
                 'created_at' => $now,
                 'updated_at' => $now,
+                'published_at' => $now,
             ],
 
             [
                 'name' => 'Matthias Cullmann',
-                'activated' => true,
-                'email' => 'matthias.cullmann@baselhack.ch',
+                'email' => 'matthias.cullmann@baloise.ch',
                 'password' => bcrypt('baselhack2018$$'),
-                'redirect_email' => 'matthias.cullmann@baloise.ch',
-                'github' => 'culmat',
-                'member_status' => 'active',
                 'created_at' => $now,
                 'updated_at' => $now,
+                'published_at' => $now,
+
             ],
 
         ];

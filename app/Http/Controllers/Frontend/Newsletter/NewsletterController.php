@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Frontend\Newsletter;
 
+use Newsletter;
 use App\App\Controllers\Controller;
-use App\Domain\Association\Models\Newsletter;
 use App\Http\Requests\Frontend\Newsletter\StoreNewsletterRequest;
 
 class NewsletterController extends Controller
@@ -15,7 +15,7 @@ class NewsletterController extends Controller
      */
     public function store(StoreNewsletterRequest $request)
     {
-        Newsletter::create($request->only('email'));
+        Newsletter::subscribe($request->email);
 
         toast('Successfully subscribed!', 'success', 'bottom-right');
 

@@ -18,6 +18,21 @@
         </a>
         @endrole
 
+        @role('events')
+        <a id="link-to-association" style="color: black; text-decoration: none;" href="{{ route('backend.events.dashboard.index') }}" class="col-md-3">
+            <div class="card mt-3 text-center">
+                <div class="card-body">
+                    <i class="fal fa-calendar-alt fa-2x"></i>
+                </div>
+                <div class="card-footer">
+                    Events
+                </div>
+            </div>
+        </a>
+        @endrole
+
+
+
         @role('administrator')
         <a id="link-to-administrator" style="color: black; text-decoration: none;" href="{{ route('backend.administrators.users.index') }}" class="col-md-3">
             <div class="card mt-3 text-center">
@@ -30,39 +45,6 @@
             </div>
         </a>
         @endrole
-
-
-        <a id="link-to-settings" style="color: black; text-decoration: none;" href="{{ route('backend.users.settings.profile.index') }}" class="col-md-3">
-            <div class="card mt-3 text-center">
-                <div class="card-body">
-                    <i class="fal fa-wrench fa-2x"></i>
-                </div>
-                <div class="card-footer">
-                    Settings
-                </div>
-            </div>
-        </a>
-
-
-
-        <a  href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();" dusk="logout" style="color: black; text-decoration: none;" class="col-md-3">
-            <div class="card mt-3 text-center">
-                <div class="card-body">
-                    <i class="fal fa-sign-out fa-2x"></i>
-                </div>
-                <div class="card-footer">
-                    Logout
-                </div>
-            </div>
-
-
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                @csrf
-            </form>
-
-        </a>
-
 
 
     </div>

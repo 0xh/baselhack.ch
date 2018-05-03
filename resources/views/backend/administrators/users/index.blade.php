@@ -9,40 +9,17 @@
 @section('backend.administrators.content')
     <div class="justify-content-center">
 
+        <div class="card">
+            <div class="card-header"><strong>Users</strong>
 
+                <div class="float-right">
 
-        <div class="card ">
-            <div class="card-header"><strong>Search</strong></div>
+                    <a href="{{ route('backend.administrators.users.archived') }}"><i style="color: black;" class="fal fa-archive mr-2"></i></a>
 
-            <div class="card-body">
-
-                <form method="POST" class="" action="{{ route('backend.administrators.users.create') }}">
-                    @csrf
-
-
-                    <div class="form-group row">
-
-                        <div class="col-md-12">
-                            <input title="Search User" id="search-user" placeholder="User" type="text" class="form-control{{ $errors->has('search-user') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
-
-                            @if ($errors->has('search-user'))
-                                <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('search-user') }}</strong>
-                                    </span>
-                            @endif
-                        </div>
-                    </div>
-
-                </form>
+                </div>
 
 
             </div>
-        </div>
-
-
-
-        <div class="card mt-4">
-            <div class="card-header"><strong>Users</strong></div>
 
             <div class="card-body">
 
@@ -63,7 +40,7 @@
                     @foreach($users as $user)
                         <tr>
                             <td class="text-center">
-                                @if($user->activated)
+                                @if($user->published_at)
                                     <img class="" src="{{ asset('backend/images/status/status_activated.png') }}">
                                 @else
                                     <img class="" src="{{ asset('backend/images/status/status_deactivated.png') }}">

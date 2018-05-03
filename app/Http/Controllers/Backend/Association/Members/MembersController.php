@@ -2,10 +2,14 @@
 
 namespace App\Http\Controllers\Backend\Association\Members;
 
-use App\Domain\Users\Models\User;
+use App\Domain\Association\Models\Member;
 use App\App\Controllers\Controller;
+use App\Domain\Association\Models\MemberExport;
+use App\Http\Requests\Backend\Association\Members\StoreMemberRequest;
+use App\Http\Requests\Backend\Association\Members\UpdateMemberRequest;
+use Carbon\Carbon;
 use Maatwebsite\Excel\Facades\Excel;
-use App\Domain\Users\Models\UserExport;
+
 
 class MembersController extends Controller
 {
@@ -19,14 +23,10 @@ class MembersController extends Controller
         $this->middleware(['web', 'auth', 'role:member']);
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
-        $members = User::orderBy('name', 'asc')->get();
+        $members = Member::orderBy('firstname', 'asc')->get();
 
         return view('backend.association.members.index', compact('members'));
     }
@@ -36,22 +36,33 @@ class MembersController extends Controller
         return view('backend.association.members.create');
     }
 
-    public function files()
+    public function store(StoreMemberRequest $request)
     {
-        $email = auth()->user()->basel_hack_email;
+        Member::create($request->only(['firstname', 'lastname','email','mobile','github','birthdate','member_since']));
 
-        return redirect()->away('https://baselhack.blaucloud.de/index.php/login'.'?user='.$email);
+        toast('Member successfully stored!', 'success', 'bottom-right');
+
+
+        return view('backend.association.members.create');
     }
 
-    public function webmail()
+    public function edit(Member $member)
     {
-        $email = auth()->user()->basel_hack_email;
+        return view('backend.association.members.edit', compact('member'));
+    }
 
-        return redirect()->away('http://webmail.baselhack.ch/login.php'.'?horde_user='.$email);
+    public function update(Member $member, UpdateMemberRequest $request)
+    {
+        $member->update($request->only(['status','firstname', 'lastname','email','mobile','github','birthdate','member_since']));
+
+        toast('Member successfully updated!', 'success', 'bottom-right');
+
+
+        return back();
     }
 
     public function export()
     {
-        return Excel::download(new UserExport(), 'members.xlsx');
+        return Excel::download(new MemberExport(), 'members'. Carbon::now()->toDayDateTimeString() . '.xlsx');
     }
 }

@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers\Backend\Administrators\Users;
 
+use App\Http\Requests\Backend\Association\Newsletters\StoreNewsletterRequest;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Smart6ate\Roles\Models\Role;
 use App\Domain\Users\Models\User;
 use App\App\Controllers\Controller;
-use App\Http\Requests\Administrators\Users\StoreUserRequest;
 
 class UsersController extends Controller
 {
@@ -27,7 +28,7 @@ class UsersController extends Controller
         return view('backend.administrators.users.create');
     }
 
-    public function store(StoreUserRequest $request)
+    public function store(StoreNewsletterRequest $request)
     {
         User::create([
             'name' => $request->name,
@@ -63,8 +64,7 @@ class UsersController extends Controller
             return back();
         }
 
-        $user->update(['activated' => false]);
-        $user->update(['member_status' => 'terminated']);
+        $user->update(['published_at' => null]);
 
         $user->roles()->detach();
 
@@ -84,7 +84,7 @@ class UsersController extends Controller
 
     public function activate(User $user)
     {
-        $user->update(['activated' => true]);
+        $user->update(['published_at' => Carbon::now()->toDateTimeString()]);
 
         toast('User successfully activated!', 'success', 'bottom-right');
 
@@ -99,7 +99,7 @@ class UsersController extends Controller
             return back();
         }
 
-        $user->update(['activated' => false]);
+        $user->update(['published_at' => null]);
 
         toast('User successfully deactivated!', 'success', 'bottom-right');
 

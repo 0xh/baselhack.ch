@@ -22,7 +22,6 @@ before_script:
 
    - php artisan key:generate
 
-   - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
    - php artisan serve &
 
 install:
@@ -33,7 +32,6 @@ install:
 
 script:
   - phpunit --coverage-clover build/coverage/xml
-  - php artisan dusk
 
 after_script:
   - php vendor/bin/codacycoverage clover build/coverage/xml

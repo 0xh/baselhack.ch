@@ -4,10 +4,11 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="At BaselHack, you will have the opportunity to create software prototypes in 34 hours! Bring your coding know-how, meet, connect and collaborate with other tech enthusiasts, innovators, and data and design wizards.">
+    <meta name="description" content="BaselHack is more than a Hackathon – we connect people, take fun seriously and grow open">
     <meta name="author" content="BaselHack">
+    <meta name="keywords" content="BaselHack, Hackathon, connect, talents, serious fun, open innovation, Basel Stadt, Basel Land, Jura, Dreiländereck">
 
-    <title>{{ config('app.name', 'BaselHack') }}</title>
+    <title>BaselHack - More than a Hack</title>
 
 
     <!-- CSRF Token -->
