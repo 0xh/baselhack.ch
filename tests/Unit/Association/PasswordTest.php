@@ -2,8 +2,8 @@
 
 namespace Tests\Unit\Association;
 
-use App\Domain\Association\Models\Password;
 use Tests\TestCase;
+use App\Domain\Association\Models\Password;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class PasswordTest extends TestCase

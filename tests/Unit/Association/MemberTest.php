@@ -2,8 +2,8 @@
 
 namespace Tests\Unit\Association;
 
-use App\Domain\Association\Models\Member;
 use Tests\TestCase;
+use App\Domain\Association\Models\Member;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class MemberTest extends TestCase

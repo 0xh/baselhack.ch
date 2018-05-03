@@ -9,8 +9,7 @@ class Password extends Model
 {
     use SoftDeletes;
 
-
     protected $fillable = [
-        'service','email', 'username', 'password', 'description'
+        'service', 'email', 'username', 'password', 'description',
     ];
 }
