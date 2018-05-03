@@ -16,7 +16,6 @@ class LoginTest extends TestCase
         parent::setUp();
     }
 
-
     /**
      * @test
      * @group auth
@@ -90,7 +89,6 @@ class LoginTest extends TestCase
 
         $this->assertNotNull($user->last_authentication);
     }
-
 
     /**
      * @test
