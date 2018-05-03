@@ -20,6 +20,6 @@ $factory->define(Password::class, function (Faker $faker) {
         'email' => $faker->safeEmail,
         'username' => $faker->userName,
         'password' => md5($faker->colorName),
-        'description' => $faker->text(200)
+        'description' => $faker->text(200),
     ];
 });

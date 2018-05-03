@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers\Backend\Users\Settings\Security;
 
-use App\Http\Requests\Backend\Users\Profile\UpdatePasswordRequest;
 use Illuminate\Support\Str;
 use App\Domain\Users\Models\User;
 use App\App\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Auth\Events\PasswordReset;
+use App\Http\Requests\Backend\Users\Profile\UpdatePasswordRequest;
 
 class SecurityController extends Controller
 {

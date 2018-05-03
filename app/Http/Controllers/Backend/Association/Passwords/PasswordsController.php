@@ -15,6 +15,7 @@ class PasswordsController extends Controller
     public function index()
     {
         $passwords = Password::all();
+
         return view('backend.association.passwords.index', compact('passwords'));
     }
 }

@@ -4,8 +4,8 @@ namespace App\Http\Controllers\Backend\Users\Settings\Profile;
 
 use App\Domain\Users\Models\User;
 use App\App\Controllers\Controller;
-use App\Http\Requests\Backend\Users\Profile\UpdateProfileRequest;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\Backend\Users\Profile\UpdateProfileRequest;
 
 class ProfileController extends Controller
 {

@@ -14,7 +14,6 @@ use App\Domain\Association\Models\Member;
 |
 */
 
-
 $factory->define(Member::class, function (Faker $faker) {
     return [
 
