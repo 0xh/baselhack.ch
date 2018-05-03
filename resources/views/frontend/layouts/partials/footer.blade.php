@@ -61,9 +61,9 @@
             <div class="col-6 col-md">
                 <h5 class="heading h6 text-uppercase font-weight-700 mb-3">Legal</h5>
                 <ul class="list-unstyled text-small">
-                         <li><a class="text-muted" href="#">Imprint</a></li>
+                        {{-- <li><a class="text-muted" href="#">Imprint</a></li>
                            <li><a class="text-muted" href="#">Privacy</a></li>
-                           <li><a class="text-muted" href="#">Terms</a></li>
+                           <li><a class="text-muted" href="#">Terms</a></li>--}}
                 </ul>
             </div>
 

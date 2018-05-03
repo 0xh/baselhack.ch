@@ -74,5 +74,7 @@
 
     @include('sweetalert::alert')
 
+    @yield('scripts')
+
 </body>
 </html>

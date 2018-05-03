@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Unit\Users;
+namespace Tests\Unit\Events;
 
 use Tests\TestCase;
 use App\Domain\Events\Models\Newsletter;

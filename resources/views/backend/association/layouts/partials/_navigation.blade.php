@@ -1,4 +1,4 @@
-{{--
+
 <div class="card mb-3">
     <div class="card-header">
         <strong class="mr-2">Dashboard</strong>  <i class="fal fa-tachometer"></i>
@@ -11,7 +11,7 @@
         </li>
     </ul>
 </div>
---}}
+
 
 <div class="card mb-3">
     <div class="card-header">
@@ -33,7 +33,7 @@
 </div>
 
 
-{{--
+
 
 <div class="card mb-3">
     <div class="card-header">
@@ -54,7 +54,7 @@
     </ul>
 </div>
 
---}}
+
 
 
 

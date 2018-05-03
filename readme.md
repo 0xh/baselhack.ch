@@ -10,7 +10,10 @@
 
 </p>
 
-## Functionalty
+## How-To
+- [Contribute](https://github.com/BaselHack/baselhack.ch/wiki/How-To-Contribute)
+
+## Packages
 
 ## Included packages
 
@@ -25,5 +28,9 @@
 - [orangehill/iseed](https://github.com/orangehill/iseed)
 
 ## License
+
+
+## Included packages
+
 
 The Website is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).

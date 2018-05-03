@@ -20,6 +20,7 @@ before_script:
    - cp .env.travis.testing .env
    - cp phpunit.travis.xml phpunit.xml
 
+   - export CODACY_PROJECT_TOKEN=0a56559d16b34bafa2c8c538705e7d7b
    - php artisan key:generate
 
    - php artisan serve &

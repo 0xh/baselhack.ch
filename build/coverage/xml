@@ -1,60 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1523913794">
-  <project timestamp="1523913794">
+<coverage generated="1525377654">
+  <project timestamp="1525377654">
     <package name="App\App\Console\Commands">
-      <file name="/home/vagrant/baselhack/web/app/App/Console/Commands/UpdatePasswords.php">
-        <class name="App\App\Console\Commands\UpdatePasswords" namespace="App\App\Console\Commands">
-          <metrics complexity="3" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="2" elements="9" coveredelements="3"/>
+      <file name="/home/vagrant/baselhack/web/app/App/Console/Commands/SyncNewsletters.php">
+        <class name="App\App\Console\Commands\SyncNewsletters" namespace="App\App\Console\Commands">
+          <metrics complexity="9" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="17" coveredstatements="2" elements="19" coveredelements="3"/>
         </class>
-        <line num="29" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="7"/>
-        <line num="31" type="stmt" count="7"/>
-        <line num="32" type="stmt" count="7"/>
-        <line num="39" type="method" name="handle" visibility="public" complexity="2" crap="6.00" count="0"/>
-        <line num="41" type="stmt" count="0"/>
-        <line num="43" type="stmt" count="0"/>
-        <line num="44" type="stmt" count="0"/>
-        <line num="45" type="stmt" count="0"/>
-        <line num="47" type="stmt" count="0"/>
-        <metrics loc="48" ncloc="28" classes="1" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="2" elements="9" coveredelements="3"/>
-      </file>
-      <file name="/home/vagrant/baselhack/web/app/App/Console/Commands/UpdateRoles.php">
-        <class name="App\App\Console\Commands\UpdateRoles" namespace="App\App\Console\Commands">
-          <metrics complexity="6" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="17" coveredstatements="2" elements="19" coveredelements="3"/>
-        </class>
-        <line num="30" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="7"/>
-        <line num="32" type="stmt" count="7"/>
-        <line num="33" type="stmt" count="7"/>
-        <line num="40" type="method" name="handle" visibility="public" complexity="5" crap="30.00" count="0"/>
+        <line num="30" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="20"/>
+        <line num="32" type="stmt" count="20"/>
+        <line num="33" type="stmt" count="20"/>
+        <line num="40" type="method" name="handle" visibility="public" complexity="8" crap="72.00" count="0"/>
         <line num="42" type="stmt" count="0"/>
         <line num="44" type="stmt" count="0"/>
+        <line num="45" type="stmt" count="0"/>
         <line num="46" type="stmt" count="0"/>
-        <line num="47" type="stmt" count="0"/>
         <line num="48" type="stmt" count="0"/>
-        <line num="51" type="stmt" count="0"/>
-        <line num="53" type="stmt" count="0"/>
+        <line num="50" type="stmt" count="0"/>
+        <line num="52" type="stmt" count="0"/>
         <line num="54" type="stmt" count="0"/>
+        <line num="55" type="stmt" count="0"/>
         <line num="57" type="stmt" count="0"/>
-        <line num="59" type="stmt" count="0"/>
-        <line num="60" type="stmt" count="0"/>
-        <line num="63" type="stmt" count="0"/>
+        <line num="62" type="stmt" count="0"/>
+        <line num="64" type="stmt" count="0"/>
         <line num="65" type="stmt" count="0"/>
         <line num="66" type="stmt" count="0"/>
-        <line num="68" type="stmt" count="0"/>
-        <metrics loc="69" ncloc="49" classes="1" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="17" coveredstatements="2" elements="19" coveredelements="3"/>
+        <line num="69" type="stmt" count="0"/>
+        <metrics loc="70" ncloc="50" classes="1" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="17" coveredstatements="2" elements="19" coveredelements="3"/>
       </file>
     </package>
     <package name="App\App\Console">
       <file name="/home/vagrant/baselhack/web/app/App/Console/Kernel.php">
         <class name="App\App\Console\Kernel" namespace="App\App\Console">
-          <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="6" coveredelements="6"/>
+          <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="7" coveredelements="7"/>
         </class>
-        <line num="26" type="method" name="schedule" visibility="protected" complexity="1" crap="1" count="7"/>
-        <line num="30" type="stmt" count="7"/>
-        <line num="37" type="method" name="commands" visibility="protected" complexity="1" crap="1" count="7"/>
-        <line num="39" type="stmt" count="7"/>
-        <line num="41" type="stmt" count="7"/>
-        <line num="42" type="stmt" count="7"/>
-        <metrics loc="43" ncloc="20" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="6" coveredelements="6"/>
+        <line num="26" type="method" name="schedule" visibility="protected" complexity="1" crap="1" count="20"/>
+        <line num="28" type="stmt" count="20"/>
+        <line num="29" type="stmt" count="20"/>
+        <line num="36" type="method" name="commands" visibility="protected" complexity="1" crap="1" count="20"/>
+        <line num="38" type="stmt" count="20"/>
+        <line num="40" type="stmt" count="20"/>
+        <line num="41" type="stmt" count="20"/>
+        <metrics loc="42" ncloc="23" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="7" coveredelements="7"/>
       </file>
     </package>
     <package name="App\App\Controllers">
@@ -64,20 +50,52 @@
         </class>
         <metrics loc="13" ncloc="13" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
       </file>
+      <file name="/home/vagrant/baselhack/web/app/App/Controllers/DataTableController.php">
+        <class name="App\App\Controllers\DataTableController" namespace="App\App\Controllers">
+          <metrics complexity="7" methods="5" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="0" elements="16" coveredelements="0"/>
+        </class>
+        <line num="15" type="method" name="__construct" visibility="public" complexity="2" crap="6.00" count="0"/>
+        <line num="17" type="stmt" count="0"/>
+        <line num="18" type="stmt" count="0"/>
+        <line num="20" type="stmt" count="0"/>
+        <line num="22" type="method" name="index" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="24" type="stmt" count="0"/>
+        <line num="27" type="stmt" count="0"/>
+        <line num="28" type="stmt" count="0"/>
+        <line num="29" type="stmt" count="0"/>
+        <line num="35" type="method" name="getDisplayableColumns" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="37" type="stmt" count="0"/>
+        <line num="38" type="stmt" count="0"/>
+        <line num="42" type="method" name="getDatabaseColumnNames" visibility="protected" complexity="1" crap="2.00" count="0"/>
+        <line num="44" type="stmt" count="0"/>
+        <line num="47" type="method" name="getRecords" visibility="protected" complexity="1" crap="2.00" count="0"/>
+        <line num="49" type="stmt" count="0"/>
+        <metrics loc="51" ncloc="51" classes="1" methods="5" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="0" elements="16" coveredelements="0"/>
+      </file>
+      <file name="/home/vagrant/baselhack/web/app/App/Controllers/DataTables/PasswordsController.php">
+        <class name="App\App\Controllers\PasswordsController" namespace="App\App\Controllers">
+          <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="4" coveredelements="0"/>
+        </class>
+        <line num="9" type="method" name="builder" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="11" type="stmt" count="0"/>
+        <line num="14" type="method" name="getDisplayableColumns" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="18" type="stmt" count="0"/>
+        <metrics loc="21" ncloc="21" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="4" coveredelements="0"/>
+      </file>
     </package>
     <package name="App\App\Exceptions">
       <file name="/home/vagrant/baselhack/web/app/App/Exceptions/Handler.php">
         <class name="App\App\Exceptions\Handler" namespace="App\App\Exceptions">
-          <metrics complexity="3" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="7" coveredelements="0"/>
+          <metrics complexity="3" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="4" elements="7" coveredelements="5"/>
         </class>
-        <line num="39" type="method" name="report" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="41" type="stmt" count="0"/>
-        <line num="42" type="stmt" count="0"/>
-        <line num="52" type="method" name="render" visibility="public" complexity="2" crap="6.00" count="0"/>
-        <line num="54" type="stmt" count="0"/>
+        <line num="39" type="method" name="report" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="41" type="stmt" count="1"/>
+        <line num="42" type="stmt" count="1"/>
+        <line num="52" type="method" name="render" visibility="public" complexity="2" crap="2.15" count="1"/>
+        <line num="54" type="stmt" count="1"/>
         <line num="55" type="stmt" count="0"/>
-        <line num="58" type="stmt" count="0"/>
-        <metrics loc="60" ncloc="31" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="7" coveredelements="0"/>
+        <line num="58" type="stmt" count="1"/>
+        <metrics loc="60" ncloc="31" classes="1" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="4" elements="7" coveredelements="5"/>
       </file>
     </package>
     <file name="/home/vagrant/baselhack/web/app/App/Helpers/helpers.php">
@@ -91,35 +109,33 @@
         <class name="App\App\Listeners\LogLastAuthentication" namespace="App\App\Listeners">
           <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="6" coveredelements="6"/>
         </class>
-        <line num="14" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="1"/>
-        <line num="17" type="stmt" count="1"/>
-        <line num="26" type="method" name="handle" visibility="public" complexity="1" crap="1" count="1"/>
-        <line num="28" type="stmt" count="1"/>
-        <line num="29" type="stmt" count="1"/>
-        <line num="30" type="stmt" count="1"/>
+        <line num="14" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="4"/>
+        <line num="17" type="stmt" count="4"/>
+        <line num="26" type="method" name="handle" visibility="public" complexity="1" crap="1" count="4"/>
+        <line num="28" type="stmt" count="4"/>
+        <line num="29" type="stmt" count="4"/>
+        <line num="30" type="stmt" count="4"/>
         <metrics loc="31" ncloc="17" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="6" coveredelements="6"/>
       </file>
     </package>
     <package name="App\App\Providers">
       <file name="/home/vagrant/baselhack/web/app/App/Providers/AppServiceProvider.php">
         <class name="App\App\Providers\AppServiceProvider" namespace="App\App\Providers">
-          <metrics complexity="3" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="6" coveredelements="6"/>
+          <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="4" coveredelements="4"/>
         </class>
-        <line num="15" type="method" name="boot" visibility="public" complexity="1" crap="1" count="7"/>
-        <line num="18" type="stmt" count="7"/>
-        <line num="25" type="method" name="register" visibility="public" complexity="2" crap="2" count="7"/>
-        <line num="27" type="stmt" count="7"/>
-        <line num="28" type="stmt" count="7"/>
-        <line num="30" type="stmt" count="7"/>
-        <metrics loc="31" ncloc="19" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="6" coveredelements="6"/>
+        <line num="14" type="method" name="boot" visibility="public" complexity="1" crap="1" count="20"/>
+        <line num="17" type="stmt" count="20"/>
+        <line num="24" type="method" name="register" visibility="public" complexity="1" crap="1" count="20"/>
+        <line num="26" type="stmt" count="20"/>
+        <metrics loc="27" ncloc="15" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="4" coveredelements="4"/>
       </file>
       <file name="/home/vagrant/baselhack/web/app/App/Providers/AuthServiceProvider.php">
         <class name="App\App\Providers\AuthServiceProvider" namespace="App\App\Providers">
           <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="3" coveredelements="3"/>
         </class>
-        <line num="23" type="method" name="boot" visibility="public" complexity="1" crap="1" count="7"/>
-        <line num="25" type="stmt" count="7"/>
-        <line num="28" type="stmt" count="7"/>
+        <line num="23" type="method" name="boot" visibility="public" complexity="1" crap="1" count="20"/>
+        <line num="25" type="stmt" count="20"/>
+        <line num="28" type="stmt" count="20"/>
         <metrics loc="29" ncloc="17" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="3" coveredelements="3"/>
       </file>
       <file name="/home/vagrant/baselhack/web/app/App/Providers/BroadcastServiceProvider.php">
@@ -136,33 +152,33 @@
         <class name="App\App\Providers\EventServiceProvider" namespace="App\App\Providers">
           <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="3" coveredelements="3"/>
         </class>
-        <line num="27" type="method" name="boot" visibility="public" complexity="1" crap="1" count="7"/>
-        <line num="29" type="stmt" count="7"/>
-        <line num="30" type="stmt" count="7"/>
+        <line num="27" type="method" name="boot" visibility="public" complexity="1" crap="1" count="20"/>
+        <line num="29" type="stmt" count="20"/>
+        <line num="30" type="stmt" count="20"/>
         <metrics loc="31" ncloc="21" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="3" coveredelements="3"/>
       </file>
       <file name="/home/vagrant/baselhack/web/app/App/Providers/RouteServiceProvider.php">
         <class name="App\App\Providers\RouteServiceProvider" namespace="App\App\Providers">
           <metrics complexity="4" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="14" coveredstatements="14" elements="18" coveredelements="18"/>
         </class>
-        <line num="24" type="method" name="boot" visibility="public" complexity="1" crap="1" count="7"/>
-        <line num="28" type="stmt" count="7"/>
-        <line num="29" type="stmt" count="7"/>
-        <line num="36" type="method" name="map" visibility="public" complexity="1" crap="1" count="7"/>
-        <line num="38" type="stmt" count="7"/>
-        <line num="40" type="stmt" count="7"/>
-        <line num="43" type="stmt" count="7"/>
-        <line num="52" type="method" name="mapWebRoutes" visibility="protected" complexity="1" crap="1" count="7"/>
-        <line num="54" type="stmt" count="7"/>
-        <line num="55" type="stmt" count="7"/>
-        <line num="56" type="stmt" count="7"/>
-        <line num="57" type="stmt" count="7"/>
-        <line num="66" type="method" name="mapApiRoutes" visibility="protected" complexity="1" crap="1" count="7"/>
-        <line num="68" type="stmt" count="7"/>
-        <line num="69" type="stmt" count="7"/>
-        <line num="70" type="stmt" count="7"/>
-        <line num="71" type="stmt" count="7"/>
-        <line num="72" type="stmt" count="7"/>
+        <line num="24" type="method" name="boot" visibility="public" complexity="1" crap="1" count="20"/>
+        <line num="28" type="stmt" count="20"/>
+        <line num="29" type="stmt" count="20"/>
+        <line num="36" type="method" name="map" visibility="public" complexity="1" crap="1" count="20"/>
+        <line num="38" type="stmt" count="20"/>
+        <line num="40" type="stmt" count="20"/>
+        <line num="43" type="stmt" count="20"/>
+        <line num="52" type="method" name="mapWebRoutes" visibility="protected" complexity="1" crap="1" count="20"/>
+        <line num="54" type="stmt" count="20"/>
+        <line num="55" type="stmt" count="20"/>
+        <line num="56" type="stmt" count="20"/>
+        <line num="57" type="stmt" count="20"/>
+        <line num="66" type="method" name="mapApiRoutes" visibility="protected" complexity="1" crap="1" count="20"/>
+        <line num="68" type="stmt" count="20"/>
+        <line num="69" type="stmt" count="20"/>
+        <line num="70" type="stmt" count="20"/>
+        <line num="71" type="stmt" count="20"/>
+        <line num="72" type="stmt" count="20"/>
         <metrics loc="73" ncloc="38" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="14" coveredstatements="14" elements="18" coveredelements="18"/>
       </file>
     </package>
@@ -181,55 +197,70 @@
       </file>
     </package>
     <package name="App\Domain\Association\Models">
-      <file name="/home/vagrant/baselhack/web/app/Domain/Association/Models/Newsletter.php">
-        <class name="App\Domain\Association\Models\Newsletter" namespace="App\Domain\Association\Models">
-          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      <file name="/home/vagrant/baselhack/web/app/Domain/Association/Models/Member.php">
+        <class name="App\Domain\Association\Models\Member" namespace="App\Domain\Association\Models">
+          <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
         </class>
-        <metrics loc="17" ncloc="12" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        <line num="16" type="method" name="getNameAttribute" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="18" type="stmt" count="0"/>
+        <metrics loc="20" ncloc="20" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
       </file>
-    </package>
-    <package name="App\Domain\Users\Models">
-      <file name="/home/vagrant/baselhack/web/app/Domain/Users/Models/User.php">
-        <class name="App\Domain\Users\Models\User" namespace="App\Domain\Users\Models">
-          <metrics complexity="7" methods="5" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="9" elements="18" coveredelements="10"/>
-        </class>
-        <line num="48" type="method" name="getRouteKeyName" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="50" type="stmt" count="0"/>
-        <line num="53" type="method" name="getGitHubLinkAttribute" visibility="public" complexity="2" crap="2.15" count="1"/>
-        <line num="55" type="stmt" count="1"/>
-        <line num="56" type="stmt" count="1"/>
-        <line num="58" type="stmt" count="0"/>
-        <line num="60" type="method" name="getBaselHackEmailAttribute" visibility="public" complexity="1" crap="1" count="1"/>
-        <line num="62" type="stmt" count="1"/>
-        <line num="63" type="stmt" count="1"/>
-        <line num="65" type="stmt" count="1"/>
-        <line num="67" type="stmt" count="1"/>
-        <line num="69" type="stmt" count="1"/>
-        <line num="72" type="method" name="getAvatar" visibility="public" complexity="2" crap="2.15" count="1"/>
-        <line num="74" type="stmt" count="1"/>
-        <line num="75" type="stmt" count="1"/>
-        <line num="78" type="stmt" count="0"/>
-        <line num="81" type="method" name="isSameAs" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="83" type="stmt" count="0"/>
-        <metrics loc="85" ncloc="70" classes="1" methods="5" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="9" elements="18" coveredelements="10"/>
-      </file>
-      <file name="/home/vagrant/baselhack/web/app/Domain/Users/Models/UserExport.php">
-        <class name="App\Domain\Users\Models\UserExport" namespace="App\Domain\Users\Models">
-          <metrics complexity="3" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="0" elements="12" coveredelements="0"/>
+      <file name="/home/vagrant/baselhack/web/app/Domain/Association/Models/MemberExport.php">
+        <class name="App\Domain\Association\Models\MemberExport" namespace="App\Domain\Association\Models">
+          <metrics complexity="3" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="0" elements="13" coveredelements="0"/>
         </class>
         <line num="11" type="method" name="headings" visibility="public" complexity="1" crap="2.00" count="0"/>
         <line num="14" type="stmt" count="0"/>
-        <line num="24" type="method" name="map" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="27" type="stmt" count="0"/>
+        <line num="25" type="method" name="map" visibility="public" complexity="1" crap="2.00" count="0"/>
         <line num="28" type="stmt" count="0"/>
         <line num="29" type="stmt" count="0"/>
         <line num="30" type="stmt" count="0"/>
         <line num="31" type="stmt" count="0"/>
         <line num="32" type="stmt" count="0"/>
         <line num="33" type="stmt" count="0"/>
-        <line num="37" type="method" name="collection" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="39" type="stmt" count="0"/>
-        <metrics loc="41" ncloc="41" classes="1" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="0" elements="12" coveredelements="0"/>
+        <line num="34" type="stmt" count="0"/>
+        <line num="35" type="stmt" count="0"/>
+        <line num="39" type="method" name="collection" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="41" type="stmt" count="0"/>
+        <metrics loc="43" ncloc="43" classes="1" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="0" elements="13" coveredelements="0"/>
+      </file>
+      <file name="/home/vagrant/baselhack/web/app/Domain/Association/Models/Password.php">
+        <class name="App\Domain\Association\Models\Password" namespace="App\Domain\Association\Models">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="16" ncloc="16" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+    </package>
+    <package name="App\Domain\Events\Models">
+      <file name="/home/vagrant/baselhack/web/app/Domain/Events/Models/Newsletter.php">
+        <class name="App\Domain\Events\Models\Newsletter" namespace="App\Domain\Events\Models">
+          <metrics complexity="3" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="8" coveredelements="0"/>
+        </class>
+        <line num="19" type="method" name="getRouteKeyName" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="21" type="stmt" count="0"/>
+        <line num="24" type="method" name="subscribe" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="26" type="stmt" count="0"/>
+        <line num="27" type="stmt" count="0"/>
+        <line num="29" type="method" name="unsubscribe" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="31" type="stmt" count="0"/>
+        <line num="32" type="stmt" count="0"/>
+        <metrics loc="33" ncloc="28" classes="1" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="8" coveredelements="0"/>
+      </file>
+    </package>
+    <package name="App\Domain\Users\Models">
+      <file name="/home/vagrant/baselhack/web/app/Domain/Users/Models/User.php">
+        <class name="App\Domain\Users\Models\User" namespace="App\Domain\Users\Models">
+          <metrics complexity="4" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="2" elements="8" coveredelements="2"/>
+        </class>
+        <line num="43" type="method" name="getRouteKeyName" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="45" type="stmt" count="0"/>
+        <line num="48" type="method" name="getAvatar" visibility="public" complexity="2" crap="2.15" count="1"/>
+        <line num="50" type="stmt" count="1"/>
+        <line num="51" type="stmt" count="1"/>
+        <line num="54" type="stmt" count="0"/>
+        <line num="57" type="method" name="isSameAs" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="59" type="stmt" count="0"/>
+        <metrics loc="61" ncloc="51" classes="1" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="2" elements="8" coveredelements="2"/>
       </file>
     </package>
     <package name="App\Events">
@@ -266,34 +297,31 @@
       </file>
       <file name="/home/vagrant/baselhack/web/app/Http/Controllers/Backend/Administrators/Users/UsersController.php">
         <class name="App\Http\Controllers\Backend\Administrators\Users\UsersController" namespace="App\Http\Controllers\Backend\Administrators\Users">
-          <metrics complexity="13" methods="11" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="38" coveredstatements="0" elements="49" coveredelements="0"/>
+          <metrics complexity="12" methods="10" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="36" coveredstatements="0" elements="46" coveredelements="0"/>
         </class>
-        <line num="13" type="method" name="__construct" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="15" type="stmt" count="0"/>
+        <line num="14" type="method" name="__construct" visibility="public" complexity="1" crap="2.00" count="0"/>
         <line num="16" type="stmt" count="0"/>
-        <line num="18" type="method" name="index" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="20" type="stmt" count="0"/>
-        <line num="22" type="stmt" count="0"/>
-        <line num="25" type="method" name="create" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="27" type="stmt" count="0"/>
-        <line num="30" type="method" name="store" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="32" type="stmt" count="0"/>
+        <line num="17" type="stmt" count="0"/>
+        <line num="19" type="method" name="index" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="21" type="stmt" count="0"/>
+        <line num="23" type="stmt" count="0"/>
+        <line num="26" type="method" name="create" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="28" type="stmt" count="0"/>
+        <line num="31" type="method" name="store" visibility="public" complexity="1" crap="2.00" count="0"/>
         <line num="33" type="stmt" count="0"/>
         <line num="34" type="stmt" count="0"/>
         <line num="35" type="stmt" count="0"/>
-        <line num="37" type="stmt" count="0"/>
-        <line num="41" type="stmt" count="0"/>
-        <line num="43" type="stmt" count="0"/>
-        <line num="46" type="method" name="edit" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="48" type="stmt" count="0"/>
-        <line num="50" type="stmt" count="0"/>
-        <line num="53" type="method" name="update" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="55" type="stmt" count="0"/>
-        <line num="58" type="method" name="delete" visibility="public" complexity="2" crap="6.00" count="0"/>
-        <line num="60" type="stmt" count="0"/>
+        <line num="36" type="stmt" count="0"/>
+        <line num="38" type="stmt" count="0"/>
+        <line num="42" type="stmt" count="0"/>
+        <line num="44" type="stmt" count="0"/>
+        <line num="47" type="method" name="edit" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="49" type="stmt" count="0"/>
+        <line num="51" type="stmt" count="0"/>
+        <line num="59" type="method" name="delete" visibility="public" complexity="2" crap="6.00" count="0"/>
         <line num="61" type="stmt" count="0"/>
-        <line num="63" type="stmt" count="0"/>
-        <line num="66" type="stmt" count="0"/>
+        <line num="62" type="stmt" count="0"/>
+        <line num="64" type="stmt" count="0"/>
         <line num="67" type="stmt" count="0"/>
         <line num="69" type="stmt" count="0"/>
         <line num="71" type="stmt" count="0"/>
@@ -317,7 +345,7 @@
         <line num="111" type="stmt" count="0"/>
         <line num="113" type="stmt" count="0"/>
         <line num="115" type="stmt" count="0"/>
-        <metrics loc="117" ncloc="117" classes="1" methods="11" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="38" coveredstatements="0" elements="49" coveredelements="0"/>
+        <metrics loc="117" ncloc="113" classes="1" methods="10" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="36" coveredstatements="0" elements="46" coveredelements="0"/>
       </file>
     </package>
     <package name="App\Http\Controllers\Backend\Association\Dashboard">
@@ -330,84 +358,89 @@
         <line num="12" type="stmt" count="0"/>
         <line num="14" type="method" name="index" visibility="public" complexity="1" crap="2.00" count="0"/>
         <line num="16" type="stmt" count="0"/>
-        <metrics loc="18" ncloc="18" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="5" coveredelements="0"/>
+        <metrics loc="20" ncloc="18" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="5" coveredelements="0"/>
       </file>
     </package>
     <package name="App\Http\Controllers\Backend\Association\Members">
       <file name="/home/vagrant/baselhack/web/app/Http/Controllers/Backend/Association/Members/MembersController.php">
         <class name="App\Http\Controllers\Backend\Association\Members\MembersController" namespace="App\Http\Controllers\Backend\Association\Members">
-          <metrics complexity="6" methods="6" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="0" elements="16" coveredelements="0"/>
+          <metrics complexity="7" methods="7" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="0" elements="20" coveredelements="0"/>
         </class>
-        <line num="17" type="method" name="__construct" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="19" type="stmt" count="0"/>
-        <line num="20" type="stmt" count="0"/>
-        <line num="27" type="method" name="index" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="20" type="method" name="__construct" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="22" type="stmt" count="0"/>
+        <line num="23" type="stmt" count="0"/>
+        <line num="25" type="method" name="index" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="27" type="stmt" count="0"/>
         <line num="29" type="stmt" count="0"/>
-        <line num="31" type="stmt" count="0"/>
-        <line num="34" type="method" name="create" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="36" type="stmt" count="0"/>
-        <line num="39" type="method" name="files" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="32" type="method" name="create" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="34" type="stmt" count="0"/>
+        <line num="37" type="method" name="store" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="39" type="stmt" count="0"/>
         <line num="41" type="stmt" count="0"/>
         <line num="43" type="stmt" count="0"/>
-        <line num="46" type="method" name="webmail" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="46" type="method" name="edit" visibility="public" complexity="1" crap="2.00" count="0"/>
         <line num="48" type="stmt" count="0"/>
-        <line num="50" type="stmt" count="0"/>
-        <line num="53" type="method" name="export" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="51" type="method" name="update" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="53" type="stmt" count="0"/>
         <line num="55" type="stmt" count="0"/>
-        <metrics loc="57" ncloc="47" classes="1" methods="6" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="0" elements="16" coveredelements="0"/>
+        <line num="57" type="stmt" count="0"/>
+        <line num="60" type="method" name="export" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="62" type="stmt" count="0"/>
+        <metrics loc="64" ncloc="59" classes="1" methods="7" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="0" elements="20" coveredelements="0"/>
       </file>
     </package>
     <package name="App\Http\Controllers\Backend\Association\Passwords">
       <file name="/home/vagrant/baselhack/web/app/Http/Controllers/Backend/Association/Passwords/PasswordsController.php">
         <class name="App\Http\Controllers\Backend\Association\Passwords\PasswordsController" namespace="App\Http\Controllers\Backend\Association\Passwords">
-          <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="5" coveredelements="0"/>
+          <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="0" elements="6" coveredelements="0"/>
         </class>
-        <line num="9" type="method" name="__construct" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="11" type="stmt" count="0"/>
+        <line num="10" type="method" name="__construct" visibility="public" complexity="1" crap="2.00" count="0"/>
         <line num="12" type="stmt" count="0"/>
-        <line num="14" type="method" name="index" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="16" type="stmt" count="0"/>
-        <metrics loc="18" ncloc="18" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="5" coveredelements="0"/>
+        <line num="13" type="stmt" count="0"/>
+        <line num="15" type="method" name="index" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="17" type="stmt" count="0"/>
+        <line num="19" type="stmt" count="0"/>
+        <metrics loc="21" ncloc="21" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="0" elements="6" coveredelements="0"/>
       </file>
     </package>
     <package name="App\Http\Controllers\Backend\Auth">
       <file name="/home/vagrant/baselhack/web/app/Http/Controllers/Backend/Auth/ForgotPasswordController.php">
         <class name="App\Http\Controllers\Backend\Auth\ForgotPasswordController" namespace="App\Http\Controllers\Backend\Auth">
-          <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="5" coveredelements="0"/>
+          <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="5" coveredelements="5"/>
         </class>
-        <line num="28" type="method" name="__construct" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="30" type="stmt" count="0"/>
-        <line num="31" type="stmt" count="0"/>
-        <line num="33" type="method" name="showLinkRequestForm" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="35" type="stmt" count="0"/>
-        <metrics loc="37" ncloc="22" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="5" coveredelements="0"/>
+        <line num="28" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="30" type="stmt" count="3"/>
+        <line num="31" type="stmt" count="3"/>
+        <line num="33" type="method" name="showLinkRequestForm" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="35" type="stmt" count="1"/>
+        <metrics loc="37" ncloc="22" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="5" coveredelements="5"/>
       </file>
       <file name="/home/vagrant/baselhack/web/app/Http/Controllers/Backend/Auth/LoginController.php">
         <class name="App\Http\Controllers\Backend\Auth\LoginController" namespace="App\Http\Controllers\Backend\Auth">
-          <metrics complexity="4" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="0" elements="13" coveredelements="0"/>
+          <metrics complexity="4" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="13" coveredelements="13"/>
         </class>
-        <line num="36" type="method" name="__construct" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="38" type="stmt" count="0"/>
-        <line num="39" type="stmt" count="0"/>
-        <line num="41" type="method" name="showLoginForm" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="43" type="stmt" count="0"/>
-        <line num="54" type="method" name="authenticated" visibility="protected" complexity="1" crap="2.00" count="0"/>
-        <line num="56" type="stmt" count="0"/>
-        <line num="57" type="stmt" count="0"/>
-        <line num="66" type="method" name="logout" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="68" type="stmt" count="0"/>
-        <line num="70" type="stmt" count="0"/>
-        <line num="72" type="stmt" count="0"/>
-        <line num="74" type="stmt" count="0"/>
-        <metrics loc="76" ncloc="41" classes="1" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="0" elements="13" coveredelements="0"/>
+        <line num="36" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="4"/>
+        <line num="38" type="stmt" count="4"/>
+        <line num="39" type="stmt" count="4"/>
+        <line num="41" type="method" name="showLoginForm" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="43" type="stmt" count="1"/>
+        <line num="54" type="method" name="authenticated" visibility="protected" complexity="1" crap="1" count="1"/>
+        <line num="56" type="stmt" count="1"/>
+        <line num="57" type="stmt" count="1"/>
+        <line num="66" type="method" name="logout" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="68" type="stmt" count="1"/>
+        <line num="70" type="stmt" count="1"/>
+        <line num="72" type="stmt" count="1"/>
+        <line num="74" type="stmt" count="1"/>
+        <metrics loc="76" ncloc="41" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="13" coveredelements="13"/>
       </file>
       <file name="/home/vagrant/baselhack/web/app/Http/Controllers/Backend/Auth/RegisterController.php">
         <class name="App\Http\Controllers\Backend\Auth\RegisterController" namespace="App\Http\Controllers\Backend\Auth">
-          <metrics complexity="5" methods="5" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="0" elements="16" coveredelements="0"/>
+          <metrics complexity="5" methods="5" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="3" elements="16" coveredelements="5"/>
         </class>
-        <line num="39" type="method" name="__construct" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="41" type="stmt" count="0"/>
-        <line num="42" type="stmt" count="0"/>
+        <line num="39" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="41" type="stmt" count="1"/>
+        <line num="42" type="stmt" count="1"/>
         <line num="51" type="method" name="validator" visibility="protected" complexity="1" crap="2.00" count="0"/>
         <line num="53" type="stmt" count="0"/>
         <line num="54" type="stmt" count="0"/>
@@ -416,24 +449,24 @@
         <line num="70" type="stmt" count="0"/>
         <line num="71" type="stmt" count="0"/>
         <line num="72" type="stmt" count="0"/>
-        <line num="81" type="method" name="showRegistrationForm" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="83" type="stmt" count="0"/>
+        <line num="81" type="method" name="showRegistrationForm" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="83" type="stmt" count="1"/>
         <line num="93" type="method" name="register" visibility="public" complexity="1" crap="2.00" count="0"/>
         <line num="95" type="stmt" count="0"/>
         <line num="96" type="stmt" count="0"/>
-        <metrics loc="97" ncloc="51" classes="1" methods="5" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="0" elements="16" coveredelements="0"/>
+        <metrics loc="97" ncloc="51" classes="1" methods="5" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="3" elements="16" coveredelements="5"/>
       </file>
       <file name="/home/vagrant/baselhack/web/app/Http/Controllers/Backend/Auth/ResetPasswordController.php">
         <class name="App\Http\Controllers\Backend\Auth\ResetPasswordController" namespace="App\Http\Controllers\Backend\Auth">
-          <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="0" elements="6" coveredelements="0"/>
+          <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="6" coveredelements="6"/>
         </class>
-        <line num="36" type="method" name="__construct" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="38" type="stmt" count="0"/>
-        <line num="39" type="stmt" count="0"/>
-        <line num="51" type="method" name="showResetForm" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="53" type="stmt" count="0"/>
-        <line num="54" type="stmt" count="0"/>
-        <metrics loc="57" ncloc="27" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="0" elements="6" coveredelements="0"/>
+        <line num="36" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="38" type="stmt" count="2"/>
+        <line num="39" type="stmt" count="2"/>
+        <line num="51" type="method" name="showResetForm" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="53" type="stmt" count="1"/>
+        <line num="54" type="stmt" count="1"/>
+        <metrics loc="57" ncloc="27" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="6" coveredelements="6"/>
       </file>
       <file name="/home/vagrant/baselhack/web/app/Http/Controllers/Backend/Auth/WebShopAuthController.php">
         <class name="App\Http\Controllers\Backend\Auth\WebShopAuthController" namespace="App\Http\Controllers\Backend\Auth">
@@ -461,6 +494,42 @@
         <line num="61" type="stmt" count="0"/>
         <line num="64" type="stmt" count="0"/>
         <metrics loc="66" ncloc="60" classes="1" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="0" elements="21" coveredelements="0"/>
+      </file>
+    </package>
+    <package name="App\Http\Controllers\Backend\events\Dashboard">
+      <file name="/home/vagrant/baselhack/web/app/Http/Controllers/Backend/Events/Dashboard/DashboardController.php">
+        <class name="App\Http\Controllers\Backend\events\Dashboard\DashboardController" namespace="App\Http\Controllers\Backend\events\Dashboard">
+          <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="5" coveredelements="0"/>
+        </class>
+        <line num="9" type="method" name="__construct" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="11" type="stmt" count="0"/>
+        <line num="12" type="stmt" count="0"/>
+        <line num="14" type="method" name="index" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="16" type="stmt" count="0"/>
+        <metrics loc="20" ncloc="18" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="5" coveredelements="0"/>
+      </file>
+    </package>
+    <package name="App\Http\Controllers\Backend\Events\Newsletters">
+      <file name="/home/vagrant/baselhack/web/app/Http/Controllers/Backend/Events/Newsletters/NewslettersController.php">
+        <class name="App\Http\Controllers\Backend\Events\Newsletters\NewslettersController" namespace="App\Http\Controllers\Backend\Events\Newsletters">
+          <metrics complexity="4" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="0" elements="15" coveredelements="0"/>
+        </class>
+        <line num="11" type="method" name="__construct" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="13" type="stmt" count="0"/>
+        <line num="14" type="stmt" count="0"/>
+        <line num="16" type="method" name="index" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="18" type="stmt" count="0"/>
+        <line num="20" type="stmt" count="0"/>
+        <line num="23" type="method" name="store" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="25" type="stmt" count="0"/>
+        <line num="27" type="stmt" count="0"/>
+        <line num="30" type="stmt" count="0"/>
+        <line num="32" type="stmt" count="0"/>
+        <line num="35" type="method" name="delete" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="37" type="stmt" count="0"/>
+        <line num="38" type="stmt" count="0"/>
+        <line num="40" type="stmt" count="0"/>
+        <metrics loc="42" ncloc="42" classes="1" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="0" elements="15" coveredelements="0"/>
       </file>
     </package>
     <package name="App\Http\Controllers\Backend\Users\Dashboard">
@@ -577,13 +646,13 @@
       </file>
       <file name="/home/vagrant/baselhack/web/app/Http/Middleware/RedirectIfAuthenticated.php">
         <class name="App\Http\Middleware\RedirectIfAuthenticated" namespace="App\Http\Middleware">
-          <metrics complexity="2" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="4" coveredelements="0"/>
+          <metrics complexity="2" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="2" elements="4" coveredelements="2"/>
         </class>
-        <line num="19" type="method" name="handle" visibility="public" complexity="2" crap="6.00" count="0"/>
-        <line num="21" type="stmt" count="0"/>
+        <line num="19" type="method" name="handle" visibility="public" complexity="2" crap="2.15" count="9"/>
+        <line num="21" type="stmt" count="9"/>
         <line num="22" type="stmt" count="0"/>
-        <line num="25" type="stmt" count="0"/>
-        <metrics loc="27" ncloc="18" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="4" coveredelements="0"/>
+        <line num="25" type="stmt" count="9"/>
+        <metrics loc="27" ncloc="18" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="2" elements="4" coveredelements="2"/>
       </file>
       <file name="/home/vagrant/baselhack/web/app/Http/Middleware/TrimStrings.php">
         <class name="App\Http\Middleware\TrimStrings" namespace="App\Http\Middleware">
@@ -616,6 +685,82 @@
         <metrics loc="31" ncloc="21" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="4" coveredelements="0"/>
       </file>
     </package>
+    <package name="App\Http\Requests\Backend\Association\Members">
+      <file name="/home/vagrant/baselhack/web/app/Http/Requests/Backend/Association/Members/StoreMemberRequest.php">
+        <class name="App\Http\Requests\Backend\Association\Members\StoreMemberRequest" namespace="App\Http\Requests\Backend\Association\Members">
+          <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="4" coveredelements="0"/>
+        </class>
+        <line num="14" type="method" name="authorize" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="16" type="stmt" count="0"/>
+        <line num="24" type="method" name="rules" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="27" type="stmt" count="0"/>
+        <metrics loc="36" ncloc="26" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="4" coveredelements="0"/>
+      </file>
+      <file name="/home/vagrant/baselhack/web/app/Http/Requests/Backend/Association/Members/UpdateMemberRequest.php">
+        <class name="App\Http\Requests\Backend\Association\Members\UpdateMemberRequest" namespace="App\Http\Requests\Backend\Association\Members">
+          <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="0" elements="12" coveredelements="0"/>
+        </class>
+        <line num="14" type="method" name="authorize" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="16" type="stmt" count="0"/>
+        <line num="24" type="method" name="rules" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="26" type="stmt" count="0"/>
+        <line num="29" type="stmt" count="0"/>
+        <line num="30" type="stmt" count="0"/>
+        <line num="31" type="stmt" count="0"/>
+        <line num="32" type="stmt" count="0"/>
+        <line num="33" type="stmt" count="0"/>
+        <line num="34" type="stmt" count="0"/>
+        <line num="35" type="stmt" count="0"/>
+        <line num="36" type="stmt" count="0"/>
+        <metrics loc="39" ncloc="29" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="0" elements="12" coveredelements="0"/>
+      </file>
+    </package>
+    <package name="App\Http\Requests\Backend\Association\Newsletters">
+      <file name="/home/vagrant/baselhack/web/app/Http/Requests/Backend/Association/Newsletters/StoreNewsletterRequest.php">
+        <class name="App\Http\Requests\Backend\Association\Newsletters\StoreNewsletterRequest" namespace="App\Http\Requests\Backend\Association\Newsletters">
+          <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="4" coveredelements="0"/>
+        </class>
+        <line num="14" type="method" name="authorize" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="16" type="stmt" count="0"/>
+        <line num="24" type="method" name="rules" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="27" type="stmt" count="0"/>
+        <metrics loc="30" ncloc="20" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="4" coveredelements="0"/>
+      </file>
+    </package>
+    <package name="App\Http\Requests\Backend\Users\Profile">
+      <file name="/home/vagrant/baselhack/web/app/Http/Requests/Backend/Users/Profile/UpdateLanguageRequest.php">
+        <class name="App\Http\Requests\Backend\Users\Profile\UpdateLanguageRequest" namespace="App\Http\Requests\Backend\Users\Profile">
+          <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="4" coveredelements="0"/>
+        </class>
+        <line num="14" type="method" name="authorize" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="16" type="stmt" count="0"/>
+        <line num="24" type="method" name="rules" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="29" type="stmt" count="0"/>
+        <metrics loc="32" ncloc="21" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="4" coveredelements="0"/>
+      </file>
+      <file name="/home/vagrant/baselhack/web/app/Http/Requests/Backend/Users/Profile/UpdatePasswordRequest.php">
+        <class name="App\Http\Requests\Backend\Users\Profile\UpdatePasswordRequest" namespace="App\Http\Requests\Backend\Users\Profile">
+          <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="4" coveredelements="0"/>
+        </class>
+        <line num="14" type="method" name="authorize" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="16" type="stmt" count="0"/>
+        <line num="24" type="method" name="rules" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="27" type="stmt" count="0"/>
+        <metrics loc="30" ncloc="20" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="4" coveredelements="0"/>
+      </file>
+      <file name="/home/vagrant/baselhack/web/app/Http/Requests/Backend/Users/Profile/UpdateProfileRequest.php">
+        <class name="App\Http\Requests\Backend\Users\Profile\UpdateProfileRequest" namespace="App\Http\Requests\Backend\Users\Profile">
+          <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="0" elements="6" coveredelements="0"/>
+        </class>
+        <line num="15" type="method" name="authorize" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="17" type="stmt" count="0"/>
+        <line num="25" type="method" name="rules" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="27" type="stmt" count="0"/>
+        <line num="30" type="stmt" count="0"/>
+        <line num="31" type="stmt" count="0"/>
+        <metrics loc="34" ncloc="24" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="0" elements="6" coveredelements="0"/>
+      </file>
+    </package>
     <package name="App\Http\Requests\Frontend\Newsletter">
       <file name="/home/vagrant/baselhack/web/app/Http/Requests/Frontend/Newsletter/StoreNewsletterRequest.php">
         <class name="App\Http\Requests\Frontend\Newsletter\StoreNewsletterRequest" namespace="App\Http\Requests\Frontend\Newsletter">
@@ -628,40 +773,6 @@
         <metrics loc="30" ncloc="20" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="4" coveredelements="0"/>
       </file>
     </package>
-    <package name="App\Http\Requests\Users\Profile">
-      <file name="/home/vagrant/baselhack/web/app/Http/Requests/Users/Profile/UpdateLanguageRequest.php">
-        <class name="App\Http\Requests\Users\Profile\UpdateLanguageRequest" namespace="App\Http\Requests\Users\Profile">
-          <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="4" coveredelements="0"/>
-        </class>
-        <line num="14" type="method" name="authorize" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="16" type="stmt" count="0"/>
-        <line num="24" type="method" name="rules" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="29" type="stmt" count="0"/>
-        <metrics loc="32" ncloc="21" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="4" coveredelements="0"/>
-      </file>
-      <file name="/home/vagrant/baselhack/web/app/Http/Requests/Users/Profile/UpdatePasswordRequest.php">
-        <class name="App\Http\Requests\Users\Profile\UpdatePasswordRequest" namespace="App\Http\Requests\Users\Profile">
-          <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="4" coveredelements="0"/>
-        </class>
-        <line num="14" type="method" name="authorize" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="16" type="stmt" count="0"/>
-        <line num="24" type="method" name="rules" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="27" type="stmt" count="0"/>
-        <metrics loc="30" ncloc="20" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="4" coveredelements="0"/>
-      </file>
-      <file name="/home/vagrant/baselhack/web/app/Http/Requests/Users/Profile/UpdateProfileRequest.php">
-        <class name="App\Http\Requests\Users\Profile\UpdateProfileRequest" namespace="App\Http\Requests\Users\Profile">
-          <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="0" elements="6" coveredelements="0"/>
-        </class>
-        <line num="15" type="method" name="authorize" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="17" type="stmt" count="0"/>
-        <line num="25" type="method" name="rules" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="27" type="stmt" count="0"/>
-        <line num="30" type="stmt" count="0"/>
-        <line num="31" type="stmt" count="0"/>
-        <metrics loc="34" ncloc="24" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="0" elements="6" coveredelements="0"/>
-      </file>
-    </package>
-    <metrics files="44" loc="1743" ncloc="1259" classes="36" methods="96" coveredmethods="15" conditionals="0" coveredconditionals="0" statements="252" coveredstatements="43" elements="348" coveredelements="58"/>
+    <metrics files="52" loc="1972" ncloc="1484" classes="44" methods="115" coveredmethods="24" conditionals="0" coveredconditionals="0" statements="286" coveredstatements="58" elements="401" coveredelements="82"/>
   </project>
 </coverage>

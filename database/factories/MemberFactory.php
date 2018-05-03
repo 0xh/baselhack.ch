@@ -17,10 +17,14 @@ use App\Domain\Association\Models\Member;
 $factory->define(Member::class, function (Faker $faker) {
     return [
 
+        'status' => 'inactive',
         'firstname' => $faker->firstName,
         'lastname' => $faker->lastName,
         'email' => $faker->safeEmail,
+        'mobile' => $faker->phoneNumber,
+        'github' => $faker->colorName,
         'birthdate' => $faker->date(),
+        'member_since' => $faker->date(),
 
     ];
 });

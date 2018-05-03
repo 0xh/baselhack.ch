@@ -15,7 +15,7 @@
 
 
 
-{{--<div class="card mb-3">
+<div class="card mb-3">
     <div class="card-header">
         <strong class="mr-2">Participants</strong>  <i class="fal fa-users"></i>
 
@@ -32,7 +32,7 @@
 
         </li>
     </ul>
-</div>--}}
+</div>
 
 
 

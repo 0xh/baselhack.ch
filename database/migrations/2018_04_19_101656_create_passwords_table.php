@@ -21,6 +21,7 @@ class CreatePasswordsTable extends Migration
             $table->string('password');
             $table->longText('description');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

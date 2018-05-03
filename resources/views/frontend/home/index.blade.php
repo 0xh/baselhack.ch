@@ -6,7 +6,8 @@
 @section('content')
 
 
-    <section class="spotlight parallax bg-cover bg-size--cover" data-spotlight="fullscreen"
+
+ <section class="spotlight parallax bg-cover bg-size--cover" data-spotlight="fullscreen"
              style="background-image: url('{{ asset('frontend/images/backgrounds/img-1.jpg') }}')">
         <span class="mask bg-primary alpha-7"></span>
         <div class="spotlight-holder py-lg pt-lg-xl">
@@ -22,9 +23,12 @@
                                     data-animation-in="fadeInUp" data-animation-delay="2000">
                                     <span class="font-weight-700"></span>
                                 </h2>
-                                {{--<p class="lead text-white mt-3 lh-180 c-white animated" data-animation-in="fadeInUp" data-animation-delay="2500">
-                                    Free HTML UI Kit based on the well known Bootstrap 4 Framework brought to you by <strong class="text-white">Webpixels</strong>
-                                </p>--}}
+                             <p class="lead text-white mt-3 lh-180 c-white animated" data-animation-in="fadeInUp" data-animation-delay="2500">
+                                 24th & 25th November 2018 <a target="_blank" href="https://www.fhnw.ch/de/die-fhnw/standorte/campus-dreispitz">@FHNW</a>
+
+                             </p><p>
+                                 <a href="#newsletter" class="btn btn-dark text-white">Signup for more information</a>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -32,6 +36,9 @@
             </div>
         </div>
     </section>
+
+
+
 
 
 
@@ -58,39 +65,39 @@
     </section>
 
 
-    <section class="py-5 bg-lighter border-top border-bottom" id="scrollToSection">
-        <div class="container">
+ <section id="newsletter" class="py-5 bg-lighter border-top border-bottom" id="scrollToSection">
+     <div class="container">
 
-            <h2 class="text-center">Sign-Up for our newsletter</h2>
-
-
-            <div class="d-flex align-items-center justify-content-center mt-4">
-
-                <form method="POST" action="{{ route('frontend.newsletter.store') }}"class="heading mt-0 mb-0">
-                    @csrf
-
-                    <div class="input-group mb-3">
-
-                        <input id="email" name="email" type="text" class="form-control" placeholder="E-Mail Address" aria-label="E-Mail Address" aria-describedby="basic-addon2" required>
-                        <div class="input-group-append">
-                            <button dusk="subscribe-for-newsletter-button" class="btn btn-primary newsletter-button" type="submit">subscribe</button>
-                        </div>
-                    </div>
+         <h2 class="text-center">Sign-Up for our newsletter</h2>
 
 
+         <div class="d-flex align-items-center justify-content-center mt-4">
 
-                    @if ($errors->has('email'))
-                        <span class="invalid-feedback">
+             <form method="POST" action="{{ route('frontend.newsletter.store') }}"class="heading mt-0 mb-0">
+                 @csrf
+
+                 <div class="input-group mb-3">
+
+                     <input id="email" name="email" type="text" class="form-control" placeholder="E-Mail Address" aria-label="E-Mail Address" aria-describedby="basic-addon2" required>
+                     <div class="input-group-append">
+                         <button class="btn btn-primary newsletter-button" type="submit">subscribe</button>
+                     </div>
+                 </div>
+
+
+
+                 @if ($errors->has('email'))
+                     <span class="invalid-feedback">
                                         <strong>{{ $errors->first('email') }}</strong>
                                     </span>
-                    @endif
+                 @endif
 
 
-                </form>
+             </form>
 
-            </div>
-        </div>
-    </section>
+         </div>
+     </div>
+ </section>
 
 
     <section class="slice slice-lg" data-delimiter="1">
@@ -184,6 +191,54 @@
         </div>
     </section>
 
+
+    {{--<section class="slice">
+        <div class="container">
+            <div class="mb-md text-center">
+                <h3 class="heading h2">Our sponsors</h3>
+                <div class="fluid-paragraph mt-3">
+                    <p class="lead"></p>
+                </div>
+            </div>
+            <div class="row cols-xs-space cols-sm-space cols-md-space">
+                <div class="col-md-2 col-6">
+                    <div class="px-4 py-4 border rounded">
+                        <img src="../assets/images/prv/client-1.png" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-md-2 col-6">
+                    <div class="px-4 py-4 border rounded">
+                        <img src="../assets/images/prv/client-2.png" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-md-2 col-6">
+                    <div class="px-4 py-4 border rounded">
+                        <img src="../assets/images/prv/client-3.png" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-md-2 col-6">
+                    <div class="px-4 py-4 border rounded">
+                        <img src="../assets/images/prv/client-4.png" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-md-2 col-6">
+                    <div class="px-4 py-4 border rounded">
+                        <img src="../assets/images/prv/client-5.png" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-md-2 col-6">
+                    <div class="px-4 py-4 border rounded">
+                        <img src="../assets/images/prv/client-6.png" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>--}}
+
+
+@endsection
+
+@section('scripts')
 
 
 @endsection
