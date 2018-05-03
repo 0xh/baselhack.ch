@@ -35,6 +35,4 @@ class UserTest extends TestCase
 
         $this->assertNotNull($user->deleted_at);
     }
-
-
 }

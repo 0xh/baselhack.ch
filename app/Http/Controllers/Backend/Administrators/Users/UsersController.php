@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers\Backend\Administrators\Users;
 
-use App\Http\Requests\Backend\Association\Newsletters\StoreNewsletterRequest;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Smart6ate\Roles\Models\Role;
 use App\Domain\Users\Models\User;
 use App\App\Controllers\Controller;
+use App\Http\Requests\Backend\Association\Newsletters\StoreNewsletterRequest;
 
 class UsersController extends Controller
 {

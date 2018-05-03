@@ -8,6 +8,4 @@ Route::group(['prefix' => '/events', 'namespace' => 'Events', 'as' => 'events.']
         Route::get('/', 'NewslettersController@index')->name('index');
         Route::get('/create', 'NewslettersController@create')->name('create');
     });
-
-
 });

@@ -2,7 +2,6 @@
 
 return [
 
-
     /*
    |--------------------------------------------------------------------------
    | Member Status
@@ -10,9 +9,8 @@ return [
    */
 
     'member_status' => [
-        'terminated','inanctive','passive','active'
+        'terminated', 'inanctive', 'passive', 'active',
     ],
-
 
     /*
     |--------------------------------------------------------------------------

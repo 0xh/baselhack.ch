@@ -29,7 +29,7 @@ class UpdateMemberRequest extends FormRequest
             'status' => 'required|string',
             'firstname' => 'required|string|max:255',
             'lastname' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:members,email,' . $member->id,
+            'email' => 'required|string|email|max:255|unique:members,email,'.$member->id,
             'mobile' => 'nullable|string|max:255',
             'github' => 'nullable|string|max:255',
             'birthdate' => 'nullable|date',

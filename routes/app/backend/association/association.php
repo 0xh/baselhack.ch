@@ -15,13 +15,10 @@ Route::group(['prefix' => '/association', 'namespace' => 'Association', 'as' => 
         Route::get('/export', 'MembersController@export')->name('export');
     });
 
-
     Route::group(['prefix' => '/newsletters', 'namespace' => 'Newsletters', 'as' => 'newsletters.'], function () {
         Route::get('/', 'NewslettersController@index')->name('index');
         Route::get('/create', 'NewslettersController@create')->name('create');
     });
-
-
 
     Route::group(['prefix' => '/passwords', 'namespace' => 'Passwords', 'as' => 'passwords.'], function () {
         Route::get('/', 'PasswordsController@index')->name('index');

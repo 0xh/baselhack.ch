@@ -2,12 +2,9 @@
 
 namespace App\Http\Controllers\Backend\Events\Newsletters;
 
+use App\App\Controllers\Controller;
 use App\Domain\Events\Models\Newsletter;
 use App\Http\Requests\Backend\Association\Newsletters\StoreNewsletterRequest;
-
-
-use App\App\Controllers\Controller;
-
 
 class NewslettersController extends Controller
 {
@@ -23,19 +20,17 @@ class NewslettersController extends Controller
         return view('backend.events.newsletters.index', compact('newsletters'));
     }
 
-
     public function store(StoreNewsletterRequest $request)
     {
         $newsletter = Newsletter::create([
 
-            'email' => $request->email
+            'email' => $request->email,
         ]);
 
         $newsletter->subscribe();
 
         return back();
     }
-
 
     public function delete(Newsletter $newsletter)
     {
@@ -44,5 +39,4 @@ class NewslettersController extends Controller
 
         return back();
     }
-
 }

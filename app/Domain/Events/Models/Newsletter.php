@@ -13,9 +13,8 @@ class Newsletter extends Model
      * @var array
      */
     protected $fillable = [
-        'email','subscribed_since'
+        'email', 'subscribed_since',
     ];
-
 
     public function getRouteKeyName()
     {
@@ -31,5 +30,4 @@ class Newsletter extends Model
     {
         SpatieNewsletter::unsubscribe($this->email);
     }
-
 }

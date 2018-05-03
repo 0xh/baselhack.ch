@@ -2,9 +2,9 @@
 
 namespace App\App\Console\Commands;
 
-use App\Domain\Events\Models\Newsletter;
-use Newsletter as SpatieNewsletter;
 use Illuminate\Console\Command;
+use Newsletter as SpatieNewsletter;
+use App\Domain\Events\Models\Newsletter;
 
 class SyncNewsletters extends Command
 {
@@ -41,40 +41,30 @@ class SyncNewsletters extends Command
     {
         $members = SpatieNewsletter::getMembers()['members'];
 
-        foreach ($members as $member)
-        {
-            if( $member['status'] === 'subscribed')
-            Newsletter::firstOrCreate([
+        foreach ($members as $member) {
+            if ($member['status'] === 'subscribed') {
+                Newsletter::firstOrCreate([
 
-                'email' => $member['email_address']
+                'email' => $member['email_address'],
             ]);
-            elseif ($member['status'] === 'unsubscribed')
-            {
-                try
-                {
+            } elseif ($member['status'] === 'unsubscribed') {
+                try {
                     $newsletter = Newsletter::whereEmail($member['email_address'])->first();
 
-                    if(!empty($newsletter))
-                    {
+                    if (! empty($newsletter)) {
                         $newsletter->delete();
                     }
-                }
-                catch (\Exception $exception)
-                {
-
+                } catch (\Exception $exception) {
                 }
             }
         }
 
         $newsletters = Newsletter::all();
 
-        foreach ($newsletters as $newsletter)
-        {
-            if(!SpatieNewsletter::isSubscribed($newsletter->email))
-            {
+        foreach ($newsletters as $newsletter) {
+            if (! SpatieNewsletter::isSubscribed($newsletter->email)) {
                 $newsletter->delete();
             }
         }
-
     }
 }

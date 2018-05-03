@@ -12,9 +12,8 @@ class User extends Authenticatable
 {
     use Notifiable, SoftDeletes, HasRoles, UsersTrait;
 
-
     protected $fillable = [
-         'name', 'email', 'password', 'published_at','last_authentication',
+         'name', 'email', 'password', 'published_at', 'last_authentication',
     ];
 
     protected $dates = [
@@ -48,8 +47,7 @@ class User extends Authenticatable
 
     public function getAvatar()
     {
-        if (empty($this->avatar))
-        {
+        if (empty($this->avatar)) {
             return 'https://www.gravatar.com/avatar/'.md5($this->email).'x?s=500&d=mm';
         }
 

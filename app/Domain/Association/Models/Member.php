@@ -9,13 +9,12 @@ class Member extends Model
 {
     use SoftDeletes;
 
-
     protected $fillable = [
-        'status','firstname','lastname','email', 'mobile', 'github','birthdate','member_since',
+        'status', 'firstname', 'lastname', 'email', 'mobile', 'github', 'birthdate', 'member_since',
     ];
 
     public function getNameAttribute()
     {
-        return $this->firstname .' ' . $this->lastname;
+        return $this->firstname.' '.$this->lastname;
     }
 }
