@@ -15,7 +15,7 @@
 
 ## Packages
 
-## Included packages
+## Production 
 
 - [spatie/laravel-newsletter](https://github.com/spatie/laravel-newsletter)
 - [Maatwebsite/Laravel-Excel](https://github.com/Maatwebsite/Laravel-Excel)
