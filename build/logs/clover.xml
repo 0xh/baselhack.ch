@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1525377622">
-  <project timestamp="1525377622">
+<coverage generated="1525670803">
+  <project timestamp="1525670803">
     <package name="App\App\Console\Commands">
       <file name="/home/vagrant/baselhack/web/app/App/Console/Commands/SyncNewsletters.php">
         <class name="App\App\Console\Commands\SyncNewsletters" namespace="App\App\Console\Commands">
@@ -33,14 +33,14 @@
         <class name="App\App\Console\Kernel" namespace="App\App\Console">
           <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="7" coveredelements="7"/>
         </class>
-        <line num="26" type="method" name="schedule" visibility="protected" complexity="1" crap="1" count="20"/>
+        <line num="25" type="method" name="schedule" visibility="protected" complexity="1" crap="1" count="20"/>
+        <line num="27" type="stmt" count="20"/>
         <line num="28" type="stmt" count="20"/>
-        <line num="29" type="stmt" count="20"/>
-        <line num="36" type="method" name="commands" visibility="protected" complexity="1" crap="1" count="20"/>
-        <line num="38" type="stmt" count="20"/>
+        <line num="35" type="method" name="commands" visibility="protected" complexity="1" crap="1" count="20"/>
+        <line num="37" type="stmt" count="20"/>
+        <line num="39" type="stmt" count="20"/>
         <line num="40" type="stmt" count="20"/>
-        <line num="41" type="stmt" count="20"/>
-        <metrics loc="42" ncloc="23" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="7" coveredelements="7"/>
+        <metrics loc="41" ncloc="24" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="7" coveredelements="7"/>
       </file>
     </package>
     <package name="App\App\Controllers">
@@ -228,7 +228,7 @@
         <class name="App\Domain\Association\Models\Password" namespace="App\Domain\Association\Models">
           <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
         </class>
-        <metrics loc="16" ncloc="16" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        <metrics loc="15" ncloc="15" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
       </file>
     </package>
     <package name="App\Domain\Events\Models">
@@ -773,6 +773,6 @@
         <metrics loc="30" ncloc="20" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="4" coveredelements="0"/>
       </file>
     </package>
-    <metrics files="52" loc="1972" ncloc="1484" classes="44" methods="115" coveredmethods="24" conditionals="0" coveredconditionals="0" statements="286" coveredstatements="58" elements="401" coveredelements="82"/>
+    <metrics files="52" loc="1970" ncloc="1484" classes="44" methods="115" coveredmethods="24" conditionals="0" coveredconditionals="0" statements="286" coveredstatements="58" elements="401" coveredelements="82"/>
   </project>
 </coverage>
