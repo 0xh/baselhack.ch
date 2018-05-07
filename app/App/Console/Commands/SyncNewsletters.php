@@ -39,14 +39,15 @@ class SyncNewsletters extends Command
      */
     public function handle()
     {
-        $members = SpatieNewsletter::getMembers()['members'];
+        $total =  SpatieNewsletter::getMembers()['total_items'];
 
-        dd($members);
+        $parameters = ['count' => $total];
+
+        $members = SpatieNewsletter::getMembers($string = '', $parameters)['members'];
         
         foreach ($members as $member) {
             if ($member['status'] === 'subscribed') {
                 Newsletter::firstOrCreate([
-
                 'email' => $member['email_address'],
             ]);
             } elseif ($member['status'] === 'unsubscribed') {
