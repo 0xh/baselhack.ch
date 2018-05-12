@@ -44,7 +44,7 @@ class SyncNewsletters extends Command
         $parameters = ['count' => $total];
 
         $members = SpatieNewsletter::getMembers($string = '', $parameters)['members'];
-        
+
         foreach ($members as $member) {
             if ($member['status'] === 'subscribed') {
                 Newsletter::firstOrCreate([

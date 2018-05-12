@@ -8,6 +8,8 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+    <meta name="robots" content="noindex, nofollow">
+
     <title>{{ 'BaselHack' }}</title>
 
     <!-- Fonts -->
