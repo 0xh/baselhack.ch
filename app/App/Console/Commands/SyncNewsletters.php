@@ -39,7 +39,7 @@ class SyncNewsletters extends Command
      */
     public function handle()
     {
-        $total =  SpatieNewsletter::getMembers()['total_items'];
+        $total = SpatieNewsletter::getMembers()['total_items'];
 
         $parameters = ['count' => $total];
 
