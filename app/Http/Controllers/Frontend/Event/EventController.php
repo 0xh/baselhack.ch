@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Frontend;
+namespace App\Http\Controllers\Frontend\Event;
 
 use App\App\Controllers\Controller;
 
-class HomeController extends Controller
+class EventController extends Controller
 {
     /**
      * Show the application dashboard.
@@ -13,6 +13,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('redesign.home.index');
+        return view('redesign.event.index');
     }
+
+
 }

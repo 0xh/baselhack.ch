@@ -11,10 +11,11 @@
 |
 */
 
-Route::get('/', 'Frontend\HomeController@index')->name('frontend.home.index');
-
-Route::post('/newsletter', 'Frontend\Newsletter\NewsletterController@store')->name('frontend.newsletter.store');
 
 @include 'app/backend/auth/auth.php';
 
+@include 'app/frontend/frontend.php';
+
 @include 'app/backend/backend.php';
+
+

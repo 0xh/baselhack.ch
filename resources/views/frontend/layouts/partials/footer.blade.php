@@ -1,34 +1,25 @@
 <footer class="pt-5 pb-3 footer  footer-dark bg-tertiary">
     <div class="container">
         <div class="row">
-            {{-- <div class="col-12 col-md-4">
-                 <div class="pr-lg-5">
-                     <h1 class="heading h6 text-uppercase font-weight-700 mb-3"><strong>BaselHack</strong></h1>
-                     <p>
-                         At BaselHack, you will have the opportunity to create software prototypes solutions from a great idea in 34 hours! Bring your coding know-how, meet, connect and collaborate with other tech enthusiasts, innovators, and data and design wizards.
-                     </p>
-                 </div>
-             </div>--}}
-
 
             <div class="col-6 col-md">
-                <h5 class="heading h6 text-uppercase font-weight-700 mb-3">BaselHack</h5>
+                <h5 class="heading h6 text-uppercase font-weight-700 mb-3"><a style="text-decoration: none;" href="{{ route('frontend.home.index') }}" class="list-unstyled text-small text-white">Baselhack</a></h5>
                 <ul class="list-unstyled text-small">
-                    <li><a dusk="login" class="text-muted" href="{{ route('login') }}">Member Area</a></li>
+                    <li><a class="text-muted" href="{{ route('login') }}">Members</a></li>
 
                 </ul>
             </div>
 
 
             <div class="col-6 col-md">
-                <h5 class="heading h6 text-uppercase font-weight-700 mb-3">Event</h5>
+                <h5 class="heading h6 text-uppercase font-weight-700 mb-3"><a style="text-decoration: none;" href="{{ route('frontend.event.index') }}" class="list-unstyled text-small text-white">Event</a></h5>
                 <ul class="list-unstyled text-small">
 
                 </ul>
             </div>
 
             <div class="col-6 col-md">
-                <h5 class="heading h6 text-uppercase font-weight-700 mb-3">Partner</h5>
+                <h5 class="heading h6 text-uppercase font-weight-700 mb-3"><a style="text-decoration: none;" href="{{ route('frontend.partners.index') }}" class="list-unstyled text-small text-white">Partners</a></h5>
                 <ul class="list-unstyled text-small">
 
                 </ul>
@@ -36,7 +27,7 @@
 
 
             <div class="col-6 col-md">
-                <h5 class="heading h6 text-uppercase font-weight-700 mb-3">Sponsors</h5>
+                <h5 class="heading h6 text-uppercase font-weight-700 mb-3"><a style="text-decoration: none;" href="{{ route('frontend.sponsors.index') }}" class="list-unstyled text-small text-white">Sponsors</a></h5>
                 <ul class="list-unstyled text-small">
 
                 </ul>
@@ -44,26 +35,22 @@
 
 
             <div class="col-6 col-md">
-                <h5 class="heading h6 text-uppercase font-weight-700 mb-3">About Us</h5>
+                <h5 class="heading h6 text-uppercase font-weight-700 mb-3"><a style="text-decoration: none;" href="{{ route('frontend.about.index') }}" class="list-unstyled text-small text-white">About us</a></h5>
                 <ul class="list-unstyled text-small">
 
                 </ul>
             </div>
 
             <div class="col-6 col-md">
-                <h5 class="heading h6 text-uppercase font-weight-700 mb-3">Contact</h5>
-                <ul class="list-unstyled text-small">
-                    {{--
-                                        <li><a class="text-muted" target="_blank" href="mailto:event@baselhack.ch">E-Mail</a></li>
-                    --}}
-                </ul>
+                <h5 class="heading h6 text-uppercase font-weight-700 mb-3"><a style="text-decoration: none;" href="{{ route('frontend.contact.index') }}" class="list-unstyled text-small text-white">Contact</a></h5>
+
             </div>
             <div class="col-6 col-md">
                 <h5 class="heading h6 text-uppercase font-weight-700 mb-3">Legal</h5>
                 <ul class="list-unstyled text-small">
-                        {{-- <li><a class="text-muted" href="#">Imprint</a></li>
-                           <li><a class="text-muted" href="#">Privacy</a></li>
-                           <li><a class="text-muted" href="#">Terms</a></li>--}}
+                    <li><a class="text-muted" href="{{ route('frontend.legal.imprint.index') }}">Imprint</a></li>
+                    <li><a class="text-muted" href="{{ route('frontend.legal.privacy.index') }}">Privacy</a></li>
+
                 </ul>
             </div>
 
@@ -78,7 +65,7 @@
                 <div class="col-md-12 text-center">
 
                     <span class="">
-            &copy; {{ date("Y") }} BaselHack. All rights reserved.
+            &copy; BaselHack {{ date("Y") }}
           </span>
 
 

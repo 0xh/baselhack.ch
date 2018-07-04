@@ -13,6 +13,24 @@
                     <a class="nav-link" href="{{ route('frontend.home.index') }}">Home</a>
                 </li>
 
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('frontend.event.index') }}">Event</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('frontend.sponsors.index') }}">Sponsors</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('frontend.about.index') }}">About us</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('frontend.contact.index') }}">Contact</a>
+                </li>
+
+
+
                 <div class="dropdown-divider d-lg-none my-4"></div>
                 <h6 class="dropdown-header font-weight-600 d-lg-none px-0">Social Media</h6>
                 <li class="nav-item">

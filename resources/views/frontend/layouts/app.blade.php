@@ -10,7 +10,6 @@
 
     <title>BaselHack - More than a Hack</title>
 
-
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -43,17 +42,13 @@
 </head>
 <body>
 
-    @include('frontend.layouts.partials.navigation')
-
 
     <main class="main">
         @yield('content')
     </main>
 
 
-
     @include('frontend.layouts.partials.footer')
-
 
     <!-- Core -->
     <script src="{{ asset('frontend/js/jquery.min.js') }}"></script>

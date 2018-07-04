@@ -6,7 +6,6 @@
 @section('content')
 
 
-
  <section class="spotlight parallax bg-cover bg-size--cover" data-spotlight="fullscreen"
              style="background-image: url('{{ asset('frontend/images/backgrounds/img-1.jpg') }}')">
         <span class="mask bg-primary alpha-7"></span>

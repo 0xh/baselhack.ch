@@ -14,10 +14,11 @@ window.Vue = require('vue');
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
+import Vue from 'vue';
+import { TableComponent, TableColumn } from 'vue-table-component';
 
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
-Vue.component('data-table', require('./components/DataTable.vue'));
-
+Vue.component('table-component', TableComponent);
+Vue.component('table-column', TableColumn);
 
 const app = new Vue({
     el: '#app'
