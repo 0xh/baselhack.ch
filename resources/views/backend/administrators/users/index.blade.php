@@ -12,12 +12,13 @@
         <div class="card">
             <div class="card-header"><strong>Users</strong>
 
+
                 <div class="float-right">
 
-                    <a href="{{ route('backend.administrators.users.archived') }}"><i style="color: black;" class="fal fa-archive mr-2"></i></a>
+                    <a href="{{ route('backend.administrators.users.index') }}" class="btn btn-sm btn-dark ml-2">Index <i class="fal fa-list-ul ml-1"></i></a>
+                    <a href="{{ route('backend.administrators.users.create') }}" class="btn btn-sm btn-dark ml-2">Create <i class="fal fa-plus-circle ml-1"></i></a>
 
                 </div>
-
 
             </div>
 
@@ -46,7 +47,7 @@
                                     <img class="" src="{{ asset('backend/images/status/status_deactivated.png') }}">
                                 @endif
                             </td>
-                            <td><a href="{{ route('backend.administrators.users.edit', $user) }}">{{ $user->name }}</a></td>
+                            <td>{{ $user->name }}</td>
                             <td>{{ $user->email }}</td>
                             <td>{{ optional($user->last_authentication)->diffForHumans() }}</td>
                             {{--

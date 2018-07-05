@@ -68,7 +68,7 @@
 
                     <div class="form-group row">
                         <div class="col-md-12 text-center">
-                            <button  type="submit" class="btn btn-block btn-primary">
+                            <button  type="submit" class="btn btn-block btn-dark">
                                 Update profile
                             </button>
 

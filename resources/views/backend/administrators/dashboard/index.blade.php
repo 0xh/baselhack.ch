@@ -13,13 +13,13 @@
             <div class="col-md-12">
                 <div class="row">
 
-                    <a id="link-to-participants" href="{{ route('backend.association.members.index') }}" class="col-md-3 text-dark">
+                    <a id="link-to-participants" href="{{ route('backend.administrators.users.index') }}" class="col-md-3 text-dark">
                         <div class="card mt-3 text-center">
                             <div class="card-body">
                                 <i class="fal fa-users fa-2x"></i>
                             </div>
                             <div class="card-footer">
-                                Members
+                                Users
                             </div>
                         </div>
                     </a>

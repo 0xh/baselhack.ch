@@ -9,7 +9,6 @@
 @section('backend.association.content')
     <div class="justify-content-center">
 
-
         <div class="card ">
             <div class="card-header"><strong>Edit {{ $member->name }}</strong></div>
 
@@ -25,7 +24,7 @@
                             <lable for="status">Status</lable>
 
                             <select title="Status" id="status" name="status" class="form-control{{ $errors->has('status') ? ' is-invalid' : '' }}" required>
-                                @foreach(config('app.member_status') as $status)
+                                @foreach(config('baselhack.members.status') as $status)
                                     <option value="{{ $status }}" @if($status === $member->status) selected @endif>{{ $status }}</option>
                                 @endforeach
                             </select>
@@ -41,7 +40,6 @@
 
 
                     <div class="form-group row">
-
 
                         <div class="col-md-6">
                             <label for="firstname">Firstname</label>
@@ -88,7 +86,6 @@
                         <div class="col-md-6">
                             <label for="mobile">Mobile</label>
                             <input id="mobile" placeholder="Mobile" type="text" class="form-control{{ $errors->has('mobile') ? ' is-invalid' : '' }}" name="mobile" value="{{ old('mobile' ,$member->mobile) }}">
-
                             @if ($errors->has('mobile'))
                                 <span class="invalid-feedback">
                                         <strong>{{ $errors->first('mobile') }}</strong>
@@ -97,8 +94,9 @@
                         </div>
 
                         <div class="col-md-6">
-                            <lable for="Github">Github</lable>
+                            <lable for="github">Github</lable>
                             <input id="github" placeholder="Github" type="text" class="form-control{{ $errors->has('github') ? ' is-invalid' : '' }}" name="github" value="{{ old('github',  $member->github) }}">
+
 
                             @if ($errors->has('github'))
                                 <span class="invalid-feedback">
@@ -140,7 +138,7 @@
 
                     <div class="form-group row mb-0">
                         <div class="col-md-12 text-center">
-                            <button type="submit" class="btn btn-block btn-primary">
+                            <button type="submit" class="btn btn-block btn-dark">
                                 Update
                             </button>
 

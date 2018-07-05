@@ -67,7 +67,7 @@
                     <div class="form-group row">
                         <div class="col-md-12 text-center">
                             <button dusk="update-password-button" type="submit"
-                                    class="btn btn-block btn-primary">
+                                    class="btn btn-block btn-dark">
                                 Update password
                             </button>
 

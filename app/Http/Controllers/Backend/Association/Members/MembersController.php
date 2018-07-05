@@ -12,14 +12,10 @@ use App\Http\Requests\Backend\Association\Members\UpdateMemberRequest;
 
 class MembersController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
+
     public function __construct()
     {
-        $this->middleware(['web', 'auth', 'role:member']);
+        $this->middleware(['web', 'auth']);
     }
 
     public function index()

@@ -3,22 +3,16 @@
 return [
 
     /*
-   |--------------------------------------------------------------------------
-   | Member Status
-   |--------------------------------------------------------------------------
-   */
-
-    'member_status' => [
-        'terminated', 'inanctive', 'passive', 'active',
-    ],
-
-    /*
     |--------------------------------------------------------------------------
     | Application Version
     |--------------------------------------------------------------------------
+    |
+    | This value is the version of your application. This value is used when
+    | the framework needs to place the application's version in a notification
+    | or any other location as required by the application or its packages.
     */
 
-    'version' => 'v.0.1.1-alpha',
+        'version' => 'v.0.1.5-alpha',
 
     /*
     |--------------------------------------------------------------------------
@@ -83,7 +77,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'CET',
 
     /*
     |--------------------------------------------------------------------------

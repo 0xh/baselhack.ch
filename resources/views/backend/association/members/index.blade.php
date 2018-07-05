@@ -11,6 +11,8 @@
 @endsection
 
 @section('backend.association.content')
+
+
     <div class="justify-content-center">
 
         <div class="card">
@@ -18,9 +20,19 @@
 
                 <div class="float-right">
 
-                    <a href="{{ route('backend.association.members.export') }}" class="btn btn-sm btn-dark ml-2">Export to .xlsx</a>
 
                 </div>
+
+                <div class="float-right">
+
+                    <a href="{{ route('backend.association.members.index') }}" class="btn btn-sm btn-dark ml-2">Index <i class="fal fa-list-ul ml-1"></i></a>
+                    <a href="{{ route('backend.association.members.export') }}" class="btn btn-sm btn-dark ml-2">Export <i class="fal fa-file-excel ml-1"></i></a>
+                    <a href="{{ route('backend.association.members.create') }}" class="btn btn-sm btn-dark ml-2">Create <i class="fal fa-plus-circle ml-1"></i></a>
+
+
+                </div>
+
+
 
             </div>
 

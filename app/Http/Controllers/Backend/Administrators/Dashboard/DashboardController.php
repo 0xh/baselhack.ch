@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Backend\Association\Dashboard;
+namespace App\Http\Controllers\Backend\Administrators\Dashboard;
 
 use App\App\Controllers\Controller;
 
@@ -13,6 +13,6 @@ class DashboardController extends Controller
 
     public function index()
     {
-        return view('backend.association.dashboard.index');
+        return view('backend.administrators.dashboard.index');
     }
 }

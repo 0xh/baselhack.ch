@@ -11,7 +11,17 @@
 
 
         <div class="card ">
-            <div class="card-header"><strong>Create user</strong></div>
+            <div class="card-header"><strong>Create user</strong>
+
+
+                <div class="float-right">
+
+                    <a href="{{ route('backend.administrators.users.index') }}" class="btn btn-sm btn-dark ml-2">Index <i class="fal fa-list-ul ml-1"></i></a>
+                    <a href="{{ route('backend.administrators.users.create') }}" class="btn btn-sm btn-dark ml-2">Create <i class="fal fa-plus-circle ml-1"></i></a>
+
+                </div>
+
+            </div>
 
             <div class="card-body">
 
@@ -48,7 +58,7 @@
 
                     <div class="form-group row mb-0">
                         <div class="col-md-12 text-center">
-                            <button type="submit" class="btn btn-block btn-primary">
+                            <button type="submit" class="btn btn-block btn-dark">
                                 Create user
                             </button>
 

@@ -34,8 +34,8 @@
 
                                     <option value="" selected disabled>Please select a language</option>
                                     @foreach($languages as $language)
-                                        <option value="{{ $language['value'] }}"
-                                                @if(auth()->user()->language == $language['value']) selected @endif>{{ $language['name'] }}</option>
+                                        <option value="{{ $language }}"
+                                                @if(auth()->user()->language == $language) selected @endif>{{ $language }}</option>
                                     @endforeach
 
                                 </select>
@@ -49,7 +49,7 @@
 
                         <div class="form-group row">
                             <div class="col-md-12 text-center">
-                                <button dusk="update-language-button" type="submit" class="btn btn-block btn-primary">
+                                <button dusk="update-language-button" type="submit" class="btn btn-block btn-dark">
                                     Update language
                                 </button>
 

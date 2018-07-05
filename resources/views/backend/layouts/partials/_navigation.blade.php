@@ -20,19 +20,13 @@
 
                 @else
 
-                    @role('member')
-                    <li class="nav-item"><a href="{{ route('backend.association.dashboard.index') }}" class="nav-link">BaselHack</a></li>
-                    @endrole
+                    <li class="nav-item"><a href="{{ route('backend.association.dashboard.index') }}" class="nav-link">Association</a></li>
 
 
-                    @role('events')
-                    <li class="nav-item"><a href="{{ route('backend.events.dashboard.index') }}" class="nav-link">Events</a></li>
-                    @endrole
+                    <li class="nav-item"><a href="{{ route('backend.event.dashboard.index') }}" class="nav-link">Event 2018</a></li>
 
+                    <li class="nav-item"><a href="{{ route('backend.administrators.dashboard.index') }}" class="nav-link">Administrator</a></li>
 
-                    @role('administrator')
-                    <li class="nav-item"><a href="{{ route('backend.administrators.users.index') }}" class="nav-link">Administrator</a></li>
-                    @endrole
 
 
                 @endif

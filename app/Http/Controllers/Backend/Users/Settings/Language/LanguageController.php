@@ -19,7 +19,7 @@ class LanguageController extends Controller
     {
         $user = Auth()->user();
 
-        $languages = Config::get('languages.'.App::getLocale());
+        $languages = Config::get('languages.backend.active');
 
         return view('backend.users.settings.language.index', compact('user', 'languages'));
     }

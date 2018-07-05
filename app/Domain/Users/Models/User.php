@@ -3,17 +3,16 @@
 namespace App\Domain\Users\Models;
 
 use App\App\Traits\UsersTrait;
-use Smart6ate\Roles\Traits\HasRoles;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-    use Notifiable, SoftDeletes, HasRoles, UsersTrait;
+    use Notifiable, SoftDeletes, UsersTrait;
 
     protected $fillable = [
-         'name', 'email', 'password', 'published_at', 'last_authentication',
+         'name','roles', 'email', 'password', 'published_at', 'last_authentication',
     ];
 
     protected $dates = [

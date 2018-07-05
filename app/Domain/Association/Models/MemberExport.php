@@ -2,11 +2,12 @@
 
 namespace App\Domain\Association\Models;
 
+use Maatwebsite\Excel\Concerns\ShouldAutoSize;
 use Maatwebsite\Excel\Concerns\WithMapping;
 use Maatwebsite\Excel\Concerns\WithHeadings;
 use Maatwebsite\Excel\Concerns\FromCollection;
 
-class MemberExport implements FromCollection, WithHeadings, WithMapping
+class MemberExport implements FromCollection, WithHeadings, WithMapping, ShouldAutoSize
 {
     public function headings(): array
     {
