@@ -14,7 +14,7 @@
                         <div class="form-group row">
 
                             <div class="col-md-8 offset-md-2">
-                                <input title="{{ __('E-Mail Address') }}" id="email" placeholder="chuck.norris@baselhack.ch" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+                                <input title="{{ __('E-Mail Address') }}" id="email" placeholder="E-Mail Address" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
 
                                 @if ($errors->has('email'))
                                     <span class="invalid-feedback">
@@ -36,23 +36,13 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <div class="col-md-8 offset-md-2">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> {{ __('Remember Me') }}
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
+
 
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-2 text-center">
-                                <button dusk="login-button" type="submit" class="btn btn-block btn-primary">
+                                <button type="submit" class="btn btn-block btn-dark">
                                     {{ __('Login') }}
                                 </button>
-
-                                <!-- @toDo Test E-Mail & password Reset -->
                                 <a class="btn btn-link mt-2" href="{{ route('password.request') }}">
                                     {{ __('Forgot Your Password?') }}
                                 </a>

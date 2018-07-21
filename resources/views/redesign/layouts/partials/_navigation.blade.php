@@ -2,9 +2,6 @@
     <div class="container">
         <div class="navbar-brand">
 
-            <a class="navbar-item" href="index.php">
-                <img src="images/homeconnect_white.png">
-            </a>
 
             <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu"
                aria-expanded="false">
@@ -49,7 +46,7 @@
 
             <div class="navbar-end">
 
-                <div class="navbar-item dropdown is-hoverable">
+       {{--         <div class="navbar-item dropdown is-hoverable">
                     <div class="dropdown-trigger">
                         <button class="button is-dark is-inverted is-outlined" aria-haspopup="true" aria-controls="dropdown-menu">
                             <span>Languags</span>
@@ -87,7 +84,7 @@
 
                         </div>
                     </div>
-                </div>
+                </div>--}}
 
             </div>
         </div>
