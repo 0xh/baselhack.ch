@@ -16,8 +16,7 @@ class NewsletterController extends Controller
      */
     public function store(StoreNewsletterRequest $request)
     {
-
-       $newsletter = [
+        $newsletter = [
            'email' => $request->email,
        ];
 

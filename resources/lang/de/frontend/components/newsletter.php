@@ -17,7 +17,6 @@ return [
             'subscribe' => 'Subscribe',
         ],
 
-
         'notification' => [
 
             'success' => [
@@ -29,4 +28,3 @@ return [
 
     ],
 ];
-
