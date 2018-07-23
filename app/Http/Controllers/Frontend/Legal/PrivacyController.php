@@ -10,6 +10,8 @@ class PrivacyController extends Controller
 
     public function index()
     {
-        return view('redesign.legal.privacy.index');
+        $current_page = 'privacy';
+
+        return view('frontend.legal.privacy.index', compact('current_page'));
     }
 }

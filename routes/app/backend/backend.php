@@ -3,6 +3,7 @@
 
 Route::group(['prefix' => 'backend', 'namespace' => 'Backend', 'as' => 'backend.'], function () {
 
+
     Route::group(['prefix' => '/administrators', 'namespace' => 'Administrators', 'as' => 'administrators.'], function () {
 
         Route::get('/dashboard', 'Dashboard\DashboardController@index')->name('dashboard.index');

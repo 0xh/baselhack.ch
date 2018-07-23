@@ -8,7 +8,9 @@ class ImprintController extends Controller
 {
     public function index()
     {
-        return view('redesign.legal.imprint.index');
+        $current_page = 'imprint';
+
+        return view('frontend.legal.imprint.index', compact('current_page'));
     }
 
 }

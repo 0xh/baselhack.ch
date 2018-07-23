@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\Frontend\Event;
 
 use App\App\Controllers\Controller;
+use App\Http\Requests\Frontend\StoreSignUpRequest;
+use App\Jobs\RedirectSignUpRequest;
+use Illuminate\Support\Facades\Lang;
 
 class SignUpController extends Controller
 {
@@ -14,12 +17,16 @@ class SignUpController extends Controller
      */
     public function index()
     {
-        return view('redesign.event.signup');
+        $current_page = 'signup';
+
+        return view('frontend.event.signup', compact('current_page'));
     }
 
-    public function store()
+    public function store(StoreSignUpRequest $request)
     {
-        toast('You have successfully signed-up for the event!', 'success', 'bottom-right');
+        RedirectSignUpRequest::dispatch($request);
+
+        alert()->success(Lang::get('frontend/event/signup.form.notification.success.title'), Lang::get('frontend/event/signup.form.notification.success.description'))->autoClose(3000);
 
         return back();
     }

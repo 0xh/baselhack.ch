@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Frontend\Event;
+namespace App\Http\Controllers\Frontend;
 
 use App\App\Controllers\Controller;
 
-class EventController extends Controller
+class AboutController extends Controller
 {
     /**
      * Show the application dashboard.
@@ -13,10 +13,9 @@ class EventController extends Controller
      */
     public function index()
     {
-        $current_page = 'event';
+        $current_page = 'about';
 
-        return view('frontend.event.index', compact('current_page'));
+        return view('frontend.about.index', compact('current_page'));
     }
-
-
+    
 }

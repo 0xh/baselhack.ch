@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Frontend\Newsletter;
 
-use Newsletter;
+use App\Jobs\ProceedNewsletterRequest;
+use Illuminate\Support\Facades\Lang;
 use App\App\Controllers\Controller;
-use App\Http\Requests\Frontend\Newsletter\StoreNewsletterRequest;
+use App\Http\Requests\Frontend\StoreNewsletterRequest;
 
 class NewsletterController extends Controller
 {
@@ -15,9 +16,9 @@ class NewsletterController extends Controller
      */
     public function store(StoreNewsletterRequest $request)
     {
-        Newsletter::subscribe($request->email);
+        ProceedNewsletterRequest::dispatch($request);
 
-        toast('Successfully subscribed!', 'success', 'bottom-right');
+        alert()->success(Lang::get('frontend/components/newsletter.notification.success.title'), Lang::get('frontend/components/newsletter.notification.success.descripion'))->autoClose(3000);
 
         return back();
     }

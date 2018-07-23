@@ -1,44 +1,60 @@
-.bg-primary {
-    background-color: #000 !important;
+body {
+    font-family: 'Nunito', sans-serif;;
 }
 
 
+.hero.is-light{
+    background-color: #e6e6e6;
+    color: #363636;
+}
 
-.bg-tertiary {
-    background-color: #192b3f !important;
+.hero.is-small {
+
+    padding-bottom: 0px;
+    padding-top: 0px;
+
+}
+
+.hero.is-small .hero-body {
+
+    padding-bottom: 0px;
+    padding-top: 0px;
+
 }
 
 
-footer hr {
+.hero.is-small .hero-body .column {
 
-    background-color: white;
+    padding-bottom: 0px;
+    padding-top: 0px;
+
 }
 
-
-.footer span {
-    color: #fff;
-}
-
-.newsletter-button
+footer a
 {
-    background-color: #192b3f !important;
-
+    margin-right: 9px;
+    margin-left: 9px;
 }
 
 
-.btn-primary {
-    color: #fff;
-    background: #192b3f linear-gradient(180deg, #192b3f, #192b3f) repeat-x;
-    background-color: rgb(25, 43, 63);
-    border-color: #192b3f;
-    box-shadow: none;
+footer .social
+
+{
+    margin-top: 30px;
 }
 
+footer .social .fab
+{
+    transition-duration: .25s;
+}
 
-.btn-primary:hover {
-    color: #fff;
-    background: #284565 linear-gradient(180deg, #284565, #284565) repeat-x;
-    background-color: rgb(40, 69, 101);
-    border-color: #192b3f;
-    box-shadow: none;
+footer .social .fab:hover
+{
+    color: #679bef;
+}
+
+.copyright
+{
+    margin-top: 25px;
+    font-size: 14px;
 }

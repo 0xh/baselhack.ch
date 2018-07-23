@@ -3,6 +3,9 @@
 <head>
 
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="BaselHack is more than a Hackathon – we connect people, take fun seriously and grow open">
     <meta name="author" content="BaselHack">
@@ -10,66 +13,49 @@
 
     <title>BaselHack - More than a Hack</title>
 
-    <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800|Roboto:400,500,700" rel="stylesheet">
-    <!-- Theme CSS -->
-    <link type="text/css" href="{{ asset('frontend/css/theme.css') }}" rel="stylesheet">
-    <!-- Demo CSS - No need to use these in your project -->
-    <link type="text/css" href="{{ asset('frontend/css/demo.css') }}" rel="stylesheet">
-    <link type="text/css" href="{{ asset('frontend/css/style.css') }}" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-L+XK540vkePe55E7PAfByfvW0XpsyYpsifTpgh/w8WvH6asVg/c2zqp0EfZfZTbF" crossorigin="anonymous">
+    @include('frontend.layouts.partials._meta')
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-oi8o31xSQq8S0RpBcb4FaLB8LJi9AT8oIdmS1QldR8Ui7KUQjNAnDlJjp55Ba8FG" crossorigin="anonymous">
+
+    <!-- Styles -->
+    <link href="{{ asset('frontend/css/fonts.css') }}" rel="stylesheet">
+    <link href="{{ asset('frontend/css/bulma.css') }}" rel="stylesheet">
+    <link href="{{ asset('frontend/css/style.css') }}" rel="stylesheet">
 
     @yield('styles')
 
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-82376109-14"></script>
+    <script async src="{{ config('analytics.google.url') }}"></script>
+
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
-        gtag('config', 'UA-82376109-14');
+        gtag({{ config('analytics.google.key') }});
     </script>
 
 
-
-
 </head>
+
 <body>
 
-
-    <main class="main">
-        @yield('content')
-    </main>
+@include('frontend.layouts.partials._navigation')
 
 
-    @include('frontend.layouts.partials.footer')
+@yield('content')
 
-    <!-- Core -->
-    <script src="{{ asset('frontend/js/jquery.min.js') }}"></script>
-    <script src="{{ asset('frontend/js/bootstrap.min.js') }}"></script>
-    <!-- FontAwesome 5 -->
-    <script src="{{ asset('frontend/js/fontawesome-all.js') }}" defer></script>
-    <!-- Page plugins -->
-    <script src="{{ asset('frontend/js/bootstrap-select.js') }}"></script>
-    <script src="{{ asset('jfrontend/js/bootstrap-tagsinput.min.js') }}"></script>
-    <script src="{{ asset('frontend/js/input-mask.min.js') }}"></script>
-    <script src="{{ asset('frontend/js/nouislider.min.js') }}"></script>
-    <script src="{{ asset('frontend/js/textarea-autosize.min.js') }}"></script>
-    <!-- Theme JS -->
-    <script src="{{ asset('frontend/js/theme.js') }}"></script>
+@include('frontend.layouts.partials._footer')
 
+<script src="{{ asset('frontend/js/navigation.js') }}"></script>
+<script src="{{ asset('frontend/js/retina.min.js') }}" defer></script>
+<script src="{{ asset('frontend/js/sweetalert.js') }}"></script>
 
-    <script src="https://unpkg.com/sweetalert2@7.18.0/dist/sweetalert2.all.js"></script>
+@include('sweetalert::alert')
 
-    @include('sweetalert::alert')
-
-    @yield('scripts')
+@yield('scripts')
 
 </body>
 </html>

@@ -13,6 +13,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('redesign.home.index');
+        $current_page = 'home';
+
+        return view('frontend.home.index', compact('current_page'));
     }
 }
