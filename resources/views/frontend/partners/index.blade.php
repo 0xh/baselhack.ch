@@ -79,6 +79,10 @@
     @include('frontend.layouts.components._newsletter')
 
 
+    @include('frontend.layouts.components._sponsors')
+
+
+
 @endsection
 
 @section('scripts')

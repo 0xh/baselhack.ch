@@ -4,7 +4,6 @@
 
 
 
-
 @endsection
 
 @section('content')
@@ -14,10 +13,11 @@
             <div class="columns is-centered">
 
                 <div class="column is-4">
-                    <figure class="image">
-                        <a href="{{ route('frontend.event.signup') }}"><img class="" alt=""
-                                                                            src="{{ asset('frontend/images/backgrounds/todo.svg') }}"></a>
-                    </figure>
+
+                      <a href="{{ route('frontend.event.index') }}">
+                            <img class="image header-image" src="{{ asset('frontend/images/backgrounds/home.png') }}">
+                      </a>
+
                 </div>
             </div>
         </div>
@@ -63,12 +63,12 @@
                         </p>
 
 
-                        <p class="has-text-justified">
+                       {{-- <p class="has-text-justified">
 
                             <a href="" class="button is-dark">Sign up BaselHack 2018</a>
 
                         </p>
-
+--}}
 
 
                     </div>
@@ -81,15 +81,17 @@
     </section>
 
 
-
+    @include('frontend.layouts.components._newsletter')
 
     @include('frontend.layouts.components._sponsors')
 
-    @include('frontend.layouts.components._newsletter')
+
+
 
 @endsection
 
 @section('scripts')
+
 
 
 @endsection

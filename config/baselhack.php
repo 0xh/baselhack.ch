@@ -14,8 +14,8 @@ return [
     ],
 
     'notifications' => [
-        'signup' => ['sebastian.fix@onicial.ch'],
-        'contact_form' => ['sebastian.fix@onicial.ch'],
+        'signup' => ['event@baselhack.ch'],
+        'contact_form' => ['sponsoring@baselhack.ch','event@baselhack.ch','info@baselhack.ch'],
     ],
 
     'socials' => [
@@ -55,4 +55,34 @@ return [
     'members' => [
         'status' => ['active', 'inactive', 'passive', 'terminated'],
     ],
+
+    'sponsors' => [
+
+        'actemium' => [
+            'title' => 'Actemium',
+            'image' => 'actemium.png',
+            'url' => 'https://www.actemium.ch',
+        ],
+        'basler_versicherungen' => [
+            'title' => 'Basler Versicherungen',
+            'image' => 'basler_versicherungen.png',
+            'url' => 'https://www.baloise.ch/',
+        ],
+        'bluesky_it_solutions' => [
+            'title' => 'Bluesky IT-Solutions',
+            'image' => 'bluesky_it_solutions.png',
+            'url' => 'https://www.bluesky-it.ch',
+        ],
+        'kanton_bl' => [
+            'title' => 'Kanton Basel-Landschaft',
+            'image' => 'kanton_bl.png',
+
+            'url' => 'https://www.baselland.ch',
+        ],
+        'swiss_made_software' => [
+            'title' => 'Swiss Made Software',
+            'image' => 'swiss_made_software.png',
+            'url' => 'https://www.swissmadesoftware.org',
+        ],
+    ]
 ];

@@ -24,7 +24,7 @@ return [
             'success' => [
 
                 'title' => 'Thank you!',
-                'description' => 'Wir werden uns in Kürze bei Ihnen melden.',
+                'description' => 'We\'ve successfully received your message!',
             ],
         ],
     ],

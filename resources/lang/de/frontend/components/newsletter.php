@@ -17,5 +17,16 @@ return [
             'subscribe' => 'Subscribe',
         ],
 
+
+        'notification' => [
+
+            'success' => [
+
+                'title' => 'Thank you!',
+                'description' => 'You\'ve successfully subscribed to our newsletter!',
+            ],
+        ],
+
     ],
 ];
+

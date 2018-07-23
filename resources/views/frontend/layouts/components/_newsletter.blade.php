@@ -9,7 +9,7 @@
 
                 <div class="column is-6">
 
-                    <h1 class="title is-uppercase">{{ __('frontend/components/newsletter.title') }}</h1>
+                    <h1 class="title">{{ __('frontend/components/newsletter.title') }}</h1>
                     <p class="subtitle is-6">{{ __('frontend/components/newsletter.subtitle') }}</p>
 
 
