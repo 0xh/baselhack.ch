@@ -4,8 +4,8 @@ return [
 
     'analytics' => ['google' => [
 
-        'key' => 'UA-82376109-14',
-        'url' => 'https://www.googletagmanager.com/gtag/js?id=UA-82376109-14',
+        'key' => 'UA-121873164-1',
+        'url' => 'https://www.googletagmanager.com/gtag/js?id=UA-121873164-1',
     ]],
 
     'meta' => [
