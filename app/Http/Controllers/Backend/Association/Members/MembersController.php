@@ -12,7 +12,6 @@ use App\Http\Requests\Backend\Association\Members\UpdateMemberRequest;
 
 class MembersController extends Controller
 {
-
     public function __construct()
     {
         $this->middleware(['web', 'auth']);

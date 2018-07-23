@@ -12,7 +12,7 @@ class User extends Authenticatable
     use Notifiable, SoftDeletes, UsersTrait;
 
     protected $fillable = [
-         'name','roles', 'email', 'password', 'published_at', 'last_authentication',
+         'name', 'roles', 'email', 'password', 'published_at', 'last_authentication',
     ];
 
     protected $dates = [

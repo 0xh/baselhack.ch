@@ -11,7 +11,6 @@
 |
 */
 
-
 Route::group(['prefix' => '', 'namespace' => 'Backend\Auth'], function () {
     Route::get('login', 'LoginController@showLoginForm')->name('login');
     Route::post('login', 'LoginController@login');
@@ -26,9 +25,7 @@ Route::group(['prefix' => '', 'namespace' => 'Backend\Auth'], function () {
     Route::post('password/reset', 'ResetPasswordController@reset');
 });
 
-
 Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
-
     Route::get('/', 'HomeController@index')->name('home.index');
 
     Route::group(['prefix' => 'event', 'namespace' => 'Event', 'as' => 'event.'], function () {
@@ -39,7 +36,6 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
     });
 
     Route::get('/about', 'AboutController@index')->name('about.index');
-
 
     Route::group(['prefix' => 'partners', 'as' => 'partners.'], function () {
         Route::get('/', 'PartnersController@index')->name('index');
@@ -54,9 +50,6 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
     Route::post('/contact', 'ContactController@store')->name('contact.store');
 
     Route::post('/newsletter', 'Newsletter\NewsletterController@store')->name('newsletter.store');
-
 });
 
 @include 'app/backend/backend.php';
-
-

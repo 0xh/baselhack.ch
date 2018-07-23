@@ -17,5 +17,4 @@ class AboutController extends Controller
 
         return view('frontend.about.index', compact('current_page'));
     }
-    
 }

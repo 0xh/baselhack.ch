@@ -3,9 +3,9 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\App\Controllers\Controller;
-use App\Http\Requests\Frontend\StoreContactRequest;
 use App\Jobs\RedirectContactRequest;
 use Illuminate\Support\Facades\Lang;
+use App\Http\Requests\Frontend\StoreContactRequest;
 
 class ContactController extends Controller
 {
@@ -24,7 +24,6 @@ class ContactController extends Controller
     public function store(StoreContactRequest $request)
     {
         /** @todo Save to Database */
-
         $contact = [
 
             'name' => $request->name,

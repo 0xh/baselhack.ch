@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Frontend\Newsletter;
 
-use App\Jobs\ProceedNewsletterRequest;
-use Illuminate\Support\Facades\Lang;
 use App\App\Controllers\Controller;
+use Illuminate\Support\Facades\Lang;
+use App\Jobs\ProceedNewsletterRequest;
 use App\Http\Requests\Frontend\StoreNewsletterRequest;
 
 class NewsletterController extends Controller

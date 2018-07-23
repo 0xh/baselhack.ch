@@ -2,17 +2,16 @@
 
 namespace App\Mail;
 
-
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
-
 
 class RedirectSignUpRequest extends Mailable
 {
     use Queueable, SerializesModels;
 
     public $signup;
+
     /**
      * Create a new message instance.
      *
@@ -33,6 +32,5 @@ class RedirectSignUpRequest extends Mailable
         return $this
             ->subject('Redirect Contact Form')
             ->markdown('emails.redirects.singup');
-
     }
 }

@@ -2,10 +2,7 @@
 
 
 Route::group(['prefix' => 'backend', 'namespace' => 'Backend', 'as' => 'backend.'], function () {
-
-
     Route::group(['prefix' => '/administrators', 'namespace' => 'Administrators', 'as' => 'administrators.'], function () {
-
         Route::get('/dashboard', 'Dashboard\DashboardController@index')->name('dashboard.index');
 
         Route::group(['prefix' => '/users', 'namespace' => 'Users', 'as' => 'users.'], function () {
@@ -13,13 +10,10 @@ Route::group(['prefix' => 'backend', 'namespace' => 'Backend', 'as' => 'backend.
 
             Route::get('/create', 'UsersController@create')->name('create');
             Route::post('/create', 'UsersController@store')->name('store');
-
         });
     });
 
-
-    Route::group(['prefix' => '/users', 'namespace' => 'Users', 'as' => 'users.'], function ()
-    {
+    Route::group(['prefix' => '/users', 'namespace' => 'Users', 'as' => 'users.'], function () {
         Route::get('/dashboard', 'Dashboard\DashboardController@index')->name('dashboard.index');
 
         Route::group(['prefix' => '/settings', 'namespace' => 'Settings', 'as' => 'settings.'], function () {
@@ -53,10 +47,7 @@ Route::group(['prefix' => 'backend', 'namespace' => 'Backend', 'as' => 'backend.
 
             Route::get('/export', 'MembersController@export')->name('export');
         });
-
-
     });
-
 
     Route::group(['prefix' => '/event', 'namespace' => 'Event', 'as' => 'event.'], function () {
         Route::get('/', 'Dashboard\DashboardController@index')->name('dashboard.index');
@@ -70,6 +61,5 @@ Route::group(['prefix' => 'backend', 'namespace' => 'Backend', 'as' => 'backend.
             Route::get('/', 'ParticipantsController@index')->name('index');
             Route::get('/create', 'ParticipantsController@create')->name('create');
         });
-
     });
 });

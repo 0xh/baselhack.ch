@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\Backend\Administrators\Users;
 
-
 use App\Domain\Users\Models\User;
 use App\App\Controllers\Controller;
 use App\Http\Requests\Administrators\Users\StoreUserRequest;
@@ -42,6 +41,4 @@ class UsersController extends Controller
 
         return redirect()->route('backend.administrators.users.index');
     }
-
-
 }

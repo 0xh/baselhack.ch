@@ -2,10 +2,10 @@
 
 namespace App\Domain\Association\Models;
 
-use Maatwebsite\Excel\Concerns\ShouldAutoSize;
 use Maatwebsite\Excel\Concerns\WithMapping;
 use Maatwebsite\Excel\Concerns\WithHeadings;
 use Maatwebsite\Excel\Concerns\FromCollection;
+use Maatwebsite\Excel\Concerns\ShouldAutoSize;
 
 class MemberExport implements FromCollection, WithHeadings, WithMapping, ShouldAutoSize
 {

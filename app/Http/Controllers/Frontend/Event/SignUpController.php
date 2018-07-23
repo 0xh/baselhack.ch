@@ -3,13 +3,12 @@
 namespace App\Http\Controllers\Frontend\Event;
 
 use App\App\Controllers\Controller;
-use App\Http\Requests\Frontend\StoreSignUpRequest;
 use App\Jobs\RedirectSignUpRequest;
 use Illuminate\Support\Facades\Lang;
+use App\Http\Requests\Frontend\StoreSignUpRequest;
 
 class SignUpController extends Controller
 {
-
     /**
      * Show the application dashboard.
      *

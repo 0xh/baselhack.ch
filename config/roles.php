@@ -4,7 +4,7 @@ return [
 
     'active' => [
         'administrator',
-        'member'
+        'member',
     ],
 
     'inactive' => [

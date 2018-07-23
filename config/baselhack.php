@@ -2,29 +2,21 @@
 
 return [
 
-    'analytics' =>
-
-    ['google' => [
+    'analytics' => ['google' => [
 
         'key' => 'UA-82376109-14',
         'url' => 'https://www.googletagmanager.com/gtag/js?id=UA-82376109-14',
     ]],
 
-
-    'meta' =>
-
-    [
+    'meta' => [
         'author' => '',
         'robots' => '',
     ],
 
-
-    'notifications' =>
-    [
-        'signup' => [ 'sebastian.fix@onicial.ch'],
-        'contact_form' => ['sebastian.fix@onicial.ch']
+    'notifications' => [
+        'signup' => ['sebastian.fix@onicial.ch'],
+        'contact_form' => ['sebastian.fix@onicial.ch'],
     ],
-
 
     'socials' => [
 
@@ -45,7 +37,6 @@ return [
             'url' => 'https://twitter.com/BaselHack',
         ],
 
-
         'youtube' => [
             'url' => 'https://www.youtube.com/channel/UCat5BvUrfV7am60pLpuy8oQ ',
         ],
@@ -55,16 +46,13 @@ return [
         ],
     ],
 
-
-
     'languages' => [
 
         'status' => true,
-        'active' => ['de','en','fr']
+        'active' => ['de', 'en', 'fr'],
     ],
-
 
     'members' => [
         'status' => ['active', 'inactive', 'passive', 'terminated'],
-    ]
+    ],
 ];
