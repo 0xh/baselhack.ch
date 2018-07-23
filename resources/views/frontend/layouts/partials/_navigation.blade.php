@@ -52,9 +52,9 @@
                     Partners
                 </a>
 
-                {{--    <a class="navbar-item" href="{{ route('frontend.about.index') }}">
+                   <a class="navbar-item" href="{{ route('frontend.about.index') }}">
                         About
-                    </a>--}}
+                    </a>
 
                 <a class="navbar-item" href="{{ route('frontend.contact.index') }}">
                     Contact
