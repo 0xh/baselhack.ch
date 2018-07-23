@@ -15,7 +15,7 @@ return [
 
     'notifications' => [
         'signup' => ['event@baselhack.ch'],
-        'contact_form' => ['sponsoring@baselhack.ch','event@baselhack.ch','info@baselhack.ch'],
+        'contact_form' => ['sponsoring@baselhack.ch', 'event@baselhack.ch', 'info@baselhack.ch'],
     ],
 
     'socials' => [
@@ -84,5 +84,5 @@ return [
             'image' => 'swiss_made_software.png',
             'url' => 'https://www.swissmadesoftware.org',
         ],
-    ]
+    ],
 ];
