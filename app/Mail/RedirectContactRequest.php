@@ -30,7 +30,7 @@ class RedirectContactRequest extends Mailable
     public function build()
     {
         return $this
-            ->subject('Redirect Contact Form')
+            ->subject(strtoupper($this->contact['topic']) . ':  From ' . $this->contact['name'])
             ->markdown('emails.redirects.contact');
     }
 }

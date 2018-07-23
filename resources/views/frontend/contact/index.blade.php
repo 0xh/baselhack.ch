@@ -16,23 +16,33 @@
 
                 <div class="column is-three-fifths">
 
-                    <h2 class="subtitle">{{ __('frontend/contact.subtitle') }}</h2>
+                    <h1 class="title">{{ __('frontend/contact.title') }}</h1>
+                    <h2 class="subtitle"> {{ __('frontend/contact.subtitle') }}</h2>
                     <hr>
 
-                    <p class="has-text-justified">
-
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-                        ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-                        dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
-                        sit amet. Lorem ipsum dolor sit amet, consetetur
-
-                    </p>
-
-                    <hr>
 
 
                     <form id="form-build" method="POST" action="{{ route('frontend.contact.store') }}">
                         @csrf
+
+
+                        <div class="field">
+                            <label class="label">{{ __('frontend/contact.form.input.topic') }}</label>
+                            <div class="control">
+                                <div class="select is-fullwidth">
+                                    <select id="topic" name="topic" class="" title="{{ __('frontend/contact.form.input.topic') }}" required autofocus>
+                                        <option disabled selected>{{ __('frontend/contact.form.input.select.topic') }}</option>
+                                        <option value="general">{{ __('frontend/contact.form.input.select.general') }}</option>
+                                        <option value="event">{{ __('frontend/contact.form.input.select.event') }}</option>
+                                        <option value="sponsoring">{{ __('frontend/contact.form.input.select.sponsoring') }}</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            @if ($errors->has('topic'))
+                                <p class="help is-danger">{{ $errors->first('topic') }}</p>
+                            @endif
+                        </div>
 
                         <div class="field">
                             <label class="label">{{ __('frontend/contact.form.input.name') }}</label>
@@ -40,7 +50,7 @@
                                 <input id="name" name="name" value="{{ old('name') }}"
                                        class="input {{ $errors->has('name') ? ' is-danger' : '' }}" type="text"
                                        placeholder="{{ __('frontend/contact.form.input.name') }}"
-                                       autocomplete="name" required autofocus>
+                                       autocomplete="name" required>
                             </div>
 
                             @if ($errors->has('name'))

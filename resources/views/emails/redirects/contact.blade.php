@@ -1,11 +1,11 @@
 @component('mail::message')
 
-    Hello, <br>
+    Hello **{{ $contact['topic'] }}-Team**
 
-    Unfortunately there was an **SOMETHING**
+     {{ $contact['message'] }}
 
+    Thanks,
+    {{ $contact['name'] }} / <{{ $contact['email'] }}>
 
-    Thanks,<br>
-    Your Administrator
 @endcomponent
 

@@ -24,9 +24,10 @@ class StoreContactRequest extends FormRequest
     public function rules()
     {
         return [
+            'topic' => 'required|string',
             'name' => 'required|string',
-            'email' => 'required',
-            'message' => 'required',
+            'email' => 'required|email',
+            'message' => 'required|string',
         ];
     }
 }
