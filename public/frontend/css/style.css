@@ -30,6 +30,18 @@ body {
 
 }
 
+
+.card.sponsors {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.card.sponsors img
+
+{
+    
+}
+
 footer a
 {
     margin-right: 9px;

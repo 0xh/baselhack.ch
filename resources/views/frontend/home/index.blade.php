@@ -83,6 +83,8 @@
 
 
 
+    @include('frontend.layouts.components._sponsors')
+
     @include('frontend.layouts.components._newsletter')
 
 @endsection
