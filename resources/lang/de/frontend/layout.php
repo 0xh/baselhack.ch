@@ -12,6 +12,6 @@ return [
             'twitter' => 'Twitter',
             'github' => 'GitHub',
             'youtube' => 'Youtube',
-        ]
-    ]
+        ],
+    ],
 ];

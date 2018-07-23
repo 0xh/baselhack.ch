@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Backend\Users\Settings\Language;
 
 use App\Domain\Users\Models\User;
 use App\App\Controllers\Controller;
-use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Config;
 use App\Http\Requests\Backend\Users\Profile\UpdateLanguageRequest;
 

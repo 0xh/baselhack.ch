@@ -17,6 +17,4 @@ class EventController extends Controller
 
         return view('frontend.event.index', compact('current_page'));
     }
-
-
 }

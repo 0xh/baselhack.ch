@@ -12,5 +12,4 @@ class ImprintController extends Controller
 
         return view('frontend.legal.imprint.index', compact('current_page'));
     }
-
 }

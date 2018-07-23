@@ -6,13 +6,11 @@ return [
 
     'form' => [
 
-        'input' =>
-
-            [
+        'input' => [
                 'name' => 'Name',
                 'email' => 'E-Mail Address',
 
-                'message' => 'Your message'
+                'message' => 'Your message',
             ],
 
         'button' => [
@@ -26,10 +24,9 @@ return [
             'success' => [
 
                 'title' => 'Thank you!',
-                'description' => 'Wir werden uns in Kürze bei Ihnen melden.'
-            ]
-        ]
-    ]
-
+                'description' => 'Wir werden uns in Kürze bei Ihnen melden.',
+            ],
+        ],
+    ],
 
 ];

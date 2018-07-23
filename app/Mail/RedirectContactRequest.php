@@ -6,12 +6,12 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-
 class RedirectContactRequest extends Mailable
 {
     use Queueable, SerializesModels;
 
     public $contact;
+
     /**
      * Create a new message instance.
      *
@@ -20,7 +20,6 @@ class RedirectContactRequest extends Mailable
     public function __construct($contact)
     {
         $this->contact = $contact;
-
     }
 
     /**
@@ -33,6 +32,5 @@ class RedirectContactRequest extends Mailable
         return $this
             ->subject('Redirect Contact Form')
             ->markdown('emails.redirects.contact');
-
     }
 }

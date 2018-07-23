@@ -11,7 +11,6 @@ class Participant extends Model
      *
      * @var array
      */
-
     protected $fillable = [
         'email',
     ];
@@ -20,6 +19,4 @@ class Participant extends Model
     {
         return 'email';
     }
-
-
 }

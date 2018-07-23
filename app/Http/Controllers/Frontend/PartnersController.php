@@ -17,5 +17,4 @@ class PartnersController extends Controller
 
         return view('frontend.partners.index', compact('current_page'));
     }
-
 }

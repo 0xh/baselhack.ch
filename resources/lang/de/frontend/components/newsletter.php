@@ -4,7 +4,6 @@ return [
     'title' => 'Newsletter',
     'subtitle' => 'Erhalten Sie regelmässige Updates zu den neusten Events.',
 
-
     'form' => [
 
         'input' => [
@@ -18,5 +17,5 @@ return [
             'subscribe' => 'Subscribe',
         ],
 
-    ]
+    ],
 ];

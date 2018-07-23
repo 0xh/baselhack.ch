@@ -2,8 +2,8 @@
 
 namespace App\Domain\Event\Models;
 
-use App\Domain\Event\Models\Subscriber as SpatieNewsletter;
 use Illuminate\Database\Eloquent\Model;
+use App\Domain\Event\Models\Subscriber as SpatieNewsletter;
 
 class Subscriber extends Model
 {
