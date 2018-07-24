@@ -30,13 +30,14 @@
     @yield('styles')
 
 
-    <script async src="{{ config('analytics.google.url') }}"></script>
-
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121873164-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag({{ config('analytics.google.key') }});
+
+        gtag('config', 'UA-121873164-1');
     </script>
 
 

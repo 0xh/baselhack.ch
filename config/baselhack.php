@@ -2,12 +2,6 @@
 
 return [
 
-    'analytics' => ['google' => [
-
-        'key' => 'UA-121873164-1',
-        'url' => 'https://www.googletagmanager.com/gtag/js?id=UA-121873164-1',
-    ]],
-
     'meta' => [
         'author' => '',
         'robots' => '',
