@@ -1,6 +1,6 @@
 @component('mail::message')
 
-    Hello **{{ $contact['topic'] }}-Team**
+    To: **{{ $contact['topic'] . '-Team' }}**
 
      {{ $contact['message'] }}
 
