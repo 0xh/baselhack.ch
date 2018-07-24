@@ -4,8 +4,6 @@ return [
     'title' => 'Leave us a message!',
     'subtitle' => 'Happy to hear fromy ou, whaterver the topic you have in mind.',
 
-
-
     'meta' => [
         'title' => 'Contact Baselhack',
         'description' => 'Contact the Baselhack Team',
@@ -13,7 +11,6 @@ return [
     ],
 
     'form' => [
-
 
         'input' => [
 
@@ -32,7 +29,6 @@ return [
 
                 'message' => 'Your message',
             ],
-
 
         'button' => [
 
