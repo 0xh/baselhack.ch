@@ -1,11 +1,11 @@
 @component('mail::message')
 
-    To: **{{ $contact['topic'] . '-Team' }}**
+    To: **{{ strtoupper($contact['topic']) }}**
+    From **{{ strtoupper($contact['name']) }}**
 
-     {{ $contact['message'] }}
+    {{ $contact['message'] }}
 
-    Thanks,
-    {{ $contact['name'] }} / <{{ $contact['email'] }}>
+    {{ $contact['email'] }}
 
 @endcomponent
 
