@@ -19,7 +19,7 @@ class UsersTableSeeder extends Seeder
         $users = [
             [
                 'name' => 'Sebastian Fix',
-                'email' => 'sebastian.fix@smartgate.ch',
+                'email' => 'sebastian.fix@onicial.ch',
                 'password' => bcrypt('UqikZmp928nk7eL&'),
                 'created_at' => $now,
                 'updated_at' => $now,
@@ -29,6 +29,17 @@ class UsersTableSeeder extends Seeder
             [
                 'name' => 'Matthias Cullmann',
                 'email' => 'matthias.cullmann@baloise.ch',
+                'password' => bcrypt('baselhack2018$$'),
+                'created_at' => $now,
+                'updated_at' => $now,
+                'published_at' => $now,
+
+            ],
+
+
+            [
+                'name' => 'Jutta Jerlich',
+                'email' => 'jutta.jerlich@gmail.com',
                 'password' => bcrypt('baselhack2018$$'),
                 'created_at' => $now,
                 'updated_at' => $now,
