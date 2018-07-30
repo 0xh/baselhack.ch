@@ -23,7 +23,7 @@
                     Home
                 </a>
 
-                <div class="navbar-item has-dropdown is-hoverable">
+               {{-- <div class="navbar-item has-dropdown is-hoverable">
                     <a class="navbar-link" href="{{ route('frontend.event.index') }}">
                         Event
                     </a>
@@ -40,7 +40,7 @@
                         </a>
 
                     </div>
-                </div>
+                </div>--}}
 
 
                 <a class="navbar-item" href="{{ route('frontend.event.index') }}">
