@@ -29,14 +29,23 @@
 
             <div class="columns is-centered">
 
-                <div class="column is-three-quarters">
+                <div class="column is-three-fifths">
+
+
+                    <h1 class="title">You finally made it!</h1>
+
+                    <h3 class="subtitle">The competitive power of a region is based on the creativity of its people and organizations.</h3>
+                    <hr>
+
 
                     <div class="content">
 
-                        <p class="has-text-justified">
 
-                            The competitive power of a region is based on the creativity of its people and
-                            organizations. Every city needs such a melting pot. Born in 2017, the Basel Hackathon is
+
+
+                     <p class="has-text-justified">
+
+                            Every city needs such a melting pot. Born in 2017, the Basel Hackathon is
                             organized by the non-profit organisation BaselHack, consisting of 22 creative enthusiasts
                             from different backgrounds and organizations from the Basel Region with a diversity of
                             skills.
@@ -63,15 +72,19 @@
                         </p>
 
 
-                       {{-- <p class="has-text-justified">
+                        {{-- <p class="has-text-justified">
 
-                            <a href="" class="button is-dark">Sign up BaselHack 2018</a>
+                           <a href="" class="button is-dark">Sign up BaselHack 2018</a>
 
-                        </p>
+                       </p>
 --}}
 
 
                     </div>
+
+
+
+
                 </div>
 
             </div>
