@@ -6,7 +6,20 @@
 
 
 
-        <a id="link-to-association" style="color: black; text-decoration: none;" href="{{ route('backend.association.dashboard.index') }}" class="col-md-3">
+        <a id="link-to-administrator" style="color: black; text-decoration: none;" href="{{ route('backend.users.settings.profile.index') }}" class="col-md-3">
+            <div class="card mt-3 text-center">
+                <div class="card-body">
+                    <i class="fal fa-user-circle fa-2x"></i>
+                </div>
+                <div class="card-footer">
+                  {{ auth()->user()->name }}
+                </div>
+            </div>
+        </a>
+
+
+
+      {{--  <a id="link-to-association" style="color: black; text-decoration: none;" href="{{ route('backend.association.dashboard.index') }}" class="col-md-3">
             <div class="card mt-3 text-center">
                 <div class="card-body">
                     <i class="fal fa-cube fa-2x"></i>
@@ -40,7 +53,7 @@
                     Administrator
                 </div>
             </div>
-        </a>
+        </a>--}}
 
 
     </div>
