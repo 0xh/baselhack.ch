@@ -51,7 +51,7 @@ class UsersTableSeeder extends Seeder
 
         User::insert($users);
 
-        $roles = Role::all();
+       /* $roles = Role::all();
 
         $members = User::all();
 
@@ -59,6 +59,6 @@ class UsersTableSeeder extends Seeder
             foreach ($roles as $role) {
                 $member->roles()->attach($role);
             }
-        }
+        }*/
     }
 }

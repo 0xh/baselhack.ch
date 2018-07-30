@@ -20,10 +20,10 @@
 
                 @else
 
-                  {{--  <li class="nav-item"><a href="{{ route('backend.association.dashboard.index') }}" class="nav-link">Association</a></li>
+                   <li class="nav-item"><a href="{{ route('backend.association.dashboard.index') }}" class="nav-link">Association</a></li>
                     <li class="nav-item"><a href="{{ route('backend.event.dashboard.index') }}" class="nav-link">Event 2018</a></li>
                     <li class="nav-item"><a href="{{ route('backend.administrators.dashboard.index') }}" class="nav-link">Administrator</a></li>
---}}
+
 
 
                 @endif
