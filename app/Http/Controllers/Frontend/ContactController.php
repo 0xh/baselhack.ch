@@ -26,6 +26,7 @@ class ContactController extends Controller
         /** @todo Save to Database */
         $contact = [
 
+            'topic' => $request->topic,
             'name' => $request->name,
             'email' => $request->email,
             'message' => $request->message,

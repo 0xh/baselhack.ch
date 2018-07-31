@@ -16,9 +16,13 @@ class NewsletterController extends Controller
      */
     public function store(StoreNewsletterRequest $request)
     {
-        ProceedNewsletterRequest::dispatch($request);
+        $newsletter = [
+           'email' => $request->email,
+       ];
 
-        alert()->success(Lang::get('frontend/components/newsletter.notification.success.title'), Lang::get('frontend/components/newsletter.notification.success.descripion'))->autoClose(3000);
+        ProceedNewsletterRequest::dispatch($newsletter);
+
+        alert()->success(Lang::get('frontend/components/newsletter.form.notification.success.title'), Lang::get('frontend/components/newsletter.form.notification.success.description'))->autoClose(3000);
 
         return back();
     }

@@ -4,7 +4,6 @@
 
 
 
-
 @endsection
 
 @section('content')
@@ -14,10 +13,11 @@
             <div class="columns is-centered">
 
                 <div class="column is-4">
-                    <figure class="image">
-                        <a href="{{ route('frontend.event.signup') }}"><img class="" alt=""
-                                                                            src="{{ asset('frontend/images/backgrounds/todo.svg') }}"></a>
-                    </figure>
+
+                      <a href="{{ route('frontend.event.index') }}">
+                            <img class="image header-image" src="{{ asset('frontend/images/backgrounds/home.png') }}">
+                      </a>
+
                 </div>
             </div>
         </div>
@@ -29,14 +29,23 @@
 
             <div class="columns is-centered">
 
-                <div class="column is-three-quarters">
+                <div class="column is-three-fifths">
+
+
+                    <h1 class="title">You finally made it!</h1>
+
+                    <h3 class="subtitle">The competitive power of a region is based on the creativity of its people and organizations.</h3>
+                    <hr>
+
 
                     <div class="content">
 
-                        <p class="has-text-justified">
 
-                            The competitive power of a region is based on the creativity of its people and
-                            organizations. Every city needs such a melting pot. Born in 2017, the Basel Hackathon is
+
+
+                     <p class="has-text-justified">
+
+                            Every city needs such a melting pot. Born in 2017, the Basel Hackathon is
                             organized by the non-profit organisation BaselHack, consisting of 22 creative enthusiasts
                             from different backgrounds and organizations from the Basel Region with a diversity of
                             skills.
@@ -63,15 +72,19 @@
                         </p>
 
 
-                        <p class="has-text-justified">
+                        {{-- <p class="has-text-justified">
 
-                            <a href="" class="button is-dark">Sign up BaselHack 2018</a>
+                           <a href="" class="button is-dark">Sign up BaselHack 2018</a>
 
-                        </p>
-
+                       </p>
+--}}
 
 
                     </div>
+
+
+
+
                 </div>
 
             </div>
@@ -81,15 +94,17 @@
     </section>
 
 
-
+    @include('frontend.layouts.components._newsletter')
 
     @include('frontend.layouts.components._sponsors')
 
-    @include('frontend.layouts.components._newsletter')
+
+
 
 @endsection
 
 @section('scripts')
+
 
 
 @endsection

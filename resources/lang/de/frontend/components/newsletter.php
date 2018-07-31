@@ -2,7 +2,7 @@
 
 return [
     'title' => 'Newsletter',
-    'subtitle' => 'Erhalten Sie regelmässige Updates zu den neusten Events.',
+    'subtitle' => 'Receive regular updates and stay tuned!',
 
     'form' => [
 
@@ -15,6 +15,15 @@ return [
         'button' => [
 
             'subscribe' => 'Subscribe',
+        ],
+
+        'notification' => [
+
+            'success' => [
+
+                'title' => 'Thank you!',
+                'description' => 'You\'ve successfully subscribed to our newsletter!',
+            ],
         ],
 
     ],

@@ -8,27 +8,6 @@ body {
     color: #363636;
 }
 
-.hero.is-small {
-
-    padding-bottom: 0px;
-    padding-top: 0px;
-
-}
-
-.hero.is-small .hero-body {
-
-    padding-bottom: 0px;
-    padding-top: 0px;
-
-}
-
-
-.hero.is-small .hero-body .column {
-
-    padding-bottom: 0px;
-    padding-top: 0px;
-
-}
 
 
 .card.sponsors {
@@ -37,8 +16,22 @@ body {
 }
 
 .card.sponsors img
-
 {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+
+    transition:all 0.5s ease;
+
+}
+
+.card.sponsors img:hover
+{
+    -webkit-filter: grayscale(50%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(50%);
+
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
 
 }
 

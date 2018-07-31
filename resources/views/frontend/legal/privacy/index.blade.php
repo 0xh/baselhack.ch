@@ -19,74 +19,65 @@
                     <div class="content">
 
 
-
-                        <h3>Datenschutz</h3>
-
-                        <p class="has-text-justified">
-                            Gestützt auf Artikel 13 der schweizerischen Bundesverfassung und die datenschutzrechtlichen
-                            Bestimmungen des Bundes (Datenschutzgesetz, DSG) hat jede Person Anspruch auf Schutz ihrer
-                            Privatsphäre sowie auf Schutz vor Missbrauch ihrer persönlichen Daten. Wir halten diese
-                            Bestimmungen ein. Persönliche Daten werden streng vertraulich behandelt und weder an Dritte
-                            verkauft noch weitergegeben. In enger Zusammenarbeit mit unseren Hosting-Providern bemühen
-                            wir uns, die Datenbanken so gut wie möglich vor fremden Zugriffen, Verlusten, Missbrauch
-                            oder vor Fälschung zu schützen
-
-                            Beim Zugriff auf unsere Webseiten werden folgende Daten in Logfiles gespeichert: IP-Adresse,
-                            Datum, Uhrzeit, Browser-Anfrage und allg. übertragene Informationen zum Betriebssystem resp.
-                            Browser. Diese Nutzungsdaten bilden die Basis für statistische, anonyme Auswertungen, so
-                            dass Trends erkennbar sind, anhand derer wir unsere Angebote entsprechend verbessern können.
-                        </p>
-
-                        <h3>Datenschutzerklärung für die Nutzung von Facebook</h3>
-
+                        <h3>General</h3>
 
                         <p class="has-text-justified">
-                            Auf unseren Seiten sind Plugins des sozialen Netzwerks Facebook, 1601 South California
-                            Avenue, Palo Alto, CA 94304, USA integriert. Die Facebook-Plugins erkennen Sie an dem
-                            Facebook-Logo oder dem “Like-Button” (“Gefällt mir”) auf unserer Seite. Eine Übersicht über
-                            die Facebook-Plugins finden Sie unter <a href="http://developers.facebook.com/docs/plugins">Facebook Developer</a>.
 
-                            Wenn Sie unsere Seiten besuchen, wird über das Plugin eine direkte Verbindung zwischen Ihrem
-                            Browser und dem Facebook-Server hergestellt. Facebook erhält dadurch die Information, dass
-                            Sie mit Ihrer IP-Adresse unsere Seite besucht haben. Wenn Sie den Facebook “Like-Button”
-                            anklicken während Sie in Ihrem Facebook-Account eingeloggt sind, können Sie die Inhalte
-                            unserer Seiten auf Ihrem Facebook-Profil verlinken. Dadurch kann Facebook den Besuch unserer
-                            Seiten Ihrem Benutzerkonto zuordnen. Wir weisen darauf hin, dass wir als Anbieter der Seiten
-                            keine Kenntnis vom Inhalt der übermittelten Daten sowie deren Nutzung durch Facebook
-                            erhalten. Weitere Informationen hierzu finden Sie in der Datenschutzerklärung von facebook
-                            unter <a href="https://www.facebook.com/about/privacy">Facebook Privacy</a>.
-
-                            Wenn Sie nicht wünschen, dass Facebook den Besuch unserer Seiten Ihrem Facebook-Nutzerkonto
-                            zuordnen kann, loggen Sie sich bitte aus Ihrem Facebook-Benutzerkonto aus.
+                            Your privacy is very important to us. We want to make your experience on the Internet as
+                            enjoyable and rewarding as possible, and we want you to use the Internet’s vast array of
+                            information, tools, and opportunities with complete confidence.
 
                         </p>
 
-                        <h3>Datenschutzerklärung für die Nutzung von Google Analytics</h3>
+
+                        <h3>Newsletter</h3>
 
                         <p class="has-text-justified">
-                            Diese Website benutzt Google Analytics, einen Webanalysedienst der Google Inc. (“Google”).
-                            Google Analytics verwendet sog. “Cookies”, Textdateien, die auf Ihrem Computer gespeichert
-                            werden und die eine Analyse der Benutzung der Website durch Sie ermöglichen. Die durch den
-                            Cookie erzeugten Informationen über Ihre Benutzung dieser Website werden in der Regel an
-                            einen Server von Google in den USA übertragen und dort gespeichert. Im Falle der Aktivierung
-                            der IP-Anonymisierung auf dieser Webseite wird Ihre IP-Adresse von Google jedoch innerhalb
-                            von Mitgliedstaaten der Europäischen Union oder in anderen Vertragsstaaten des Abkommens
-                            über den Europäischen Wirtschaftsraum zuvor gekürzt. Nur in Ausnahmefällen wird die volle
-                            IP-Adresse an einen Server von Google in den USA übertragen und dort gekürzt. Google wird
-                            diese Informationen benutzen, um Ihre Nutzung der Website auszuwerten, um Reports über die
-                            Websiteaktivitäten für die Websitebetreiber zusammenzustellen und um weitere mit der
-                            Websitenutzung und der Internetnutzung verbundene Dienstleistungen zu erbringen. Auch wird
-                            Google diese Informationen gegebenenfalls an Dritte übertragen, sofern dies gesetzlich
-                            vorgeschrieben oder soweit Dritte diese Daten im Auftrag von Google verarbeiten. Die im
-                            Rahmen von Google Analytics von Ihrem Browser übermittelte IP-Adresse wird nicht mit anderen
-                            Daten von Google zusammengeführt. Sie können die Installation der Cookies durch eine
-                            entsprechende Einstellung Ihrer Browser Software verhindern; wir weisen Sie jedoch darauf
-                            hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser Website voll
-                            umfänglich nutzen können. Durch die Nutzung dieser Website erklären Sie sich mit der
-                            Bearbeitung der über Sie erhobenen Daten durch Google in der zuvor beschriebenen Art und
-                            Weise und zu dem zuvor benannten Zweck einverstanden.
+
+                            If you would like to receive our newsletter, we require a valid email address as well as
+                            information that allows us to verify that you are the owner of the specified email address
+                            and that you agree to receive this newsletter. No additional data is collected or is only
+                            collected on a voluntary basis. We only use this data to send the requested information and
+                            do not pass it on to third parties.
+
                         </p>
 
+
+                        <h3>Contact form</h3>
+
+                        <p class="has-text-justified">
+
+                            Should you send us questions via the contact form, we will collect the data entered on the
+                            form, including the contact details you provide, to answer your question and any follow-up
+                            questions. We do not share this information without your permission.
+
+                        </p>
+
+
+                        <h3>Google Analytics</h3>
+
+                        <p class="has-text-justified">
+
+                            This website uses Google Analytics, a web analytics service. It is operated by Google Inc.,
+                            1600 Amphitheatre Parkway, Mountain View, CA 94043, USA.
+
+                        </p>
+                        <p class="has-text-justified">
+
+                            Google Analytics uses so-called “cookies”. These are text files that are stored on your
+                            computer and that allow an analysis of the use of the website by you. The information
+                            generated by the cookie about your use of this website is usually transmitted to a Google
+                            server in the USA and stored there.
+
+                        </p>
+                        <p class="has-text-justified">
+
+                            Google Analytics cookies are stored based on Art. 6 (1) (f) EU GDPR. The website operator
+                            has a legitimate interest in analyzing user behavior to optimize both its website and its
+                            advertising.
+
+
+                        </p>
 
 
                     </div>

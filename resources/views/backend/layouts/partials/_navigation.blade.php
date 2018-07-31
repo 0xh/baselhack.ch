@@ -20,13 +20,10 @@
 
                 @else
 
-                    <li class="nav-item"><a href="{{ route('backend.association.dashboard.index') }}" class="nav-link">Association</a></li>
-
-
+                  {{--  <li class="nav-item"><a href="{{ route('backend.association.dashboard.index') }}" class="nav-link">Association</a></li>
                     <li class="nav-item"><a href="{{ route('backend.event.dashboard.index') }}" class="nav-link">Event 2018</a></li>
-
                     <li class="nav-item"><a href="{{ route('backend.administrators.dashboard.index') }}" class="nav-link">Administrator</a></li>
-
+--}}
 
 
                 @endif
@@ -43,7 +40,7 @@
                 @else
 
 
-                    <li><a class="nav-link" href="{{ route('backend.users.settings.profile.index') }}"><i class="fal fa-user"></i> <span style="font-size: 12px; font-weight: bold;">{{ auth()->user()->name }}</span></a></li>
+                    <li><a class="nav-link" href="{{ route('backend.users.settings.profile.index') }}"> <i class="fal fa-user-circle"></i>  <span style="font-size: 12px; font-weight: bold;">{{ auth()->user()->name }}</span></a></li>
 
 
 

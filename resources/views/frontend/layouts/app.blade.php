@@ -11,6 +11,8 @@
     <meta name="author" content="BaselHack">
     <meta name="keywords" content="BaselHack, Hackathon, connect, talents, serious fun, open innovation, Basel Stadt, Basel Land, Jura, Dreiländereck">
 
+    <meta name="google-site-verification" content="M4X8v15Wz14ak2J40VUCJAeLcu4X9pfs-XNoqJsj-w8" />
+
     <title>BaselHack - More than a Hack</title>
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -28,13 +30,14 @@
     @yield('styles')
 
 
-    <script async src="{{ config('analytics.google.url') }}"></script>
-
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121873164-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag({{ config('analytics.google.key') }});
+
+        gtag('config', 'UA-121873164-1');
     </script>
 
 
@@ -49,6 +52,7 @@
 
 @include('frontend.layouts.partials._footer')
 
+<script src="{{ asset('frontend/js/modernizr.js') }}"></script>
 <script src="{{ asset('frontend/js/navigation.js') }}"></script>
 <script src="{{ asset('frontend/js/retina.min.js') }}" defer></script>
 <script src="{{ asset('frontend/js/sweetalert.js') }}"></script>

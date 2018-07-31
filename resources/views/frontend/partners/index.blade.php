@@ -13,7 +13,7 @@
 
             <div class="columns is-centered">
 
-                <div class="column is-three-quarters">
+                <div class="column is-three-fifths">
 
                     <h1 class="title">Collaboration is key</h1>
 
@@ -77,6 +77,10 @@
 
 
     @include('frontend.layouts.components._newsletter')
+
+
+    @include('frontend.layouts.components._sponsors')
+
 
 
 @endsection

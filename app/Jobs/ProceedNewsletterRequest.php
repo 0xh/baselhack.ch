@@ -8,22 +8,21 @@ use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
-use App\Http\Requests\Frontend\StoreNewsletterRequest;
 
 class ProceedNewsletterRequest implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
-    public $request;
+    public $newsletter;
 
     /**
      * Create a new job instance.
      *
      * @return void
      */
-    public function __construct(StoreNewsletterRequest $request)
+    public function __construct($newsletter)
     {
-        $this->request = $request;
+        $this->newsletter = $newsletter;
     }
 
     /**
@@ -33,6 +32,6 @@ class ProceedNewsletterRequest implements ShouldQueue
      */
     public function handle()
     {
-        Newsletter::subscribe($this->request->email);
+        Newsletter::subscribe($this->newsletter['email']);
     }
 }
