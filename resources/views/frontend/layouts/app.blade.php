@@ -47,7 +47,6 @@
 
 @include('frontend.layouts.partials._navigation')
 
-
 @yield('content')
 
 @include('frontend.layouts.partials._footer')

@@ -41,6 +41,10 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
         Route::get('/', 'PartnersController@index')->name('index');
     });
 
+    Route::group(['prefix' => 'sponsors', 'as' => 'sponsors.'], function () {
+        Route::get('/', 'SponsorsController@index')->name('index');
+    });
+
     Route::group(['prefix' => 'legal', 'namespace' => 'Legal', 'as' => 'legal.'], function () {
         Route::get('/imprint', 'ImprintController@index')->name('imprint.index');
         Route::get('/privacy', 'PrivacyController@index')->name('privacy.index');

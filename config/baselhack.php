@@ -50,7 +50,43 @@ return [
         'status' => ['active', 'inactive', 'passive', 'terminated'],
     ],
 
+
+    'partners' => [
+
+        'powercoders' => [
+            'title' => 'POWER.CODERS',
+            'image' => 'powercoders.png',
+            'url' => 'https://powercoders.org/',
+        ],
+
+        'swiss_made_software' => [
+            'title' => 'Swiss Made Software',
+            'image' => 'swiss_made_software.png',
+            'url' => 'https://www.swissmadesoftware.org',
+        ],
+    ],
+
     'sponsors' => [
+
+
+        'basel_area_swiss' => [
+            'title' => 'Basel Area Swiss',
+            'image' => 'basel_area_swiss.png',
+            'url' => 'https://www.baselarea.swiss/baselarea-swiss.html',
+        ],
+
+        'kanton_bl' => [
+            'title' => 'Kanton Basel-Landschaft',
+            'image' => 'kanton_bl.png',
+
+            'url' => 'https://www.baselland.ch',
+        ],
+
+        'smart_regio_basel' => [
+            'title' => 'Smart Regio Basel',
+            'image' => 'smart_regio_basel.png',
+            'url' => 'https://smartregiobasel.ch/',
+        ],
 
         'actemium' => [
             'title' => 'Actemium',
@@ -67,16 +103,8 @@ return [
             'image' => 'bluesky_it_solutions.png',
             'url' => 'https://www.bluesky-it.ch',
         ],
-        'kanton_bl' => [
-            'title' => 'Kanton Basel-Landschaft',
-            'image' => 'kanton_bl.png',
 
-            'url' => 'https://www.baselland.ch',
-        ],
-        'swiss_made_software' => [
-            'title' => 'Swiss Made Software',
-            'image' => 'swiss_made_software.png',
-            'url' => 'https://www.swissmadesoftware.org',
-        ],
+
+
     ],
 ];

@@ -16,9 +16,10 @@
 
             <div class="columns is-centered">
 
-                <div class="column is-three-fifths">
 
-                    <h1 class="title">At BaselHack</h1>
+                <div class="column is-three-quarters">
+
+                <h1 class="title">At BaselHack</h1>
                     <h2 class="subtitle">Why we want to partner with you?</h2>
                     <hr>
 

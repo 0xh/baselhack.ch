@@ -29,7 +29,7 @@
 
             <div class="columns is-centered">
 
-                <div class="column is-three-fifths">
+                <div class="column is-three-quarters">
 
 
                     <h1 class="title">You finally made it!</h1>
@@ -94,9 +94,13 @@
     </section>
 
 
-    @include('frontend.layouts.components._newsletter')
 
     @include('frontend.layouts.components._sponsors')
+
+    @include('frontend.layouts.components._newsletter')
+
+
+    @include('frontend.layouts.components._partners')
 
 
 

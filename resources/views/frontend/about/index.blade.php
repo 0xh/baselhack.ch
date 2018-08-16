@@ -13,9 +13,10 @@
 
             <div class="columns is-centered">
 
-                <div class="column is-three-fifths">
 
-                    <h1 class="title">About Us</h1>
+                <div class="column is-three-quarters">
+
+                <h1 class="title">About Us</h1>
                     <h2 class="subtitle">BaselHack is more than a Hackathon – we connect people, take fun seriously and
                         grow open innovation</h2>
                     <hr>

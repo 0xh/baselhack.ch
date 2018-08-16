@@ -52,7 +52,12 @@
                     Partners
                 </a>
 
-                 <a class="navbar-item" href="{{ route('frontend.about.index') }}">
+                <a class="navbar-item" href="{{ route('frontend.sponsors.index') }}">
+                    Sponsors
+                </a>
+
+
+                <a class="navbar-item" href="{{ route('frontend.about.index') }}">
                         About
                     </a>
 

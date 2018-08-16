@@ -14,9 +14,10 @@
 
             <div class="columns is-centered">
 
-                <div class="column is-three-fifths">
 
-                    <h1 class="title">{{ __('frontend/contact.title') }}</h1>
+                <div class="column is-three-quarters">
+
+                <h1 class="title">{{ __('frontend/contact.title') }}</h1>
                     <h2 class="subtitle"> {{ __('frontend/contact.subtitle') }}</h2>
                     <hr>
 
