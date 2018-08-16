@@ -36,7 +36,6 @@ class UsersTableSeeder extends Seeder
 
             ],
 
-
             [
                 'name' => 'Jutta Jerlich',
                 'email' => 'jutta.jerlich@gmail.com',
@@ -51,14 +50,14 @@ class UsersTableSeeder extends Seeder
 
         User::insert($users);
 
-       /* $roles = Role::all();
+        /* $roles = Role::all();
 
-        $members = User::all();
+         $members = User::all();
 
-        foreach ($members as $member) {
-            foreach ($roles as $role) {
-                $member->roles()->attach($role);
-            }
-        }*/
+         foreach ($members as $member) {
+             foreach ($roles as $role) {
+                 $member->roles()->attach($role);
+             }
+         }*/
     }
 }
