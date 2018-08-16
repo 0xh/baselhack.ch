@@ -50,7 +50,6 @@ return [
         'status' => ['active', 'inactive', 'passive', 'terminated'],
     ],
 
-
     'partners' => [
 
         'powercoders' => [
@@ -67,7 +66,6 @@ return [
     ],
 
     'sponsors' => [
-
 
         'basel_area_swiss' => [
             'title' => 'Basel Area Swiss',
@@ -103,8 +101,6 @@ return [
             'image' => 'bluesky_it_solutions.png',
             'url' => 'https://www.bluesky-it.ch',
         ],
-
-
 
     ],
 ];
