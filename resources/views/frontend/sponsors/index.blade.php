@@ -22,12 +22,12 @@
                     <h3 class="subtitle">We proudly present our sponsors!</h3>
 
 
-                    <div style="margin-top: 25px;" class="columns is-multiline is-centered is-vcentered">
+                    <div style="margin-top: 25px;" class="columns is-multiline is-centered is-vcentered is-mobile">
 
 
                         @foreach(config('baselhack.sponsors') as $sponsor)
 
-                            <div class="column is-2-desktop ">
+                            <div class="column is-2-desktop is-6-mobile">
 
                                 <div style=" border-radius: 5px;" class="card sponsors ">
                                     <div class="card-image">

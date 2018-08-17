@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a53a531259ffc6c129b4fb267ab36678",
+    "content-hash": "5216d48017ae914829667b2fefa34560",
     "packages": [
         {
             "name": "codacy/coverage",
@@ -399,6 +399,115 @@
                 "parser"
             ],
             "time": "2018-03-08T01:11:30+00:00"
+        },
+        {
+            "name": "eyewitness/cron-expression",
+            "version": "v3.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/eyewitness/cron-expression.git",
+                "reference": "0665701f70761398e333cd999fa4f6b0f95b3c1b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/eyewitness/cron-expression/zipball/0665701f70761398e333cd999fa4f6b0f95b3c1b",
+                "reference": "0665701f70761398e333cd999fa4f6b0f95b3c1b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~6.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Eyewitness\\Cron\\": "src/Eyewitness/Cron/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                },
+                {
+                    "name": "Chris Tankersley",
+                    "email": "chris@ctankersley.com",
+                    "homepage": "https://github.com/dragonmantank"
+                }
+            ],
+            "description": "CRON for PHP: Calculate the next or previous run date and determine if a CRON expression is due",
+            "keywords": [
+                "cron",
+                "schedule"
+            ],
+            "time": "2018-02-07T04:37:19+00:00"
+        },
+        {
+            "name": "eyewitness/eye",
+            "version": "dev-beta",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/eyewitness/eye.git",
+                "reference": "73f5e72fd687e8e21ec761676449fff58e0b0c1f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/eyewitness/eye/zipball/73f5e72fd687e8e21ec761676449fff58e0b0c1f",
+                "reference": "73f5e72fd687e8e21ec761676449fff58e0b0c1f",
+                "shasum": ""
+            },
+            "require": {
+                "eyewitness/cron-expression": "~3.0",
+                "guzzlehttp/guzzle": "5.*|6.*",
+                "laravel/framework": "~5.1",
+                "nesbot/carbon": "*"
+            },
+            "require-dev": {
+                "fzaninotto/faker": "~1.4",
+                "mockery/mockery": "~1.0",
+                "orchestra/testbench": "~3.5",
+                "phpunit/phpunit": "~6.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Eyewitness\\Eye\\EyeServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Eyewitness\\Eye\\": "app"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Laurence",
+                    "email": "laurence@eyewitness.io"
+                }
+            ],
+            "description": "Eyewitness.io client for Laravel 5 applications",
+            "homepage": "https://github.com/eyewitness/eye",
+            "keywords": [
+                "cron",
+                "eyewitness",
+                "laravel 5",
+                "monitor",
+                "queue"
+            ],
+            "time": "2018-08-01T01:18:09+00:00"
         },
         {
             "name": "fideloper/proxy",
@@ -1854,6 +1963,72 @@
                 "sweet-alert2"
             ],
             "time": "2018-04-04T13:43:57+00:00"
+        },
+        {
+            "name": "spatie/laravel-failed-job-monitor",
+            "version": "3.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-failed-job-monitor.git",
+                "reference": "8eb0ab110bf1ebb631694d49ad02c0c40804ebdc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-failed-job-monitor/zipball/8eb0ab110bf1ebb631694d49ad02c0c40804ebdc",
+                "reference": "8eb0ab110bf1ebb631694d49ad02c0c40804ebdc",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "~5.5.0|~5.6.0",
+                "illuminate/notifications": "~5.5.0|~5.6.0",
+                "illuminate/queue": "~5.5.0|~5.6.0",
+                "illuminate/support": "~5.5.0|~5.6.0",
+                "php": "^7.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "~3.5.0|~3.6.0",
+                "phpunit/phpunit": "^6.3|^7.0"
+            },
+            "suggest": {
+                "guzzlehttp/guzzle": "Allows notifications to be sent via Slack"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Spatie\\FailedJobMonitor\\FailedJobMonitorServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\FailedJobMonitor\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Get notified when a queued job fails",
+            "homepage": "https://github.com/spatie/laravel-failed-job-monitor",
+            "keywords": [
+                "job",
+                "laravel-failed-job-monitor",
+                "monitor",
+                "notify",
+                "queue",
+                "slack",
+                "spatie"
+            ],
+            "time": "2018-02-13T22:25:44+00:00"
         },
         {
             "name": "spatie/laravel-newsletter",
@@ -4932,6 +5107,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "eyewitness/eye": 20,
         "orangehill/iseed": 20
     },
     "prefer-stable": true,

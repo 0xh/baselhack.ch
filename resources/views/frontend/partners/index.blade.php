@@ -8,10 +8,10 @@
 
     @include('frontend.layouts.components._header')
 
-    <section class="section">
-        <div class="container">
+                <section class="section">
+                    <div class="container">
 
-            <div class="columns is-centered">
+                        <div class="columns is-centered">
 
 
                 <div class="column is-three-quarters">
@@ -69,6 +69,45 @@
 
                     </div>
 
+
+
+
+                    <h1 style="margin-top: 50px;" class="title">Partners</h1>
+
+                    <h3 class="subtitle">We proudly present our partners!</h3>
+
+
+
+
+                    <div style="margin-top: 25px;" class="columns is-multiline is-centered is-vcentered is-mobile">
+
+
+                        @foreach(config('baselhack.partners') as $partner)
+
+                            <div class="column is-2-desktop is-6-mobile">
+
+                                <div style=" border-radius: 5px;" class="card sponsors">
+                                    <div class="card-image">
+
+                                        <figure class="image">
+                                            <a target="_blank" title="{{ $partner['title'] }}"  alt="{{ $partner['title'] }}" href="{{ $partner['url'] }}"><img
+                                                        title="{{ $partner['title'] }}" src="{{ asset('frontend/images/sponsors/' .  $partner['image']) }}"
+                                                        alt="{{ $partner['title'] }}"></a>
+                                        </figure>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+
+                        @endforeach
+
+
+                    </div>
+
+
                 </div>
 
             </div>
@@ -78,9 +117,6 @@
 
 
     @include('frontend.layouts.components._newsletter')
-
-
-    @include('frontend.layouts.components._partners')
 
 
 
