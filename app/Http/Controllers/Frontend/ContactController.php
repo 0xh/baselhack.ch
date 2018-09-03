@@ -3,17 +3,14 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\App\Controllers\Controller;
-use App\Jobs\RedirectContactRequest;
+use App\Domain\Jobs\ForwardContacRequest;
+use App\Domain\Objects\Contact;
 use Illuminate\Support\Facades\Lang;
 use App\Http\Requests\Frontend\StoreContactRequest;
 
 class ContactController extends Controller
 {
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
         $current_page = 'contact';
@@ -23,18 +20,21 @@ class ContactController extends Controller
 
     public function store(StoreContactRequest $request)
     {
-        /** @todo Save to Database */
-        $contact = [
 
-            'topic' => $request->topic,
-            'name' => $request->name,
-            'email' => $request->email,
-            'message' => $request->message,
-        ];
+        $contact = new Contact(
+            $request->topic,
+            $request->name,
+            $request->email,
+            $request->message
+        );
 
-        RedirectContactRequest::dispatch($contact);
+        if ($contact instanceof Contact) {
+            ForwardContacRequest::dispatch($contact);
 
-        alert()->success(Lang::get('frontend/contact.form.notification.success.title'), Lang::get('frontend/contact.form.notification.success.description'))->autoClose(3000);
+            alert()->success(Lang::get('frontend/contact.form.notification.success.title'), Lang::get('frontend/contact.form.notification.success.description'))->autoClose(3000);
+        } else {
+            alert()->success(Lang::get('frontend/contact.form.notification.error.title'), Lang::get('frontend/contact.form.notification.error.description'))->autoClose(3000);
+        }
 
         return back();
     }

@@ -2,14 +2,12 @@
 
 return [
 
-    'meta' => [
-        'author' => '',
-        'robots' => '',
-    ],
-
     'notifications' => [
-        'signup' => ['event@baselhack.ch'],
-        'contact_form' => ['sponsoring@baselhack.ch', 'info@baselhack.ch'],
+
+        'general' => ['info@baselhack.ch'],
+        'sponsoring' => ['sponsoring@baselhack.ch'],
+        'event' => ['event@baselhack.ch'],
+
     ],
 
     'socials' => [
@@ -41,16 +39,18 @@ return [
     ],
 
     'languages' => [
-
-        'status' => true,
-        'active' => ['de', 'en', 'fr'],
+       'de', 'en', 'fr',
     ],
 
-    'members' => [
-        'status' => ['active', 'inactive', 'passive', 'terminated'],
-    ],
 
     'partners' => [
+
+
+        'fuck_up_nights' => [
+            'title' => 'FuckUp Nights Basel',
+            'image' => 'fuck_up_nights.png',
+            'url' => 'https://fuckupnights.com/basel/',
+        ],
 
         'powercoders' => [
             'title' => 'POWER.CODERS',

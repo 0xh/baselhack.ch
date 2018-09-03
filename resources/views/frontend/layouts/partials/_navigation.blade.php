@@ -16,6 +16,7 @@
             </div>
         </div>
 
+
         <div id="navbarMenu" class="navbar-menu has-text-centered">
 
             <div class="navbar-start has-text-centered-touch">
@@ -23,29 +24,19 @@
                     Home
                 </a>
 
-               {{-- <div class="navbar-item has-dropdown is-hoverable">
+               <div class="navbar-item has-dropdown is-hoverable">
                     <a class="navbar-link" href="{{ route('frontend.event.index') }}">
                         Event
                     </a>
                     <div class="navbar-dropdown is-boxed">
 
-                        <a class="navbar-item" href="{{ route('frontend.event.signup') }}">
-                            Information
-                        </a>
-
-                        <hr class="navbar-divider">
 
                         <a class="navbar-item" href="{{ route('frontend.event.signup') }}">
-                            Sing up
+                            Sing-Up
                         </a>
 
                     </div>
-                </div>--}}
-
-
-                <a class="navbar-item" href="{{ route('frontend.event.index') }}">
-                    Event
-                </a>
+                </div>
 
 
                 <a class="navbar-item" href="{{ route('frontend.partners.index') }}">

@@ -40,7 +40,7 @@ class LoginTest extends TestCase
             'password' => 'secret',
         ]);
 
-        $this->assertRedirectedTo(route('backend.users.dashboard.index'));
+        $this->assertRedirectedTo(route('backend.dashboard.index'));
     }
 
     /**

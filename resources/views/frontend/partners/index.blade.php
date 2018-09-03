@@ -91,7 +91,7 @@
 
                                         <figure class="image">
                                             <a target="_blank" title="{{ $partner['title'] }}"  alt="{{ $partner['title'] }}" href="{{ $partner['url'] }}"><img
-                                                        title="{{ $partner['title'] }}" src="{{ asset('frontend/images/sponsors/' .  $partner['image']) }}"
+                                                        title="{{ $partner['title'] }}" src="{{ asset('frontend/images/partners/' .  $partner['image']) }}"
                                                         alt="{{ $partner['title'] }}"></a>
                                         </figure>
                                     </div>

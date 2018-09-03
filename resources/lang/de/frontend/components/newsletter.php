@@ -24,6 +24,11 @@ return [
                 'title' => 'Thank you!',
                 'description' => 'You\'ve successfully subscribed to our newsletter!',
             ],
+            'error' => [
+
+                'title' => 'Ohhps!',
+                'description' => 'Something went wrong. Please try again later!',
+            ],
         ],
 
     ],

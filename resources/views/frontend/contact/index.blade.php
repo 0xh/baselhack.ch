@@ -18,7 +18,7 @@
                 <div class="column is-three-quarters">
 
                 <h1 class="title">{{ __('frontend/contact.title') }}</h1>
-                    <h2 class="subtitle"> {{ __('frontend/contact.subtitle') }}</h2>
+                    <h2 class="subtitle">{{ __('frontend/contact.subtitle') }}</h2>
                     <hr>
 
 
@@ -32,7 +32,7 @@
                             <div class="control">
                                 <div class="select is-fullwidth">
                                     <select id="topic" name="topic" class="" title="{{ __('frontend/contact.form.input.topic') }}" required autofocus>
-                                        <option disabled selected>{{ __('frontend/contact.form.input.select.topic') }}</option>
+                                        <option value="" disabled selected>{{ __('frontend/contact.form.input.select.topic') }}</option>
                                         <option value="general">{{ __('frontend/contact.form.input.select.general') }}</option>
                                         <option value="event">{{ __('frontend/contact.form.input.select.event') }}</option>
                                         <option value="sponsoring">{{ __('frontend/contact.form.input.select.sponsoring') }}</option>

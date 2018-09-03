@@ -1,41 +1,36 @@
-sudo: true
+sudo: required
 
 dist: trusty
 
 language: php
 
+php:
+- 7.1
+
+services:
+- mysql
+
 addons:
   chrome: stable
 
-php:
-  - 7.1
-
-services:
-  - redis-server
-  - postgres
+install:
+- travis_retry composer install --no-interaction --prefer-dist --no-suggest
 
 before_script:
-   - psql -c 'create database testing;' -U postgres
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
+- ./vendor/laravel/dusk/bin/chromedriver-linux &
 
-   - cp .env.travis.testing .env
-   - cp phpunit.travis.xml phpunit.xml
+- mysql -e 'create database testing;'
 
-   - export CODACY_PROJECT_TOKEN=0a56559d16b34bafa2c8c538705e7d7b
-   - php artisan key:generate
+- cp .env.travis .env
+- cp phpunit.travis.xml phpunit.xml
 
-   - php artisan serve &
-
-install:
-
-   - travis_retry composer install --no-interaction --prefer-dist --no-suggest
-   - travis_retry npm install
-   - npm run prod
+- php artisan key:generate
+- php artisan serve &
 
 script:
-  - phpunit --coverage-clover build/coverage/xml
-
-after_script:
-  - php vendor/bin/codacycoverage clover build/coverage/xml
+- phpunit
 
 after_success:
-  - chmod +x ./tests.sh; ./tests.sh
+  - chmod +x ./travis.success.sh; ./travis.success.sh

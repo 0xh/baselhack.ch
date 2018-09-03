@@ -11,15 +11,29 @@ class CreateParticipantsTable extends Migration
      *
      * @return void
      */
+
     public function up()
     {
         Schema::create('participants', function (Blueprint $table) {
+
             $table->increments('id');
-            $table->string('status');
-            $table->string('name');
-            $table->string('email');
-            $table->dateTime('email_confirmed')->nullable();
+            $table->uuid('uuid')->unique();
+
+            $table->string('type');
+
+            $table->string('firstname');
+            $table->string('lastname');
+
+            $table->string('company')->nullable();
+            $table->string('email')->unique();
+
+            $table->boolean('confirmed_email')->default(false);
+
+            $table->boolean('over_eighteen')->default(false);
+            $table->dateTime('accepted_policy')->nullable();
+
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -41,7 +41,7 @@
                 </div>
 
                 <div class="copyright">
-                   <a href="{{ route('backend.users.dashboard.index') }}">&copy; BaselHack</a>
+                 &copy; BaselHack
                 </div>
 
             </div>

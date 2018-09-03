@@ -2,9 +2,6 @@
 
     <title>{{ __('frontend/' . $current_page . '.meta.title') }}</title>
 
-    <meta name="robots" content="{{ config('meta.robots') }}">
-    <meta name="author" content="{{ config('meta.author') }}"/>
-
     <meta name="description" content="{{ __('frontend/' . $current_page . '.meta.description') }}"/>
     <meta name="keywords" content="{{ __('frontend/' . $current_page . '.meta.keywords') }}">
 

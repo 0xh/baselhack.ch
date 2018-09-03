@@ -43,6 +43,11 @@ return [
                 'title' => 'Thank you!',
                 'description' => 'We\'ve successfully received your message!',
             ],
+            'error' => [
+
+                'title' => 'Ohhps!',
+                'description' => 'Something went wrong. Please try again later!',
+            ],
         ],
     ],
 

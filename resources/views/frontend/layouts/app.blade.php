@@ -53,7 +53,6 @@
 
 <script src="{{ asset('frontend/js/modernizr.js') }}"></script>
 <script src="{{ asset('frontend/js/navigation.js') }}"></script>
-<script src="{{ asset('frontend/js/retina.min.js') }}" defer></script>
 <script src="{{ asset('frontend/js/sweetalert.js') }}"></script>
 
 @include('sweetalert::alert')

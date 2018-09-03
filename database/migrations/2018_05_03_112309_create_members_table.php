@@ -11,18 +11,15 @@ class CreateMembersTable extends Migration
      *
      * @return void
      */
+
     public function up()
     {
         Schema::create('members', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('status')->default('inactive');
+            $table->uuid('uuid')->unique();
             $table->string('firstname');
             $table->string('lastname');
-            $table->string('email');
-            $table->string('mobile')->nullable();
-            $table->string('github')->nullable();
-            $table->date('birthdate')->nullable();
-            $table->dateTime('member_since')->nullable();
+            $table->string('email')->unique();
             $table->timestamps();
             $table->softDeletes();
         });
