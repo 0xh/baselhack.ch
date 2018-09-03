@@ -2,8 +2,9 @@
 
 namespace Tests\Feature;
 
+use App\Domain\Models\User;
 use Tests\TestCase;
-use App\Domain\Users\Models\User;
+
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Auth\Notifications\ResetPassword;
@@ -18,20 +19,13 @@ class ResetsPasswordTest extends TestCase
         parent::setUp();
     }
 
-    /**
-     * @test
-     * @group auth
-     */
     public function show_reset_password_request_page()
     {
         $this->get(route('password.request'));
         $this->assertResponseStatus(200);
     }
 
-    /**
-     * @test
-     * @group auth
-     */
+
     public function send_reset_password_email()
     {
         $user = factory(User::class)->create();
@@ -43,10 +37,7 @@ class ResetsPasswordTest extends TestCase
         $this->assertResponseStatus(302);
     }
 
-    /**
-     * @test
-     * @group auth
-     */
+
     public function not_send_a_reset_password_email_to_an_invalid_user()
     {
         $this->doesntExpectJobs(ResetPassword::class);
@@ -54,10 +45,7 @@ class ResetsPasswordTest extends TestCase
         $this->post('password/email', ['email' => 'invalid@email.com']);
     }
 
-    /**
-     * @test
-     * @group auth
-     */
+
     public function show_reset_password_page()
     {
         $this->get('/password/reset/token');
@@ -65,10 +53,7 @@ class ResetsPasswordTest extends TestCase
         $this->assertResponseStatus(200);
     }
 
-    /**
-     * @test
-     * @group auth
-     */
+
     public function reset_an_users_password()
     {
         $user = factory(User::class)->create();
