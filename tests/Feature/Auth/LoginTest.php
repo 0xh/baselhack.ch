@@ -2,9 +2,8 @@
 
 namespace Tests\Unit\Auth;
 
-use App\Domain\Models\User;
 use Tests\TestCase;
-
+use App\Domain\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
@@ -17,14 +16,12 @@ class LoginTest extends TestCase
         parent::setUp();
     }
 
-
     public function show_login_page()
     {
         $this->get(route('login'));
 
         $this->assertResponseStatus(200);
     }
-
 
     public function do_login_an_valid_user()
     {
@@ -37,7 +34,6 @@ class LoginTest extends TestCase
 
         $this->assertRedirectedTo(route('backend.dashboard.index'));
     }
-
 
     public function do_not_log_in_an_invalid_user()
     {
@@ -53,7 +49,6 @@ class LoginTest extends TestCase
         $this->assertRedirectedTo('/');
     }
 
-
     public function log_out_an_authenticated_user()
     {
         $user = create(User::class);
@@ -63,7 +58,6 @@ class LoginTest extends TestCase
         $this->assertRedirectedTo('/');
         $this->assertFalse(Auth::check());
     }
-
 
     public function track_last_authentication()
     {
@@ -75,7 +69,6 @@ class LoginTest extends TestCase
 
         $this->assertNotNull($user->last_authentication);
     }
-
 
     public function track_last_activity_after_login()
     {
