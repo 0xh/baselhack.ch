@@ -17,7 +17,7 @@
         </div>
 
 
-        <div id="navbarMenu" class="navbar-menu has-text-centered">
+        <div id="navbarMenu" class="navbar-menu has-text-centered is-uppercase">
 
             <div class="navbar-start has-text-centered-touch">
                 <a class="navbar-item" href="{{ route('frontend.home.index') }}">

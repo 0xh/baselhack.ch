@@ -19,7 +19,7 @@ class SignUpController extends Controller
 
     public function store(StoreSignUpRequest $request)
     {
-       
+
         $participant = Participant::create([
 
             'type' => $request->type,
