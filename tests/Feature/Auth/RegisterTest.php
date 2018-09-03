@@ -14,7 +14,6 @@ class RegisterTest extends TestCase
         parent::setUp();
     }
 
-
     public function show_register_page()
     {
         $this->get(route('register'));
