@@ -29,7 +29,7 @@ return [
                     'visitor' => 'Visitor',
                 ],
 
-                'firstname' => 'Fristname',
+                'firstname' => 'Firstname',
                 'lastname' => 'Lastname',
                 'company' => 'Company',
                 'email' => 'E-Mail',

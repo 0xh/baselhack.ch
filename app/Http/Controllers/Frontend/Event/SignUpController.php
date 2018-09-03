@@ -19,6 +19,7 @@ class SignUpController extends Controller
 
     public function store(StoreSignUpRequest $request)
     {
+       
         $participant = Participant::create([
 
             'type' => $request->type,
@@ -26,7 +27,7 @@ class SignUpController extends Controller
             'lastname' => $request->lastname,
             'company' => $request->company,
             'email' => $request->email,
-            'over_eighteen' => $request->over_eighteen === true ? true : false,
+            'over_eighteen' => $request->over_eighteen == true ? true : false,
             'accepted_policy' => Carbon::now(),
 
         ]);
