@@ -11,11 +11,9 @@ class CreateParticipantsTable extends Migration
      *
      * @return void
      */
-
     public function up()
     {
         Schema::create('participants', function (Blueprint $table) {
-
             $table->increments('id');
             $table->uuid('uuid')->unique();
 

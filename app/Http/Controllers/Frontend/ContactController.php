@@ -2,15 +2,14 @@
 
 namespace App\Http\Controllers\Frontend;
 
-use App\App\Controllers\Controller;
-use App\Domain\Jobs\ForwardContacRequest;
 use App\Domain\Objects\Contact;
+use App\App\Controllers\Controller;
 use Illuminate\Support\Facades\Lang;
+use App\Domain\Jobs\ForwardContacRequest;
 use App\Http\Requests\Frontend\StoreContactRequest;
 
 class ContactController extends Controller
 {
-
     public function index()
     {
         $current_page = 'contact';
@@ -20,7 +19,6 @@ class ContactController extends Controller
 
     public function store(StoreContactRequest $request)
     {
-
         $contact = new Contact(
             $request->topic,
             $request->name,

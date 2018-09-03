@@ -1,7 +1,6 @@
 <?php
 
 
-
 Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
     Route::get('/', 'HomeController@index')->name('home.index');
 
@@ -32,4 +31,3 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
 
     Route::post('/newsletter', 'Newsletter\NewsletterController@store')->name('newsletter.store');
 });
-

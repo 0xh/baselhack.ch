@@ -2,8 +2,8 @@
 
 namespace App\Http\Requests\Frontend;
 
-use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
+use Illuminate\Foundation\Http\FormRequest;
 
 class StoreSignUpRequest extends FormRequest
 {
@@ -25,13 +25,13 @@ class StoreSignUpRequest extends FormRequest
     public function rules()
     {
         return [
-            'type' => 'required|string|' . Rule::in('participant', 'sponsor','visitor'),
+            'type' => 'required|string|'.Rule::in('participant', 'sponsor', 'visitor'),
             'firstname' => 'required|string',
             'lastname' => 'required|string',
             'company' => 'nullable|string',
             'email' => 'required|string|email',
-            'over_eighteen'    => 'nullable|boolean',
-            'privacy'            => 'accepted',
+            'over_eighteen' => 'nullable|boolean',
+            'privacy' => 'accepted',
         ];
     }
 }

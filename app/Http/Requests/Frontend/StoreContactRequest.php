@@ -2,8 +2,8 @@
 
 namespace App\Http\Requests\Frontend;
 
-use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
+use Illuminate\Foundation\Http\FormRequest;
 
 class StoreContactRequest extends FormRequest
 {
@@ -25,7 +25,7 @@ class StoreContactRequest extends FormRequest
     public function rules()
     {
         return [
-            'topic' => 'required|string|' . Rule::in('general', 'event','sponsoring'),
+            'topic' => 'required|string|'.Rule::in('general', 'event', 'sponsoring'),
             'name' => 'required|string',
             'email' => 'required|email',
             'message' => 'required|string',
