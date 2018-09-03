@@ -2,9 +2,9 @@
 
 namespace App\Domain\Jobs;
 
-use App\Domain\Mail\ContactForm;
-use App\Domain\Objects\Contact;
 use Illuminate\Bus\Queueable;
+use App\Domain\Objects\Contact;
+use App\Domain\Mail\ContactForm;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
@@ -39,7 +39,7 @@ class ForwardContacRequest implements ShouldQueue
      */
     public function handle()
     {
-        $emails = config('baselhack.notifications.' . $this->contact->topic);
+        $emails = config('baselhack.notifications.'.$this->contact->topic);
 
         if ($emails) {
             foreach ($emails as $email) {

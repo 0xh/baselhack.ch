@@ -42,9 +42,7 @@ return [
        'de', 'en', 'fr',
     ],
 
-
     'partners' => [
-
 
         'fuck_up_nights' => [
             'title' => 'FuckUp Nights Basel',

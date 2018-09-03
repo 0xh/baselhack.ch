@@ -9,26 +9,24 @@ return [
             'keywords' => 'BaselHack, Basel, Hackathon, connect, talents, Open Innovation, Open Source, bring all your ideas',
         ],
 
-
     'signup' => [
-
 
         'form' => [
 
             'button' => [
-                'submit' => 'Sign-Up!'
+                'submit' => 'Sign-Up!',
             ],
 
             'input' => [
 
-                'type'  => 'Type',
+                'type' => 'Type',
 
                 'select' => [
 
                     'type' => 'Please select a type!',
                     'participant' => 'Participant',
                     'sponsor' => 'Sponsor',
-                    'visitor' => 'Visitor'
+                    'visitor' => 'Visitor',
                 ],
 
                 'firstname' => 'Fristname',
@@ -55,10 +53,7 @@ return [
                 ],
             ],
 
-
-        ]
-
-
+        ],
 
     ],
 
