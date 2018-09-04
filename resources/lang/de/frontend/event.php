@@ -33,7 +33,7 @@ return [
                 'lastname' => 'Lastname',
                 'company' => 'Company',
                 'email' => 'E-Mail',
-                'over_eighteen' => 'Are you ver 18 years old?',
+                'over_eighteen' => 'I\'m over years old.',
                 'accept_policty' => 'Please accept our privacy regulations.',
                 'privacy' => 'Privacy',
             ],
