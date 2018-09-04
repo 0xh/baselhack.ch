@@ -33,8 +33,9 @@ return [
                 'lastname' => 'Lastname',
                 'company' => 'Company',
                 'email' => 'E-Mail',
-                'over_eighteen' => 'I\'m over years old.',
-                'accept_policty' => 'Please accept our privacy regulations.',
+                'over_eighteen' => 'I\'m over 18 years old.',
+                'accept_policty_start' => 'Please accept our ',
+                'accept_policty_stop' => 'regulations.',
                 'privacy' => 'Privacy',
             ],
 

@@ -120,8 +120,8 @@
                         <div class="field">
                             <label style="margin-top: 20px;" class="checkbox">
                                 <input id="privacy" name="privacy" type="checkbox" required>
-                                {{ __('frontend/event.signup.form.input.accept_policty') }} <a target="_blank"
-                                                                                     href="{{ route('frontend.legal.privacy.index') }}">{{ __('frontend/event.signup.form.input.privacy') }}</a>.
+                                {{ __('frontend/event.signup.form.input.accept_policty_start') }} <a target="_blank"
+                                                                                     href="{{ route('frontend.legal.privacy.index') }}">{{ __('frontend/event.signup.form.input.privacy') }}</a>  {{ __('frontend/event.signup.form.input.accept_policty_stop') }}.
                             </label>
 
 
