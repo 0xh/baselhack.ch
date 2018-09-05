@@ -16,4 +16,5 @@ class Contact
         $this->email = $email;
         $this->message = $message;
     }
+
 }

@@ -8,15 +8,15 @@
 
     @include('frontend.layouts.components._header')
 
-                <section class="section">
-                    <div class="container">
+    <section class="section">
+        <div class="container">
 
-                        <div class="columns is-centered">
+            <div class="columns is-centered">
 
 
                 <div class="column is-three-quarters">
 
-                <h1 class="title">Collaboration is key</h1>
+                    <h1 class="title">Collaboration is key</h1>
 
                     <h3 class="subtitle">Why we want to partner with you?</h3>
                     <hr>
@@ -24,60 +24,38 @@
                     <div class="content">
 
                         <p class="has-text-justified">
-                            Human capital is the essential resource for today’s innovation and knowledge based economy.
+
                             The competitive power of a region is based on the creativity of its people and
                             organizations. Many regions struggle to retain or attract the highly educated and skilled
                             workforce.
-                        </p>
 
-                        <p class="has-text-justified">
-                            This is not a one-time task you can check off your list. It is a continuous engagement to
-                            stay attractive, just like in a relationship. Only here we speak about organizations,
-                            government institutions
                         </p>
-
 
                         <p class="has-text-justified">
                             BaselHack is a platform where people from different backgrounds, expertise, topics,
                             viewpoints and organizations come together to create new concepts and build solutions. Every
-                            city needs such a melting pot. To be able to keep all stakeholders engaged, everyone has to
-                            contribute. We want us to come together so that BaselHack can grow roots in the minds and
-                            hearts of many so that it gets a solid foundation as an institution of the Basel region.
+                            city needs such a melting pot.
                         </p>
 
 
+                        <p class="has-text-justified">
+                            We want to partner with you because this is not a one-time task you can check off your list.
+                            It is a continuous engagement building an attractive place to live for everyone, just like
+                            in a relationship.</p>
+
+
+                        <p class="has-text-justified"> Everyone contributes in building something big. We want us to
+                            come together so that BaselHack grows roots in the minds and hearts of everyone in the Basel
+                            region.</p>
+
+
+                        <p class="has-text-justified">We partner with organizations, government institutions and
+                            education to grow BaselHack into an institution that we cannot imagine to be without. </p>
                     </div>
 
 
-                    <h3 class="subtitle">What are your benefits?</h3>
+                    <h1 style="margin-top: 50px;" class="title">Our Partners</h1>
                     <hr>
-
-                    <div class="content">
-
-                        <ul>
-
-                            <li>Social Impact: Aus der Region, für die Region</li>
-                            <li>Access to top talents in action</li>
-                            <li>Brand positioning</li>
-                            <li>Brand visibility in extensive networks: sponsors, location partners, the professional
-                                networks of 32 organizers
-                            </li>
-                            <li>Inspiration for your employees</li>
-                            <li>Innovation accelerator</li>
-
-                        </ul>
-
-                    </div>
-
-
-
-
-                    <h1 style="margin-top: 50px;" class="title">Partners</h1>
-
-                    <h3 class="subtitle">We proudly present our partners!</h3>
-
-
-
 
                     <div style="margin-top: 25px;" class="columns is-multiline is-centered is-vcentered is-mobile">
 
@@ -90,8 +68,10 @@
                                     <div class="card-image">
 
                                         <figure class="image">
-                                            <a target="_blank" title="{{ $partner['title'] }}"  alt="{{ $partner['title'] }}" href="{{ $partner['url'] }}"><img
-                                                        title="{{ $partner['title'] }}" src="{{ asset('frontend/images/partners/' .  $partner['image']) }}"
+                                            <a target="_blank" title="{{ $partner['title'] }}"
+                                               alt="{{ $partner['title'] }}" href="{{ $partner['url'] }}"><img
+                                                        title="{{ $partner['title'] }}"
+                                                        src="{{ asset('frontend/images/partners/' .  $partner['image']) }}"
                                                         alt="{{ $partner['title'] }}"></a>
                                         </figure>
                                     </div>
