@@ -50,7 +50,7 @@
 
         <env name="MAIL_DRIVER" value="smtp"/>
         <env name="MAIL_HOST" value="smtp"/>
-        <env name="MAIL_PORT" value="smtp"/>
+        <env name="MAIL_PORT" value="2525"/>
         <env name="MAIL_USERNAME" value="2689c7bde9a288"/>
         <env name="MAIL_PASSWORD" value="d16f7f81ed6d81"/>
         <env name="MAIL_ENCRYPTION" value="tls"/>

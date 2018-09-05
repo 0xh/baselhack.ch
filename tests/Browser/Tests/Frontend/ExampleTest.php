@@ -16,7 +16,7 @@ class ExampleTest extends DuskTestCase
     public function testBasicExample()
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit('/')
+            $browser->visitRoute('frontend.home.index')
                     ->assertSee('You finally made it!');
         });
     }
