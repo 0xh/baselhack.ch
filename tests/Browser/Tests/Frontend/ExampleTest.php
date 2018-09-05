@@ -5,7 +5,6 @@ namespace Tests\Browser\Frontend;
 use Tests\DuskTestCase;
 use Laravel\Dusk\Browser;
 
-
 class ExampleTest extends DuskTestCase
 {
     /**
