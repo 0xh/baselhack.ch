@@ -17,7 +17,7 @@
                 <div class="column is-three-quarters">
 
 
-                    <h1 class="title">Sponsiring</h1>
+                    <h1 class="title">Sponsoring</h1>
 
                     <h3 class="subtitle">Much more than a Hackathon</h3>
                     <hr>
