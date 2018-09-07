@@ -29,10 +29,9 @@
                         Event
                     </a>
                     <div class="navbar-dropdown is-boxed">
-
-
+                        
                         <a class="navbar-item" href="{{ route('frontend.event.signup') }}">
-                            Sing-Up
+                            Sign-Up
                         </a>
 
                     </div>
