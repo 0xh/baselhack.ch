@@ -45,6 +45,5 @@ class Transformation extends Command
         Artisan::call('transform-backup:participants');
 
         $this->info('Transformed Participants');
-
     }
 }

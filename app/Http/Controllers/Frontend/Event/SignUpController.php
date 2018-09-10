@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers\Frontend\Event;
 
-use App\Domain\Jobs\SubscribeToParticipantNewsletter;
-use App\Domain\Notifications\ConfirmParticipation;
 use Carbon\Carbon;
 use App\Domain\Models\Participant;
 use App\App\Controllers\Controller;
 use Illuminate\Support\Facades\Lang;
+use App\Domain\Notifications\ConfirmParticipation;
 use App\Http\Requests\Frontend\StoreSignUpRequest;
+use App\Domain\Jobs\SubscribeToParticipantNewsletter;
 
 class SignUpController extends Controller
 {
@@ -24,8 +24,7 @@ class SignUpController extends Controller
 
     public function store(StoreSignUpRequest $request)
     {
-        try
-        {
+        try {
             $participant = Participant::create([
 
                 'firstname' => $request->firstname,
@@ -41,14 +40,10 @@ class SignUpController extends Controller
             SubscribeToParticipantNewsletter::dispatch($participant);
 
             alert()->success(Lang::get('frontend/event.signup.form.notification.success.title'), Lang::get('frontend/event.signup.form.notification.success.description'));
-
-        }
-        catch (\Exception $exception)
-        {
+        } catch (\Exception $exception) {
             $participant = Participant::whereEmail($request->email)->first();
 
-            if($participant instanceof Participant)
-            {
+            if ($participant instanceof Participant) {
                 $participant->forceDelete();
             }
 
@@ -58,23 +53,18 @@ class SignUpController extends Controller
         return back();
     }
 
-
     public function confirm(Participant $participant)
     {
         $participant->unreadNotifications->markAsRead();
 
-        if (!$participant->confirmed_email)
-        {
+        if (! $participant->confirmed_email) {
             $participant->update([
-                'confirmed_email' => true
+                'confirmed_email' => true,
             ]);
-
         }
 
         alert()->success(Lang::get('frontend/event.signup.form.notification.confirmed.title'), Lang::get('frontend/event.signup.form.notification.confirmed.description'));
 
         return redirect()->route('frontend.home.index');
     }
-
-
 }

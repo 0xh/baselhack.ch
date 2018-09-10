@@ -2,7 +2,6 @@
 
 namespace App\Http\Requests\Frontend;
 
-use Illuminate\Validation\Rule;
 use Illuminate\Foundation\Http\FormRequest;
 
 class StoreSignUpRequest extends FormRequest

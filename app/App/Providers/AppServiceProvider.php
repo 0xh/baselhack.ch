@@ -23,7 +23,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        if (!app()->environment('production')) {
+        if (! app()->environment('production')) {
             $this->app->register(\Barryvdh\Debugbar\ServiceProvider::class);
             $this->app->register(\Laravel\Dusk\DuskServiceProvider::class);
         }

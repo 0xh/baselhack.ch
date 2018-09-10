@@ -2,9 +2,9 @@
 
 namespace App\Domain\Jobs;
 
-use App\Domain\Models\Participant;
 use Newsletter;
 use Illuminate\Bus\Queueable;
+use App\Domain\Models\Participant;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -33,6 +33,6 @@ class SubscribeToParticipantNewsletter implements ShouldQueue
      */
     public function handle()
     {
-        Newsletter::subscribe($this->participant->email, ['FNAME'=>$this->participant->firstname, 'LNAME'=>$this->participant->lastname,  'COMPANY' => $this->participant->company], 'participants_2018');
+        Newsletter::subscribe($this->participant->email, ['FNAME' => $this->participant->firstname, 'LNAME' => $this->participant->lastname,  'COMPANY' => $this->participant->company], 'participants_2018');
     }
 }

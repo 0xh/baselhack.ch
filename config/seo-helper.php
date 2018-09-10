@@ -8,11 +8,11 @@ return [
      */
 
     'title' => [
-        'default'   => 'Baselhack',
+        'default' => 'Baselhack',
         'site-name' => config('app.name', 'Baselhack'),
         'separator' => '-',
-        'first'     => true,
-        'max'       => 55,
+        'first' => true,
+        'max' => 55,
     ],
 
     /* -----------------------------------------------------------------
@@ -21,8 +21,8 @@ return [
      */
 
     'description' => [
-        'default'   => 'Lorem Ipsum',
-        'max'       => 155,
+        'default' => 'Lorem Ipsum',
+        'max' => 155,
     ],
 
     /* -----------------------------------------------------------------
@@ -30,8 +30,8 @@ return [
      | -----------------------------------------------------------------
      */
 
-    'keywords'  => [
-        'default'   => [
+    'keywords' => [
+        'default' => [
             //
         ],
     ],
@@ -41,12 +41,12 @@ return [
      | -----------------------------------------------------------------
      */
 
-    'misc'      => [
+    'misc' => [
         'canonical' => true,
-        'robots'    => config('app.env') !== 'production', // Tell robots not to index the content if it's not on production
-        'default'   => [
-            'viewport'  => 'width=device-width, initial-scale=1', // Responsive design thing
-            'author'    => '', // https://plus.google.com/[YOUR PERSONAL G+ PROFILE HERE]
+        'robots' => config('app.env') !== 'production', // Tell robots not to index the content if it's not on production
+        'default' => [
+            'viewport' => 'width=device-width, initial-scale=1', // Responsive design thing
+            'author' => '', // https://plus.google.com/[YOUR PERSONAL G+ PROFILE HERE]
             'publisher' => '', // https://plus.google.com/[YOUR PERSONAL G+ PROFILE HERE]
         ],
     ],
@@ -57,11 +57,11 @@ return [
      */
 
     'webmasters' => [
-        'google'    => '',
-        'bing'      => '',
-        'alexa'     => '',
+        'google' => '',
+        'bing' => '',
+        'alexa' => '',
         'pinterest' => '',
-        'yandex'    => '',
+        'yandex' => '',
     ],
 
     /* -----------------------------------------------------------------
@@ -70,13 +70,13 @@ return [
      */
 
     'open-graph' => [
-        'enabled'     => true,
-        'prefix'      => 'og:',
-        'type'        => 'website',
-        'title'       => 'Default Open Graph title',
+        'enabled' => true,
+        'prefix' => 'og:',
+        'type' => 'website',
+        'title' => 'Default Open Graph title',
         'description' => 'Default Open Graph description',
-        'site-name'   => '',
-        'properties'  => [
+        'site-name' => '',
+        'properties' => [
             //
         ],
     ],
@@ -89,11 +89,11 @@ return [
 
     'twitter' => [
         'enabled' => true,
-        'prefix'  => 'twitter:',
-        'card'    => 'summary',
-        'site'    => 'Username',
-        'title'   => 'Default Twitter Card title',
-        'metas'   => [
+        'prefix' => 'twitter:',
+        'card' => 'summary',
+        'site' => 'Username',
+        'title' => 'Default Twitter Card title',
+        'metas' => [
             //
         ],
     ],

@@ -11,7 +11,6 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
         Route::post('/sign-up', 'SignUpController@store')->name('signup.store');
 
         Route::get('sign-up/confirm/{participant}', 'SignUpController@confirm')->name('signup.confirm');
-
     });
 
     Route::get('/about', 'AboutController@index')->name('about.index');

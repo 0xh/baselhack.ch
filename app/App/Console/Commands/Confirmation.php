@@ -2,11 +2,10 @@
 
 namespace App\App\Console\Commands;
 
-use App\Domain\Jobs\SubscribeToParticipantNewsletter;
+use Illuminate\Console\Command;
 use App\Domain\Models\Participant;
 use App\Domain\Notifications\ConfirmParticipation;
-use Illuminate\Console\Command;
-
+use App\Domain\Jobs\SubscribeToParticipantNewsletter;
 
 class Confirmation extends Command
 {
@@ -41,22 +40,17 @@ class Confirmation extends Command
      */
     public function handle()
     {
-        $participants = Participant::where('confirmed_email',false)->get();
+        $participants = Participant::where('confirmed_email', false)->get();
 
-        if($participants->count())
-        {
-            foreach ($participants as $participant)
-            {
-                $count = $participant->notifications()->where('type','App\Domain\Notifications\ConfirmParticipation')->get()->count();
+        if ($participants->count()) {
+            foreach ($participants as $participant) {
+                $count = $participant->notifications()->where('type', 'App\Domain\Notifications\ConfirmParticipation')->get()->count();
 
-                if($count <= 0)
-                {
+                if ($count <= 0) {
                     $participant->notify(new ConfirmParticipation($participant));
 
                     SubscribeToParticipantNewsletter::dispatch($participant);
-
                 }
-
             }
         }
 

@@ -2,7 +2,6 @@
 
 return [
 
-
     'confirm_participation' => [
 
         'subject' => 'Confirm your participation',
