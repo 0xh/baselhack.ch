@@ -3,5 +3,4 @@
 return [
     'title' => 'Sponsoring',
 
-
 ];

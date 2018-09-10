@@ -37,7 +37,7 @@ return [
 
         'participants_2018' => [
 
-            'id' => env('MAILCHIMP_PARTICIPANTS_2018_LIST_ID')
+            'id' => env('MAILCHIMP_PARTICIPANTS_2018_LIST_ID'),
         ],
 
     ],

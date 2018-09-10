@@ -2,10 +2,8 @@
 
 namespace App\App\Console\Commands\Migrations;
 
-use Newsletter;
-
-use App\Domain\Models\Participant;
 use Illuminate\Console\Command;
+use App\Domain\Models\Participant;
 use Illuminate\Support\Facades\DB;
 
 class TransformParticipants extends Command
@@ -58,12 +56,8 @@ class TransformParticipants extends Command
                     'over_eighteen' => $staging_participant->over_eighteen,
                     'accepted_policy' => $staging_participant->accepted_policy,
                 ]);
-
             }
-
         } catch (\Exception $exception) {
-
-
         }
     }
 }

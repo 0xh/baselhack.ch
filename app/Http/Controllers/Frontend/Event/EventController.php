@@ -5,10 +5,8 @@ namespace App\Http\Controllers\Frontend\Event;
 use App\App\Controllers\Controller;
 use Illuminate\Support\Facades\Lang;
 
-
 class EventController extends Controller
 {
-
     public function index()
     {
         $this->seo()
@@ -18,5 +16,4 @@ class EventController extends Controller
 
         return view('frontend.event.index');
     }
-
 }

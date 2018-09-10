@@ -17,7 +17,6 @@ class ContactController extends Controller
             ->setDescription(Lang::get('frontend/meta.contact_index.description'))
             ->setKeywords(Lang::get('frontend/meta.contact_index.keywords'));
 
-
         return view('frontend.contact.index');
     }
 

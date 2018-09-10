@@ -9,7 +9,6 @@ class ImprintController extends Controller
 {
     public function index()
     {
-
         $this->seo()
             ->setTitle(Lang::get('frontend/meta.imprint_index.title'))
             ->setDescription(Lang::get('frontend/meta.imprint_index.description'))

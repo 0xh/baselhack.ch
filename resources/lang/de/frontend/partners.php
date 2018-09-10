@@ -3,6 +3,4 @@
 return [
     'title' => 'Partners',
 
-
-
 ];
