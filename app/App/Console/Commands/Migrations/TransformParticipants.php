@@ -5,7 +5,6 @@ namespace App\App\Console\Commands\Migrations;
 use Illuminate\Console\Command;
 use App\Domain\Models\Participant;
 use Illuminate\Support\Facades\DB;
-use App\Domain\Jobs\SubscribeToParticipantNewsletter;
 
 class TransformParticipants extends Command
 {
