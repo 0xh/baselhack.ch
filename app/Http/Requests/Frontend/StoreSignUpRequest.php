@@ -25,12 +25,11 @@ class StoreSignUpRequest extends FormRequest
     public function rules()
     {
         return [
-            'type' => 'required|string|'.Rule::in('participant', 'sponsor', 'visitor'),
-            'firstname' => 'required|string',
-            'lastname' => 'required|string',
-            'company' => 'nullable|string',
-            'email' => 'required|string|email',
-            'over_eighteen' => 'nullable|boolean',
+            'firstname' => 'required|string|max:255',
+            'lastname' => 'required|string|max:255',
+            'company' => 'nullable|string|max:255',
+            'email' => 'required|string|email|max:255|unique:participants',
+            'over_eighteen' => 'required|boolean',
             'privacy' => 'accepted',
         ];
     }

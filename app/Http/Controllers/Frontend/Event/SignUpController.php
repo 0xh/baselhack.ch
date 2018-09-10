@@ -12,21 +12,23 @@ class SignUpController extends Controller
 {
     public function index()
     {
-        $current_page = 'event';
+        $this->seo()
+            ->setTitle(Lang::get('frontend/meta.event_signup.title'))
+            ->setDescription(Lang::get('frontend/meta.event_signup.description'))
+            ->setKeywords(Lang::get('frontend/meta.event_signup.keywords'));
 
-        return view('frontend.event.signup', compact('current_page'));
+        return view('frontend.event.signup');
     }
 
     public function store(StoreSignUpRequest $request)
     {
         $participant = Participant::create([
 
-            'type' => $request->type,
             'firstname' => $request->firstname,
             'lastname' => $request->lastname,
             'company' => $request->company,
             'email' => $request->email,
-            'over_eighteen' => $request->over_eighteen === true ? true : false,
+            'over_eighteen' => true,
             'accepted_policy' => Carbon::now(),
 
         ]);

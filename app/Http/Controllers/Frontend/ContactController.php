@@ -12,9 +12,13 @@ class ContactController extends Controller
 {
     public function index()
     {
-        $current_page = 'contact';
+        $this->seo()
+            ->setTitle(Lang::get('frontend/meta.contact_index.title'))
+            ->setDescription(Lang::get('frontend/meta.contact_index.description'))
+            ->setKeywords(Lang::get('frontend/meta.contact_index.keywords'));
 
-        return view('frontend.contact.index', compact('current_page'));
+
+        return view('frontend.contact.index');
     }
 
     public function store(StoreContactRequest $request)

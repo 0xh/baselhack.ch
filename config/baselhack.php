@@ -2,12 +2,13 @@
 
 return [
 
+    'version' => '180910-beta',
+
     'notifications' => [
 
         'general' => ['info@baselhack.ch'],
         'sponsoring' => ['sponsoring@baselhack.ch'],
         'event' => ['event@baselhack.ch'],
-
     ],
 
     'socials' => [

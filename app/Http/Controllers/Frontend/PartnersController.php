@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\App\Controllers\Controller;
+use Illuminate\Support\Facades\Lang;
 
 class PartnersController extends Controller
 {
@@ -13,8 +14,11 @@ class PartnersController extends Controller
      */
     public function index()
     {
-        $current_page = 'partners';
+        $this->seo()
+            ->setTitle(Lang::get('frontend/meta.partners_index.title'))
+            ->setDescription(Lang::get('frontend/meta.partners_index.description'))
+            ->setKeywords(Lang::get('frontend/meta.partners_index.keywords'));
 
-        return view('frontend.partners.index', compact('current_page'));
+        return view('frontend.partners.index');
     }
 }

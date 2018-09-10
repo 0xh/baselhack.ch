@@ -1,14 +1,9 @@
 <?php
 
 return [
-    'title' => 'Leave us a message!',
-    'subtitle' => 'Happy to hear fromy ou, whaterver the topic you have in mind.',
 
-    'meta' => [
-        'title' => 'Contact Baselhack',
-        'description' => 'Contact the Baselhack Team',
-        'keywords' => 'BaselHack, Basel Region, Hackathon, Contact, Together for the future',
-    ],
+    'title' => 'Leave us a message!',
+    'subtitle' => 'Happy to hear from you, whaterver the topic you have in mind.',
 
     'form' => [
 

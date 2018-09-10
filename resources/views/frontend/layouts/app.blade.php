@@ -5,22 +5,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="BaselHack is more than a Hackathon – we connect people, take fun seriously and grow open">
-    <meta name="author" content="BaselHack">
-    <meta name="keywords" content="BaselHack, Hackathon, connect, talents, serious fun, open innovation, Basel Stadt, Basel Land, Jura, Dreiländereck">
-
-    <meta name="google-site-verification" content="M4X8v15Wz14ak2J40VUCJAeLcu4X9pfs-XNoqJsj-w8" />
-
-    <title>BaselHack - More than a Hack</title>
-
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+    <head>
+        {!! seo_helper()->render() !!}
+    </head>
 
-    @include('frontend.layouts.partials._meta')
+    @include('frontend.layouts.partials._favicons')
 
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-oi8o31xSQq8S0RpBcb4FaLB8LJi9AT8oIdmS1QldR8Ui7KUQjNAnDlJjp55Ba8FG" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-9ralMzdK1QYsk4yBY680hmsb4/hJ98xK3w0TIaJ3ll4POWpWUYaA2bRjGGujGT8w" crossorigin="anonymous">
 
     <!-- Styles -->
     <link href="{{ asset('frontend/css/fonts.css') }}" rel="stylesheet">
@@ -28,18 +21,6 @@
     <link href="{{ asset('frontend/css/style.css') }}" rel="stylesheet">
 
     @yield('styles')
-
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121873164-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-121873164-1');
-    </script>
-
 
 </head>
 
@@ -51,7 +32,6 @@
 
 @include('frontend.layouts.partials._footer')
 
-<script src="{{ asset('frontend/js/modernizr.js') }}"></script>
 <script src="{{ asset('frontend/js/navigation.js') }}"></script>
 <script src="{{ asset('frontend/js/sweetalert.js') }}"></script>
 

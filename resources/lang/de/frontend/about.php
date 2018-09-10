@@ -27,9 +27,9 @@ return [
                 'lastname' => 'Lastname',
                 'company' => 'Company',
                 'email' => 'E-Mail',
-                'over_eighteen' => 'And confirm that you\'re over 18 years old.',
+                'over_eighteen' => 'I\'m over 18 years old.',
                 'accept_policty_start' => 'Please accept our ',
-                'accept_policty_stop' => 'regulations',
+                'accept_policty_stop' => 'regulations.',
                 'privacy' => 'Privacy',
             ],
 

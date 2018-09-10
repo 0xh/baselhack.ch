@@ -6,7 +6,20 @@
 
 @section('content')
 
-    @include('frontend.layouts.components._header')
+    <section class="section hero header is-small is-light">
+        <div class="hero-body">
+            <div class="columns is-centered">
+
+                <div class="column is-4">
+
+                    <a href="{{ route('frontend.event.signup') }}">
+                        <img class="image header-image" src="{{ asset('frontend/images/backgrounds/partners.png') }}">
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section class="section">
         <div class="container">
@@ -97,10 +110,6 @@
 
 
     @include('frontend.layouts.components._newsletter')
-
-
-
-
 
 @endsection
 

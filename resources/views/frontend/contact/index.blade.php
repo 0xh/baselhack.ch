@@ -7,13 +7,24 @@
 
 @section('content')
 
-    @include('frontend.layouts.components._header')
+    <section class="section hero header is-small is-light">
+        <div class="hero-body">
+            <div class="columns is-centered">
 
+                <div class="column is-4">
+
+                    <a href="{{ route('frontend.event.signup') }}">
+                        <img class="image header-image" src="{{ asset('frontend/images/backgrounds/contact.png') }}">
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="section">
         <div class="container">
 
             <div class="columns is-centered">
-
 
                 <div class="column is-three-quarters">
 
@@ -21,11 +32,8 @@
                     <h2 class="subtitle">{{ __('frontend/contact.subtitle') }}</h2>
                     <hr>
 
-
-
                     <form id="form-build" method="POST" action="{{ route('frontend.contact.store') }}">
                         @csrf
-
 
                         <div class="field">
                             <label class="label">{{ __('frontend/contact.form.input.topic') }}</label>

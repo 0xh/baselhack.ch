@@ -4,10 +4,7 @@
 
 
         <div class="navbar-brand">
-{{--
-            <a class="navbar-item" href="https://bulma.io">
-                <img src="{{ asset('frontend/images/logo/baselhack_black.png') }}" alt="Bulma: a modern CSS framework based on Flexbox">
-            </a>--}}
+
 
             <div class="navbar-burger  burger" data-target="navbarMenu">
                 <span></span>
@@ -29,7 +26,7 @@
                         Event
                     </a>
                     <div class="navbar-dropdown is-boxed">
-                        
+
                         <a class="navbar-item" href="{{ route('frontend.event.signup') }}">
                             Sign-Up
                         </a>
@@ -60,15 +57,8 @@
             <div class="navbar-end is-hidden-touch">
 
 
-              {{--  <div class="navbar-item">
-                    <a id="open-modal"
-                       class="button is-dark"
-                       target="_blank"
-                       href="">
-                        <span>Sign up BaselHack 2018</span>
-                    </a>
-                </div>
---}}
+
+
 
             </div>
         </div>

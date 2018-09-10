@@ -17,12 +17,11 @@ class CreateParticipantsTable extends Migration
             $table->increments('id');
             $table->uuid('uuid')->unique();
 
-            $table->string('type');
-
             $table->string('firstname');
             $table->string('lastname');
 
             $table->string('company')->nullable();
+
             $table->string('email')->unique();
 
             $table->boolean('confirmed_email')->default(false);
@@ -32,6 +31,7 @@ class CreateParticipantsTable extends Migration
 
             $table->timestamps();
             $table->softDeletes();
+
         });
     }
 

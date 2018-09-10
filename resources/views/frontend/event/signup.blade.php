@@ -6,7 +6,17 @@
 
 @section('content')
 
-    @include('frontend.layouts.components._header')
+    <section class="section hero header is-small is-light">
+        <div class="hero-body">
+            <div class="columns is-centered">
+                <div class="column is-3">
+                    <figure class="image">
+                        <img  class="" alt="" src="{{ asset('frontend/images/backgrounds/event.png') }}">
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section class="section">
         <div class="container">
@@ -21,29 +31,10 @@
                     <hr>
 
 
+
+
                     <form id="form-build" method="POST" action="{{ route('frontend.event.signup.store') }}">
                         @csrf
-
-                        <div class="field">
-                            <label class="label">{{ __('frontend/event.signup.form.input.type') }}</label>
-                            <div class="control">
-                                <div class="select is-fullwidth">
-                                    <select id="type" name="type" class=""
-                                            title="{{ __('frontend/event.signup.form.input.type') }}" required
-                                            autofocus>
-                                        <option value="" disabled
-                                                selected>{{ __('frontend/event.signup.form.input.select.type') }}</option>
-                                        <option value="participant">{{ __('frontend/event.signup.form.input.select.participant') }}</option>
-                                        <option value="sponsor">{{ __('frontend/event.signup.form.input.select.sponsor') }}</option>
-                                        <option value="visitor">{{ __('frontend/event.signup.form.input.select.visitor') }}</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            @if ($errors->has('type'))
-                                <p class="help is-danger">{{ $errors->first('type') }}</p>
-                            @endif
-                        </div>
 
                         <div class="field">
                             <label class="label">{{ __('frontend/event.signup.form.input.firstname') }}</label>
@@ -104,32 +95,69 @@
                         </div>
 
 
-                        <div class="field">
-                            <label style="margin-top: 20px;" class="checkbox">
-                                <input id="over_eighteen" value="1" name="over_eighteen" type="checkbox">
-                                {{ __('frontend/event.signup.form.input.over_eighteen') }}
-                            </label>
+                        <hr>
 
 
-                            @if ($errors->has('over_eighteen'))
-                                <p class="help is-danger">{{ $errors->first('over_eighteen') }}</p>
-                            @endif
+                        <div class="content">
+                            <p>Participation is limited to <b>100 Hackers.</b> Anyone can take part. Minors will only be allowed entry if accompanied by a parent who also registers. Team participation is possible, although not a requirement, as teams will be formed on site. Every person in a team must register individually.</p>
 
                         </div>
 
-                        <div class="field">
-                            <label style="margin-top: 20px;" class="checkbox">
-                                <input id="privacy" name="privacy" type="checkbox" required>
-                                {{ __('frontend/event.signup.form.input.accept_policty_start') }} <a target="_blank"
-                                                                                     href="{{ route('frontend.legal.privacy.index') }}">{{ __('frontend/event.signup.form.input.privacy') }}</a>  {{ __('frontend/event.signup.form.input.accept_policty_stop') }}.
-                            </label>
+                        <hr>
 
 
-                            @if ($errors->has('privacy'))
-                                <p class="help is-danger">{{ $errors->first('privacy') }}</p>
-                            @endif
+                        <div class="columns is-centered is-mobile">
+
+
+
+                            <div class="column is-5">
+
+                                <div class="field">
+                                    <label style="margin-top: 20px;" class="checkbox">
+                                        <input id="privacy" name="privacy" type="checkbox" required>
+                                        {{ __('frontend/event.signup.form.input.accept_policty_start') }} <a target="_blank"
+                                                                                                             href="{{ route('frontend.legal.privacy.index') }}">{{ __('frontend/event.signup.form.input.privacy') }}</a>  {{ __('frontend/event.signup.form.input.accept_policty_stop') }}.
+                                    </label>
+
+
+                                    @if ($errors->has('privacy'))
+                                        <p class="help is-danger">{{ $errors->first('privacy') }}</p>
+                                    @endif
+
+                                </div>
+
+
+                            </div>
+
+
+                            <div class="column is-5">
+                                <div class="field">
+                                    <label style="margin-top: 20px;" class="checkbox">
+                                        <input id="over_eighteen" value="1" name="over_eighteen" type="checkbox" required>
+                                        {{ __('frontend/event.signup.form.input.over_eighteen') }}
+                                    </label>
+
+
+                                    @if ($errors->has('over_eighteen'))
+                                        <p class="help is-danger">{{ $errors->first('over_eighteen') }}</p>
+                                    @endif
+
+
+
+
+                                </div>
+
+
+                            </div>
+
+
+
 
                         </div>
+
+
+
+
 
 
                         <div style="margin-top: 30px;" class="field">
@@ -142,9 +170,7 @@
                 </div>
             </div>
 
-
         </div>
-
 
     </section>
 

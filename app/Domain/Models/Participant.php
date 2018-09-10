@@ -5,10 +5,11 @@ namespace App\Domain\Models;
 use App\App\Traits\HasUuid;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Notifications\Notifiable;
 
 class Participant extends Model
 {
-    use SoftDeletes, HasUuid;
+    use Notifiable, SoftDeletes, HasUuid;
 
     /**
      * The attributes that are mass assignable.

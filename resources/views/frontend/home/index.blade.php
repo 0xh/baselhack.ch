@@ -14,7 +14,7 @@
 
                 <div class="column is-4">
 
-                      <a href="{{ route('frontend.event.index') }}">
+                      <a href="{{ route('frontend.event.signup') }}">
                             <img class="image header-image" src="{{ asset('frontend/images/backgrounds/home.png') }}">
                       </a>
 
@@ -70,14 +70,6 @@
 
 
                         </p>
-
-
-                        {{-- <p class="has-text-justified">
-
-                           <a href="" class="button is-dark">Sign up BaselHack 2018</a>
-
-                       </p>
---}}
 
 
                     </div>

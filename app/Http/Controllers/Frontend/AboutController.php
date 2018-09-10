@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\App\Controllers\Controller;
+use Illuminate\Support\Facades\Lang;
 
 class AboutController extends Controller
 {
@@ -13,8 +14,11 @@ class AboutController extends Controller
      */
     public function index()
     {
-        $current_page = 'about';
+        $this->seo()
+            ->setTitle(Lang::get('frontend/meta.about_index.title'))
+            ->setDescription(Lang::get('frontend/meta.about_index.description'))
+            ->setKeywords(Lang::get('frontend/meta.about_index.keywords'));
 
-        return view('frontend.about.index', compact('current_page'));
+        return view('frontend.about.index');
     }
 }

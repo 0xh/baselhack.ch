@@ -16,10 +16,13 @@
 
 - [spatie/laravel-newsletter](https://github.com/spatie/laravel-newsletter)
 - [realrashid/sweet-alert](https://github.com/realrashid/sweet-alert)
+- [arcanedev/seo-helper]()
+- [maatwebsite/excel]()
 
 ### Development
 
 - [barryvdh/laravel-debugbar](https://github.com/barryvdh/laravel-debugbar)
+- [laravel/dusk]()
 
 ## License
 
