@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Frontend\Event;
 
+use App\Domain\Jobs\SubscribeToParticipantNewsletter;
 use App\Domain\Notifications\ConfirmParticipation;
 use Carbon\Carbon;
 use App\Domain\Models\Participant;
@@ -36,6 +37,8 @@ class SignUpController extends Controller
             ]);
 
             $participant->notify(new ConfirmParticipation($participant));
+
+            SubscribeToParticipantNewsletter::dispatch($participant);
 
             alert()->success(Lang::get('frontend/event.signup.form.notification.success.title'), Lang::get('frontend/event.signup.form.notification.success.description'));
 

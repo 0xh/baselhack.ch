@@ -2,6 +2,7 @@
 
 namespace App\App\Console\Commands;
 
+use App\Domain\Jobs\SubscribeToParticipantNewsletter;
 use App\Domain\Models\Participant;
 use App\Domain\Notifications\ConfirmParticipation;
 use Illuminate\Console\Command;
@@ -51,6 +52,8 @@ class Confirmation extends Command
                 if($count <= 0)
                 {
                     $participant->notify(new ConfirmParticipation($participant));
+
+                    SubscribeToParticipantNewsletter::dispatch($participant);
 
                 }
 

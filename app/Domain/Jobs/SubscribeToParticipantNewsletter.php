@@ -2,6 +2,7 @@
 
 namespace App\Domain\Jobs;
 
+use App\Domain\Models\Participant;
 use Newsletter;
 use Illuminate\Bus\Queueable;
 use Illuminate\Queue\SerializesModels;
@@ -9,20 +10,20 @@ use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 
-class SubscribeToNewsletter implements ShouldQueue
+class SubscribeToParticipantNewsletter implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
-    public $newsletter;
+    public $participant;
 
     /**
      * Create a new job instance.
      *
      * @return void
      */
-    public function __construct($newsletter)
+    public function __construct(Participant $participant)
     {
-        $this->newsletter = $newsletter;
+        $this->participant = $participant;
     }
 
     /**
@@ -32,7 +33,6 @@ class SubscribeToNewsletter implements ShouldQueue
      */
     public function handle()
     {
-        Newsletter::subscribe($this->newsletter->email, [],'newsletter');
-
+        Newsletter::subscribe($this->participant->email, ['FNAME'=>$this->participant->firstname, 'LNAME'=>$this->participant->lastname,  'COMPANY' => $this->participant->company], 'participants_2018');
     }
 }

@@ -11,7 +11,7 @@ return [
     /*
      * The listName to use when no listName has been specified in a method.
      */
-    'defaultListName' => 'subscribers',
+    'defaultListName' => 'newsletter',
 
     /*
      * Here you can define properties of the lists.
@@ -25,15 +25,21 @@ return [
          * You can set it to any string you want and you can add
          * as many lists as you want.
          */
-        'subscribers' => [
+        'newsletter' => [
 
             /*
              * A MailChimp list id. Check the MailChimp docs if you don't know
              * how to get this value:
              * http://kb.mailchimp.com/lists/managing-subscribers/find-your-list-id.
              */
-            'id' => env('MAILCHIMP_LIST_ID'),
+            'id' => env('MAILCHIMP_NEWSLETTER_LIST_ID'),
         ],
+
+        'participants_2018' => [
+
+            'id' => env('MAILCHIMP_PARTICIPANTS_2018_LIST_ID')
+        ],
+
     ],
 
     /*
