@@ -2,6 +2,7 @@
 
 namespace App\App\Console\Commands\Migrations;
 
+use App\Domain\Jobs\SubscribeToParticipantNewsletter;
 use Newsletter;
 
 use App\Domain\Models\Participant;
@@ -46,6 +47,15 @@ class TransformParticipants extends Command
 
             $staging_participants = $staging_database->table('participants')->where('type', 'participant')->get();
 
+            $staging_non_participants = $staging_database->table('participants')->where('type', '!=','participant')->get();
+
+
+            foreach ($staging_non_participants as $staging_non_participant)
+            {
+                SubscribeToParticipantNewsletter::dispatch($staging_non_participant);
+
+            }
+            
             foreach ($staging_participants as $staging_participant) {
                 $participant = Participant::create([
                     'id' => $staging_participant->id,
