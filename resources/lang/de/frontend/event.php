@@ -35,6 +35,14 @@ return [
 
             'notification' => [
 
+
+                'confirmed' => [
+
+                    'title' => 'Thank you!',
+                    'description' => 'We\'ve successfully confirmed your participation!',
+                ],
+
+
                 'success' => [
 
                     'title' => 'Thank you!',

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Frontend\Event;
 
+use App\Domain\Notifications\ConfirmParticipation;
 use Carbon\Carbon;
 use App\Domain\Models\Participant;
 use App\App\Controllers\Controller;
@@ -22,23 +23,55 @@ class SignUpController extends Controller
 
     public function store(StoreSignUpRequest $request)
     {
-        $participant = Participant::create([
+        try
+        {
+            $participant = Participant::create([
 
-            'firstname' => $request->firstname,
-            'lastname' => $request->lastname,
-            'company' => $request->company,
-            'email' => $request->email,
-            'over_eighteen' => true,
-            'accepted_policy' => Carbon::now(),
+                'firstname' => $request->firstname,
+                'lastname' => $request->lastname,
+                'company' => $request->company,
+                'email' => $request->email,
+                'over_eighteen' => true,
+                'accepted_policy' => Carbon::now(),
+            ]);
 
-        ]);
+            $participant->notify(new ConfirmParticipation($participant));
 
-        if ($participant instanceof Participant) {
-            alert()->success(Lang::get('frontend/event.signup.form.notification.success.title'), Lang::get('frontend/event.signup.form.notification.success.description'))->autoClose(3000);
-        } else {
-            alert()->success(Lang::get('frontend/event.signup.form.notification.error.title'), Lang::get('frontend/event.signup.form.notification.error.description'))->autoClose(3000);
+            alert()->success(Lang::get('frontend/event.signup.form.notification.success.title'), Lang::get('frontend/event.signup.form.notification.success.description'));
+
+        }
+        catch (\Exception $exception)
+        {
+            $participant = Participant::whereEmail($request->email)->first();
+
+            if($participant instanceof Participant)
+            {
+                $participant->forceDelete();
+            }
+
+            alert()->error(Lang::get('frontend/event.signup.form.notification.error.title'), Lang::get('frontend/event.signup.form.notification.error.description'));
         }
 
         return back();
     }
+
+
+    public function confirm(Participant $participant)
+    {
+        $participant->unreadNotifications->markAsRead();
+
+        if (!$participant->confirmed_email)
+        {
+            $participant->update([
+                'confirmed_email' => true
+            ]);
+
+        }
+
+        alert()->success(Lang::get('frontend/event.signup.form.notification.confirmed.title'), Lang::get('frontend/event.signup.form.notification.confirmed.description'));
+
+        return redirect()->route('frontend.home.index');
+    }
+
+
 }

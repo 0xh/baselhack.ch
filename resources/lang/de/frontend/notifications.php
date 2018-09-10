@@ -7,9 +7,8 @@ return [
 
         'subject' => 'Confirm your participation',
         'greeting' => 'Dear ',
-        'line' => '',
-        'action' => '',
-        'salutation' => '',
-        
+        'line' => 'Cool! Thank you for registering. ',
+        'action' => 'Pleas confirm your participation',
+        'salutation' => 'You will receive further communication with more details about the Hack and the upcoming dates.',
     ],
 ];

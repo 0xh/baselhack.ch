@@ -43,8 +43,8 @@ class Transformation extends Command
         Artisan::call('migrate:fresh', ['--database' => env('DB_CONNECTION'), '--force' => true]);
 
         Artisan::call('transform-backup:participants');
-        $this->info('Transformed Participants');
 
+        $this->info('Transformed Participants');
 
     }
 }

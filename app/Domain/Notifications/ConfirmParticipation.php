@@ -3,6 +3,7 @@
 namespace App\Domain\Notifications;
 
 
+use App\Domain\Models\Participant;
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -13,14 +14,16 @@ class ConfirmParticipation extends Notification implements ShouldQueue
 {
     use Queueable;
 
+    protected $participant;
+
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(Participant $participant)
     {
-        //
+        $this->participant = $participant;
     }
 
     /**
@@ -44,10 +47,10 @@ class ConfirmParticipation extends Notification implements ShouldQueue
     {
         return (new MailMessage)
                     ->subject(Lang::get('frontend/notifications.confirm_participation.subject'))
-                    ->greeting('The introduction to the notification.')
-                    ->line('The introduction to the notification.')
-                    ->action('Notification Action', url('/'))
-                    ->salutation('Thank you for using our application!');
+                    ->greeting(Lang::get('frontend/notifications.confirm_participation.greeting') . $this->participant->firstname )
+                    ->line(Lang::get('frontend/notifications.confirm_participation.line'))
+                    ->action(Lang::get('frontend/notifications.confirm_participation.action'), route('frontend.event.signup.confirm', $this->participant))
+                    ->salutation(Lang::get('frontend/notifications.confirm_participation.salutation'));
     }
 
     /**

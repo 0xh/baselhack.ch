@@ -39,23 +39,28 @@ class TransformParticipants extends Command
      */
     public function handle()
     {
-        $staging_database= DB::connection(env('STAGING_DB_CONNECTION'));
+        try {
+            $staging_database = DB::connection(env('STAGING_DB_CONNECTION'));
 
-        $staging_participants = $staging_database->table('participants')->where('type','participant')->get();
+            $staging_participants = $staging_database->table('participants')->where('type', 'participant')->get();
 
-        foreach ($staging_participants as $staging_participant)
-        {
-            $participant = Participant::create([
-                'id'        => $staging_participant['id'],
-                'uuid'        => $staging_participant['uuid'],
-                'firstname'        => $staging_participant['firstname'],
-                'lastname'        => $staging_participant['lastname'],
-                'company'        => $staging_participant['company'],
-                'email'        => $staging_participant['email'],
-                'confirmed_email'        => $staging_participant['confirmed_email'],
-                'over_eighteen'        => $staging_participant['over_eighteen'],
-                'accepted_policy'        => $staging_participant['accepted_policy'],
-            ]);
+            foreach ($staging_participants as $staging_participant) {
+                $participant = Participant::create([
+                    'id' => $staging_participant->id,
+                    'uuid' => $staging_participant->uuid,
+                    'firstname' => $staging_participant->firstname,
+                    'lastname' => $staging_participant->lastname,
+                    'company' => $staging_participant->company,
+                    'email' => $staging_participant->email,
+                    'confirmed_email' => $staging_participant->confirmed_email,
+                    'over_eighteen' => $staging_participant->over_eighteen,
+                    'accepted_policy' => $staging_participant->accepted_policy,
+                ]);
+            }
+
+        } catch (\Exception $exception) {
+
+
         }
     }
 }

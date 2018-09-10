@@ -17,7 +17,7 @@ class Participant extends Model
      * @var array
      */
     protected $fillable = [
-        'uuid', 'type', 'firstname', 'lastname', 'company', 'email', 'confirmed_email', 'over_eighteen', 'accepted_policy',
+        'uuid', 'firstname', 'lastname', 'company', 'email', 'confirmed_email', 'over_eighteen', 'accepted_policy',
     ];
 
     protected $dates = [
