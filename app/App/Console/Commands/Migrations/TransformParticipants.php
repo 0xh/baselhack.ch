@@ -2,10 +2,10 @@
 
 namespace App\App\Console\Commands\Migrations;
 
-use App\Domain\Jobs\SubscribeToParticipantNewsletter;
 use Illuminate\Console\Command;
 use App\Domain\Models\Participant;
 use Illuminate\Support\Facades\DB;
+use App\Domain\Jobs\SubscribeToParticipantNewsletter;
 
 class TransformParticipants extends Command
 {
@@ -44,7 +44,7 @@ class TransformParticipants extends Command
             $staging_database = DB::connection(env('STAGING_DB_CONNECTION'));
 
             $staging_participants = $staging_database->table('participants')->where('type', 'participant')->get();
-            
+
             foreach ($staging_participants as $staging_participant) {
                 $participant = Participant::create([
                     'id' => $staging_participant->id,
