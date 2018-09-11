@@ -23,15 +23,15 @@ class ConfirmParticipationTest extends TestCase
         parent::tearDown();
     }
 
-    /* @test
-     * @group unit
-     * @group traits
+    /** @test
+     * @group feature
+     * @group requests
      */
-
-    public function confirm_participation()
+    public function confirm_participation_notification_open()
     {
         $this->assertTrue(true);
     }
+
 
     /*   public function confirm_participation_notification()
        {
