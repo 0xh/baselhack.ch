@@ -41,19 +41,10 @@ class SignUpController extends Controller
             SubscribeToParticipantNewsletter::dispatch($participant);
 
             alert()->success(Lang::get('frontend/event.signup.form.notification.success.title'), Lang::get('frontend/event.signup.form.notification.success.description'));
+
         } catch (\Exception $exception) {
-<<<<<<< HEAD
 
             Log::error(print_r($exception->getMessage(), true));
-=======
-            Log::error(print_r($exception, true));
-
-            $participant = Participant::whereEmail($request->email)->first();
-
-            if ($participant instanceof Participant) {
-                $participant->forceDelete();
-            }
->>>>>>> 11fe539abc2666370a7239f638fc6c82ae03b622
 
             alert()->error(Lang::get('frontend/event.signup.form.notification.error.title'), Lang::get('frontend/event.signup.form.notification.error.description'));
         }
