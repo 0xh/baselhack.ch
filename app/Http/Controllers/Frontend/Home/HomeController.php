@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Frontend\Home;
 
 use App\App\Controllers\Controller;
+use App\Domain\Models\Partner;
+use App\Domain\Models\Sponsor;
 use Illuminate\Support\Facades\Lang;
 
 class HomeController extends Controller
@@ -19,6 +21,9 @@ class HomeController extends Controller
             ->setDescription(Lang::get('frontend/meta.home_index.description'))
             ->setKeywords(Lang::get('frontend/meta.home_index.keywords'));
 
-        return view('frontend.home.index');
+        $partners = Partner::all();
+        $sponsors = Sponsor::all();
+
+        return view('frontend.home.index', compact('partners', 'sponsors'));
     }
 }

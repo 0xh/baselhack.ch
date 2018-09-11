@@ -20,7 +20,6 @@ class PartnersController extends Controller
             ->setDescription(Lang::get('frontend/meta.partners_index.description'))
             ->setKeywords(Lang::get('frontend/meta.partners_index.keywords'));
 
-
         $partners = Partner::all();
 
         return view('frontend.partners.index', compact('partners'));

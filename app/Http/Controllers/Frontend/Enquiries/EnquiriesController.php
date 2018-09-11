@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\Frontend\Enquiries;
 
+use App\Domain\Jobs\ProceedEnquiries;
 use App\Domain\Models\Enquiry;
+use App\Domain\Models\User;
 use App\Domain\Notifications\ConfirmRequest;
 use App\App\Controllers\Controller;
 use Illuminate\Support\Facades\Lang;
@@ -23,7 +25,6 @@ class EnquiriesController extends Controller
 
     public function store(StoreEnquiryRequest $request)
     {
-
         $enquiry = Enquiry::create([
             'type' => $request->type,
             'company' => $request->company,
@@ -32,19 +33,20 @@ class EnquiriesController extends Controller
             'message' => $request->message
         ]);
 
+
+
+
         try
         {
-            $enquiry->notify(new ConfirmRequest($enquiry));
 
-            /** @todo Notify Anyone Else */
-
-            alert()->success(Lang::get('frontend/contact.form.notification.success.title'), Lang::get('frontend/contact.form.notification.success.description'))->autoClose(3000);
+            ProceedEnquiries::dispatch($enquiry);
+            alert()->success(Lang::get('frontend/enquiries.form.notification.success.title'), Lang::get('frontend/enquiries.form.notification.success.description'))->autoClose(3000);
 
         } catch (\Exception $exception)
         {
-            Log::error(print_r($exception, true));
+            Log::error(print_r($exception->getMessage(), true));
 
-            alert()->error(Lang::get('frontend/contact.form.notification.error.title'), Lang::get('frontend/contact.form.notification.error.description'))->autoClose(3000);
+            alert()->error(Lang::get('frontend/enquiries.form.notification.error.title'), Lang::get('frontend/enquiries.form.notification.error.description'))->autoClose(3000);
         }
 
         return back();

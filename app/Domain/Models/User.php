@@ -15,6 +15,11 @@ class User extends Authenticatable
          'uuid', 'name',  'email', 'password', 'published_at', 'last_authenticated',
     ];
 
+    protected $casts = [
+        'roles' => 'array',
+        'notifications' => 'array',
+    ];
+
     protected $dates = [
 
         'created_at',
@@ -39,22 +44,10 @@ class User extends Authenticatable
      *
      * @return string
      */
+
     public function getRouteKeyName()
     {
-        return 'email';
+        return 'uuid';
     }
 
-    public function getAvatar()
-    {
-        if (empty($this->avatar)) {
-            return 'https://www.gravatar.com/avatar/'.md5($this->email).'x?s=500&d=mm';
-        }
-
-        return $this->avatar;
-    }
-
-    public function isSameAs(self $user)
-    {
-        return $this->id === $user->id;
-    }
 }

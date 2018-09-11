@@ -38,7 +38,11 @@
                         @csrf
 
                         <div class="field">
-                            <label class="label">{{ __('frontend/event.signup.form.input.firstname') }}</label>
+                            <label class="label">{{ __('frontend/event.signup.form.input.firstname') }}
+
+
+                            </label>
+
                             <div class="control">
                                 <input id="firstname" name="firstname" value="{{ old('firstname') }}"
                                        class="input {{ $errors->has('firstname') ? ' is-danger' : '' }}" type="text"
@@ -52,8 +56,12 @@
                         </div>
 
 
-                        <div class="field">
-                            <label class="label">{{ __('frontend/event.signup.form.input.lastname') }}</label>
+                        <div style="margin-top: 15px;" class="field">
+
+                            <label class="label">{{ __('frontend/event.signup.form.input.lastname') }}
+
+
+                            </label>
                             <div class="control">
                                 <input id="lastname" name="lastname" value="{{ old('lastname') }}"
                                        class="input {{ $errors->has('lastname') ? ' is-danger' : '' }}" type="text"
@@ -66,8 +74,13 @@
                             @endif
                         </div>
 
-                        <div class="field">
-                            <label class="label">{{ __('frontend/event.signup.form.input.company') }}</label>
+                        <div style="margin-top: 15px;" class="field">
+
+                            <label class="label">{{ __('frontend/event.signup.form.input.company') }}
+
+                                <span style="font-size: 9px;" class="tag is-dark is-pulled-right is-uppercase">optional</span>
+
+                            </label>
                             <div class="control">
                                 <input id="company" name="company" value="{{ old('company') }}"
                                        class="input {{ $errors->has('company') ? ' is-danger' : '' }}" type="text"
@@ -81,8 +94,11 @@
                         </div>
 
 
-                        <div class="field">
-                            <label class="label">{{ __('frontend/event.signup.form.input.email') }}</label>
+                        <div style="margin-top: 15px;" class="field">
+                            <label class="label">{{ __('frontend/event.signup.form.input.email') }}
+
+
+                            </label>
                             <div class="control">
                                 <input id="email" name="email" value="{{ old('email') }}"
                                        class="input {{ $errors->has('email') ? ' is-danger' : '' }}" type="email"

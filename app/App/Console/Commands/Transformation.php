@@ -44,7 +44,9 @@ class Transformation extends Command
         Artisan::call('db:seed', ['--database' => env('DB_CONNECTION')]);
 
         Artisan::call('transform-backup:participants');
-
         $this->info('Transformed Participants');
+
+        Artisan::call('transform-backup:notifications');
+        $this->info('Transformed Notifications');
     }
 }

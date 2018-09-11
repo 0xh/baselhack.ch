@@ -34,7 +34,7 @@ class ConfirmParticipation extends Notification implements ShouldQueue
      */
     public function via($notifiable)
     {
-        return [ 'mail'];
+        return [ 'database','mail'];
     }
 
     /**
@@ -50,8 +50,28 @@ class ConfirmParticipation extends Notification implements ShouldQueue
                     ->subject(Lang::get('frontend/notifications.confirm_participation.subject'))
                     ->greeting(Lang::get('frontend/notifications.confirm_participation.greeting').$this->participant->firstname)
                     ->line(Lang::get('frontend/notifications.confirm_participation.line'))
-                    ->action(Lang::get('frontend/notifications.confirm_participation.action'), route('frontend.event.signup.confirm', $this->participant))
-                    ->salutation(Lang::get('frontend/notifications.confirm_participation.salutation'));
+                    ->action(Lang::get('frontend/notifications.confirm_participation.action'), route('frontend.events.signup.confirm', $this->participant))
+                    ->line(Lang::get('frontend/notifications.confirm_participation.salutation'));
+    }
+
+    /**
+     * Get the array representation of the notification.
+     *
+     * @param  mixed $notifiable
+     *
+     * @return array
+     */
+    public function toArray($notifiable)
+    {
+        return [
+
+            'uuid' => $this->participant->uuid,
+            'type' => $this->participant->type,
+            'company' => $this->participant->company,
+            'firstname' => $this->participant->firstname,
+            'lastname' => $this->participant->lastname,
+            'email' => $this->participant->email,
+        ];
     }
 
 }

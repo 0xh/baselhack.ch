@@ -13,7 +13,7 @@
                 <div style="margin-top: 25px;" class="columns is-multiline is-centered is-vcentered">
 
 
-                    @foreach(config('baselhack.partners') as $partner)
+                    @foreach($partners as $partner)
 
                         <div class="column is-2-desktop">
 
@@ -21,9 +21,9 @@
                                 <div class="card-image">
 
                                     <figure class="image">
-                                        <a target="_blank" title="{{ $partner['title'] }}"  alt="{{ $partner['title'] }}" href="{{ $partner['url'] }}"><img
-                                                    title="{{ $partner['title'] }}" src="{{ asset('frontend/images/partners/' .  $partner['image']) }}"
-                                                    alt="{{ $partner['title'] }}"></a>
+                                        <a target="_blank" title="{{ $partner->name }}"  alt="{{ $partner->name }}" href="{{ $partner->url }}"><img
+                                                    title="{{ $partner->name }}" src="{{ asset('frontend/images/partners/' .  $partner->image) }}"
+                                                    alt="{{ $partner->name }}"></a>
                                     </figure>
                                 </div>
 

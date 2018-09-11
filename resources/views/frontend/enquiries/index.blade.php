@@ -55,8 +55,13 @@
                             @endif
                         </div>
 
-                        <div class="field">
-                            <label for="company" class="label">{{ __('frontend/enquiries.form.input.company') }}</label>
+                        <div style="margin-top: 15px;" class="field">
+                            <label for="company" class="label">{{ __('frontend/enquiries.form.input.company') }}
+
+                                <span style="font-size: 9px;" class="tag is-dark is-pulled-right is-uppercase">optional</span>
+
+
+                            </label>
                             <div class="control">
                                 <input id="company" name="company" value="{{ old('company') }}"
                                        class="input {{ $errors->has('company') ? ' is-danger' : '' }}" type="text"
@@ -70,7 +75,7 @@
                         </div>
 
 
-                        <div class="field">
+                        <div style="margin-top: 15px;" class="field">
                             <label for="name" class="label">{{ __('frontend/enquiries.form.input.name') }}</label>
                             <div class="control">
                                 <input id="name" name="name" value="{{ old('name') }}"
@@ -85,7 +90,7 @@
                         </div>
 
 
-                        <div class="field">
+                        <div style="margin-top: 15px;" class="field">
                             <label for="email" class="label">{{ __('frontend/enquiries.form.input.email') }}</label>
                             <div class="control">
                                 <input id="email" name="email" value="{{ old('email') }}"
@@ -101,7 +106,7 @@
                         </div>
 
 
-                        <div class="field">
+                        <div style="margin-top: 15px;" class="field">
                             <label for="message" class="label">{{ __('frontend/enquiries.form.input.message') }}</label>
                             <div class="control">
                                 <textarea id="message" name="message" rows="5"

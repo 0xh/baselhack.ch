@@ -9,7 +9,7 @@ use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 
-class ConfirmRequest extends Notification implements ShouldQueue
+class DeliverRequest extends Notification implements ShouldQueue
 {
     use Queueable;
 
@@ -48,10 +48,12 @@ class ConfirmRequest extends Notification implements ShouldQueue
     public function toMail($notifiable)
     {
         return (new MailMessage)
-            ->subject(Lang::get('frontend/notifications.confirm_request.subject'))
-            ->greeting(Lang::get('frontend/notifications.confirm_request.greeting') . ' ' . $this->enquiry->name)
-            ->line(Lang::get('frontend/notifications.confirm_request.line'))
-            ->line(Lang::get('frontend/notifications.confirm_request.salutation'))
+            ->subject(Lang::get('frontend/notifications.deliver_request.subject'))
+            ->greeting(Lang::get('frontend/notifications.deliver_request.greeting'))
+            ->line('Company: ' . $this->enquiry->company)
+            ->line('Name: ' . $this->enquiry->name)
+            ->line('E-Mail: ' . $this->enquiry->email)
+            ->line('Message:')
             ->line($this->enquiry->message);
 
     }

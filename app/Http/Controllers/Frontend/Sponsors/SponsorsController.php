@@ -20,7 +20,6 @@ class SponsorsController extends Controller
             ->setDescription(Lang::get('frontend/meta.sponsors_index.description'))
             ->setKeywords(Lang::get('frontend/meta.sponsors_index.keywords'));
 
-
         $sponsors = Sponsor::all();
 
         return view('frontend.sponsors.index', compact('sponsors'));

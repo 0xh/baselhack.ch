@@ -13,7 +13,7 @@
                 <div style="margin-top: 25px;" class="columns is-multiline is-centered is-vcentered">
 
 
-                    @foreach(config('baselhack.sponsors') as $sponsor)
+                    @foreach($sponsors as $sponsor)
 
                         <div class="column is-2-desktop">
 
@@ -21,9 +21,9 @@
                                 <div class="card-image">
 
                                     <figure class="image">
-                                        <a target="_blank" title="{{ $sponsor['title'] }}"  href="{{ $sponsor['url'] }}"><img
-                                                    title="{{ $sponsor['title'] }}" src="{{ asset('frontend/images/sponsors/' .  $sponsor['image']) }}"
-                                                    alt="{{ $sponsor['title'] }}"></a>
+                                        <a target="_blank" title="{{ $sponsor->name }}"  href="{{ $sponsor->url }}"><img
+                                                    title="{{ $sponsor->name }}" src="{{ asset('frontend/images/sponsors/' .  $sponsor->image) }}"
+                                                    alt="{{ $sponsor->name }}"></a>
                                     </figure>
                                 </div>
 

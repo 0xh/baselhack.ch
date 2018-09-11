@@ -43,13 +43,7 @@ class SignUpController extends Controller
             alert()->success(Lang::get('frontend/event.signup.form.notification.success.title'), Lang::get('frontend/event.signup.form.notification.success.description'));
         } catch (\Exception $exception) {
 
-            Log::error(print_r($exception, true));
-
-            $participant = Participant::whereEmail($request->email)->first();
-
-            if ($participant instanceof Participant) {
-                $participant->forceDelete();
-            }
+            Log::error(print_r($exception->getMessage(), true));
 
             alert()->error(Lang::get('frontend/event.signup.form.notification.error.title'), Lang::get('frontend/event.signup.form.notification.error.description'));
         }
