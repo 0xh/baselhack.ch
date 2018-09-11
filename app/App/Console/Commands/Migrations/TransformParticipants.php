@@ -39,13 +39,12 @@ class TransformParticipants extends Command
      */
     public function handle()
     {
+        $staging_database = DB::connection(env('STAGING_DB_CONNECTION'));
 
-            $staging_database = DB::connection(env('STAGING_DB_CONNECTION'));
+        $staging_participants = $staging_database->table('participants')->get();
 
-            $staging_participants = $staging_database->table('participants')->get();
-
-            foreach ($staging_participants as $staging_participant) {
-                $participant = Participant::create([
+        foreach ($staging_participants as $staging_participant) {
+            $participant = Participant::create([
                     'id' => $staging_participant->id,
                     'firstname' => $staging_participant->firstname,
                     'lastname' => $staging_participant->lastname,
@@ -56,10 +55,9 @@ class TransformParticipants extends Command
                     'accepted_policy' => $staging_participant->accepted_policy,
                 ]);
 
-                $participant->update([
+            $participant->update([
                    'uuid' => $staging_participant->uuid,
                 ]);
-            }
-
+        }
     }
 }

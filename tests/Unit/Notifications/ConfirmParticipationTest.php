@@ -33,22 +33,22 @@ class ConfirmParticipationTest extends TestCase
         $this->assertTrue(true);
     }
 
- /*   public function confirm_participation_notification()
-    {
-        factory(Participant::class,2)->create();
+    /*   public function confirm_participation_notification()
+       {
+           factory(Participant::class,2)->create();
 
-        $participant = Participant::first();
+           $participant = Participant::first();
 
-        Notification::fake();
+           Notification::fake();
 
-        Notification::assertSentTo(
-            $participant,
-            ConfirmParticipation::class,
-            function ($notification, $channels) use ($participant) {
-                return $notification->participant->id === $participant->id;
-            }
-        );
-    }*/
+           Notification::assertSentTo(
+               $participant,
+               ConfirmParticipation::class,
+               function ($notification, $channels) use ($participant) {
+                   return $notification->participant->id === $participant->id;
+               }
+           );
+       }*/
 
    /* public function test_confirm_participation_notification()
     {

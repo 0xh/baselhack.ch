@@ -4,7 +4,6 @@ namespace App\App\Console\Commands\Migrations;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Notifications\Notification;
 
 class TransformNotifications extends Command
 {
@@ -41,8 +40,7 @@ class TransformNotifications extends Command
     {
         $staging_database = DB::connection(env('STAGING_DB_CONNECTION'));
 
-        foreach($staging_database->table('notifications')->get() as $notifications){
-
+        foreach ($staging_database->table('notifications')->get() as $notifications) {
             DB::table('notifications')->insert((array) $notifications);
         }
     }
