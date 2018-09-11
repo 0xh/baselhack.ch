@@ -6,6 +6,7 @@
 
 @section('content')
 
+
     <section class="section hero header is-small is-light">
         <div class="hero-body">
             <div class="columns is-centered">
@@ -33,7 +34,7 @@
 
 
 
-                    <form id="form-build" method="POST" action="{{ route('frontend.event.signup.store') }}">
+                    <form id="form-build" method="POST" action="{{ route('frontend.events.signup.store') }}">
                         @csrf
 
                         <div class="field">
@@ -162,9 +163,10 @@
 
 
 
-                        <div class="columns is-centered is-mobile">
+                        <hr>
+                        <div class="columns is-centered">
 
-                            <div class="column is-5">
+                            <div class="column">
                                 <div class="field {{ $errors->has('g-recaptcha-response') ? ' is-danger' : '' }}">
                                     <div class="g-recaptcha" data-sitekey="6LeXkG8UAAAAANeVjDf6hPjY7KnMwyhZtKSstIUg"></div>
 

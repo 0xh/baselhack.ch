@@ -22,12 +22,12 @@
                 </a>
 
                <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link" href="{{ route('frontend.event.index') }}">
+                    <a class="navbar-link" href="{{ route('frontend.events.index') }}">
                         Event
                     </a>
                     <div class="navbar-dropdown is-boxed">
 
-                        <a class="navbar-item" href="{{ route('frontend.event.signup') }}">
+                        <a class="navbar-item" href="{{ route('frontend.events.signup.index') }}">
                             Sign-Up
                         </a>
 
@@ -48,7 +48,7 @@
                         About
                     </a>
 
-                <a class="navbar-item" href="{{ route('frontend.contact.index') }}">
+                <a class="navbar-item" href="{{ route('frontend.enquiries.index') }}">
                     Contact
                 </a>
 

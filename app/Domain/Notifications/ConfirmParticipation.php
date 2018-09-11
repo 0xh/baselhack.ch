@@ -34,7 +34,7 @@ class ConfirmParticipation extends Notification implements ShouldQueue
      */
     public function via($notifiable)
     {
-        return ['database', 'mail'];
+        return [ 'mail'];
     }
 
     /**
@@ -54,17 +54,4 @@ class ConfirmParticipation extends Notification implements ShouldQueue
                     ->salutation(Lang::get('frontend/notifications.confirm_participation.salutation'));
     }
 
-    /**
-     * Get the array representation of the notification.
-     *
-     * @param  mixed  $notifiable
-     *
-     * @return array
-     */
-    public function toArray($notifiable)
-    {
-        return [
-
-        ];
-    }
 }

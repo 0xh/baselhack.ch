@@ -1,7 +1,7 @@
 <?php
 
 use Faker\Generator as Faker;
-use App\Domain\Event\Models\Participant;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,17 +14,14 @@ use App\Domain\Event\Models\Participant;
 |
 */
 
-$factory->define(Participant::class, function (Faker $faker) {
+$factory->define(\App\Domain\Models\Participant::class, function (Faker $faker) {
     return [
-
-        'status' => 'inactive',
+        'company' => $faker->company,
         'firstname' => $faker->firstName,
         'lastname' => $faker->lastName,
         'email' => $faker->safeEmail,
-        'mobile' => $faker->phoneNumber,
-        'github' => $faker->colorName,
-        'birthdate' => $faker->date(),
-        'member_since' => $faker->date(),
-
+        'confirmed_email' => $faker->boolean(),
+        'over_eighteen' => $faker->boolean(),
+        'accepted_policy' => $faker->dateTime(),
     ];
 });

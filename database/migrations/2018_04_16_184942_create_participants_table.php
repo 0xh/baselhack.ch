@@ -17,11 +17,11 @@ class CreateParticipantsTable extends Migration
             $table->increments('id');
             $table->uuid('uuid')->unique();
 
-            $table->string('firstname');
-            $table->string('lastname');
 
             $table->string('company')->nullable();
 
+            $table->string('firstname');
+            $table->string('lastname');
             $table->string('email')->unique();
 
             $table->boolean('confirmed_email')->default(false);

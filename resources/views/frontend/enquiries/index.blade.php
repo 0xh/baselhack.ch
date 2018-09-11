@@ -13,8 +13,8 @@
 
                 <div class="column is-4">
 
-                    <a href="{{ route('frontend.event.signup') }}">
-                        <img class="image header-image" src="{{ asset('frontend/images/backgrounds/contact.png') }}">
+                    <a href="{{ route('frontend.events.signup.index') }}">
+                        <img class="image header-image" src="{{ asset('frontend/images/backgrounds/enquiries.png') }}">
                     </a>
 
                 </div>
@@ -28,39 +28,54 @@
 
                 <div class="column is-three-quarters">
 
-                    <h1 class="title">{{ __('frontend/contact.title') }}</h1>
-                    <h2 class="subtitle">{{ __('frontend/contact.subtitle') }}</h2>
+                    <h1 class="title">{{ __('frontend/enquiries.title') }}</h1>
+                    <h2 class="subtitle">{{ __('frontend/enquiries.subtitle') }}</h2>
                     <hr>
 
-                    <form id="form-build" method="POST" action="{{ route('frontend.contact.store') }}">
+                    <form id="form-build" method="POST" action="{{ route('frontend.enquiries.store') }}">
                         @csrf
 
                         <div class="field">
-                            <label class="label">{{ __('frontend/contact.form.input.topic') }}</label>
+                            <label for="type" class="label">{{ __('frontend/enquiries.form.input.type') }}</label>
                             <div class="control">
                                 <div class="select is-fullwidth">
-                                    <select id="topic" name="topic" class=""
-                                            title="{{ __('frontend/contact.form.input.topic') }}" required autofocus>
+                                    <select id="type" name="type" class=""
+                                            title="{{ __('frontend/enquiries.form.input.type') }}" required autofocus>
                                         <option value="" disabled
-                                                selected>{{ __('frontend/contact.form.input.select.topic') }}</option>
-                                        <option value="general" @if(old('topic') == 'general')selected @endif>{{ __('frontend/contact.form.input.select.general') }}</option>
-                                        <option value="event" @if(old('topic') == 'event')selected @endif>{{ __('frontend/contact.form.input.select.event') }}</option>
-                                        <option value="sponsoring" @if(old('topic') == 'sponsoring')selected @endif>{{ __('frontend/contact.form.input.select.sponsoring') }}</option>
+                                                selected>{{ __('frontend/enquiries.form.input.select.type') }}</option>
+                                        <option value="general" @if(old('type') == 'general')selected @endif>{{ __('frontend/enquiries.form.input.select.general') }}</option>
+                                        <option value="event" @if(old('type') == 'event')selected @endif>{{ __('frontend/enquiries.form.input.select.event') }}</option>
+                                        <option value="sponsoring" @if(old('type') == 'sponsoring')selected @endif>{{ __('frontend/enquiries.form.input.select.sponsoring') }}</option>
                                     </select>
                                 </div>
                             </div>
 
-                            @if ($errors->has('topic'))
-                                <p class="help is-danger">{{ $errors->first('topic') }}</p>
+                            @if ($errors->has('type'))
+                                <p class="help is-danger">{{ $errors->first('type') }}</p>
                             @endif
                         </div>
 
                         <div class="field">
-                            <label class="label">{{ __('frontend/contact.form.input.name') }}</label>
+                            <label for="company" class="label">{{ __('frontend/enquiries.form.input.company') }}</label>
+                            <div class="control">
+                                <input id="company" name="company" value="{{ old('company') }}"
+                                       class="input {{ $errors->has('company') ? ' is-danger' : '' }}" type="text"
+                                       placeholder="{{ __('frontend/enquiries.form.input.company') }}"
+                                       autocomplete="company">
+                            </div>
+
+                            @if ($errors->has('company'))
+                                <p class="help is-danger">{{ $errors->first('company') }}</p>
+                            @endif
+                        </div>
+
+
+                        <div class="field">
+                            <label for="name" class="label">{{ __('frontend/enquiries.form.input.name') }}</label>
                             <div class="control">
                                 <input id="name" name="name" value="{{ old('name') }}"
                                        class="input {{ $errors->has('name') ? ' is-danger' : '' }}" type="text"
-                                       placeholder="{{ __('frontend/contact.form.input.name') }}"
+                                       placeholder="{{ __('frontend/enquiries.form.input.name') }}"
                                        autocomplete="name" required>
                             </div>
 
@@ -71,11 +86,11 @@
 
 
                         <div class="field">
-                            <label class="label">{{ __('frontend/contact.form.input.email') }}</label>
+                            <label for="email" class="label">{{ __('frontend/enquiries.form.input.email') }}</label>
                             <div class="control">
                                 <input id="email" name="email" value="{{ old('email') }}"
                                        class="input {{ $errors->has('email') ? ' is-danger' : '' }}" type="email"
-                                       placeholder="{{ __('frontend/contact.form.input.email') }}"
+                                       placeholder="{{ __('frontend/enquiries.form.input.email') }}"
                                        autocomplete="email" required>
 
                                 @if ($errors->has('email'))
@@ -87,12 +102,12 @@
 
 
                         <div class="field">
-                            <label class="label">{{ __('frontend/contact.form.input.message') }}</label>
+                            <label for="message" class="label">{{ __('frontend/enquiries.form.input.message') }}</label>
                             <div class="control">
                                 <textarea id="message" name="message" rows="5"
                                           class="textarea {{ $errors->has('email') ? ' is-danger' : '' }}"
-                                          placeholder="{{ __('frontend/contact.form.input.message') }}"
-                                          required>{{ old('email') }}</textarea>
+                                          placeholder="{{ __('frontend/enquiries.form.input.message') }}"
+                                          required>{{ old('message') }}</textarea>
 
                                 @if ($errors->has('message'))
                                     <p class="help is-danger">{{ $errors->first('message') }}</p>
@@ -115,7 +130,7 @@
 
                         <div style="margin-top: 20px;" class="field">
                             <button type="submit"
-                                    class="button is-dark is-fullwidth">{{ __('frontend/contact.form.button.submit') }}</button>
+                                    class="button is-dark is-fullwidth">{{ __('frontend/enquiries.form.button.submit') }}</button>
                         </div>
 
 

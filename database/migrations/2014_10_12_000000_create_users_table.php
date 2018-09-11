@@ -20,6 +20,8 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->string('language')->default(config('app.locale'));
+            $table->json('roles')->nullable();
+            $table->json('notifications')->nullable();
             $table->rememberToken();
             $table->dateTime('last_authenticated')->nullable();
             $table->timestamps();

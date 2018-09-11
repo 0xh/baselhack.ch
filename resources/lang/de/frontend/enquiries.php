@@ -9,16 +9,17 @@ return [
 
         'input' => [
 
-                'topic' => 'Topic',
+                'type' => 'Type',
 
                 'select' => [
 
-                    'topic' => 'Select a topic',
+                    'type' => 'Select a type',
                     'general' => 'General',
                     'sponsoring' => 'Sponsoring',
                     'event' => 'Event',
                 ],
 
+                'company' => 'Company',
                 'name' => 'Name',
                 'email' => 'E-Mail Address',
 

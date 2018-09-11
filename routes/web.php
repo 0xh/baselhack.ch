@@ -2,24 +2,26 @@
 
 
 Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
-    Route::get('/', 'HomeController@index')->name('home.index');
 
-    Route::group(['prefix' => 'event', 'namespace' => 'Event', 'as' => 'event.'], function () {
-        Route::get('/', 'EventController@index')->name('index');
+    Route::get('/', 'Home\HomeController@index')->name('home.index');
 
-        Route::get('/sign-up', 'SignUpController@index')->name('signup');
-        Route::post('/sign-up', 'SignUpController@store')->name('signup.store');
+    Route::group(['prefix' => 'events', 'namespace' => 'Events', 'as' => 'events.'], function () {
+        Route::get('/', 'EventsController@index')->name('index');
 
-        Route::get('sign-up/confirm/{participant}', 'SignUpController@confirm')->name('signup.confirm');
+        Route::group(['prefix' => 'sign-up', 'as' => 'signup.'], function () {
+            Route::get('/', 'SignUpController@index')->name('index');
+            Route::post('/', 'SignUpController@store')->name('store');
+            Route::get('/confirm/{participant}', 'SignUpController@confirm')->name('confirm');
+        });
     });
 
-    Route::get('/about', 'AboutController@index')->name('about.index');
+    Route::get('/about', 'About\AboutController@index')->name('about.index');
 
-    Route::group(['prefix' => 'partners', 'as' => 'partners.'], function () {
+    Route::group(['prefix' => 'partners', 'namespace' => 'Partners', 'as' => 'partners.'], function () {
         Route::get('/', 'PartnersController@index')->name('index');
     });
 
-    Route::group(['prefix' => 'sponsors', 'as' => 'sponsors.'], function () {
+    Route::group(['prefix' => 'sponsors', 'namespace' => 'Sponsors', 'as' => 'sponsors.'], function () {
         Route::get('/', 'SponsorsController@index')->name('index');
     });
 
@@ -28,8 +30,11 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
         Route::get('/privacy', 'PrivacyController@index')->name('privacy.index');
     });
 
-    Route::get('/contact', 'ContactController@index')->name('contact.index');
-    Route::post('/contact', 'ContactController@store')->name('contact.store');
+
+    Route::group(['prefix' => 'contact', 'namespace' => 'Enquiries', 'as' => 'enquiries.'], function () {
+        Route::get('/', 'EnquiriesController@index')->name('index');
+        Route::post('/', 'EnquiriesController@store')->name('store');
+    });
 
     Route::post('/newsletter', 'Newsletter\NewsletterController@store')->name('newsletter.store');
 });

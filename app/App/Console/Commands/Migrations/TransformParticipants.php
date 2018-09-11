@@ -47,7 +47,6 @@ class TransformParticipants extends Command
             foreach ($staging_participants as $staging_participant) {
                 $participant = Participant::create([
                     'id' => $staging_participant->id,
-                    'uuid' => $staging_participant->uuid,
                     'firstname' => $staging_participant->firstname,
                     'lastname' => $staging_participant->lastname,
                     'company' => $staging_participant->company,
@@ -56,6 +55,11 @@ class TransformParticipants extends Command
                     'over_eighteen' => $staging_participant->over_eighteen,
                     'accepted_policy' => $staging_participant->accepted_policy,
                 ]);
+
+                $participant->update([
+                   'uuid' =>  $staging_participant->uuid,
+                ]);
+
             }
         } catch (\Exception $exception) {
         }

@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\Frontend;
+namespace App\Http\Controllers\Frontend\Sponsors;
 
 use App\App\Controllers\Controller;
+use App\Domain\Models\Sponsor;
 use Illuminate\Support\Facades\Lang;
 
 class SponsorsController extends Controller
@@ -19,6 +20,9 @@ class SponsorsController extends Controller
             ->setDescription(Lang::get('frontend/meta.sponsors_index.description'))
             ->setKeywords(Lang::get('frontend/meta.sponsors_index.keywords'));
 
-        return view('frontend.sponsors.index');
+
+        $sponsors = Sponsor::all();
+
+        return view('frontend.sponsors.index', compact('sponsors'));
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Frontend;
+namespace App\Http\Controllers\Frontend\Home;
 
 use App\App\Controllers\Controller;
 use Illuminate\Support\Facades\Lang;

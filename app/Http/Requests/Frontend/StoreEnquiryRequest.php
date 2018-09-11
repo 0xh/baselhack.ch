@@ -5,7 +5,7 @@ namespace App\Http\Requests\Frontend;
 use Illuminate\Validation\Rule;
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreContactRequest extends FormRequest
+class StoreEnquiryRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,9 +25,10 @@ class StoreContactRequest extends FormRequest
     public function rules()
     {
         return [
-            'topic' => 'required|string|'.Rule::in('general', 'event', 'sponsoring'),
-            'name' => 'required|string',
-            'email' => 'required|email',
+            'type' => 'required|string|'.Rule::in('general', 'event', 'sponsoring'),
+            'company' => 'nullable|string|max:255',
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255',
             'message' => 'required|string',
             'g-recaptcha-response' => 'required|recaptcha',
         ];

@@ -11,33 +11,11 @@
                 </div>
 
                 <div class="social">
-
-                    <a target="_blank" class="" title="{{ __('frontend/layout.footer.socials.instagram') }}" href="{{ config('baselhack.socials.instagram.url') }}">
-                        <i class="fab fa-instagram fa-lg"></i>
-                    </a>
-
-                    <a target="_blank" class="" title="{{ __('frontend/layout.footer.socials.facebook') }}" href="{{ config('baselhack.socials.facebook.url') }}">
-                        <i class="fab fa-facebook-f fa-lg"></i>
-                    </a>
-
-
-                    <a target="_blank" class="" title="{{ __('frontend/layout.footer.socials.linkedin') }}" href="{{ config('baselhack.socials.linkedin.url') }}">
-                        <i class="fab fa-linkedin-in fa-lg"></i>
-                    </a>
-
-
-                    <a target="_blank" class="" title="{{ __('frontend/layout.footer.socials.twitter') }}" href="{{ config('baselhack.socials.twitter.url') }}">
-                        <i class="fab fa-twitter fa-lg"></i>
-                    </a>
-
-                    <a target="_blank" class="" title="{{ __('frontend/layout.footer.socials.youtube') }}" href="{{ config('baselhack.socials.youtube.url') }}">
-                        <i class="fab fa-youtube fa-lg"></i>
-                    </a>
-
-                    <a target="_blank" class="" title="{{ __('frontend/layout.footer.socials.github') }}" href="{{ config('baselhack.socials.github.url') }}">
-                        <i class="fab fa-github fa-lg"></i>
-                    </a>
-
+                    @foreach($social_medias as $social_media)
+                        <a target="_blank" class="" title="{{ $social_media->name }}" href="{{ $social_media->url }}">
+                            <i class="{{ $social_media->icon }} fa-lg"></i>
+                        </a>
+                    @endforeach
                 </div>
 
                 <div class="copyright">

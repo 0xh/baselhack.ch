@@ -4,7 +4,6 @@ namespace App\App\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
-
 class Kernel extends ConsoleKernel
 {
     /**
@@ -13,7 +12,11 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
+        'App\App\Console\Commands\Sitemap',
+        'App\App\Console\Commands\Transformation',
+        'App\App\Console\Commands\Confirmation',
     ];
+
 
     /**
      * Define the application's command schedule.

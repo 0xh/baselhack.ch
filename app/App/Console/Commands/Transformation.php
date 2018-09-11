@@ -40,9 +40,10 @@ class Transformation extends Command
     {
         $this->confirm('Confirm Transformation');
 
-        /*   Artisan::call('migrate:fresh', ['--database' => env('DB_CONNECTION'), '--force' => true]);
+        Artisan::call('migrate:fresh', ['--database' => env('DB_CONNECTION'), '--force' => true]);
+        Artisan::call('db:seed', ['--database' => env('DB_CONNECTION')]);
 
-           Artisan::call('transform-backup:participants');*/
+        Artisan::call('transform-backup:participants');
 
         $this->info('Transformed Participants');
     }

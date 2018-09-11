@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Frontend\Event;
+namespace App\Http\Controllers\Frontend\Events;
 
 use App\App\Controllers\Controller;
 use Illuminate\Support\Facades\Lang;
 
-class EventController extends Controller
+class EventsController extends Controller
 {
     public function index()
     {
@@ -14,6 +14,6 @@ class EventController extends Controller
             ->setDescription(Lang::get('frontend/meta.event_index.description'))
             ->setKeywords(Lang::get('frontend/meta.event_index.keywords'));
 
-        return view('frontend.event.index');
+        return view('frontend.events.index');
     }
 }
