@@ -5,7 +5,7 @@ dist: trusty
 language: php
 
 php:
-- 7.1
+- 7.2
 
 services:
 - mysq
@@ -16,12 +16,11 @@ addons:
       - mysql-5.7-trusty
     packages:
       - mysql-server
-      - mysql-client
   chrome: stable
 
 before_install:
-  - sudo mysql -e "use mysql; update user set authentication_string=PASSWORD('testing') where User='root'; update user set plugin='mysql_native_password';FLUSH PRIVILEGES;"
-  - sudo mysql_upgrade -u root -ptesting
+  - sudo mysql -e "use mysql; update user set authentication_string=PASSWORD('') where User='root'; update user set plugin='mysql_native_password';FLUSH PRIVILEGES;"
+  - sudo mysql_upgrade
   - sudo service mysql restart
 
 install:
