@@ -32,7 +32,6 @@ class ConfirmParticipationTest extends TestCase
         $this->assertTrue(true);
     }
 
-
     /*   public function confirm_participation_notification()
        {
            factory(Participant::class,2)->create();

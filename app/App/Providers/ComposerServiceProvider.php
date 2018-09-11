@@ -16,8 +16,7 @@ class ComposerServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        try
-        {
+        try {
             if (Schema::hasTable('social_media')) {
                 $social_medias = SocialMedia::all();
 
@@ -25,11 +24,7 @@ class ComposerServiceProvider extends ServiceProvider
                     $view->with(compact('social_medias'));
                 });
             }
-        }
-        catch (\Exception $exception)
-        {
-
-
+        } catch (\Exception $exception) {
         }
     }
 
@@ -40,6 +35,5 @@ class ComposerServiceProvider extends ServiceProvider
      */
     public function register()
     {
-
     }
 }
