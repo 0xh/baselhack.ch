@@ -17,7 +17,7 @@ $factory->define(\App\Domain\Models\Enquiry::class, function (Faker $faker) {
     return [
         'type' => $faker->randomElement(config('baselhack.enquiry.type')),
         'company' => $faker->company,
-        'name' => $faker->firstName . ' ' . $faker->lastName,
+        'name' => $faker->firstName.' '.$faker->lastName,
         'email' => $faker->safeEmail,
         'message' => $faker->text(200),
     ];

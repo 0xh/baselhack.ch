@@ -2,15 +2,12 @@
 
 namespace Tests\Unit\Notifications;
 
-use App\Domain\Models\Participant;
-use App\Domain\Notifications\ConfirmParticipation;
-
-use Illuminate\Support\Facades\Lang;
 use Tests\TestCase;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
-
+use App\Domain\Models\Participant;
+use Illuminate\Support\Facades\Lang;
 use Illuminate\Support\Facades\Notification;
-
+use App\Domain\Notifications\ConfirmParticipation;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class ConfirmParticipationTest extends TestCase
 {
@@ -26,8 +23,7 @@ class ConfirmParticipationTest extends TestCase
         parent::tearDown();
     }
 
-
-    /** @test
+    /* @test
      * @group unit
      * @group traits
      */
@@ -71,6 +67,4 @@ class ConfirmParticipationTest extends TestCase
             }
         );
     }*/
-
-
 }

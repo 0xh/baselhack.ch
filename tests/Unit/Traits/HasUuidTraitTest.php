@@ -2,9 +2,7 @@
 
 namespace Tests\Unit\Traits;
 
-use App\Domain\Models\User;
 use Tests\TestCase;
-use Illuminate\Support\Collection;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class HasUuidTraitTest extends TestCase
@@ -29,6 +27,4 @@ class HasUuidTraitTest extends TestCase
     {
         $this->assertTrue(true);
     }
-
-
 }

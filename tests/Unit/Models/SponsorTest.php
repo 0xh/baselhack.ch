@@ -2,8 +2,8 @@
 
 namespace Tests\Unit\Models;
 
-use App\Domain\Models\Sponsor;
 use Tests\TestCase;
+use App\Domain\Models\Sponsor;
 use Illuminate\Support\Collection;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
@@ -40,21 +40,19 @@ class SponsorTest extends TestCase
      * @group unit
      * @group models
      */
-
     public function update_a_sponsor()
     {
         $fillables = ['uuid', 'name',  'image', 'url'];
 
         $old = factory(Sponsor::class)->create();
         $new = factory(Sponsor::class)->make([
-            'uuid' => 'random-uuid'
+            'uuid' => 'random-uuid',
         ]);
 
-        foreach ($fillables as $fillable)
-        {
+        foreach ($fillables as $fillable) {
             $old->update([
 
-                $fillable => $new->$fillable
+                $fillable => $new->$fillable,
             ]);
 
             $this->assertEquals($old->$fillable, $new->$fillable);

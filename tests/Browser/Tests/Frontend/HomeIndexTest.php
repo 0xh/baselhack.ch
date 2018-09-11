@@ -13,11 +13,9 @@ class HomeIndexTest extends DuskTestCase
      * @return void
      */
 
-
     /** @test
      * @group dusk
      */
-
     public function visit_frontend_home_index()
     {
         $this->browse(function (Browser $browser) {

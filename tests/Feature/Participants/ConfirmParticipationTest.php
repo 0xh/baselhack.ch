@@ -3,7 +3,6 @@
 namespace Tests\Feature\Participants;
 
 use Tests\TestCase;
-
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class ConfirmParticipationTest extends TestCase
@@ -28,6 +27,4 @@ class ConfirmParticipationTest extends TestCase
     {
         $this->assertTrue(true);
     }
-
-
 }

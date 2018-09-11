@@ -2,9 +2,7 @@
 
 namespace Tests\Unit\Notifications;
 
-use App\Domain\Models\User;
 use Tests\TestCase;
-use Illuminate\Support\Collection;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class ConfirmRequestTest extends TestCase
@@ -29,6 +27,4 @@ class ConfirmRequestTest extends TestCase
     {
         $this->assertTrue(true);
     }
-
-
 }

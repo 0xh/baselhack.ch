@@ -11,7 +11,7 @@ class Sponsor extends Model
     use SoftDeletes, HasUuid;
 
     protected $fillable = [
-        'uuid', 'name',  'image', 'url'
+        'uuid', 'name',  'image', 'url',
     ];
 
     public function getRouteKeyName()

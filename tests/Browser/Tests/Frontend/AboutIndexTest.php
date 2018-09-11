@@ -13,11 +13,9 @@ class AboutIndexTest extends DuskTestCase
      * @return void
      */
 
-
     /** @test
      * @group dusk
      */
-
     public function visit_frontend_about_index()
     {
         $this->browse(function (Browser $browser) {

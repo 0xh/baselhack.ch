@@ -3,7 +3,6 @@
 namespace Tests\Feature\Requests;
 
 use Tests\TestCase;
-
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class StoreSignUpRequestTest extends TestCase
@@ -24,11 +23,8 @@ class StoreSignUpRequestTest extends TestCase
      * @group feature
      * @group requests
      */
-
     public function store_signup_request()
     {
         $this->assertTrue(true);
     }
-
-
 }

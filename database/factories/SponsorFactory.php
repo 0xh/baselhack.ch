@@ -18,6 +18,6 @@ $factory->define(\App\Domain\Models\Sponsor::class, function (Faker $faker) {
         'name' => $faker->company,
         'image' => $faker->imageUrl(),
         'url' => $faker->url,
-        'order' => null
+        'order' => null,
     ];
 });

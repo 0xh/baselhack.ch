@@ -40,27 +40,24 @@ class ParticipantTest extends TestCase
      * @group unit
      * @group models
      */
-
     public function update_a_participant()
     {
         $fillables = ['uuid', 'firstname', 'lastname', 'company', 'email', 'confirmed_email', 'over_eighteen', 'accepted_policy'];
 
         $old = factory(Participant::class)->create();
         $new = factory(Participant::class)->make([
-            'uuid' => 'random-uuid'
+            'uuid' => 'random-uuid',
         ]);
 
-        foreach ($fillables as $fillable)
-        {
+        foreach ($fillables as $fillable) {
             $old->update([
 
-                $fillable => $new->$fillable
+                $fillable => $new->$fillable,
             ]);
 
             $this->assertEquals($old->$fillable, $new->$fillable);
         }
 
         $this->assertEquals($fillables, $old->getFillable());
-
     }
 }

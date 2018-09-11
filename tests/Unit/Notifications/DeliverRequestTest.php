@@ -2,9 +2,7 @@
 
 namespace Tests\Unit\Notifications;
 
-
 use Tests\TestCase;
-
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class DeliverRequestTest extends TestCase
@@ -29,6 +27,4 @@ class DeliverRequestTest extends TestCase
     {
         $this->assertTrue(true);
     }
-
-
 }

@@ -13,11 +13,9 @@ class EventsIndexTest extends DuskTestCase
      * @return void
      */
 
-
     /** @test
      * @group dusk
      */
-
     public function visit_frontend_events_index()
     {
         $this->browse(function (Browser $browser) {

@@ -13,11 +13,9 @@ class SponsorsIndexTest extends DuskTestCase
      * @return void
      */
 
-
     /** @test
      * @group dusk
      */
-
     public function visit_frontend_sponsors_index()
     {
         $this->browse(function (Browser $browser) {

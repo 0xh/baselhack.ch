@@ -2,7 +2,6 @@
 
 use Faker\Generator as Faker;
 
-
 /*
 |--------------------------------------------------------------------------
 | Model Factories
@@ -25,10 +24,9 @@ $factory->define(\App\Domain\Models\User::class, function (Faker $faker) {
     ];
 });
 
-
 $factory->state(\App\Domain\Models\User::class, 'roles', function ($faker) {
     return [
-        'roles' => null
+        'roles' => null,
     ];
 });
 
@@ -38,17 +36,14 @@ $factory->state(\App\Domain\Models\User::class, 'notifications', function ($fake
     ];
 });
 
-
 $factory->state(\App\Domain\Models\User::class, 'last_authenticated', function ($faker) {
     return [
         'last_authenticated' => \Carbon\Carbon::now(),
     ];
 });
 
-
 $factory->state(\App\Domain\Models\User::class, 'published', function ($faker) {
     return [
         'published_at' => \Carbon\Carbon::now(),
     ];
 });
-

@@ -3,7 +3,6 @@
 namespace Tests\Feature\Requests;
 
 use Tests\TestCase;
-
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class StoreEnquiryRequestTest extends TestCase
@@ -28,6 +27,4 @@ class StoreEnquiryRequestTest extends TestCase
     {
         $this->assertTrue(true);
     }
-
-
 }

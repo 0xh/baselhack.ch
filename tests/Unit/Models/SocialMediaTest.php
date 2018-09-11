@@ -2,8 +2,8 @@
 
 namespace Tests\Unit\Models;
 
-use App\Domain\Models\SocialMedia;
 use Tests\TestCase;
+use App\Domain\Models\SocialMedia;
 use Illuminate\Support\Collection;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
@@ -40,27 +40,24 @@ class SocialMediaTest extends TestCase
      * @group unit
      * @group models
      */
-
     public function update_a_social_media()
     {
         $fillables = ['uuid', 'name',  'icon', 'url'];
 
         $old = factory(SocialMedia::class)->create();
         $new = factory(SocialMedia::class)->make([
-            'uuid' => 'random-uuid'
+            'uuid' => 'random-uuid',
         ]);
 
-        foreach ($fillables as $fillable)
-        {
+        foreach ($fillables as $fillable) {
             $old->update([
 
-                $fillable => $new->$fillable
+                $fillable => $new->$fillable,
             ]);
 
             $this->assertEquals($old->$fillable, $new->$fillable);
         }
 
         $this->assertEquals($fillables, $old->getFillable());
-
     }
 }

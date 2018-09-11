@@ -13,11 +13,9 @@ class PartnersIndexTest extends DuskTestCase
      * @return void
      */
 
-
     /** @test
      * @group dusk
      */
-
     public function visit_frontend_partners_index()
     {
         $this->browse(function (Browser $browser) {
