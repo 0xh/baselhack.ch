@@ -5,18 +5,24 @@ namespace Tests\Browser\Frontend;
 use Tests\DuskTestCase;
 use Laravel\Dusk\Browser;
 
-class ExampleTest extends DuskTestCase
+class AboutIndexTest extends DuskTestCase
 {
     /**
      * A basic browser test example.
      *
      * @return void
      */
-    public function testBasicExample()
+
+
+    /** @test
+     * @group dusk
+     */
+
+    public function visit_frontend_about_index()
     {
         $this->browse(function (Browser $browser) {
-            $browser->visitRoute('frontend.home.index')
-                    ->assertSee('You finally made it!');
+            $browser->visitRoute('frontend.about.index')
+                    ->assertRouteIs('frontend.about.index');
         });
     }
 }

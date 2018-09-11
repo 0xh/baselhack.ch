@@ -5,6 +5,16 @@ return [
     'version' => '180911-beta',
 
     'languages' => [
-       'de', 'en',
+        'de', 'en',
     ],
+
+    'enquiry' => [
+
+        'type' => [
+
+            'general', 'event', 'sponsoring'
+        ]
+    ],
+
+
 ];

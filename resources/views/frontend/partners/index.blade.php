@@ -67,38 +67,44 @@
                     </div>
 
 
-                    <h1 style="margin-top: 50px;" class="title">Our Partners</h1>
-                    <hr>
-
-                    <div style="margin-top: 25px;" class="columns is-multiline is-centered is-vcentered is-mobile">
+                    @if(!empty($partners) AND $partners->count())
 
 
-                        @foreach($partners as $partner)
+                        <h1 style="margin-top: 50px;" class="title">Our Partners</h1>
+                        <hr>
 
-                            <div class="column is-2-desktop is-6-mobile">
+                        <div style="margin-top: 25px;" class="columns is-multiline is-centered is-vcentered is-mobile">
 
-                                <div style=" border-radius: 5px;" class="card sponsors">
-                                    <div class="card-image">
 
-                                        <figure class="image">
-                                            <a target="_blank" title="{{ $partner->name }}"
-                                               alt="{{ $partner['title'] }}" href="{{ $partner->url }}"><img
-                                                        title="{{ $partner->name }}"
-                                                        src="{{ asset('frontend/images/partners/' .  $partner->image) }}"
-                                                        alt="{{ $partner->name }}"></a>
-                                        </figure>
+                            @foreach($partners as $partner)
+
+                                <div class="column is-2-desktop is-6-mobile">
+
+                                    <div style=" border-radius: 5px;" class="card sponsors">
+                                        <div class="card-image">
+
+                                            <figure class="image">
+                                                <a target="_blank" title="{{ $partner->name }}"
+                                                   alt="{{ $partner['title'] }}" href="{{ $partner->url }}"><img
+                                                            title="{{ $partner->name }}"
+                                                            src="{{ asset('frontend/images/partners/' .  $partner->image) }}"
+                                                            alt="{{ $partner->name }}"></a>
+                                            </figure>
+                                        </div>
+
                                     </div>
 
                                 </div>
 
-                            </div>
 
 
+                            @endforeach
 
-                        @endforeach
 
+                        </div>
 
-                    </div>
+                    @endif
+
 
 
                 </div>

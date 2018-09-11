@@ -2,12 +2,12 @@
 
 namespace Tests\Unit\Models;
 
+use App\Domain\Models\User;
 use Tests\TestCase;
-use App\Domain\Models\Participant;
 use Illuminate\Support\Collection;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
-class ParticipantTest extends TestCase
+class UserTest extends TestCase
 {
     use DatabaseMigrations;
 
@@ -25,15 +25,15 @@ class ParticipantTest extends TestCase
      * @group unit
      * @group models
      */
-    public function create_a_participant()
+    public function create_a_user()
     {
         $amount = 10;
 
-        $participants = factory(Participant::class, $amount)->create();
+        $users = factory(User::class, $amount)->create();
 
-        $this->assertInstanceOf(Collection::class, $participants);
-        $this->assertInstanceOf(Participant::class, $participants->first());
-        $this->assertEquals($amount, $participants->count());
+        $this->assertInstanceOf(Collection::class, $users);
+        $this->assertInstanceOf(User::class, $users->first());
+        $this->assertEquals($amount, $users->count());
     }
 
     /** @test
@@ -41,12 +41,12 @@ class ParticipantTest extends TestCase
      * @group models
      */
 
-    public function update_a_participant()
+    public function update_a_user()
     {
-        $fillables = ['uuid', 'firstname', 'lastname', 'company', 'email', 'confirmed_email', 'over_eighteen', 'accepted_policy'];
+        $fillables = ['uuid', 'name', 'email', 'password', 'published_at', 'last_authenticated'];
 
-        $old = factory(Participant::class)->create();
-        $new = factory(Participant::class)->make([
+        $old = factory(User::class)->states('notifications','published', 'last_authenticated')->create();
+        $new = factory(User::class)->states('notifications','published', 'last_authenticated')->make([
             'uuid' => 'random-uuid'
         ]);
 
@@ -61,6 +61,5 @@ class ParticipantTest extends TestCase
         }
 
         $this->assertEquals($fillables, $old->getFillable());
-
     }
 }

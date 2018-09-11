@@ -1,3 +1,4 @@
+@if(!empty($sponsors) AND $sponsors->count())
 <section class="section is-hidden-mobile">
     <div class="container">
 
@@ -45,3 +46,4 @@
     </div>
 
 </section>
+@endif

@@ -16,7 +16,7 @@ class CreateEnquiriesTable extends Migration
         Schema::create('enquiries', function (Blueprint $table) {
             $table->increments('id');
             $table->uuid('uuid')->unique();
-            $table->string('type');
+            $table->enum('type', config('baselhack.enquiry.type'));
             $table->string('company')->nullable();
             $table->string('name');
             $table->string('email');

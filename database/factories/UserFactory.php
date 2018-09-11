@@ -1,7 +1,7 @@
 <?php
 
 use Faker\Generator as Faker;
-use App\Domain\Users\Models\User;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,12 +14,41 @@ use App\Domain\Users\Models\User;
 |
 */
 
-$factory->define(User::class, function (Faker $faker) {
+$factory->define(\App\Domain\Models\User::class, function (Faker $faker) {
     return [
 
         'name' => $faker->name,
         'email' => $faker->unique()->safeEmail,
         'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
         'remember_token' => str_random(10),
+        'language' => $faker->randomElement(config('baselhack.languages')),
     ];
 });
+
+
+$factory->state(\App\Domain\Models\User::class, 'roles', function ($faker) {
+    return [
+        'roles' => null
+    ];
+});
+
+$factory->state(\App\Domain\Models\User::class, 'notifications', function ($faker) {
+    return [
+        'notifications' => $faker->randomElement(config('baselhack.enquiry.types')),
+    ];
+});
+
+
+$factory->state(\App\Domain\Models\User::class, 'last_authenticated', function ($faker) {
+    return [
+        'last_authenticated' => \Carbon\Carbon::now(),
+    ];
+});
+
+
+$factory->state(\App\Domain\Models\User::class, 'published', function ($faker) {
+    return [
+        'published_at' => \Carbon\Carbon::now(),
+    ];
+});
+

@@ -39,13 +39,13 @@
                             <label for="type" class="label">{{ __('frontend/enquiries.form.input.type') }}</label>
                             <div class="control">
                                 <div class="select is-fullwidth">
-                                    <select id="type" name="type" class=""
-                                            title="{{ __('frontend/enquiries.form.input.type') }}" required autofocus>
-                                        <option value="" disabled
-                                                selected>{{ __('frontend/enquiries.form.input.select.type') }}</option>
-                                        <option value="general" @if(old('type') == 'general')selected @endif>{{ __('frontend/enquiries.form.input.select.general') }}</option>
-                                        <option value="event" @if(old('type') == 'event')selected @endif>{{ __('frontend/enquiries.form.input.select.event') }}</option>
-                                        <option value="sponsoring" @if(old('type') == 'sponsoring')selected @endif>{{ __('frontend/enquiries.form.input.select.sponsoring') }}</option>
+                                    <select id="type" name="type" class="" title="{{ __('frontend/enquiries.form.input.type') }}" required autofocus>
+
+                                        <option value="" disabled selected>{{ __('frontend/enquiries.form.input.select.type') }}</option>
+                                        @foreach(config('baselhack.enquiry.type') as $type)
+                                            <option value="{{ $type }}" @if(old('type') ==  $type)selected @endif>{{ __('frontend/enquiries.form.input.select.' . $type) }}</option>
+                                        @endforeach
+
                                     </select>
                                 </div>
                             </div>

@@ -10,13 +10,17 @@
                     <a title="{{ __('frontend/privacy.title') }}" href="{{ route('frontend.legal.privacy.index') }}" >{{ __('frontend/privacy.title') }}</a>
                 </div>
 
-                <div class="social">
-                    @foreach($social_medias as $social_media)
-                        <a target="_blank" class="" title="{{ $social_media->name }}" href="{{ $social_media->url }}">
-                            <i class="{{ $social_media->icon }} fa-lg"></i>
-                        </a>
-                    @endforeach
-                </div>
+                @if(!empty($social_medias) AND $social_medias->count())
+                    <div class="social">
+                        @foreach($social_medias as $social_media)
+                            <a target="_blank" class="" title="{{ $social_media->name }}" href="{{ $social_media->url }}">
+                                <i class="{{ $social_media->icon }} fa-lg"></i>
+                            </a>
+                        @endforeach
+                    </div>
+                @endif
+
+
 
                 <div class="copyright">
                  &copy; BaselHack

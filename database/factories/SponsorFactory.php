@@ -1,7 +1,6 @@
 <?php
 
 use Faker\Generator as Faker;
-use App\Domain\Association\Models\Password;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,12 +13,11 @@ use App\Domain\Association\Models\Password;
 |
 */
 
-$factory->define(Password::class, function (Faker $faker) {
+$factory->define(\App\Domain\Models\Sponsor::class, function (Faker $faker) {
     return [
-        'service' => $faker->name,
-        'email' => $faker->safeEmail,
-        'username' => $faker->userName,
-        'password' => md5($faker->colorName),
-        'description' => $faker->text(200),
+        'name' => $faker->company,
+        'image' => $faker->imageUrl(),
+        'url' => $faker->url,
+        'order' => null
     ];
 });

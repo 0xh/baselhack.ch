@@ -2,12 +2,12 @@
 
 namespace Tests\Unit\Models;
 
+use App\Domain\Models\Sponsor;
 use Tests\TestCase;
-use App\Domain\Models\Participant;
 use Illuminate\Support\Collection;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
-class ParticipantTest extends TestCase
+class SponsorTest extends TestCase
 {
     use DatabaseMigrations;
 
@@ -25,15 +25,15 @@ class ParticipantTest extends TestCase
      * @group unit
      * @group models
      */
-    public function create_a_participant()
+    public function create_a_sponsor()
     {
         $amount = 10;
 
-        $participants = factory(Participant::class, $amount)->create();
+        $sponsors = factory(Sponsor::class, $amount)->create();
 
-        $this->assertInstanceOf(Collection::class, $participants);
-        $this->assertInstanceOf(Participant::class, $participants->first());
-        $this->assertEquals($amount, $participants->count());
+        $this->assertInstanceOf(Collection::class, $sponsors);
+        $this->assertInstanceOf(Sponsor::class, $sponsors->first());
+        $this->assertEquals($amount, $sponsors->count());
     }
 
     /** @test
@@ -41,12 +41,12 @@ class ParticipantTest extends TestCase
      * @group models
      */
 
-    public function update_a_participant()
+    public function update_a_sponsor()
     {
-        $fillables = ['uuid', 'firstname', 'lastname', 'company', 'email', 'confirmed_email', 'over_eighteen', 'accepted_policy'];
+        $fillables = ['uuid', 'name',  'image', 'url'];
 
-        $old = factory(Participant::class)->create();
-        $new = factory(Participant::class)->make([
+        $old = factory(Sponsor::class)->create();
+        $new = factory(Sponsor::class)->make([
             'uuid' => 'random-uuid'
         ]);
 
@@ -61,6 +61,5 @@ class ParticipantTest extends TestCase
         }
 
         $this->assertEquals($fillables, $old->getFillable());
-
     }
 }

@@ -2,12 +2,12 @@
 
 namespace Tests\Unit\Models;
 
+use App\Domain\Models\SocialMedia;
 use Tests\TestCase;
-use App\Domain\Models\Participant;
 use Illuminate\Support\Collection;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
-class ParticipantTest extends TestCase
+class SocialMediaTest extends TestCase
 {
     use DatabaseMigrations;
 
@@ -25,15 +25,15 @@ class ParticipantTest extends TestCase
      * @group unit
      * @group models
      */
-    public function create_a_participant()
+    public function create_a_social_media()
     {
         $amount = 10;
 
-        $participants = factory(Participant::class, $amount)->create();
+        $social_medias = factory(SocialMedia::class, $amount)->create();
 
-        $this->assertInstanceOf(Collection::class, $participants);
-        $this->assertInstanceOf(Participant::class, $participants->first());
-        $this->assertEquals($amount, $participants->count());
+        $this->assertInstanceOf(Collection::class, $social_medias);
+        $this->assertInstanceOf(SocialMedia::class, $social_medias->first());
+        $this->assertEquals($amount, $social_medias->count());
     }
 
     /** @test
@@ -41,12 +41,12 @@ class ParticipantTest extends TestCase
      * @group models
      */
 
-    public function update_a_participant()
+    public function update_a_social_media()
     {
-        $fillables = ['uuid', 'firstname', 'lastname', 'company', 'email', 'confirmed_email', 'over_eighteen', 'accepted_policy'];
+        $fillables = ['uuid', 'name',  'icon', 'url'];
 
-        $old = factory(Participant::class)->create();
-        $new = factory(Participant::class)->make([
+        $old = factory(SocialMedia::class)->create();
+        $new = factory(SocialMedia::class)->make([
             'uuid' => 'random-uuid'
         ]);
 

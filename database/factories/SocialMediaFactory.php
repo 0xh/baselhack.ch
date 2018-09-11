@@ -1,7 +1,6 @@
 <?php
 
 use Faker\Generator as Faker;
-use App\Domain\Association\Models\Member;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,17 +13,10 @@ use App\Domain\Association\Models\Member;
 |
 */
 
-$factory->define(Member::class, function (Faker $faker) {
+$factory->define(\App\Domain\Models\SocialMedia::class, function (Faker $faker) {
     return [
-
-        'status' => 'inactive',
-        'firstname' => $faker->firstName,
-        'lastname' => $faker->lastName,
-        'email' => $faker->safeEmail,
-        'mobile' => $faker->phoneNumber,
-        'github' => $faker->colorName,
-        'birthdate' => $faker->date(),
-        'member_since' => $faker->date(),
-
+        'name' => $faker->name,
+        'icon' => $faker->randomElement(['fab fa-facebook-f','fab fa-github']),
+        'url' => $faker->url,
     ];
 });
