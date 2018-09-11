@@ -13,16 +13,26 @@ class SubscribeToNewsletter implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
-    public $newsletter;
+    protected $list;
+    protected $email;
+    protected $firstname;
+    protected $lastname;
+    protected $company;
+    public $gdpr;
 
     /**
      * Create a new job instance.
      *
      * @return void
      */
-    public function __construct($newsletter)
+    public function __construct(bool $gdpr = false, string $list = 'newsletter', $email, $firstname = '', $lastname = '', $company = '')
     {
-        $this->newsletter = $newsletter;
+        $this->company = $company;
+        $this->firstname = $firstname;
+        $this->lastname = $lastname;
+        $this->email = $email;
+        $this->list = $list;
+        $this->gdpr = $gdpr;
     }
 
     /**
@@ -32,6 +42,16 @@ class SubscribeToNewsletter implements ShouldQueue
      */
     public function handle()
     {
-        Newsletter::subscribePending($this->newsletter->email, [], 'newsletter');
+        switch ($this->gdpr)
+        {
+            case true:
+                Newsletter::subscribePending($this->email, ['FNAME' => $this->firstname, 'LNAME' => $this->lastname,  'COMPANY' => $this->company], $this->list);
+                break;
+
+            default:
+                Newsletter::subscribe($this->email, ['FNAME' => $this->firstname, 'LNAME' => $this->lastname,  'COMPANY' => $this->company], $this->list);
+                break;
+        }
+
     }
 }

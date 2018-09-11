@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Frontend\Events;
 
+use App\Domain\Jobs\SubscribeToNewsletter;
 use Carbon\Carbon;
 use App\Domain\Models\Participant;
 use App\App\Controllers\Controller;
@@ -9,7 +10,7 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Lang;
 use App\Domain\Notifications\ConfirmParticipation;
 use App\Http\Requests\Frontend\StoreSignUpRequest;
-use App\Domain\Jobs\SubscribeToParticipantNewsletter;
+
 
 class SignUpController extends Controller
 {
@@ -38,7 +39,7 @@ class SignUpController extends Controller
 
             $participant->notify(new ConfirmParticipation($participant));
 
-            SubscribeToParticipantNewsletter::dispatch($participant);
+            SubscribeToNewsletter::dispatch($gdpr = false, $list = 'participants_2018', $participant->email, $participant->firstname, $participant->lastname, $participant->company);
 
             alert()->success(Lang::get('frontend/event.signup.form.notification.success.title'), Lang::get('frontend/event.signup.form.notification.success.description'));
         } catch (\Exception $exception) {
