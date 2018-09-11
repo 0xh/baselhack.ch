@@ -32,6 +32,6 @@ class SubscribeToNewsletter implements ShouldQueue
      */
     public function handle()
     {
-        Newsletter::subscribe($this->newsletter->email, [], 'newsletter');
+        Newsletter::subscribePending($this->newsletter->email, [], 'newsletter');
     }
 }

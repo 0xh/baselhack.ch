@@ -153,8 +153,33 @@
 
 
 
+
+
+
+
                         </div>
 
+
+
+
+                        <div class="columns is-centered is-mobile">
+
+                            <div class="column is-5">
+                                <div class="field {{ $errors->has('g-recaptcha-response') ? ' is-danger' : '' }}">
+                                    <div class="g-recaptcha" data-sitekey="6LeXkG8UAAAAANeVjDf6hPjY7KnMwyhZtKSstIUg"></div>
+
+                                    @if ($errors->has('g-recaptcha-response'))
+                                        <p class="help is-danger">{{ $errors->first('g-recaptcha-response') }}</p>
+                                    @endif
+
+
+                                </div>
+
+                            </div>
+
+
+
+                        </div>
 
 
 
@@ -164,6 +189,7 @@
                             <button type="submit"
                                     class="button is-dark is-fullwidth">{{ __('frontend/event.signup.form.button.submit') }}</button>
                         </div>
+
 
                     </form>
 

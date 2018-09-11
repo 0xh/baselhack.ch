@@ -28,7 +28,7 @@
 
                 <div class="column is-three-quarters">
 
-                <h1 class="title">{{ __('frontend/contact.title') }}</h1>
+                    <h1 class="title">{{ __('frontend/contact.title') }}</h1>
                     <h2 class="subtitle">{{ __('frontend/contact.subtitle') }}</h2>
                     <hr>
 
@@ -39,11 +39,13 @@
                             <label class="label">{{ __('frontend/contact.form.input.topic') }}</label>
                             <div class="control">
                                 <div class="select is-fullwidth">
-                                    <select id="topic" name="topic" class="" title="{{ __('frontend/contact.form.input.topic') }}" required autofocus>
-                                        <option value="" disabled selected>{{ __('frontend/contact.form.input.select.topic') }}</option>
-                                        <option value="general">{{ __('frontend/contact.form.input.select.general') }}</option>
-                                        <option value="event">{{ __('frontend/contact.form.input.select.event') }}</option>
-                                        <option value="sponsoring">{{ __('frontend/contact.form.input.select.sponsoring') }}</option>
+                                    <select id="topic" name="topic" class=""
+                                            title="{{ __('frontend/contact.form.input.topic') }}" required autofocus>
+                                        <option value="" disabled
+                                                selected>{{ __('frontend/contact.form.input.select.topic') }}</option>
+                                        <option value="general" @if(old('topic') == 'general')selected @endif>{{ __('frontend/contact.form.input.select.general') }}</option>
+                                        <option value="event" @if(old('topic') == 'event')selected @endif>{{ __('frontend/contact.form.input.select.event') }}</option>
+                                        <option value="sponsoring" @if(old('topic') == 'sponsoring')selected @endif>{{ __('frontend/contact.form.input.select.sponsoring') }}</option>
                                     </select>
                                 </div>
                             </div>
@@ -100,10 +102,22 @@
                         </div>
 
 
+                        <div class="field {{ $errors->has('g-recaptcha-response') ? ' is-danger' : '' }}">
+                            <div class="g-recaptcha" data-sitekey="6LeXkG8UAAAAANeVjDf6hPjY7KnMwyhZtKSstIUg"></div>
+
+                            @if ($errors->has('g-recaptcha-response'))
+                                <p class="help is-danger">{{ $errors->first('g-recaptcha-response') }}</p>
+                            @endif
+
+
+                        </div>
+
+
                         <div style="margin-top: 20px;" class="field">
                             <button type="submit"
                                     class="button is-dark is-fullwidth">{{ __('frontend/contact.form.button.submit') }}</button>
                         </div>
+
 
                     </form>
 

@@ -30,6 +30,8 @@ class StoreSignUpRequest extends FormRequest
             'email' => 'required|string|email|max:255|unique:participants',
             'over_eighteen' => 'required|boolean',
             'privacy' => 'accepted',
+            'g-recaptcha-response' => 'required|recaptcha'
+
         ];
     }
 }
