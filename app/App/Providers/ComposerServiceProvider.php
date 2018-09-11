@@ -16,7 +16,7 @@ class ComposerServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        if (! app()->environment('testing')) {
+        /*if (! app()->environment('testing')) {
             if (Schema::hasTable('social_media')) {
                 $social_medias = SocialMedia::all();
 
@@ -24,7 +24,7 @@ class ComposerServiceProvider extends ServiceProvider
                     $view->with(compact('social_medias'));
                 });
             }
-        }
+        }*/
     }
 
     /**
