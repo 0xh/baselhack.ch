@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers\Frontend\Enquiries;
 
-use App\Domain\Jobs\ProceedEnquiries;
 use App\Domain\Models\Enquiry;
-
 use App\App\Controllers\Controller;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Lang;
+use App\Domain\Jobs\ProceedEnquiries;
 use App\Http\Requests\Frontend\StoreEnquiryRequest;
 
 class EnquiriesController extends Controller
@@ -32,14 +31,11 @@ class EnquiriesController extends Controller
             'message' => $request->message,
         ]);
 
-        try
-        {
+        try {
             ProceedEnquiries::dispatch($enquiry);
 
             alert()->success(Lang::get('frontend/enquiries.form.notification.success.title'), Lang::get('frontend/enquiries.form.notification.success.description'));
-
-        } catch (\Exception $exception)
-        {
+        } catch (\Exception $exception) {
             Log::error(print_r($exception->getMessage(), true));
 
             alert()->error(Lang::get('frontend/enquiries.form.notification.error.title'), Lang::get('frontend/enquiries.form.notification.error.description'));

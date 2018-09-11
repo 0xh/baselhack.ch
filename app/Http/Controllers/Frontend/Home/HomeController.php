@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Frontend\Home;
 
-use App\App\Controllers\Controller;
 use App\Domain\Models\Partner;
 use App\Domain\Models\Sponsor;
+use App\App\Controllers\Controller;
 use Illuminate\Support\Facades\Lang;
 
 class HomeController extends Controller

@@ -44,10 +44,8 @@ class User extends Authenticatable
      *
      * @return string
      */
-
     public function getRouteKeyName()
     {
         return 'uuid';
     }
-
 }

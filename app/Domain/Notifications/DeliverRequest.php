@@ -2,8 +2,8 @@
 
 namespace App\Domain\Notifications;
 
-use App\Domain\Models\Enquiry;
 use Illuminate\Bus\Queueable;
+use App\Domain\Models\Enquiry;
 use Illuminate\Support\Facades\Lang;
 use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -14,7 +14,6 @@ class DeliverRequest extends Notification implements ShouldQueue
     use Queueable;
 
     protected $enquiry;
-
 
     /**
      * Create a new notification instance.
@@ -50,12 +49,11 @@ class DeliverRequest extends Notification implements ShouldQueue
         return (new MailMessage)
             ->subject(Lang::get('frontend/notifications.deliver_request.subject'))
             ->greeting(Lang::get('frontend/notifications.deliver_request.greeting'))
-            ->line('Company: ' . $this->enquiry->company)
-            ->line('Name: ' . $this->enquiry->name)
-            ->line('E-Mail: ' . $this->enquiry->email)
+            ->line('Company: '.$this->enquiry->company)
+            ->line('Name: '.$this->enquiry->name)
+            ->line('E-Mail: '.$this->enquiry->email)
             ->line('Message:')
             ->line($this->enquiry->message);
-
     }
 
     /**

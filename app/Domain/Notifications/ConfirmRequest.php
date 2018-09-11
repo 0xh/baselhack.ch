@@ -48,7 +48,7 @@ class ConfirmRequest extends Notification implements ShouldQueue
     {
         return (new MailMessage)
             ->subject(Lang::get('frontend/notifications.confirm_request.subject'))
-            ->greeting(Lang::get('frontend/notifications.confirm_request.greeting') . ' ' . $this->enquiry->name)
+            ->greeting(Lang::get('frontend/notifications.confirm_request.greeting').' '.$this->enquiry->name)
             ->line(Lang::get('frontend/notifications.confirm_request.line'))
             ->line(Lang::get('frontend/notifications.confirm_request.salutation'))
             ->line($this->enquiry->message);

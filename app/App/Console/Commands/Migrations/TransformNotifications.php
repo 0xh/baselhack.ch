@@ -3,9 +3,8 @@
 namespace App\App\Console\Commands\Migrations;
 
 use Illuminate\Console\Command;
-use App\Domain\Models\Participant;
-use Illuminate\Notifications\Notification;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Notifications\Notification;
 
 class TransformNotifications extends Command
 {
@@ -46,8 +45,7 @@ class TransformNotifications extends Command
             $notifications = $staging_database->table('notifications')->get();
 
             foreach ($notifications as $notification) {
-
-                    Notification::create([
+                Notification::create([
                         'id' => '',
                         'type' => '',
                         'notifiable_type' => '',
@@ -57,7 +55,6 @@ class TransformNotifications extends Command
                         'created_at' => '',
                         'updated_at' => '',
                     ]);
-
             }
         } catch (\Exception $exception) {
         }

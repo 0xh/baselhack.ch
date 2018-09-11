@@ -20,7 +20,6 @@ class NewsletterController extends Controller
 
             alert()->success(Lang::get('frontend/components/newsletter.form.notification.success.title'), Lang::get('frontend/components/newsletter.form.notification.success.description'));
         } catch (\Exception $exception) {
-
             Log::error(print_r($exception->getMessage(), true));
 
             alert()->error(Lang::get('frontend/components/newsletter.form.notification.error.title'), Lang::get('frontend/components/newsletter.form.notification.error.description'));
