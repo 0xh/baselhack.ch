@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Frontend\Sponsors;
 
-use App\App\Controllers\Controller;
 use App\Domain\Models\Sponsor;
+use App\App\Controllers\Controller;
 use Illuminate\Support\Facades\Lang;
 
 class SponsorsController extends Controller

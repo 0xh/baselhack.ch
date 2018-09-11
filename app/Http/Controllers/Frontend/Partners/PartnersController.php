@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Frontend\Partners;
 
-use App\App\Controllers\Controller;
 use App\Domain\Models\Partner;
+use App\App\Controllers\Controller;
 use Illuminate\Support\Facades\Lang;
 
 class PartnersController extends Controller

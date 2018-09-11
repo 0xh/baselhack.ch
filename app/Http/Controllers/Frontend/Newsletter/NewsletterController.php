@@ -4,17 +4,16 @@ namespace App\Http\Controllers\Frontend\Newsletter;
 
 use App\Domain\Objects\Newsletter;
 use App\App\Controllers\Controller;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Lang;
 use App\Domain\Jobs\SubscribeToNewsletter;
 use App\Http\Requests\Frontend\StoreNewsletterRequest;
-use Illuminate\Support\Facades\Log;
 
 class NewsletterController extends Controller
 {
     public function store(StoreNewsletterRequest $request)
     {
         $newsletter = new Newsletter($request->email);
-
 
         try {
             SubscribeToNewsletter::dispatch($newsletter);

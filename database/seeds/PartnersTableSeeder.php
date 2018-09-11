@@ -28,6 +28,5 @@ class PartnersTableSeeder extends Seeder
             'url' => 'https://www.swissmadesoftware.org',
             'image' => 'fuck_up_nights.png',
         ]);
-
     }
 }

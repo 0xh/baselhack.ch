@@ -73,5 +73,4 @@ class ConfirmParticipation extends Notification implements ShouldQueue
             'email' => $this->participant->email,
         ];
     }
-
 }

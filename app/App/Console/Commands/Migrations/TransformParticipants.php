@@ -57,9 +57,8 @@ class TransformParticipants extends Command
                 ]);
 
                 $participant->update([
-                   'uuid' =>  $staging_participant->uuid,
+                   'uuid' => $staging_participant->uuid,
                 ]);
-
             }
         } catch (\Exception $exception) {
         }

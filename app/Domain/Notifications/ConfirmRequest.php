@@ -2,8 +2,8 @@
 
 namespace App\Domain\Notifications;
 
-use App\Domain\Models\Enquiry;
 use Illuminate\Bus\Queueable;
+use App\Domain\Models\Enquiry;
 use Illuminate\Support\Facades\Lang;
 use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -14,7 +14,6 @@ class ConfirmRequest extends Notification implements ShouldQueue
     use Queueable;
 
     protected $enquiry;
-
 
     /**
      * Create a new notification instance.
@@ -53,7 +52,6 @@ class ConfirmRequest extends Notification implements ShouldQueue
             ->line(Lang::get('frontend/notifications.confirm_request.line'))
             ->line(Lang::get('frontend/notifications.confirm_request.salutation'))
             ->line($this->enquiry->message);
-
     }
 
     /**

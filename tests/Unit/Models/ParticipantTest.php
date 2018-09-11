@@ -2,12 +2,10 @@
 
 namespace Tests\Unit\Models;
 
-
-use App\Domain\Models\Participant;
-
-use Illuminate\Foundation\Testing\DatabaseMigrations;
-use Illuminate\Support\Collection;
 use Tests\TestCase;
+use App\Domain\Models\Participant;
+use Illuminate\Support\Collection;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class ParticipantTest extends TestCase
 {
@@ -36,8 +34,5 @@ class ParticipantTest extends TestCase
         $this->assertInstanceOf(Collection::class, $participants);
         $this->assertInstanceOf(Participant::class, $participants->first());
         $this->assertEquals($amount, $participants->count());
-
     }
-
-
 }

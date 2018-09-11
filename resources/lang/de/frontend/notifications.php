@@ -11,7 +11,6 @@ return [
         'salutation' => 'You will receive further communication with more details about the Hack and the upcoming dates.'
     ],
 
-
     'confirm_request' => [
         'subject' => 'Request confirmation',
         'greeting' => 'Hi',
@@ -19,9 +18,9 @@ return [
         'salutation' => 'Your request message:'
     ],
 
-
     'deliver_request' => [
         'subject' => 'Baselhack Enquiry',
         'greeting' => 'A new enquiry:',
+
     ],
 ];

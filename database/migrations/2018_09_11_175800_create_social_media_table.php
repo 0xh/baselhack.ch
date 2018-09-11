@@ -11,8 +11,6 @@ class CreateSocialMediaTable extends Migration
      *
      * @return void
      */
-
-
     public function up()
     {
         Schema::create('social_media', function (Blueprint $table) {

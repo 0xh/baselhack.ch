@@ -5,11 +5,11 @@ namespace App\Http\Controllers\Frontend\Events;
 use Carbon\Carbon;
 use App\Domain\Models\Participant;
 use App\App\Controllers\Controller;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Lang;
 use App\Domain\Notifications\ConfirmParticipation;
 use App\Http\Requests\Frontend\StoreSignUpRequest;
 use App\Domain\Jobs\SubscribeToParticipantNewsletter;
-use Illuminate\Support\Facades\Log;
 
 class SignUpController extends Controller
 {
@@ -42,8 +42,18 @@ class SignUpController extends Controller
 
             alert()->success(Lang::get('frontend/event.signup.form.notification.success.title'), Lang::get('frontend/event.signup.form.notification.success.description'));
         } catch (\Exception $exception) {
+<<<<<<< HEAD
 
             Log::error(print_r($exception->getMessage(), true));
+=======
+            Log::error(print_r($exception, true));
+
+            $participant = Participant::whereEmail($request->email)->first();
+
+            if ($participant instanceof Participant) {
+                $participant->forceDelete();
+            }
+>>>>>>> 11fe539abc2666370a7239f638fc6c82ae03b622
 
             alert()->error(Lang::get('frontend/event.signup.form.notification.error.title'), Lang::get('frontend/event.signup.form.notification.error.description'));
         }
