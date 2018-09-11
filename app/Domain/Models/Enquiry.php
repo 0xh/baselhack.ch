@@ -16,9 +16,8 @@ class Enquiry extends Model
      *
      * @var array
      */
-
     protected $fillable = [
-        'uuid', 'type', 'company', 'name','email', 'message'
+        'uuid', 'type', 'company', 'name', 'email', 'message',
     ];
 
     protected $dates = [

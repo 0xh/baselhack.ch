@@ -2,7 +2,6 @@
 
 
 Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
-
     Route::get('/', 'Home\HomeController@index')->name('home.index');
 
     Route::group(['prefix' => 'events', 'namespace' => 'Events', 'as' => 'events.'], function () {
@@ -29,7 +28,6 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
         Route::get('/imprint', 'ImprintController@index')->name('imprint.index');
         Route::get('/privacy', 'PrivacyController@index')->name('privacy.index');
     });
-
 
     Route::group(['prefix' => 'contact', 'namespace' => 'Enquiries', 'as' => 'enquiries.'], function () {
         Route::get('/', 'EnquiriesController@index')->name('index');

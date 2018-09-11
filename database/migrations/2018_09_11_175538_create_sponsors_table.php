@@ -22,7 +22,6 @@ class CreateSponsorsTable extends Migration
             $table->integer('order')->nullable();
             $table->timestamps();
             $table->softDeletes();
-
         });
     }
 

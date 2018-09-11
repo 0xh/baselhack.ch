@@ -2,8 +2,8 @@
 
 namespace App\Domain\Notifications;
 
-use App\Domain\Models\Enquiry;
 use Illuminate\Bus\Queueable;
+use App\Domain\Models\Enquiry;
 use Illuminate\Support\Facades\Lang;
 use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -14,7 +14,6 @@ class ConfirmRequest extends Notification implements ShouldQueue
     use Queueable;
 
     protected $contact;
-
 
     /**
      * Create a new notification instance.
@@ -35,7 +34,7 @@ class ConfirmRequest extends Notification implements ShouldQueue
      */
     public function via($notifiable)
     {
-        return ['database','mail'];
+        return ['database', 'mail'];
     }
 
     /**
@@ -49,11 +48,10 @@ class ConfirmRequest extends Notification implements ShouldQueue
     {
         return (new MailMessage)
                     ->subject(Lang::get('frontend/notifications.confirm_request.subject'))
-                    ->greeting(Lang::get('frontend/notifications.confirm_request.greeting'). ' ' . $this->contact->name)
+                    ->greeting(Lang::get('frontend/notifications.confirm_request.greeting').' '.$this->contact->name)
                     ->line(Lang::get('frontend/notifications.confirm_request.line'))
                     ->line($this->contact->message)
                     ->salutation(Lang::get('frontend/notifications.confirm_request.salutation'));
-
     }
 
     /**

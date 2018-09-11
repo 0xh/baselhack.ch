@@ -46,6 +46,5 @@ class SponsorsTableSeeder extends Seeder
             'url' => 'https://www.bluesky-it.ch',
             'image' => 'bluesky_it_solutions.png',
         ]);
-
     }
 }

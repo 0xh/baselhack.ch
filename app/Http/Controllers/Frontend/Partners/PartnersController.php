@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Frontend\Partners;
 
-use App\App\Controllers\Controller;
 use App\Domain\Models\Partner;
+use App\App\Controllers\Controller;
 use Illuminate\Support\Facades\Lang;
 
 class PartnersController extends Controller
@@ -19,7 +19,6 @@ class PartnersController extends Controller
             ->setTitle(Lang::get('frontend/meta.partners_index.title'))
             ->setDescription(Lang::get('frontend/meta.partners_index.description'))
             ->setKeywords(Lang::get('frontend/meta.partners_index.keywords'));
-
 
         $partners = Partner::all();
 

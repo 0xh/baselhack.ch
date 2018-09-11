@@ -34,7 +34,7 @@ class ConfirmParticipation extends Notification implements ShouldQueue
      */
     public function via($notifiable)
     {
-        return [ 'mail'];
+        return ['mail'];
     }
 
     /**
@@ -53,5 +53,4 @@ class ConfirmParticipation extends Notification implements ShouldQueue
                     ->action(Lang::get('frontend/notifications.confirm_participation.action'), route('frontend.event.signup.confirm', $this->participant))
                     ->salutation(Lang::get('frontend/notifications.confirm_participation.salutation'));
     }
-
 }

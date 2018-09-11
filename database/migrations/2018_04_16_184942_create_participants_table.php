@@ -17,7 +17,6 @@ class CreateParticipantsTable extends Migration
             $table->increments('id');
             $table->uuid('uuid')->unique();
 
-
             $table->string('company')->nullable();
 
             $table->string('firstname');
