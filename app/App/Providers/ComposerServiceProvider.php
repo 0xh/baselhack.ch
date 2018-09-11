@@ -17,14 +17,17 @@ class ComposerServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        if (! app()->environment('testing')) {
 
-        if (DB::connection()->getDatabaseName() AND Schema::hasTable('social_media')) {
-            $social_medias = SocialMedia::all();
+            if (Schema::hasTable('social_media')) {
+                $social_medias = SocialMedia::all();
 
-            View::composer('*', function ($view) use ($social_medias) {
-                $view->with(compact('social_medias'));
-            });
+                View::composer('*', function ($view) use ($social_medias) {
+                    $view->with(compact('social_medias'));
+                });
+            }
         }
+
     }
 
     /**

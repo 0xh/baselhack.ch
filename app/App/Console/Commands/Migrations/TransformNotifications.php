@@ -39,24 +39,11 @@ class TransformNotifications extends Command
      */
     public function handle()
     {
-        try {
-            $staging_database = DB::connection(env('STAGING_DB_CONNECTION'));
+        $staging_database = DB::connection(env('STAGING_DB_CONNECTION'));
 
-            $notifications = $staging_database->table('notifications')->get();
+        foreach($staging_database->table('notifications')->get() as $notifications){
 
-            foreach ($notifications as $notification) {
-                Notification::create([
-                        'id' => '',
-                        'type' => '',
-                        'notifiable_type' => '',
-                        'notifiable_id' => '',
-                        'data' => '',
-                        'read_at' => '',
-                        'created_at' => '',
-                        'updated_at' => '',
-                    ]);
-            }
-        } catch (\Exception $exception) {
+            DB::table('notifications')->insert((array) $notifications);
         }
     }
 }

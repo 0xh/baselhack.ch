@@ -28,6 +28,11 @@ class ConfirmParticipationTest extends TestCase
      * @group traits
      */
 
+    public function confirm_participation()
+    {
+        $this->assertTrue(true);
+    }
+
  /*   public function confirm_participation_notification()
     {
         factory(Participant::class,2)->create();
