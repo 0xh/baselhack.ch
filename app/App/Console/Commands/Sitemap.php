@@ -2,11 +2,8 @@
 
 namespace App\App\Console\Commands;
 
-use Illuminate\Console\Command;
-use App\Domain\Models\Participant;
-use App\Domain\Notifications\ConfirmParticipation;
-use App\Domain\Jobs\SubscribeToParticipantNewsletter;
 use Spatie\Crawler\Crawler;
+use Illuminate\Console\Command;
 use Spatie\Sitemap\SitemapGenerator;
 
 class Sitemap extends Command
@@ -47,6 +44,5 @@ class Sitemap extends Command
                 $crawler->setMaximumDepth(3);
             })
             ->writeToFile(public_path('sitemap.xml'));
-
     }
 }

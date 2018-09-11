@@ -26,7 +26,6 @@ class Kernel extends ConsoleKernel
     {
         $schedule->command('sitemap:generate')->weekly();
         $schedule->command('confirmation:start')->dailyAt('12:00');
-
     }
 
     /**
