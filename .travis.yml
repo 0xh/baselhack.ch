@@ -32,7 +32,7 @@ before_script:
 - sh -e /etc/init.d/xvfb start
 - ./vendor/laravel/dusk/bin/chromedriver-linux &
 
-- mysql -e 'create database testing;'
+- mysql -e 'CREATE DATABASE IF NOT EXISTS testing;'
 
 - cp .env.travis .env
 - cp phpunit.travis.xml phpunit.xml
