@@ -13,11 +13,9 @@ class NewsletterController extends Controller
 {
     public function store(StoreNewsletterRequest $request)
     {
-        SubscribeToNewsletter::dispatch($gdpr = true, $list= 'newsletter', $request->email);
+        SubscribeToNewsletter::dispatch($gdpr = true, $list = 'newsletter', $request->email);
 
         try {
-
-
             alert()->success(Lang::get('frontend/components/newsletter.form.notification.success.title'), Lang::get('frontend/components/newsletter.form.notification.success.description'));
         } catch (\Exception $exception) {
             Log::error(print_r($exception->getMessage(), true));

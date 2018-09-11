@@ -2,15 +2,14 @@
 
 namespace App\Http\Controllers\Frontend\Events;
 
-use App\Domain\Jobs\SubscribeToNewsletter;
 use Carbon\Carbon;
 use App\Domain\Models\Participant;
 use App\App\Controllers\Controller;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Lang;
+use App\Domain\Jobs\SubscribeToNewsletter;
 use App\Domain\Notifications\ConfirmParticipation;
 use App\Http\Requests\Frontend\StoreSignUpRequest;
-
 
 class SignUpController extends Controller
 {

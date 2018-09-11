@@ -43,7 +43,7 @@ class TransformParticipants extends Command
             $staging_database = DB::connection(env('STAGING_DB_CONNECTION'));
 
             $staging_participants = $staging_database->table('participants')->get();
-            
+
             foreach ($staging_participants as $staging_participant) {
                 $participant = Participant::create([
                     'id' => $staging_participant->id,

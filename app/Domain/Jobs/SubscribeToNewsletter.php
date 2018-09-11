@@ -25,7 +25,7 @@ class SubscribeToNewsletter implements ShouldQueue
      *
      * @return void
      */
-    public function __construct(bool $gdpr = false, string $list = 'newsletter', $email, $firstname = '', $lastname = '', $company = '')
+    public function __construct(bool $gdpr, string $list, $email, $firstname = '', $lastname = '', $company = '')
     {
         $this->company = $company;
         $this->firstname = $firstname;
@@ -42,8 +42,7 @@ class SubscribeToNewsletter implements ShouldQueue
      */
     public function handle()
     {
-        switch ($this->gdpr)
-        {
+        switch ($this->gdpr) {
             case true:
                 Newsletter::subscribePending($this->email, ['FNAME' => $this->firstname, 'LNAME' => $this->lastname,  'COMPANY' => $this->company], $this->list);
                 break;
@@ -52,6 +51,5 @@ class SubscribeToNewsletter implements ShouldQueue
                 Newsletter::subscribe($this->email, ['FNAME' => $this->firstname, 'LNAME' => $this->lastname,  'COMPANY' => $this->company], $this->list);
                 break;
         }
-
     }
 }
