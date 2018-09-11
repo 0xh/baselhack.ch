@@ -17,8 +17,7 @@ class ComposerServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-
-        if (DB::connection()->getDatabaseName() AND Schema::hasTable('social_media')) {
+        if (DB::connection()->getDatabaseName() and Schema::hasTable('social_media')) {
             $social_medias = SocialMedia::all();
 
             View::composer('*', function ($view) use ($social_medias) {
