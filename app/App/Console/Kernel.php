@@ -14,7 +14,7 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         'App\App\Console\Commands\Sitemap',
-        'App\App\Console\Commands\Transformation',
+/*        'App\App\Console\Commands\Transformation',*/
         'App\App\Console\Commands\Confirmation',
     ];
 
@@ -28,7 +28,7 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         $schedule->command('sitemap:generate')->weekly();
-        $schedule->command('confirmation:start')->dailyAt('12:00');
+        $schedule->command('confirmation:start')->dailyAt('09:30');
     }
 
     /**

@@ -37,7 +37,28 @@
                     <form id="form-build" method="POST" action="{{ route('frontend.events.signup.store') }}">
                         @csrf
 
+
                         <div class="field">
+
+                            <label class="label">{{ __('frontend/event.signup.form.input.company') }}
+
+                                <span style="font-size: 9px;" class="tag is-dark is-pulled-right is-uppercase">optional</span>
+
+                            </label>
+                            <div class="control">
+                                <input id="company" name="company" value="{{ old('company') }}"
+                                       class="input {{ $errors->has('company') ? ' is-danger' : '' }}" type="text"
+                                       placeholder="{{ __('frontend/event.signup.form.input.company') }}"
+                                       autocomplete="company">
+                            </div>
+
+                            @if ($errors->has('company'))
+                                <p class="help is-danger">{{ $errors->first('company') }}</p>
+                            @endif
+                        </div>
+
+
+                        <div style="margin-top: 15px;" class="field">
                             <label class="label">{{ __('frontend/event.signup.form.input.firstname') }}
 
 
@@ -74,24 +95,7 @@
                             @endif
                         </div>
 
-                        <div style="margin-top: 15px;" class="field">
 
-                            <label class="label">{{ __('frontend/event.signup.form.input.company') }}
-
-                                <span style="font-size: 9px;" class="tag is-dark is-pulled-right is-uppercase">optional</span>
-
-                            </label>
-                            <div class="control">
-                                <input id="company" name="company" value="{{ old('company') }}"
-                                       class="input {{ $errors->has('company') ? ' is-danger' : '' }}" type="text"
-                                       placeholder="{{ __('frontend/event.signup.form.input.company') }}"
-                                       autocomplete="company">
-                            </div>
-
-                            @if ($errors->has('company'))
-                                <p class="help is-danger">{{ $errors->first('company') }}</p>
-                            @endif
-                        </div>
 
 
                         <div style="margin-top: 15px;" class="field">
