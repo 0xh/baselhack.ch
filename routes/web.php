@@ -3,6 +3,8 @@
 
 Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
     Route::get('/', 'Home\HomeController@index')->name('home.index');
+    
+    Route::get('/event/sign-up/confirm/{participant}', 'Events\SignUpController@confirm');
 
     Route::group(['prefix' => 'events', 'namespace' => 'Events', 'as' => 'events.'], function () {
         Route::get('/', 'EventsController@index')->name('index');
