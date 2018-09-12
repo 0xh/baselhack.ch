@@ -21,6 +21,13 @@ class EnquiriesIndexTest extends DuskTestCase
         $this->browse(function (Browser $browser) {
             $browser->visitRoute('frontend.enquiries.index')
                     ->assertRouteIs('frontend.enquiries.index');
+            $this->check_seo($browser);
         });
+    }
+
+
+    protected  function check_seo(\Laravel\Dusk\Browser $browser)
+    {
+        $browser->assertTitleContains(\Illuminate\Support\Facades\Lang::get('frontend/meta.enquiries_index.title'));
     }
 }

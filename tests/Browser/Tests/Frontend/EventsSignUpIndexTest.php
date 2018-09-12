@@ -21,6 +21,13 @@ class EventsSignUpIndexTest extends DuskTestCase
         $this->browse(function (Browser $browser) {
             $browser->visitRoute('frontend.events.signup.index')
                     ->assertRouteIs('frontend.events.signup.index');
+            $this->check_seo($browser);
         });
+    }
+
+
+    protected  function check_seo(\Laravel\Dusk\Browser $browser)
+    {
+        $browser->assertTitleContains(\Illuminate\Support\Facades\Lang::get('frontend/meta.event_signup.title'));
     }
 }

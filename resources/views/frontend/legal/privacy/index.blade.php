@@ -12,7 +12,7 @@
 
                 <div class="column is-4">
 
-                    <a href="{{ route('frontend.event.signup') }}">
+                    <a href="{{ route('frontend.events.signup.index') }}">
                         <img class="image header-image" src="{{ asset('frontend/images/backgrounds/privacy.png') }}">
                     </a>
 

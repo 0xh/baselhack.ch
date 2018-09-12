@@ -21,6 +21,16 @@ class AboutIndexTest extends DuskTestCase
         $this->browse(function (Browser $browser) {
             $browser->visitRoute('frontend.about.index')
                     ->assertRouteIs('frontend.about.index');
+
+            $this->check_seo($browser);
         });
     }
+
+
+    protected  function check_seo(\Laravel\Dusk\Browser $browser)
+    {
+        $browser->assertTitleContains(\Illuminate\Support\Facades\Lang::get('frontend/meta.about_index.title'));
+    }
+
+
 }

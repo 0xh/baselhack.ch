@@ -21,6 +21,13 @@ class SponsorsIndexTest extends DuskTestCase
         $this->browse(function (Browser $browser) {
             $browser->visitRoute('frontend.sponsors.index')
                     ->assertRouteIs('frontend.sponsors.index');
+            $this->check_seo($browser);
         });
+    }
+
+
+    protected  function check_seo(\Laravel\Dusk\Browser $browser)
+    {
+        $browser->assertTitleContains(\Illuminate\Support\Facades\Lang::get('frontend/meta.sponsors_index.title'));
     }
 }

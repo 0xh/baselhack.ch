@@ -21,6 +21,13 @@ class LegalPrivacyIndexTest extends DuskTestCase
         $this->browse(function (Browser $browser) {
             $browser->visitRoute('frontend.legal.privacy.index')
                     ->assertRouteIs('frontend.legal.privacy.index');
+            $this->check_seo($browser);
         });
+    }
+
+
+    protected  function check_seo(\Laravel\Dusk\Browser $browser)
+    {
+        $browser->assertTitleContains(\Illuminate\Support\Facades\Lang::get('frontend/meta.privacy_index.title'));
     }
 }

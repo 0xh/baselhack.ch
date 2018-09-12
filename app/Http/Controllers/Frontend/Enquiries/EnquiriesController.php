@@ -14,9 +14,9 @@ class EnquiriesController extends Controller
     public function index()
     {
         $this->seo()
-            ->setTitle(Lang::get('frontend/meta.contact_index.title'))
-            ->setDescription(Lang::get('frontend/meta.contact_index.description'))
-            ->setKeywords(Lang::get('frontend/meta.contact_index.keywords'));
+            ->setTitle(Lang::get('frontend/meta.enquiries_index.title'))
+            ->setDescription(Lang::get('frontend/meta.enquiries_index.description'))
+            ->setKeywords(Lang::get('frontend/meta.enquiries_index.keywords'));
 
         return view('frontend.enquiries.index');
     }

@@ -3,7 +3,6 @@
 return [
 
     'home_index' => [
-
         'title' => 'More than a Hack',
         'description' => 'BaselHack is more than a Hackathon – we connect people, take fun seriously and grow open innovation',
         'keywords' => 'BaselHack, Hackathon, connect, talents, serious fun, open innovation, Basel Stadt, Basel Land, Jura, Three Country Corner Switzerland Germany France',
@@ -39,7 +38,7 @@ return [
         'keywords' => 'BaselHack, Basel, Hackathon, connect, talents, Open Innovation, Innovation, collaboration, digitization, together for the future, Sponsoring',
     ],
 
-    'contact_index' => [
+    'enquiries_index' => [
         'title' => 'Contact',
         'description' => 'Contact the Baselhack Team',
         'keywords' => 'BaselHack, Basel Region, Hackathon, Contact, Together for the future',

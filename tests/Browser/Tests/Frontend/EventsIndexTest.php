@@ -21,6 +21,13 @@ class EventsIndexTest extends DuskTestCase
         $this->browse(function (Browser $browser) {
             $browser->visitRoute('frontend.events.index')
                     ->assertRouteIs('frontend.events.index');
+            $this->check_seo($browser);
         });
+    }
+
+
+    protected  function check_seo(\Laravel\Dusk\Browser $browser)
+    {
+        $browser->assertTitleContains(\Illuminate\Support\Facades\Lang::get('frontend/meta.event_index.title'));
     }
 }
