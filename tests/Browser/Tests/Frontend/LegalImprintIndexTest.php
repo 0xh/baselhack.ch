@@ -2,7 +2,6 @@
 
 namespace Tests\Browser\Frontend;
 
-use Illuminate\Support\Facades\Lang;
 use Tests\DuskTestCase;
 use Laravel\Dusk\Browser;
 
@@ -27,11 +26,8 @@ class LegalImprintIndexTest extends DuskTestCase
         });
     }
 
-
-    protected  function check_seo(\Laravel\Dusk\Browser $browser)
+    protected function check_seo(\Laravel\Dusk\Browser $browser)
     {
         $browser->assertTitleContains(\Illuminate\Support\Facades\Lang::get('frontend/meta.imprint_index.title'));
     }
-
-
 }

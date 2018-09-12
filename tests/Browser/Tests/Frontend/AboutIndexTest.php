@@ -26,11 +26,8 @@ class AboutIndexTest extends DuskTestCase
         });
     }
 
-
-    protected  function check_seo(\Laravel\Dusk\Browser $browser)
+    protected function check_seo(\Laravel\Dusk\Browser $browser)
     {
         $browser->assertTitleContains(\Illuminate\Support\Facades\Lang::get('frontend/meta.about_index.title'));
     }
-
-
 }
