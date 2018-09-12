@@ -3,7 +3,6 @@
 namespace App\App\Console\Commands\Migrations;
 
 use Illuminate\Console\Command;
-use App\Domain\Models\Participant;
 use Illuminate\Support\Facades\DB;
 
 class TransformParticipants extends Command
@@ -44,7 +43,5 @@ class TransformParticipants extends Command
         foreach ($staging_database->table('participants')->get() as $notifications) {
             DB::table('participants')->insert((array) $notifications);
         }
-
-
     }
 }

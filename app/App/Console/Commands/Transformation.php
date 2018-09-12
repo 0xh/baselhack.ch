@@ -41,8 +41,8 @@ class Transformation extends Command
         $this->confirm('Confirm Transformation');
         $this->info('No scheduled transformations');
 
-       /* Artisan::call('migrate:fresh', ['--database' => env('DB_CONNECTION'), '--force' => true]);
-        Artisan::call('db:seed', ['--database' => env('DB_CONNECTION'), '--force' => true]);*/
+        /* Artisan::call('migrate:fresh', ['--database' => env('DB_CONNECTION'), '--force' => true]);
+         Artisan::call('db:seed', ['--database' => env('DB_CONNECTION'), '--force' => true]);*/
 
    /*     Artisan::call('transform-backup:participants');
         $this->info('Transformed Participants');
