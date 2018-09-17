@@ -16,6 +16,7 @@ class Kernel extends ConsoleKernel
         'App\App\Console\Commands\Sitemap',
 /*        'App\App\Console\Commands\Transformation',*/
         'App\App\Console\Commands\Confirmation',
+        'App\App\Console\Commands\EmailFailedTravisCIBuild',
     ];
 
     /**

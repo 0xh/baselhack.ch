@@ -2,11 +2,13 @@
 
 namespace Tests\Browser\Frontend;
 
+use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Tests\DuskTestCase;
 use Laravel\Dusk\Browser;
 
 class EventsIndexTest extends DuskTestCase
 {
+    use DatabaseMigrations;
     /**
      * A basic browser test example.
      *

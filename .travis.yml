@@ -41,7 +41,9 @@ before_script:
 
 script:
 - phpunit
-- php artisan dusk
+
+after_failure:
+- php artisan email:failure
 
 after_success:
   - chmod +x ./travis.success.sh; ./travis.success.sh
