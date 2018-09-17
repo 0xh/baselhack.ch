@@ -34,10 +34,8 @@ before_script:
 - cp .env.travis .env
 - cp phpunit.travis.xml phpunit.xml
 
-- google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
-
 - php artisan key:generate
-- php artisan serve &
+- php artisan serve > /dev/null 2>&1 &
 
 script:
 - phpunit
