@@ -48,7 +48,7 @@ class ConfirmParticipationTest extends TestCase
                }
            );
        }*/
-    
+
     /*    public function test_confirm_participation_notification()
 
     {
