@@ -9,10 +9,6 @@
          processIsolation="false"
          stopOnFailure="false">
 
-    <logging>
-        <log type="coverage-clover" target="build/logs/clover.xml"/>
-    </logging>
-
     <testsuites>
 
         <testsuite name="Unit">
@@ -49,7 +45,7 @@
         <env name="QUEUE_DRIVER" value="sync"/>
 
         <env name="MAIL_DRIVER" value="smtp"/>
-        <env name="MAIL_HOST" value="smtp"/>
+        <env name="MAIL_HOST" value="smtp.mailtrap.io"/>
         <env name="MAIL_PORT" value="2525"/>
         <env name="MAIL_USERNAME" value="2689c7bde9a288"/>
         <env name="MAIL_PASSWORD" value="d16f7f81ed6d81"/>
@@ -57,5 +53,9 @@
 
     </php>
 </phpunit>
+
+
+
+
 
 

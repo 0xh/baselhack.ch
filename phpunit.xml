@@ -9,10 +9,6 @@
          processIsolation="false"
          stopOnFailure="false">
 
-    <logging>
-        <log type="coverage-clover" target="build/logs/clover.xml"/>
-    </logging>
-
     <testsuites>
 
 
@@ -34,12 +30,17 @@
 
         <env name="APP_ENV" value="testing"/>
         <env name="CACHE_DRIVER" value="array"/>
-        <env name="SESSION_DRIVER" value="array"/>
+        <env name="SESSION_DRIVER" value="database"/>
         <env name="QUEUE_DRIVER" value="sync"/>
-        <env name="MAIL_DRIVER" value="array"/>
 
         <env name="DB_DATABASE" value="smarango_baselhack_web_test"/>
 
+        <env name="MAIL_DRIVER" value="smtp"/>
+        <env name="MAIL_HOST" value="smtp.mailtrap.io"/>
+        <env name="MAIL_PORT" value="2525"/>
+        <env name="MAIL_USERNAME" value="2689c7bde9a288"/>
+        <env name="MAIL_PASSWORD" value="d16f7f81ed6d81"/>
+        <env name="MAIL_ENCRYPTION" value="tls"/>
 
 
     </php>
