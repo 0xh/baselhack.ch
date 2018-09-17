@@ -1,14 +1,12 @@
 sudo: required
-
-dist: trusty
-
 language: php
+dist: trusty
 
 php:
 - 7.2
 
 services:
-- mysq
+- mysql
 
 addons:
   apt:
@@ -36,11 +34,14 @@ before_script:
 - cp .env.travis .env
 - cp phpunit.travis.xml phpunit.xml
 
+- google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
+
 - php artisan key:generate
 - php artisan serve &
 
 script:
 - phpunit
+- php artisan dusk
 
 after_success:
   - chmod +x ./travis.success.sh; ./travis.success.sh
