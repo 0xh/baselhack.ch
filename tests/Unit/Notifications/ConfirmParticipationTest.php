@@ -49,7 +49,7 @@ class ConfirmParticipationTest extends TestCase
            );
        }*/
 
-   /* public function test_confirm_participation_notification()
+        public function test_confirm_participation_notification()
     {
         $participant = factory(Participant::class)->create();
 
@@ -70,5 +70,5 @@ class ConfirmParticipationTest extends TestCase
                 return $notification->participant->id === $participant->id;
             }
         );
-    }*/
+    }
 }
