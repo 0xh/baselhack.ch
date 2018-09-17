@@ -25,7 +25,7 @@ class StoreEnquiryRequest extends FormRequest
     public function rules()
     {
         return [
-            'type' => 'required|string|'. Rule::in('general', 'event', 'sponsoring'),
+            'type' => 'required|string|'.Rule::in('general', 'event', 'sponsoring'),
             'company' => 'nullable|string|max:255',
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255',

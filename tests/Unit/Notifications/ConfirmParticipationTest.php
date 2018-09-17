@@ -49,7 +49,7 @@ class ConfirmParticipationTest extends TestCase
            );
        }*/
 
-        public function test_confirm_participation_notification()
+    public function test_confirm_participation_notification()
     {
         $participant = factory(Participant::class)->create();
 
@@ -58,8 +58,7 @@ class ConfirmParticipationTest extends TestCase
         Notification::assertSentTo(
             $participant,
             ConfirmParticipation::class,
-            function ($notification) use ($participant){
-
+            function ($notification) use ($participant) {
                 $mailData = $notification->toMail($participant)->toArray();
                 $this->assertEquals(Lang::get('frontend/notifications.confirm_participation.subject'), $mailData['subject']);
                 $this->assertEquals(Lang::get('frontend/notifications.confirm_participation.greeting'), $mailData['greeting']);
