@@ -2,11 +2,10 @@
 
 namespace App\Mail;
 
-use Illuminate\Support\Facades\File;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
+use Illuminate\Support\Facades\File;
 use Illuminate\Queue\SerializesModels;
-
 
 class DuskFailure extends Mailable
 {
@@ -31,11 +30,9 @@ class DuskFailure extends Mailable
     {
         $view = $this->view('emails.dusk_failure');
         $files = File::allFiles('tests/Browser/screenshots');
+
         return $this->view('emails.dusk_failure', [
-            'files' => $files
+            'files' => $files,
         ]);
-
-
-
     }
 }
