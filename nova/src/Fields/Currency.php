@@ -17,6 +17,7 @@ class Currency extends Number
      * @param  string  $name
      * @param  string|null  $attribute
      * @param  mixed|null  $resolveCallback
+     *
      * @return void
      */
     public function __construct($name, $attribute = null, $resolveCallback = null)
@@ -32,6 +33,7 @@ class Currency extends Number
      * The monetary format the field will used be displayed in.
      *
      * @param  string  $format
+     *
      * @return $this
      */
     public function format($format)

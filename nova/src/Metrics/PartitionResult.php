@@ -18,6 +18,7 @@ class PartitionResult implements JsonSerializable
      * Create a new partition result instance.
      *
      * @param  array  $value
+     *
      * @return void
      */
     public function __construct(array $value)
@@ -29,6 +30,7 @@ class PartitionResult implements JsonSerializable
      * Format the labels for the partition result.
      *
      * @param  \Closure  $callback
+     *
      * @return $this
      */
     public function label(Closure $callback)

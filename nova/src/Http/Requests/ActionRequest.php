@@ -21,7 +21,7 @@ class ActionRequest extends NovaRequest
     {
         return once(function () {
             return $this->availableActions()->first(function ($action) {
-                return $action->uriKey() == $this->action;
+                return $action->uriKey() === $this->action;
             }) ?: abort($this->actionExists() ? 403 : 404);
         });
     }
@@ -50,7 +50,7 @@ class ActionRequest extends NovaRequest
                     : $this->newResource()->resolveActions($this);
 
         return $actions->contains(function ($action) {
-            return $action->uriKey() == $this->action;
+            return $action->uriKey() === $this->action;
         });
     }
 
@@ -69,6 +69,7 @@ class ActionRequest extends NovaRequest
      *
      * @param  int  $count
      * @param  \Closure  $callback
+     *
      * @return mixed
      */
     public function chunks($count, Closure $callback)
@@ -116,6 +117,7 @@ class ActionRequest extends NovaRequest
      * Map the chunk of models into an appropriate state.
      *
      * @param  \Illuminate\Database\Eloquent\Collection  $chunk
+     *
      * @return \Illuminate\Database\Eloquent\Collection
      */
     protected function mapChunk($chunk)
@@ -175,6 +177,7 @@ class ActionRequest extends NovaRequest
      * When running pivot actions, this is the key of the owning model.
      *
      * @param  \Illuminate\Database\Eloquent\Model
+     *
      * @return int
      */
     public function actionableKey($model)
@@ -204,6 +207,7 @@ class ActionRequest extends NovaRequest
      * When running pivot actions, this is the key of the target model.
      *
      * @param  \Illuminate\Database\Eloquent\Model
+     *
      * @return int
      */
     public function targetKey($model)

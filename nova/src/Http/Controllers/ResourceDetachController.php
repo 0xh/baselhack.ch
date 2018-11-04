@@ -15,6 +15,7 @@ class ResourceDetachController extends Controller
      * Detach the given resource(s).
      *
      * @param  \Laravel\Nova\Http\Requests\DetachResourceRequest  $request
+     *
      * @return \Illuminate\Http\Response
      */
     public function handle(DetachResourceRequest $request)
@@ -46,6 +47,7 @@ class ResourceDetachController extends Controller
      * @param  \Laravel\Nova\Http\Requests\DetachResourceRequest  $request
      * @param  \Laravel\Nova\Resource  $resource
      * @param  \Illuminate\Database\Eloquent\Model
+     *
      * @return void
      */
     protected function deletePivotFields(DetachResourceRequest $request, $resource, $pivot)

@@ -12,6 +12,7 @@ class FieldDownloadController extends Controller
      * Download the given field's contents.
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
+     *
      * @return \Illuminate\Http\Response
      */
     public function show(NovaRequest $request)

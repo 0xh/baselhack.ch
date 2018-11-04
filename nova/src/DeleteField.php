@@ -12,6 +12,7 @@ class DeleteField
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
      * @param  \Laravel\Nova\Fields\Field  $field
      * @param  \Illuminate\Database\Eloquent\Model  $model
+     *
      * @return \Illuminate\Database\Eloquent\Model
      */
     public static function forRequest(NovaRequest $request, $field, $model)

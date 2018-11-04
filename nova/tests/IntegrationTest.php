@@ -101,6 +101,7 @@ abstract class IntegrationTest extends TestCase
      * Run the next job on the queue.
      *
      * @param  int  $times
+     *
      * @return void
      */
     protected function work($times = 1)
@@ -139,6 +140,7 @@ abstract class IntegrationTest extends TestCase
      * Get the service providers for the package.
      *
      * @param  \Illuminate\Foundation\Application  $app
+     *
      * @return array
      */
     protected function getPackageProviders($app)
@@ -155,6 +157,7 @@ abstract class IntegrationTest extends TestCase
      * Define environment.
      *
      * @param  \Illuminate\Foundation\Application  $app
+     *
      * @return void
      */
     protected function getEnvironmentSetUp($app)
@@ -162,9 +165,9 @@ abstract class IntegrationTest extends TestCase
         $app['config']->set('database.default', 'sqlite');
 
         $app['config']->set('database.connections.sqlite', [
-            'driver'   => 'sqlite',
+            'driver' => 'sqlite',
             'database' => ':memory:',
-            'prefix'   => '',
+            'prefix' => '',
         ]);
     }
 }

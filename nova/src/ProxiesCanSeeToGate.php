@@ -11,6 +11,7 @@ trait ProxiesCanSeeToGate
      *
      * @param  string  $ability
      * @param  array|mixed  $arguments
+     *
      * @return $this
      */
     public function canSeeWhen($ability, $arguments = [])
