@@ -10,6 +10,7 @@ class ResourceRelationshipGuesser
      * Guess the resource class name from the displayable name.
      *
      * @param  string  $name
+     *
      * @return string
      */
     public static function guessResource($name)

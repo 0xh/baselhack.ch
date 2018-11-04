@@ -39,11 +39,12 @@ class Boolean extends Field
      *
      * @param  mixed  $resource
      * @param  string  $attribute
+     *
      * @return mixed
      */
     protected function resolveAttribute($resource, $attribute)
     {
-        return data_get($resource, $attribute) == $this->trueValue ? true : false;
+        return data_get($resource, $attribute) === $this->trueValue ? true : false;
     }
 
     /**
@@ -53,12 +54,13 @@ class Boolean extends Field
      * @param  string  $requestAttribute
      * @param  object  $model
      * @param  string  $attribute
+     *
      * @return void
      */
     protected function fillAttributeFromRequest(NovaRequest $request, $requestAttribute, $model, $attribute)
     {
         if (isset($request[$requestAttribute])) {
-            $model->{$attribute} = $request[$requestAttribute] == 1
+            $model->{$attribute} = $request[$requestAttribute] === 1
                     ? $this->trueValue : $this->falseValue;
         }
     }
@@ -68,6 +70,7 @@ class Boolean extends Field
      *
      * @param  mixed  $trueValue
      * @param  mixed  $falseValue
+     *
      * @return $this
      */
     public function values($trueValue, $falseValue)
@@ -79,6 +82,7 @@ class Boolean extends Field
      * Specify the value to store when the field is "true".
      *
      * @param  mixed  $value
+     *
      * @return $this
      */
     public function trueValue($value)
@@ -92,6 +96,7 @@ class Boolean extends Field
      * Specify the value to store when the field is "false".
      *
      * @param  mixed  $value
+     *
      * @return $this
      */
     public function falseValue($value)

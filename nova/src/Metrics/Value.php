@@ -21,6 +21,7 @@ abstract class Value extends RangedMetric
      * @param  \Illuminate\Database\Eloquent\Builder|string  $model
      * @param  string|null  $column
      * @param  string|null  $dateColumn
+     *
      * @return \Laravel\Nova\Metrics\ValueResult
      */
     public function count($request, $model, $column = null, $dateColumn = null)
@@ -35,6 +36,7 @@ abstract class Value extends RangedMetric
      * @param  \Illuminate\Database\Eloquent\Builder|string  $model
      * @param  string  $column
      * @param  string|null  $dateColumn
+     *
      * @return \Laravel\Nova\Metrics\ValueResult
      */
     public function average($request, $model, $column, $dateColumn = null)
@@ -49,6 +51,7 @@ abstract class Value extends RangedMetric
      * @param  \Illuminate\Database\Eloquent\Builder|string  $model
      * @param  string  $column
      * @param  string|null  $dateColumn
+     *
      * @return \Laravel\Nova\Metrics\ValueResult
      */
     public function sum($request, $model, $column, $dateColumn = null)
@@ -63,6 +66,7 @@ abstract class Value extends RangedMetric
      * @param  \Illuminate\Database\Eloquent\Builder|string  $model
      * @param  string  $column
      * @param  string|null  $dateColumn
+     *
      * @return \Laravel\Nova\Metrics\ValueResult
      */
     public function max($request, $model, $column, $dateColumn = null)
@@ -77,6 +81,7 @@ abstract class Value extends RangedMetric
      * @param  \Illuminate\Database\Eloquent\Builder|string  $model
      * @param  string  $column
      * @param  string|null  $dateColumn
+     *
      * @return \Laravel\Nova\Metrics\ValueResult
      */
     public function min($request, $model, $column, $dateColumn = null)
@@ -92,6 +97,7 @@ abstract class Value extends RangedMetric
      * @param  string  $function
      * @param  string|null  $column
      * @param  string|null  $dateColumn
+     *
      * @return \Laravel\Nova\Metrics\ValueResult
      */
     protected function aggregate($request, $model, $function, $column = null, $dateColumn = null)
@@ -115,22 +121,23 @@ abstract class Value extends RangedMetric
      * Calculate the previous range and calculate any short-cuts.
      *
      * @param  string|int  $range
+     *
      * @return array
      */
     protected function previousRange($range)
     {
-        if ($range == 'MTD') {
+        if ($range === 'MTD') {
             return [
                 now()->modify('first day of previous month')->setTime(0, 0),
                 now()->subMonthsNoOverflow(1),
             ];
         }
 
-        if ($range == 'QTD') {
+        if ($range === 'QTD') {
             return $this->previousQuarterRange();
         }
 
-        if ($range == 'YTD') {
+        if ($range === 'YTD') {
             return [
                 now()->subYears(1)->firstOfYear(),
                 now()->subYearsNoOverflow(1),
@@ -160,22 +167,23 @@ abstract class Value extends RangedMetric
      * Calculate the current range and calculate any short-cuts.
      *
      * @param  string|int  $range
+     *
      * @return array
      */
     protected function currentRange($range)
     {
-        if ($range == 'MTD') {
+        if ($range === 'MTD') {
             return [
                 now()->firstOfMonth(),
                 now(),
             ];
         }
 
-        if ($range == 'QTD') {
+        if ($range === 'QTD') {
             return $this->currentQuarterRange();
         }
 
-        if ($range == 'YTD') {
+        if ($range === 'YTD') {
             return [
                 now()->firstOfYear(),
                 now(),
@@ -205,6 +213,7 @@ abstract class Value extends RangedMetric
      * Create a new value metric result.
      *
      * @param  mixed  $value
+     *
      * @return \Laravel\Nova\Metrics\ValueResult
      */
     public function result($value)

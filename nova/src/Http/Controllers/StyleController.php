@@ -12,6 +12,7 @@ class StyleController extends Controller
      * Serve the requested stylesheet.
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
+     *
      * @return \Illuminate\Http\Response
      */
     public function show(NovaRequest $request)

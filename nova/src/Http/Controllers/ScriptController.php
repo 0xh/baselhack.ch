@@ -12,6 +12,7 @@ class ScriptController extends Controller
      * Serve the requested script.
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
+     *
      * @return \Illuminate\Http\Response
      */
     public function show(NovaRequest $request)

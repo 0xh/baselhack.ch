@@ -95,6 +95,7 @@ class BelongsTo extends Field
      * @param  string  $name
      * @param  string|null  $attribute
      * @param  string|null  $resource
+     *
      * @return void
      */
     public function __construct($name, $attribute = null, $resource = null)
@@ -112,6 +113,7 @@ class BelongsTo extends Field
      * Determine if the field should be displayed for the given request.
      *
      * @param  \Illuminate\Http\Request  $request
+     *
      * @return bool
      */
     public function authorize(Request $request)
@@ -127,6 +129,7 @@ class BelongsTo extends Field
      * Ex: Is this a "user" belongs to field in a blog post list being shown on the "user" detail page.
      *
      * @param  \Illuminate\Http\Request  $request
+     *
      * @return bool
      */
     public function isNotRedundant(Request $request)
@@ -140,6 +143,7 @@ class BelongsTo extends Field
      *
      * @param  mixed  $resource
      * @param  string|null  $attribute
+     *
      * @return void
      */
     public function resolve($resource, $attribute = null)
@@ -157,6 +161,7 @@ class BelongsTo extends Field
      * Get the validation rules for this field.
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
+     *
      * @return array
      */
     public function getRules(NovaRequest $request)
@@ -168,7 +173,7 @@ class BelongsTo extends Field
         return array_merge_recursive(parent::getRules($request), [
             $this->attribute => array_filter([
                 $this->nullable ? 'nullable' : 'required',
-                new Relatable($request, $query)
+                new Relatable($request, $query),
             ]),
         ]);
     }
@@ -178,6 +183,7 @@ class BelongsTo extends Field
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
      * @param  object  $model
+     *
      * @return void
      */
     public function fill(NovaRequest $request, $model)
@@ -194,6 +200,7 @@ class BelongsTo extends Field
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
      * @param  bool  $withTrashed
+     *
      * @return \Illuminate\Database\Eloquent\Builder
      */
     public function buildAssociatableQuery(NovaRequest $request, $withTrashed = false)
@@ -219,6 +226,7 @@ class BelongsTo extends Field
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
      * @param  \Illuminate\Database\Eloquent\Model  $model
+     *
      * @return array
      */
     protected function associatableQueryCallable(NovaRequest $request, $model)
@@ -233,6 +241,7 @@ class BelongsTo extends Field
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
      * @param  \Illuminate\Database\Eloquent\Model  $model
+     *
      * @return string
      */
     protected function associatableQueryMethod(NovaRequest $request, $model)
@@ -249,6 +258,7 @@ class BelongsTo extends Field
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
      * @param  mixed  $resource
+     *
      * @return array
      */
     public function formatAssociatableResource(NovaRequest $request, $resource)
@@ -264,6 +274,7 @@ class BelongsTo extends Field
      * Specify if the relationship should be searchable.
      *
      * @param  bool  $value
+     *
      * @return $this
      */
     public function searchable($value = true)
@@ -277,6 +288,7 @@ class BelongsTo extends Field
      * Specify a callback that should be run when the field is filled.
      *
      * @param  \Closure  $callback
+     *
      * @return $this
      */
     public function filled($callback)
@@ -290,6 +302,7 @@ class BelongsTo extends Field
      * Set the attribute name of the inverse of the relationship.
      *
      * @param  string  $inverse
+     *
      * @return $this
      */
     public function inverse($inverse)
@@ -303,6 +316,7 @@ class BelongsTo extends Field
      * Indicate that the field should be nullable.
      *
      * @param  bool  $nullable
+     *
      * @return $this
      */
     public function nullable($nullable = true)

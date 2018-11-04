@@ -11,6 +11,7 @@ class ActionMethod
      *
      * @param  \Laravel\Nova\Actions\Action  $action
      * @param  \Illuminate\Database\Eloquent\Model  $model
+     *
      * @return string
      */
     public static function determine(Action $action, $model)
