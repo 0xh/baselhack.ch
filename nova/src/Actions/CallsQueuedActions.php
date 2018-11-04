@@ -41,6 +41,7 @@ trait CallsQueuedActions
      * Call the action using the given callback.
      *
      * @param  callable  $callback
+     *
      * @return void
      */
     protected function callAction($callback)
@@ -60,6 +61,7 @@ trait CallsQueuedActions
      * Set the job instance of the given class if necessary.
      *
      * @param  mixed  $instance
+     *
      * @return mixed
      */
     protected function setJobInstanceIfNecessary($instance)

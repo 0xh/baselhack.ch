@@ -15,6 +15,7 @@ class UserLens extends Lens
      *
      * @param  \Laravel\Nova\Http\Requests\LensRequest  $request
      * @param  \Illuminate\Database\Eloquent\Builder  $query
+     *
      * @return mixed
      */
     public static function query(LensRequest $request, $query)
@@ -26,6 +27,7 @@ class UserLens extends Lens
      * Get the fields available to the lens.
      *
      * @param  \Illuminate\Http\Request  $request
+     *
      * @return array
      */
     public function fields(Request $request)
@@ -40,6 +42,7 @@ class UserLens extends Lens
      * Get the filters available for the lens.
      *
      * @param  \Illuminate\Http\Request  $request
+     *
      * @return array
      */
     public function filters(Request $request)

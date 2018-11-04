@@ -42,6 +42,7 @@ abstract class Element implements JsonSerializable
      * Create a new element.
      *
      * @param  string|null  $component
+     *
      * @return void
      */
     public function __construct($component = null)
@@ -63,6 +64,7 @@ abstract class Element implements JsonSerializable
      * Determine if the element should be displayed for the given request.
      *
      * @param  \Illuminate\Http\Request  $request
+     *
      * @return bool
      */
     public function authorize(Request $request)
@@ -74,6 +76,7 @@ abstract class Element implements JsonSerializable
      * Set the callback to be run to authorize viewing the card.
      *
      * @param  \Closure  $callback
+     *
      * @return $this
      */
     public function canSee(Closure $callback)
@@ -87,6 +90,7 @@ abstract class Element implements JsonSerializable
      * Determine if the card should be available for the given request.
      *
      * @param  \Illuminate\Http\Request  $request
+     *
      * @return bool
      */
     public function authorizedToSee(Request $request)
@@ -130,6 +134,7 @@ abstract class Element implements JsonSerializable
      * Set additional meta information for the element.
      *
      * @param  array  $meta
+     *
      * @return $this
      */
     public function withMeta(array $meta)

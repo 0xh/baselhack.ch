@@ -101,6 +101,7 @@ class File extends Field implements DeletableContract
      * @param  string  $attribute
      * @param  string|null  $disk
      * @param  callable|null  $storageCallback
+     *
      * @return void
      */
     public function __construct($name, $attribute = null, $disk = 'public', $storageCallback = null)
@@ -112,9 +113,7 @@ class File extends Field implements DeletableContract
         $this->prepareStorageCallback($storageCallback);
 
         $this->thumbnail(function () {
-            return null;
         })->preview(function () {
-            return null;
         })->download(function ($request, $model) {
             $name = $this->originalNameColumn ? $model->{$this->originalNameColumn} : null;
 
@@ -132,6 +131,7 @@ class File extends Field implements DeletableContract
      * Prepare the storage callback.
      *
      * @param  callable|null  $storageCallback
+     *
      * @return void
      */
     protected function prepareStorageCallback($storageCallback)
@@ -149,6 +149,7 @@ class File extends Field implements DeletableContract
      * Store the file on disk.
      *
      * @param  \Illuminate\Http\Request  $request
+     *
      * @return string
      */
     protected function storeFile($request)
@@ -167,6 +168,7 @@ class File extends Field implements DeletableContract
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  array  $attributes
+     *
      * @return array
      */
     protected function mergeExtraStorageColumns($request, array $attributes)
@@ -206,6 +208,7 @@ class File extends Field implements DeletableContract
      * Set the name of the disk the file is stored on by default.
      *
      * @param  string  $disk
+     *
      * @return $this
      */
     public function disk($disk)
@@ -219,6 +222,7 @@ class File extends Field implements DeletableContract
      * Specify the callback that should be used to store the file.
      *
      * @param  callable  $storageCallback
+     *
      * @return $this
      */
     public function store(callable $storageCallback)
@@ -232,6 +236,7 @@ class File extends Field implements DeletableContract
      * Set the file's storage path.
      *
      * @param  string  $path
+     *
      * @return string
      */
     public function path($path)
@@ -245,6 +250,7 @@ class File extends Field implements DeletableContract
      * Specify the callback that should be used to determine the file's storage name.
      *
      * @param  callable  $storeAsCallback
+     *
      * @return $this
      */
     public function storeAs(callable $storeAsCallback)
@@ -258,6 +264,7 @@ class File extends Field implements DeletableContract
      * Specify the callback that should be used to retrieve the thumbnail URL.
      *
      * @param  callable  $thumbnailUrlCallback
+     *
      * @return $this
      */
     public function thumbnail(callable $thumbnailUrlCallback)
@@ -281,6 +288,7 @@ class File extends Field implements DeletableContract
      * Specify the callback that should be used to retrieve the preview URL.
      *
      * @param  callable  $previewUrlCallback
+     *
      * @return $this
      */
     public function preview(callable $previewUrlCallback)
@@ -294,6 +302,7 @@ class File extends Field implements DeletableContract
      * Specify the callback that should be used to create a download HTTP response.
      *
      * @param  callable  $downloadResponseCallback
+     *
      * @return $this
      */
     public function download(callable $downloadResponseCallback)
@@ -307,6 +316,7 @@ class File extends Field implements DeletableContract
      * Specify the column where the file's original name should be stored.
      *
      * @param  string  $column
+     *
      * @return $this
      */
     public function storeOriginalName($column)
@@ -320,6 +330,7 @@ class File extends Field implements DeletableContract
      * Specify the column where the file size should be stored.
      *
      * @param  string  $column
+     *
      * @return $this
      */
     public function storeSize($column)
@@ -334,6 +345,7 @@ class File extends Field implements DeletableContract
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
      * @param  object  $model
+     *
      * @return void
      */
     public function fillForAction(NovaRequest $request, $model)
@@ -350,6 +362,7 @@ class File extends Field implements DeletableContract
      * @param  string  $requestAttribute
      * @param  object  $model
      * @param  string  $attribute
+     *
      * @return void
      */
     protected function fillAttribute(NovaRequest $request, $requestAttribute, $model, $attribute)
@@ -378,6 +391,7 @@ class File extends Field implements DeletableContract
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
      * @param  \Laravel\Nova\Resource  $resource
+     *
      * @return \Illuminate\Http\Response
      */
     public function toDownloadResponse(NovaRequest $request, $resource)

@@ -68,6 +68,7 @@ class Action implements JsonSerializable
      * Determine if the action should be available for the given request.
      *
      * @param  \Illuminate\Http\Request  $request
+     *
      * @return bool
      */
     public function authorizedToSee(Request $request)
@@ -80,6 +81,7 @@ class Action implements JsonSerializable
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \Illuminate\Database\Eloquent\Model  $model
+     *
      * @return bool
      */
     public function authorizedToRun(Request $request, $model)
@@ -91,6 +93,7 @@ class Action implements JsonSerializable
      * Return a message response from the action.
      *
      * @param  string  $message
+     *
      * @return array
      */
     public static function message($message)
@@ -102,6 +105,7 @@ class Action implements JsonSerializable
      * Return a dangerous message response from the action.
      *
      * @param  string  $message
+     *
      * @return array
      */
     public static function danger($message)
@@ -123,6 +127,7 @@ class Action implements JsonSerializable
      * Return a redirect response from the action.
      *
      * @param  string  $url
+     *
      * @return array
      */
     public static function redirect($url)
@@ -135,6 +140,7 @@ class Action implements JsonSerializable
      *
      * @param  string  $url
      * @param  string  $name
+     *
      * @return array
      */
     public static function download($url, $name)
@@ -146,8 +152,10 @@ class Action implements JsonSerializable
      * Execute the action for the given request.
      *
      * @param  \Laravel\Nova\Http\Requests\ActionRequest  $request
-     * @return mixed
+     *
      * @throws MissingActionHandlerException
+     *
+     * @return mixed
      */
     public function handleRequest(ActionRequest $request)
     {
@@ -182,6 +190,7 @@ class Action implements JsonSerializable
      * Mark the action event record for the model as finished.
      *
      * @param  \Illuminate\Database\Eloquent\Model  $model
+     *
      * @return int
      */
     protected function markAsFinished($model)
@@ -194,6 +203,7 @@ class Action implements JsonSerializable
      *
      * @param  \Illuminate\Database\Eloquent\Model  $model
      * @param  \Throwable|string  $e
+     *
      * @return int
      */
     protected function markAsFailed($model, $e = null)
@@ -215,6 +225,7 @@ class Action implements JsonSerializable
      * Indicate that this action can be run for the entire resource at once.
      *
      * @param  bool  $value
+     *
      * @return $this
      */
     public function availableForEntireResource($value = true)
@@ -228,6 +239,7 @@ class Action implements JsonSerializable
      * Indicate that this action is only available on the resource detail view.
      *
      * @param  bool  $value
+     *
      * @return $this
      */
     public function onlyOnDetail($value = true)
@@ -241,6 +253,7 @@ class Action implements JsonSerializable
      * Set the current batch ID being handled by the action.
      *
      * @param  string  $batchId
+     *
      * @return $this
      */
     public function withBatchId($batchId)
@@ -254,6 +267,7 @@ class Action implements JsonSerializable
      * Set the callback to be run to authorize viewing the action.
      *
      * @param  \Closure  $callback
+     *
      * @return $this
      */
     public function canSee(Closure $callback)
@@ -267,6 +281,7 @@ class Action implements JsonSerializable
      * Set the callback to be run to authorize running the action.
      *
      * @param  \Closure  $callback
+     *
      * @return $this
      */
     public function canRun(Closure $callback)

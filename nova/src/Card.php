@@ -15,6 +15,7 @@ abstract class Card extends Element
      * Set the width of the card.
      *
      * @param  string  $width
+     *
      * @return $this
      */
     public function width($width)

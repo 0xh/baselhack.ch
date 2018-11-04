@@ -13,6 +13,7 @@ class ResourceRestoreController extends Controller
      * Restore the given resource(s).
      *
      * @param  \Laravel\Nova\Http\Requests\RestoreResourceRequest  $request
+     *
      * @return \Illuminate\Http\Response
      */
     public function handle(RestoreResourceRequest $request)

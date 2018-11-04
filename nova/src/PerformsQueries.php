@@ -16,6 +16,7 @@ trait PerformsQueries
      * @param  array  $filters
      * @param  array  $orderings
      * @param  string  $withTrashed
+     *
      * @return \Illuminate\Database\Eloquent\Builder
      */
     public static function buildIndexQuery(NovaRequest $request, $query, $search = null,
@@ -36,6 +37,7 @@ trait PerformsQueries
      * @param  \Illuminate\Database\Eloquent\Builder  $query
      * @param  string  $search
      * @param  string  $withTrashed
+     *
      * @return \Illuminate\Database\Eloquent\Builder
      */
     protected static function initializeQuery(NovaRequest $request, $query, $search, $withTrashed)
@@ -54,6 +56,7 @@ trait PerformsQueries
      *
      * @param  \Illuminate\Database\Eloquent\Builder  $query
      * @param  string  $search
+     *
      * @return \Illuminate\Database\Eloquent\Builder
      */
     protected static function applySearch($query, $search)
@@ -67,7 +70,7 @@ trait PerformsQueries
 
             $connectionType = $query->getModel()->getConnection()->getDriverName();
 
-            $likeOperator = $connectionType == 'pgsql' ? 'ilike' : 'like';
+            $likeOperator = $connectionType === 'pgsql' ? 'ilike' : 'like';
 
             foreach (static::searchableColumns() as $column) {
                 $query->orWhere($model->qualifyColumn($column), $likeOperator, '%'.$search.'%');
@@ -82,6 +85,7 @@ trait PerformsQueries
      * @param  \Illuminate\Database\Eloquent\Builder  $query
      * @param  string  $search
      * @param  string  $withTrashed
+     *
      * @return \Illuminate\Database\Eloquent\Builder
      */
     protected static function initializeQueryUsingScout(NovaRequest $request, $query, $search, $withTrashed)
@@ -102,6 +106,7 @@ trait PerformsQueries
      *
      * @param  mixed  $query
      * @param  string  $withTrashed
+     *
      * @return mixed
      */
     protected static function applySoftDeleteConstraint($query, $withTrashed)
@@ -117,6 +122,7 @@ trait PerformsQueries
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
      * @param  \Illuminate\Database\Eloquent\Builder  $query
      * @param  array  $filters
+     *
      * @return \Illuminate\Database\Eloquent\Builder
      */
     protected static function applyFilters(NovaRequest $request, $query, array $filters)
@@ -131,6 +137,7 @@ trait PerformsQueries
      *
      * @param  \Illuminate\Database\Eloquent\Builder  $query
      * @param  array  $orderings
+     *
      * @return \Illuminate\Database\Eloquent\Builder
      */
     protected static function applyOrderings($query, array $orderings)
@@ -153,6 +160,7 @@ trait PerformsQueries
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
      * @param  \Illuminate\Database\Eloquent\Builder  $query
+     *
      * @return \Illuminate\Database\Eloquent\Builder
      */
     public static function indexQuery(NovaRequest $request, $query)
@@ -165,6 +173,7 @@ trait PerformsQueries
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
      * @param  \Laravel\Scout\Builder  $query
+     *
      * @return \Laravel\Scout\Builder
      */
     public static function scoutQuery(NovaRequest $request, $query)
@@ -177,6 +186,7 @@ trait PerformsQueries
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
      * @param  \Illuminate\Database\Eloquent\Builder  $query
+     *
      * @return \Illuminate\Database\Eloquent\Builder
      */
     public static function detailQuery(NovaRequest $request, $query)
@@ -191,6 +201,7 @@ trait PerformsQueries
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
      * @param  \Illuminate\Database\Eloquent\Builder  $query
+     *
      * @return \Illuminate\Database\Eloquent\Builder
      */
     public static function relatableQuery(NovaRequest $request, $query)

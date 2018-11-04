@@ -11,6 +11,7 @@ class RelatableAttachment extends Relatable
      *
      * @param  string  $resource
      * @param  \Illuminate\Database\Eloquent\Model  $model
+     *
      * @return bool
      */
     protected function authorize($resource, $model)

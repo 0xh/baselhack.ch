@@ -11,6 +11,7 @@ class MissingActionHandlerException extends Exception
      *
      * @param  mixed  $action
      * @param  string  $method
+     *
      * @return static
      */
     public static function make($action, $method)

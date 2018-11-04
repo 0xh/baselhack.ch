@@ -17,6 +17,7 @@ class Place extends Text
      * @param  string  $name
      * @param  string|null  $attribute
      * @param  mixed|null  $resolveCallback
+     *
      * @return void
      */
     public function __construct($name, $attribute = null, $resolveCallback = null)
@@ -44,11 +45,12 @@ class Place extends Text
      * Set the place type.
      *
      * @param  string  $type
+     *
      * @return $this
      */
     public function type($type)
     {
-        if ($type == 'city') {
+        if ($type === 'city') {
             $this->secondAddressLine(null)->city(null)->postalCode(null);
         }
 
@@ -59,6 +61,7 @@ class Place extends Text
      * Set the countries to search within.
      *
      * @param  array  $countries
+     *
      * @return $this
      */
     public function countries(array $countries)
@@ -70,6 +73,7 @@ class Place extends Text
      * Specify the field that contains the second address line.
      *
      * @param  string  $field
+     *
      * @return $this
      */
     public function secondAddressLine($field)
@@ -81,6 +85,7 @@ class Place extends Text
      * Specify the field that contains the city.
      *
      * @param  string  $field
+     *
      * @return $this
      */
     public function city($field)
@@ -92,6 +97,7 @@ class Place extends Text
      * Specify the field that contains the state.
      *
      * @param  string  $field
+     *
      * @return $this
      */
     public function state($field)
@@ -103,6 +109,7 @@ class Place extends Text
      * Specify the field that contains the postal code.
      *
      * @param  string  $field
+     *
      * @return $this
      */
     public function postalCode($field)
@@ -114,6 +121,7 @@ class Place extends Text
      * Specify the field that contains the country.
      *
      * @param  string  $field
+     *
      * @return $this
      */
     public function country($field)

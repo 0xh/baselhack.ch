@@ -127,6 +127,7 @@ class ThemeCommand extends Command
      *
      * @param  string  $command
      * @param  string  $path
+     *
      * @return void
      */
     protected function runCommand($command, $path)
@@ -148,6 +149,7 @@ class ThemeCommand extends Command
      * @param  string  $search
      * @param  string  $replace
      * @param  string  $path
+     *
      * @return void
      */
     protected function replace($search, $replace, $path)
