@@ -2,8 +2,8 @@
 
 namespace App\Providers;
 
-use App\Domain\Models\User;
 use Laravel\Nova\Nova;
+use App\Domain\Models\User;
 use Illuminate\Support\Facades\Gate;
 use App\Nova\Metrics\ActiveParticipants;
 use App\Nova\Metrics\InactiveParticipants;
@@ -45,7 +45,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     {
         Gate::define('viewNova', function ($user) {
             return in_array($user->email, [
-                User::all()->pluck('email')->toArray()
+                User::all()->pluck('email')->toArray(),
             ]);
         });
     }
