@@ -18,12 +18,10 @@ return [
      */
     'lists' => [
 
-
         'baselhack' => [
 
             'id' => env('MAILCHIMP_BASELHACK_LIST_ID'),
         ],
-
 
     ],
 

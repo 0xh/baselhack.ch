@@ -2,13 +2,11 @@
 
 namespace App\Providers;
 
+use Laravel\Nova\Nova;
+use Illuminate\Support\Facades\Gate;
 use App\Nova\Metrics\ActiveParticipants;
 use App\Nova\Metrics\InactiveParticipants;
-use Laravel\Nova\Nova;
-use Laravel\Nova\Cards\Help;
-use Illuminate\Support\Facades\Gate;
 use Laravel\Nova\NovaApplicationServiceProvider;
-
 
 class NovaServiceProvider extends NovaApplicationServiceProvider
 {

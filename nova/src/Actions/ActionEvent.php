@@ -40,6 +40,7 @@ class ActionEvent extends Model
      *
      * @param  \Illuminate\Database\Eloquent\Model  $user
      * @param  \Illuminate\Database\Eloquent\Model  $model
+     *
      * @return \Illuminate\Database\Eloquent\Model
      */
     public static function forResourceUpdate($user, $model)
@@ -66,6 +67,7 @@ class ActionEvent extends Model
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
      * @param  \Illuminate\Database\Eloquent\Model  $parent
      * @param  \Illuminate\Database\Eloquent\Model  $pivot
+     *
      * @return \Illuminate\Database\Eloquent\Model
      */
     public static function forAttachedResourceUpdate(NovaRequest $request, $parent, $pivot)
@@ -91,6 +93,7 @@ class ActionEvent extends Model
      *
      * @param  \Illuminate\Database\Eloquent\Model  $user
      * @param  \Illuminate\Support\Collection  $models
+     *
      * @return \Illuminate\Support\Collection
      */
     public static function forResourceDelete($user, Collection $models)
@@ -103,6 +106,7 @@ class ActionEvent extends Model
      *
      * @param  \Illuminate\Database\Eloquent\Model  $user
      * @param  \Illuminate\Support\Collection  $models
+     *
      * @return \Illuminate\Support\Collection
      */
     public static function forResourceRestore($user, Collection $models)
@@ -116,6 +120,7 @@ class ActionEvent extends Model
      * @param  string  $action
      * @param  \Illuminate\Database\Eloquent\Model  $user
      * @param  \Illuminate\Support\Collection  $models
+     *
      * @return \Illuminate\Support\Collection
      */
     public static function forSoftDeleteAction($action, $user, Collection $models)
@@ -149,6 +154,7 @@ class ActionEvent extends Model
      * @param  \Illuminate\Database\Eloquent\Model  $parent
      * @param  \Illuminate\Support\Collection  $models
      * @param  string  $pivotClass
+     *
      * @return \Illuminate\Support\Collection
      */
     public static function forResourceDetach($user, $parent, Collection $models, $pivotClass)
@@ -183,6 +189,7 @@ class ActionEvent extends Model
      * @param  string  $batchId
      * @param  \Illuminate\Support\Collection  $models
      * @param  string  $status
+     *
      * @return void
      */
     public static function createForModels(ActionRequest $request, Action $action,
@@ -211,6 +218,7 @@ class ActionEvent extends Model
      * @param  \Laravel\Nova\Actions\Action  $action
      * @param  string  $batchId
      * @param  string  $status
+     *
      * @return array
      */
     public static function defaultAttributes(ActionRequest $request, Action $action,
@@ -260,6 +268,7 @@ class ActionEvent extends Model
      * Mark the given batch as running.
      *
      * @param  string  $batchId
+     *
      * @return int
      */
     public static function markBatchAsRunning($batchId)
@@ -274,6 +283,7 @@ class ActionEvent extends Model
      * Mark the given batch as finished.
      *
      * @param  string  $batchId
+     *
      * @return int
      */
     public static function markBatchAsFinished($batchId)
@@ -289,6 +299,7 @@ class ActionEvent extends Model
      *
      * @param  string  $batchId
      * @param  \Illuminate\Database\Eloquent\Model  $model
+     *
      * @return int
      */
     public static function markAsFinished($batchId, $model)
@@ -301,6 +312,7 @@ class ActionEvent extends Model
      *
      * @param  string  $batchId
      * @param  \Throwable  $e
+     *
      * @return int
      */
     public static function markBatchAsFailed($batchId, $e = null)
@@ -318,6 +330,7 @@ class ActionEvent extends Model
      * @param  string  $batchId
      * @param  \Illuminate\Database\Eloquent\Model  $model
      * @param  \Throwable|string  $e
+     *
      * @return int
      */
     public static function markAsFailed($batchId, $model, $e = null)
@@ -332,6 +345,7 @@ class ActionEvent extends Model
      * @param  \Illuminate\Database\Eloquent\Model  $model
      * @param  string  $status
      * @param  \Throwable|string  $e
+     *
      * @return int
      */
     public static function updateStatus($batchId, $model, $status, $e = null)

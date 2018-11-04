@@ -36,72 +36,63 @@ class UsersTableSeeder extends Seeder
             'name' => 'Stan Barrows',
             'email' => 'stan.barrows@onicial.ch',
             'password' => bcrypt('normal'),
-            'notifications' => null
+            'notifications' => null,
         ]);
-
 
         \App\Domain\Models\User::create([
             'name' => 'Jonas Jatsch',
             'email' => 'jonas.jatsch@baloise.com',
             'password' => bcrypt('Baselhack2018$$'),
-            'notifications' => null
+            'notifications' => null,
         ]);
 
         \App\Domain\Models\User::create([
             'name' => 'Jutta Jerlich',
             'email' => 'jutta.jerlich@gmail.com',
             'password' => bcrypt('Baselhack2018$$'),
-            'notifications' => null
+            'notifications' => null,
         ]);
 
         \App\Domain\Models\User::create([
             'name' => 'Matthias Cullmann',
             'email' => 'matthias.cullmann@baloise.ch',
             'password' => bcrypt('Baselhack2018$$'),
-            'notifications' => null
+            'notifications' => null,
         ]);
-
 
         \App\Domain\Models\User::create([
             'name' => 'Vivienne Mayer',
             'email' => 'vivienne.mayer@bs.ch',
             'password' => bcrypt('Baselhack2018$$'),
-            'notifications' => null
+            'notifications' => null,
         ]);
 
         \App\Domain\Models\User::create([
             'name' => 'Dario Todaro',
             'email' => 'dario.todaro@bluesky-it.ch',
             'password' => bcrypt('Baselhack2018$$'),
-            'notifications' => null
+            'notifications' => null,
         ]);
 
         \App\Domain\Models\User::create([
             'name' => 'Oliver Fritsch',
             'email' => ' oliver_fritsch@yahoo.de',
             'password' => bcrypt('Baselhack2018$$'),
-            'notifications' => null
+            'notifications' => null,
         ]);
-
 
         \App\Domain\Models\User::create([
             'name' => 'Marina Morawietz',
             'email' => ' marina.morawietz@fhnw.ch',
             'password' => bcrypt('Baselhack2018$$'),
-            'notifications' => null
+            'notifications' => null,
         ]);
 
         \App\Domain\Models\User::create([
             'name' => 'Thomas Brenzikofer',
             'email' => ' thomas.brenzikofer@baselarea.swiss',
             'password' => bcrypt('Baselhack2018$$'),
-            'notifications' => null
+            'notifications' => null,
         ]);
-
-
-
-
-
-
     }
 }

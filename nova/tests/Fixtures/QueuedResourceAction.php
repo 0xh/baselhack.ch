@@ -18,6 +18,7 @@ class QueuedResourceAction extends Action implements ShouldQueue
      *
      * @param  \Laravel\Nova\Fields\ActionFields  $fields
      * @param  \Illuminate\Support\Collection  $models
+     *
      * @return void
      */
     public function handleForUsers(ActionFields $fields, Collection $models)

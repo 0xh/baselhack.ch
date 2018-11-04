@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers\Frontend\Events;
 
-use App\App\Controllers\Controller;
-
-use App\Domain\Models\Participant;
 use Illuminate\Http\Request;
+use App\Domain\Models\Participant;
+use App\App\Controllers\Controller;
 use Illuminate\Support\Facades\Lang;
-
 
 class EventsController extends Controller
 {
@@ -21,24 +19,18 @@ class EventsController extends Controller
         return view('frontend.events.index');
     }
 
-
     public function unsubscribe(Request $request)
     {
         $participants = Participant::where('email', $request->email)->get();
 
-            if($participants->count())
-            {
-                $participants->first()->delete();
+        if ($participants->count()) {
+            $participants->first()->delete();
 
-                alert()->success('Thank you!', 'You\'ve successfully unsubscribed from our event!');
-            }
+            alert()->success('Thank you!', 'You\'ve successfully unsubscribed from our event!');
+        } else {
+            alert()->error('Ohhps!', 'Pleas Sign-Up first =)!');
+        }
 
-            else
-            {
-                alert()->error('Ohhps!', 'Pleas Sign-Up first =)!');
-
-            }
-              return redirect()->route('frontend.home.index');
-
+        return redirect()->route('frontend.home.index');
     }
 }

@@ -3,10 +3,6 @@
 namespace Tests\Unit\Notifications;
 
 use Tests\TestCase;
-use App\Domain\Models\Participant;
-use Illuminate\Support\Facades\Lang;
-use Illuminate\Support\Facades\Notification;
-use App\Domain\Notifications\ConfirmParticipation;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class ConfirmParticipationTest extends TestCase
@@ -31,5 +27,4 @@ class ConfirmParticipationTest extends TestCase
     {
         $this->assertTrue(true);
     }
-
 }

@@ -6,7 +6,6 @@ use App\App\Traits\HasUuid;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Laravel\Nova\Actions\Actionable;
 
 class Participant extends Model
 {

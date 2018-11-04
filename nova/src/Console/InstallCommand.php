@@ -81,6 +81,7 @@ class InstallCommand extends Command
      *
      * @param  string  $file
      * @param  string  $namespace
+     *
      * @return void
      */
     protected function setAppNamespaceOn($file, $namespace)

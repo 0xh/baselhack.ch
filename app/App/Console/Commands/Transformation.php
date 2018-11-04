@@ -5,7 +5,6 @@ namespace App\App\Console\Commands;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Artisan;
 
-
 class Transformation extends Command
 {
     /**
@@ -52,6 +51,5 @@ class Transformation extends Command
 
         Artisan::call('transform-backup:enquiries');
         $this->info('Transformed Enquiries');
-
     }
 }

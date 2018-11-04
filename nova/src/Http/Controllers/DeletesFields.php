@@ -13,6 +13,7 @@ trait DeletesFields
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
      * @param  \Illuminate\Database\Eloquent\Model  $model
+     *
      * @return void
      */
     protected function forceDeleteFields(NovaRequest $request, $model)
@@ -26,6 +27,7 @@ trait DeletesFields
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
      * @param  \Illuminate\Database\Eloquent\Model  $model
      * @param  bool  $skipSoftDeletes
+     *
      * @return void
      */
     protected function deleteFields(NovaRequest $request, $model, $skipSoftDeletes = true)

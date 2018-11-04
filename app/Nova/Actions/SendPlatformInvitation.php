@@ -2,8 +2,6 @@
 
 namespace App\Nova\Actions;
 
-
-use App\Domain\Notifications\SendPlatformInvitationNotification;
 use Illuminate\Bus\Queueable;
 use Laravel\Nova\Actions\Action;
 use Illuminate\Support\Collection;
@@ -11,6 +9,7 @@ use Laravel\Nova\Fields\ActionFields;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use App\Domain\Notifications\SendPlatformInvitationNotification;
 
 class SendPlatformInvitation extends Action implements ShouldQueue
 {
@@ -21,26 +20,22 @@ class SendPlatformInvitation extends Action implements ShouldQueue
      *
      * @param  \Laravel\Nova\Fields\ActionFields  $fields
      * @param  \Illuminate\Support\Collection  $models
+     *
      * @return mixed
      */
     public function handle(ActionFields $fields, Collection $models)
     {
-        try
-        {
+        try {
             foreach ($models as $model) {
                 $model->notify(new SendPlatformInvitationNotification($model));
             }
 
             return Action::message('It worked!');
-        }
-        catch (\Exception $exception)
-        {
+        } catch (\Exception $exception) {
             // @Todo Log
 
             return Action::danger('Something went wrong!');
         }
-
-
     }
 
     /**

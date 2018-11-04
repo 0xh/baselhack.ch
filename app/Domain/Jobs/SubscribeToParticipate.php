@@ -2,9 +2,9 @@
 
 namespace App\Domain\Jobs;
 
-use App\Domain\Models\Participant;
 use Newsletter;
 use Illuminate\Bus\Queueable;
+use App\Domain\Models\Participant;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -14,9 +14,7 @@ class SubscribeToParticipate implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
-
     protected $participant;
-
 
     /**
      * Create a new job instance.
@@ -26,7 +24,6 @@ class SubscribeToParticipate implements ShouldQueue
     public function __construct(Participant $participant)
     {
         $this->participant = $participant;
-
     }
 
     /**
@@ -42,8 +39,7 @@ class SubscribeToParticipate implements ShouldQueue
             'EMAIL' => $this->participant->email,
             'COMPANY' => $this->participant->company,
               'FIRSTNAME' => $this->participant->firstname,
-            'LASTNAME' => $this->participant->lastname
-        ],'baselhack');
-
+            'LASTNAME' => $this->participant->lastname,
+        ], 'baselhack');
     }
 }

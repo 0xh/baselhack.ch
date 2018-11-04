@@ -45,6 +45,7 @@ abstract class TrendDateExpression extends Expression
      * @param  string  $column
      * @param  string  $unit
      * @param  string  $timezone
+     *
      * @return void
      */
     public function __construct(Builder $query, $column, $unit, $timezone)
@@ -73,6 +74,7 @@ abstract class TrendDateExpression extends Expression
      * Wrap the given value using the query's grammar.
      *
      * @param  string  $value
+     *
      * @return string
      */
     protected function wrap($value)

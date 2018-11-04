@@ -12,6 +12,7 @@ class ResourceStoreController extends Controller
      * Create a new resource.
      *
      * @param  \Laravel\Nova\Http\Requests\CreateResourceRequest  $request
+     *
      * @return \Illuminate\Http\Response
      */
     public function handle(CreateResourceRequest $request)

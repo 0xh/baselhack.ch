@@ -2,9 +2,9 @@
 
 namespace App\Nova\Metrics;
 
-use App\Domain\Models\Participant;
 use Illuminate\Http\Request;
 use Laravel\Nova\Metrics\Value;
+use App\Domain\Models\Participant;
 
 class InactiveParticipants extends Value
 {
@@ -12,13 +12,13 @@ class InactiveParticipants extends Value
      * Calculate the value of the metric.
      *
      * @param  \Illuminate\Http\Request  $request
+     *
      * @return mixed
      */
     public function calculate(Request $request)
     {
         return $this->result(Participant::onlyTrashed()->get()->count());
     }
-
 
     /**
      * Determine for how many minutes the metric should be cached.

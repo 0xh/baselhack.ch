@@ -20,6 +20,7 @@ class Image extends File
      * @param  string|null  $attribute
      * @param  string|null  $disk
      * @param  callable|null  $storageCallback
+     *
      * @return void
      */
     public function __construct($name, $attribute = null, $disk = 'public', $storageCallback = null)

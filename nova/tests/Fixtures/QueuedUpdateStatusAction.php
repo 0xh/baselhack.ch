@@ -17,6 +17,7 @@ class QueuedUpdateStatusAction extends Action implements ShouldQueue
      *
      * @param  \Laravel\Nova\Fields\ActionFields  $fields
      * @param  \Illuminate\Support\Collection  $models
+     *
      * @return string|void
      */
     public function handle(ActionFields $fields, Collection $models)

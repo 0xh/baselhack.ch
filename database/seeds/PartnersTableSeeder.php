@@ -29,13 +29,10 @@ class PartnersTableSeeder extends Seeder
             'image' => 'fuck_up_nights.png',
         ]);
 
-
         \App\Domain\Models\Partner::create([
             'name' => 'Standortförderung Basel-Stadt',
             'url' => 'http://www.awa.bs.ch/standortfoerderung.html',
             'image' => 'standortfoerderung_bs.png',
         ]);
-
-
     }
 }

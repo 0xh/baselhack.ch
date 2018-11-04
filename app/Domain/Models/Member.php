@@ -15,7 +15,6 @@ class Member extends Authenticatable
          'uuid', 'name',  'email', 'password', 'published_at', 'last_authenticated',
     ];
 
-
     protected $dates = [
 
         'created_at',

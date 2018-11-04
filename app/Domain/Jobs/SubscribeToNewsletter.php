@@ -15,7 +15,6 @@ class SubscribeToNewsletter implements ShouldQueue
 
     protected $email;
 
-
     /**
      * Create a new job instance.
      *
@@ -23,7 +22,6 @@ class SubscribeToNewsletter implements ShouldQueue
      */
     public function __construct($email)
     {
-
         $this->email = $email;
     }
 
@@ -34,6 +32,6 @@ class SubscribeToNewsletter implements ShouldQueue
      */
     public function handle()
     {
-        Newsletter::subscribePending($this->email, ['EMAIL' => $this->email,'TYPE' => 'Newsletter'], 'baselhack');
+        Newsletter::subscribePending($this->email, ['EMAIL' => $this->email, 'TYPE' => 'Newsletter'], 'baselhack');
     }
 }

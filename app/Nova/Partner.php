@@ -22,7 +22,6 @@ class Partner extends Resource
      */
     public static $title = 'name';
 
-
     public static $displayInNavigation = false;
 
     /**
@@ -38,13 +37,13 @@ class Partner extends Resource
      * Get the fields displayed by the resource.
      *
      * @param  \Illuminate\Http\Request  $request
+     *
      * @return array
      */
     public function fields(Request $request)
     {
         return [
             ID::make()->sortable(),
-
 
             Text::make('Name')
                 ->sortable()
@@ -57,6 +56,7 @@ class Partner extends Resource
      * Get the cards available for the request.
      *
      * @param  \Illuminate\Http\Request  $request
+     *
      * @return array
      */
     public function cards(Request $request)
@@ -68,6 +68,7 @@ class Partner extends Resource
      * Get the filters available for the resource.
      *
      * @param  \Illuminate\Http\Request  $request
+     *
      * @return array
      */
     public function filters(Request $request)
@@ -79,6 +80,7 @@ class Partner extends Resource
      * Get the lenses available for the resource.
      *
      * @param  \Illuminate\Http\Request  $request
+     *
      * @return array
      */
     public function lenses(Request $request)
@@ -90,6 +92,7 @@ class Partner extends Resource
      * Get the actions available for the resource.
      *
      * @param  \Illuminate\Http\Request  $request
+     *
      * @return array
      */
     public function actions(Request $request)

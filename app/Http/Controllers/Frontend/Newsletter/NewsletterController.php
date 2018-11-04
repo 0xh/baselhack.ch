@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers\Frontend\Newsletter;
 
+use Newsletter;
 use App\App\Controllers\Controller;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Lang;
 use App\Domain\Jobs\SubscribeToNewsletter;
 use App\Http\Requests\Frontend\StoreNewsletterRequest;
-use Newsletter;
 
 class NewsletterController extends Controller
 {

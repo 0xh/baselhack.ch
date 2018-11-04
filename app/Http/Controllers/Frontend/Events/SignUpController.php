@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers\Frontend\Events;
 
-use App\Domain\Jobs\SubscribeToParticipate;
-use App\Http\Requests\Frontend\StoreSkipRequest;
 use Carbon\Carbon;
 use App\Domain\Models\Participant;
 use App\App\Controllers\Controller;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Lang;
 use App\Domain\Jobs\SubscribeToNewsletter;
+use App\Domain\Jobs\SubscribeToParticipate;
+use App\Http\Requests\Frontend\StoreSkipRequest;
 use App\Domain\Notifications\ConfirmParticipation;
 use App\Http\Requests\Frontend\StoreSignUpRequest;
 
@@ -27,9 +27,7 @@ class SignUpController extends Controller
 
     public function store(StoreSignUpRequest $request)
     {
-
-        if(Participant::all()->count() >= config('baselhack.maximum_participants'))
-        {
+        if (Participant::all()->count() >= config('baselhack.maximum_participants')) {
             alert()->error(Lang::get('frontend/event.signup.form.notification.fully_booked.title'), Lang::get('frontend/event.signup.form.notification.fully_booked.description'));
 
             return back();
@@ -50,8 +48,6 @@ class SignUpController extends Controller
             SubscribeToParticipate::dispatch($participant);
 
             alert()->success(Lang::get('frontend/event.signup.form.notification.success.title'), Lang::get('frontend/event.signup.form.notification.success.description'));
-
-
         } catch (\Exception $exception) {
             Log::error(print_r($exception->getMessage(), true));
 
@@ -64,7 +60,6 @@ class SignUpController extends Controller
     public function skip(StoreSkipRequest $request)
     {
         try {
-
             SubscribeToNewsletter::dispatch($gdpr = true, $list = 'waiting_2018', $request->email);
 
             alert()->success(Lang::get('frontend/components/newsletter.form.notification.success.title'), Lang::get('frontend/components/newsletter.form.notification.success.description'));
@@ -75,9 +70,7 @@ class SignUpController extends Controller
         }
 
         return back();
-
     }
-
 
     public function confirm(Participant $participant)
     {
