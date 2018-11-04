@@ -13,7 +13,6 @@ class UpdateStatusAction extends Action
      *
      * @param  \Laravel\Nova\Fields\ActionFields  $fields
      * @param  \Illuminate\Support\Collection  $models
-     *
      * @return string|void
      */
     public function handle(ActionFields $fields, Collection $models)

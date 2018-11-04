@@ -18,7 +18,6 @@ class NoopActionWithPivotHandle extends Action
      *
      * @param  \Laravel\Nova\Fields\ActionFields  $fields
      * @param  \Illuminate\Support\Collection  $models
-     *
      * @return string|void
      */
     public function handleForRoleAssignments(ActionFields $fields, Collection $models)

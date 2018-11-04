@@ -12,7 +12,6 @@ class CustomerRevenue extends Value
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \Laravel\Nova\Tests\Fixtures\User
-     *
      * @return mixed
      */
     public function calculate(Request $request, User $user)

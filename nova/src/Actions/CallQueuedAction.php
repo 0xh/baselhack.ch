@@ -25,7 +25,6 @@ class CallQueuedAction
      * @param  \Laravel\Nova\Fields\ActionFields  $fields
      * @param  \Illuminate\Database\Eloquent\Collection  $models
      * @param  string  $batchId
-     *
      * @return void
      */
     public function __construct(Action $action, $method, ActionFields $fields, Collection $models, $batchId)
@@ -53,7 +52,6 @@ class CallQueuedAction
      * Call the failed method on the job instance.
      *
      * @param  \Exception  $e
-     *
      * @return void
      */
     public function failed($e)

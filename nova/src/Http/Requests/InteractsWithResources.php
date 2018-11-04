@@ -69,7 +69,6 @@ trait InteractsWithResources
      * Find the resource model instance for the request.
      *
      * @param  mixed|null  $resourceId
-     *
      * @return \Laravel\Nova\Resource
      */
     public function findResourceOrFail($resourceId = null)
@@ -81,7 +80,6 @@ trait InteractsWithResources
      * Find the model instance for the request.
      *
      * @param  mixed|null  $resourceId
-     *
      * @return \Illuminate\Database\Eloquent\Model
      */
     public function findModelOrFail($resourceId = null)
@@ -99,7 +97,6 @@ trait InteractsWithResources
      * Get the query to find the model instance for the request.
      *
      * @param  mixed|null  $resourceId
-     *
      * @return \Illuminate\Database\Eloquent\Model
      */
     public function findModelQuery($resourceId = null)
@@ -113,7 +110,6 @@ trait InteractsWithResources
      * Get a new instance of the resource being requested.
      *
      * @param  \Illuminate\Database\Eloquent\Model  $model
-     *
      * @return \Laravel\Nova\Resource
      */
     public function newResourceWith($model)

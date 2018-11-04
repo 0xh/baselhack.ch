@@ -49,7 +49,6 @@ class HasMany extends Field implements ListableField
      * @param  string  $name
      * @param  string|null  $attribute
      * @param  string|null  $resource
-     *
      * @return void
      */
     public function __construct($name, $attribute = null, $resource = null)
@@ -67,7 +66,6 @@ class HasMany extends Field implements ListableField
      * Determine if the field should be displayed for the given request.
      *
      * @param  \Illuminate\Http\Request  $request
-     *
      * @return bool
      */
     public function authorize(Request $request)
@@ -82,7 +80,6 @@ class HasMany extends Field implements ListableField
      *
      * @param  mixed  $resource
      * @param  string|null  $attribute
-     *
      * @return void
      */
     public function resolve($resource, $attribute = null)

@@ -11,7 +11,6 @@ class RelatableAuthorizationController extends Controller
      * Get the relatable authorization status for the resource.
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
-     *
      * @return \Illuminate\Http\Response
      */
     public function show(NovaRequest $request)

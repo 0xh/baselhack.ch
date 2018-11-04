@@ -30,7 +30,6 @@ class AddressResource extends Resource
      * Get the fields displayed by the resource.
      *
      * @param  \Illuminate\Http\Request  $request
-     *
      * @return array
      */
     public function fields(Request $request)

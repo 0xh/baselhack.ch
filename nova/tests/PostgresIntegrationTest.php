@@ -21,7 +21,6 @@ abstract class PostgresIntegrationTest extends IntegrationTest
      * Define environment.
      *
      * @param  \Illuminate\Foundation\Application  $app
-     *
      * @return void
      */
     protected function getEnvironmentSetUp($app)

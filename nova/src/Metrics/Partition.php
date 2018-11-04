@@ -21,7 +21,6 @@ abstract class Partition extends Metric
      * @param  \Illuminate\Database\Eloquent\Builder|string  $model
      * @param  string  $groupBy
      * @param  string|null  $column
-     *
      * @return \Laravel\Nova\Metrics\PartitionResult
      */
     public function count($request, $model, $groupBy, $column = null)
@@ -36,7 +35,6 @@ abstract class Partition extends Metric
      * @param  \Illuminate\Database\Eloquent\Builder|string  $model
      * @param  string|null  $column
      * @param  string  $groupBy
-     *
      * @return \Laravel\Nova\Metrics\PartitionResult
      */
     public function average($request, $model, $column, $groupBy)
@@ -51,7 +49,6 @@ abstract class Partition extends Metric
      * @param  \Illuminate\Database\Eloquent\Builder|string  $model
      * @param  string|null  $column
      * @param  string  $groupBy
-     *
      * @return \Laravel\Nova\Metrics\PartitionResult
      */
     public function sum($request, $model, $column, $groupBy)
@@ -66,7 +63,6 @@ abstract class Partition extends Metric
      * @param  \Illuminate\Database\Eloquent\Builder|string  $model
      * @param  string|null  $column
      * @param  string  $groupBy
-     *
      * @return \Laravel\Nova\Metrics\PartitionResult
      */
     public function max($request, $model, $column, $groupBy)
@@ -81,7 +77,6 @@ abstract class Partition extends Metric
      * @param  \Illuminate\Database\Eloquent\Builder|string  $model
      * @param  string|null  $column
      * @param  string  $groupBy
-     *
      * @return \Laravel\Nova\Metrics\PartitionResult
      */
     public function min($request, $model, $column, $groupBy)
@@ -97,7 +92,6 @@ abstract class Partition extends Metric
      * @param  string  $function
      * @param  string  $column
      * @param  string  $groupBy
-     *
      * @return \Laravel\Nova\Metrics\PartitionResult
      */
     protected function aggregate($request, $model, $function, $column, $groupBy)
@@ -122,7 +116,6 @@ abstract class Partition extends Metric
      *
      * @param  \Illuminate\Database\Eloquent\Model  $result
      * @param  string  $groupBy
-     *
      * @return array
      */
     protected function formatAggregateResult($result, $groupBy)
@@ -136,7 +129,6 @@ abstract class Partition extends Metric
      * Create a new partition metric result.
      *
      * @param  array  $value
-     *
      * @return \Laravel\Nova\Metrics\PartitionResult
      */
     public function result(array $value)

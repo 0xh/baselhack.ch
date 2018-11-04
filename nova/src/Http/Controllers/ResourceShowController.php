@@ -12,7 +12,6 @@ class ResourceShowController extends Controller
      * Display the resource for administration.
      *
      * @param  \Laravel\Nova\Http\Requests\ResourceDetailRequest  $request
-     *
      * @return \Illuminate\Http\Response
      */
     public function handle(ResourceDetailRequest $request)
@@ -36,7 +35,6 @@ class ResourceShowController extends Controller
      *
      * @param  \Laravel\Nova\Http\Requests\ResourceDetailRequest  $request
      * @param  array  $resource
-     *
      * @return \Illuminate\Http\Response
      */
     protected function assignFieldsToPanels(ResourceDetailRequest $request, array $resource)

@@ -23,15 +23,14 @@ class Textarea extends Field
     /**
      * The number of rows used for the textarea.
      *
-     * @var int
+     * @var integer
      */
     public $rows = 5;
 
     /**
      * Set the number of rows used for the textarea.
      *
-     * @param  int $rows
-     *
+     * @param  integer $rows
      * @return $this
      */
     public function rows($rows)

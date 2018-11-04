@@ -18,7 +18,6 @@ class QueuedAction extends Action implements ShouldQueue
      *
      * @param  \Laravel\Nova\Fields\ActionFields  $fields
      * @param  \Illuminate\Database\Eloquent\Collection  $models
-     *
      * @return void
      */
     public function handle(ActionFields $fields, Collection $models)

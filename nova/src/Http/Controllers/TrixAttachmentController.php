@@ -11,7 +11,6 @@ class TrixAttachmentController extends Controller
      * Store an attachment for a Trix field.
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
-     *
      * @return \Illuminate\Http\Response
      */
     public function store(NovaRequest $request)
@@ -31,7 +30,6 @@ class TrixAttachmentController extends Controller
      * Delete a single, persisted attachment for a Trix field by URL.
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
-     *
      * @return \Illuminate\Http\Response
      */
     public function destroyAttachment(NovaRequest $request)
@@ -51,7 +49,6 @@ class TrixAttachmentController extends Controller
      * Purge all pending attachments for a Trix field.
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
-     *
      * @return \Illuminate\Http\Response
      */
     public function destroyPending(NovaRequest $request)

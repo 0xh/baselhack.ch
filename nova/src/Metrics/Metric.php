@@ -21,7 +21,6 @@ abstract class Metric extends Card
      * Calculate the metric's value.
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
-     *
      * @return mixed
      */
     public function resolve(NovaRequest $request)
@@ -47,7 +46,6 @@ abstract class Metric extends Card
      * Get the appropriate cache key for the metric.
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
-     *
      * @return string
      */
     protected function getCacheKey(NovaRequest $request)

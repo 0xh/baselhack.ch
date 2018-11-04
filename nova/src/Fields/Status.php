@@ -29,7 +29,6 @@ class Status extends Text
      * Specify the values that should be considered "loading".
      *
      * @param  array  $loadingWords
-     *
      * @return $this
      */
     public function loadingWhen(array $loadingWords)
@@ -41,7 +40,6 @@ class Status extends Text
      * Specify the values that should be considered "failed".
      *
      * @param  array  $failedWords
-     *
      * @return $this
      */
     public function failedWhen(array $failedWords)

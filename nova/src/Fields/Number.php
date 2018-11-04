@@ -10,7 +10,6 @@ class Number extends Text
      * @param  string  $name
      * @param  string|null  $attribute
      * @param  mixed|null  $resolveCallback
-     *
      * @return void
      */
     public function __construct($name, $attribute = null, $resolveCallback = null)
@@ -24,7 +23,6 @@ class Number extends Text
      * The minimum value that can be assigned to the field.
      *
      * @param  mixed  $min
-     *
      * @return $this
      */
     public function min($min)
@@ -36,7 +34,6 @@ class Number extends Text
      * The maximum value that can be assigned to the field.
      *
      * @param  mixed  $max
-     *
      * @return $this
      */
     public function max($max)
@@ -48,7 +45,6 @@ class Number extends Text
      * The step size the field will increment and decrement by.
      *
      * @param  mixed  $step
-     *
      * @return $this
      */
     public function step($step)
