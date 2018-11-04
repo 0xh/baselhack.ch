@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEnquiriesTable extends Migration
+class CreateNotesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,16 @@ class CreateEnquiriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('enquiries', function (Blueprint $table) {
+        Schema::create('notes', function (Blueprint $table) {
+
             $table->increments('id');
-            $table->uuid('uuid')->unique();
-            $table->string('type');
+            $table->string('uuid')->nullable();
             $table->string('company')->nullable();
-            $table->string('name');
+            $table->string('firstname')->nullable();;
+            $table->string('lastname')->nullable();;
             $table->string('email');
-            $table->longText('message');
+            $table->string('tag')->nullable();
+
             $table->timestamps();
             $table->softDeletes();
         });
@@ -33,6 +35,6 @@ class CreateEnquiriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('enquiries');
+        Schema::dropIfExists('notes');
     }
 }
