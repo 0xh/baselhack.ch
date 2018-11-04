@@ -3,7 +3,7 @@
 namespace Tests\Unit\Models;
 
 use Tests\TestCase;
-use App\Domain\Models\SocialMedia;
+use App\Domain\Models\Social;
 use Illuminate\Support\Collection;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
@@ -29,10 +29,10 @@ class SocialMediaTest extends TestCase
     {
         $amount = 10;
 
-        $social_medias = factory(SocialMedia::class, $amount)->create();
+        $social_medias = factory(Social::class, $amount)->create();
 
         $this->assertInstanceOf(Collection::class, $social_medias);
-        $this->assertInstanceOf(SocialMedia::class, $social_medias->first());
+        $this->assertInstanceOf(Social::class, $social_medias->first());
         $this->assertEquals($amount, $social_medias->count());
     }
 
@@ -44,8 +44,8 @@ class SocialMediaTest extends TestCase
     {
         $fillables = ['uuid', 'name',  'icon', 'url'];
 
-        $old = factory(SocialMedia::class)->create();
-        $new = factory(SocialMedia::class)->make([
+        $old = factory(Social::class)->create();
+        $new = factory(Social::class)->make([
             'uuid' => 'random-uuid',
         ]);
 

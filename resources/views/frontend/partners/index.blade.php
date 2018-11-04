@@ -78,7 +78,7 @@
 
                             @foreach($partners as $partner)
 
-                                <div class="column is-2-desktop is-6-mobile">
+                                <div class="column is-variable is-2-desktop is-6-mobile">
 
                                     <div style=" border-radius: 5px;" class="card sponsors">
                                         <div class="card-image">

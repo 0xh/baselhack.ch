@@ -16,7 +16,7 @@
 
                     @foreach($sponsors as $sponsor)
 
-                        <div class="column is-2-desktop">
+                        <div class="column is-variable is-2-desktop">
 
                             <div style=" border-radius: 5px;" class="card sponsors">
                                 <div class="card-image">

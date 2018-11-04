@@ -4,9 +4,12 @@ namespace Tests\Browser\Frontend;
 
 use Tests\DuskTestCase;
 use Laravel\Dusk\Browser;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class EnquiriesIndexTest extends DuskTestCase
 {
+    use DatabaseMigrations;
+
     /**
      * A basic browser test example.
      *
@@ -21,6 +24,7 @@ class EnquiriesIndexTest extends DuskTestCase
         $this->browse(function (Browser $browser) {
             $browser->visitRoute('frontend.enquiries.index')
                     ->assertRouteIs('frontend.enquiries.index');
+
             $this->check_seo($browser);
         });
     }

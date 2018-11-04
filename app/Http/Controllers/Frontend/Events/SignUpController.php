@@ -8,6 +8,8 @@ use App\App\Controllers\Controller;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Lang;
 use App\Domain\Jobs\SubscribeToNewsletter;
+use App\Domain\Jobs\SubscribeToParticipate;
+use App\Http\Requests\Frontend\StoreSkipRequest;
 use App\Domain\Notifications\ConfirmParticipation;
 use App\Http\Requests\Frontend\StoreSignUpRequest;
 
@@ -25,6 +27,12 @@ class SignUpController extends Controller
 
     public function store(StoreSignUpRequest $request)
     {
+        if (Participant::all()->count() >= config('baselhack.maximum_participants')) {
+            alert()->error(Lang::get('frontend/event.signup.form.notification.fully_booked.title'), Lang::get('frontend/event.signup.form.notification.fully_booked.description'));
+
+            return back();
+        }
+
         try {
             $participant = Participant::create([
 
@@ -37,14 +45,28 @@ class SignUpController extends Controller
             ]);
 
             $participant->notify(new ConfirmParticipation($participant));
-
-            SubscribeToNewsletter::dispatch($gdpr = false, $list = 'participants_2018', $participant->email, $participant->firstname, $participant->lastname, $participant->company);
+            SubscribeToParticipate::dispatch($participant);
 
             alert()->success(Lang::get('frontend/event.signup.form.notification.success.title'), Lang::get('frontend/event.signup.form.notification.success.description'));
         } catch (\Exception $exception) {
             Log::error(print_r($exception->getMessage(), true));
 
             alert()->error(Lang::get('frontend/event.signup.form.notification.error.title'), Lang::get('frontend/event.signup.form.notification.error.description'));
+        }
+
+        return back();
+    }
+
+    public function skip(StoreSkipRequest $request)
+    {
+        try {
+            SubscribeToNewsletter::dispatch($gdpr = true, $list = 'waiting_2018', $request->email);
+
+            alert()->success(Lang::get('frontend/components/newsletter.form.notification.success.title'), Lang::get('frontend/components/newsletter.form.notification.success.description'));
+        } catch (\Exception $exception) {
+            Log::error(print_r($exception->getMessage(), true));
+
+            alert()->error(Lang::get('frontend/components/newsletter.form.notification.error.title'), Lang::get('frontend/components/newsletter.form.notification.error.description'));
         }
 
         return back();

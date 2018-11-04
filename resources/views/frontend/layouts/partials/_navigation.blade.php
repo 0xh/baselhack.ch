@@ -27,6 +27,10 @@
                     </a>
                     <div class="navbar-dropdown is-boxed">
 
+                        <a class="navbar-item" href="{{ route('frontend.events.index') }}">
+                           Information
+                        </a>
+
                         <a class="navbar-item" href="{{ route('frontend.events.signup.index') }}">
                             Sign-Up
                         </a>

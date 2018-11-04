@@ -46,5 +46,11 @@ class SponsorsTableSeeder extends Seeder
             'url' => 'https://www.bluesky-it.ch',
             'image' => 'bluesky_it_solutions.png',
         ]);
+
+        \App\Domain\Models\Sponsor::create([
+            'name' => 'Trivadis',
+            'url' => 'https://www.trivadis.com/de/',
+            'image' => 'trivadis.png',
+        ]);
     }
 }

@@ -2,7 +2,8 @@
 
 namespace App\App\Providers;
 
-use App\Domain\Models\SocialMedia;
+use App\Domain\Models\Social;
+use App\Domain\Models\Participant;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
@@ -18,10 +19,11 @@ class ComposerServiceProvider extends ServiceProvider
     {
         try {
             if (Schema::hasTable('social_media')) {
-                $social_medias = SocialMedia::all();
+                $social_medias = Social::all();
+                $current_participants = Participant::all()->count();
 
-                View::composer('*', function ($view) use ($social_medias) {
-                    $view->with(compact('social_medias'));
+                View::composer('*', function ($view) use ($social_medias, $current_participants) {
+                    $view->with(compact('social_medias', 'current_participants'));
                 });
             }
         } catch (\Exception $exception) {
