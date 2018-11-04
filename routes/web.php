@@ -8,7 +8,7 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
 
     Route::group(['prefix' => 'events', 'namespace' => 'Events', 'as' => 'events.'], function () {
         Route::get('/', 'EventsController@index')->name('index');
-        Route::get('/unsubscribe/{email}', 'EventsController@unsubscribe')->name('unsubscribe');
+        Route::get('/unsubscribe/{uuid}', 'EventsController@unsubscribe')->name('unsubscribe');
 
         Route::group(['prefix' => 'sign-up', 'as' => 'signup.'], function () {
             Route::get('/', 'SignUpController@index')->name('index');

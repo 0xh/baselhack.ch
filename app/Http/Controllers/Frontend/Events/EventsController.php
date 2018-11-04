@@ -21,7 +21,7 @@ class EventsController extends Controller
 
     public function unsubscribe(Request $request)
     {
-        $participants = Participant::where('email', $request->email)->get();
+        $participants = Participant::where('uuid', $request->uuid)->get();
 
         if ($participants->count()) {
             $participants->first()->delete();
