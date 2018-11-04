@@ -132,10 +132,8 @@
 
                         </div>
 
-
                         <div style="margin-top: 20px;" class="field">
-                            <button type="submit"
-                                    class="button is-dark is-fullwidth">{{ __('frontend/enquiries.form.button.submit') }}</button>
+                            <button type="submit" class="button is-dark is-fullwidth">{{ __('frontend/enquiries.form.button.submit') }}</button>
                         </div>
 
 

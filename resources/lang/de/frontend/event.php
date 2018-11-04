@@ -47,6 +47,12 @@ return [
                     'description' => 'We\'ve successfully received your registration!',
                 ],
 
+                'fully_booked' => [
+
+                    'title' => 'Sorry =(',
+                    'description' => 'At the moment we\'re fully booked!',
+                ],
+
                 'error' => [
 
                     'title' => 'Ohhps!',

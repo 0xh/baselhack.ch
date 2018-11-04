@@ -26,7 +26,7 @@ class CreateParticipantsTable extends Migration
             $table->boolean('confirmed_email')->default(false);
 
             $table->boolean('over_eighteen')->default(false);
-            $table->dateTime('accepted_policy')->nullable();
+            $table->dateTime('accepted_policy')->default(\Carbon\Carbon::now());
 
             $table->timestamps();
             $table->softDeletes();

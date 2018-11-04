@@ -9,13 +9,13 @@ return [
     ],
 
     'event_index' => [
-        'title' => 'The first BaselHack',
+        'title' => 'The one and only',
         'description' => 'The first Hackathon in the Region of Basel with 11 running prototypes',
         'keywords' => 'BaselHack, Basel, Hackathon, connect, talents, Open Innovation, Open Source, bring all your ideas',
     ],
 
     'event_signup' => [
-        'title' => 'The first BaselHack',
+        'title' => 'The one and only',
         'description' => 'The first Hackathon in the Region of Basel with 11 running prototypes',
         'keywords' => 'BaselHack, Basel, Hackathon, connect, talents, Open Innovation, Open Source, bring all your ideas',
     ],

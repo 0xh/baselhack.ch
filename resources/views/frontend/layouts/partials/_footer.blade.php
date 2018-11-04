@@ -23,7 +23,7 @@
 
 
                 <div class="copyright">
-                 &copy; BaselHack
+                    <a href="{{ url('/manager') }}" title="">&copy; BaselHack</a>
                 </div>
 
             </div>

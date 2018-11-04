@@ -9,19 +9,6 @@ body {
 }
 
 
-
-
-@media only screen and (max-width: 480px) {
-    .navbar-link {
-
-        padding-left: 2.5em; !important;
-    }
-}
-
-
-
-
-
 .card.sponsors {
     background-color: transparent;
     box-shadow: none;

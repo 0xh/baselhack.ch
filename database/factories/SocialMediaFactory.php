@@ -13,7 +13,7 @@ use Faker\Generator as Faker;
 |
 */
 
-$factory->define(\App\Domain\Models\SocialMedia::class, function (Faker $faker) {
+$factory->define(\App\Domain\Models\Social::class, function (Faker $faker) {
     return [
         'name' => $faker->name,
         'icon' => $faker->randomElement(['fab fa-facebook-f', 'fab fa-github']),

@@ -170,6 +170,7 @@ return [
         App\App\Providers\AuthServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,
         App\App\Providers\EventServiceProvider::class,
+        App\Providers\NovaServiceProvider::class,
         App\App\Providers\RouteServiceProvider::class,
         App\App\Providers\ComposerServiceProvider::class,
 

@@ -37,22 +37,14 @@
 
                     <div class="content">
 
-
-
                     <p class="has-text-justified">
                         you meet, connect and collaborate with tech enthusiasts, creative minds, data specialist, design
                         wizards and visionaries.
-                    </p>
 
-                    <p class="has-text-justified">
                         Bring your own idea or join a team to create a running prototype that can be presented to a
                         panel of judges and the Basel Area audience.
 
-                    </p>
-
-
-                    <p class="has-text-justified">
-                        Your prototype will be published Open Source and hopefully live on beyond the event, being
+                      Your prototype will be published Open Source and hopefully live on beyond the event, being
                         developed for the region.
                     </p>
 
@@ -90,7 +82,14 @@
                     </p>
 
 
+
                     </div>
+
+
+
+
+                        <a href="{{ route('frontend.events.signup.index') }}" class="button is-success">Sign-Up now!</a>
+
 
 
                 </div>

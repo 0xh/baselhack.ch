@@ -24,7 +24,9 @@ class EnquiriesIndexTest extends DuskTestCase
         $this->browse(function (Browser $browser) {
             $browser->visitRoute('frontend.enquiries.index')
                     ->assertRouteIs('frontend.enquiries.index');
+
             $this->check_seo($browser);
+
         });
     }
 

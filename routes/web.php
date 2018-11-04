@@ -8,11 +8,15 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
 
     Route::group(['prefix' => 'events', 'namespace' => 'Events', 'as' => 'events.'], function () {
         Route::get('/', 'EventsController@index')->name('index');
+        Route::get('/unsubscribe/{email}', 'EventsController@unsubscribe')->name('unsubscribe');
+
 
         Route::group(['prefix' => 'sign-up', 'as' => 'signup.'], function () {
             Route::get('/', 'SignUpController@index')->name('index');
             Route::post('/', 'SignUpController@store')->name('store');
+            Route::post('/skip', 'SignUpController@skip')->name('skip');
             Route::get('/confirm/{participant}', 'SignUpController@confirm')->name('confirm');
+
         });
     });
 
@@ -38,3 +42,5 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
 
     Route::post('/newsletter', 'Newsletter\NewsletterController@store')->name('newsletter.store');
 });
+
+

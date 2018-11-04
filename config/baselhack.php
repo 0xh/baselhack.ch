@@ -2,11 +2,13 @@
 
 return [
 
-    'version' => '180911-beta',
+    'version' => '181104-beta',
 
     'languages' => [
         'de', 'en',
     ],
+
+    'maximum_participants' => 125,
 
     'enquiry' => [
 

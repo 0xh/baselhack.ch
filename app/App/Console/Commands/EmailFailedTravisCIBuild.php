@@ -39,6 +39,6 @@ class EmailFailedTravisCIBuild extends Command
      */
     public function handle()
     {
-        Mail::to('info@onicial.com')->send(new DuskFailure());
+        Mail::to('info@onicial.ch')->send(new DuskFailure());
     }
 }
