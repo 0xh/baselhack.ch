@@ -2,9 +2,8 @@
 
 namespace App\Domain\Jobs;
 
-
-use App\Domain\Models\Note;
 use Newsletter;
+use App\Domain\Models\Note;
 use Illuminate\Bus\Queueable;
 use App\Domain\Models\Participant;
 use Illuminate\Queue\SerializesModels;
@@ -41,16 +40,16 @@ class SubscribeToParticipate implements ShouldQueue
             'company' => $this->participant->company,
             'firstname' => $this->participant->firstname,
             'lastname' => $this->participant->lastname,
-            'tag' => 'Participants2018'
+            'tag' => 'Participants2018',
         ]);
 
-    /*    Newsletter::subscribe($this->participant->email, [
-            'UUID' => $this->participant->uuid,
-            'TYPE' => 'Participants2018',
-            'EMAIL' => $this->participant->email,
-            'COMPANY' => $this->participant->company,
-              'FIRSTNAME' => $this->participant->firstname,
-            'LASTNAME' => $this->participant->lastname,
-        ], 'baselhack');*/
+        /*    Newsletter::subscribe($this->participant->email, [
+                'UUID' => $this->participant->uuid,
+                'TYPE' => 'Participants2018',
+                'EMAIL' => $this->participant->email,
+                'COMPANY' => $this->participant->company,
+                  'FIRSTNAME' => $this->participant->firstname,
+                'LASTNAME' => $this->participant->lastname,
+            ], 'baselhack');*/
     }
 }

@@ -13,7 +13,7 @@ return [
     'enquiry' => [
 
         'type' => [
-            'general','event','sponsoring'
+            'general', 'event', 'sponsoring',
         ],
     ],
 

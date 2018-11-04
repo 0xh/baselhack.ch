@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\Frontend\Newsletter;
 
-use App\Domain\Models\Enquiry;
 use Newsletter;
 use App\App\Controllers\Controller;
 use Illuminate\Support\Facades\Log;
@@ -15,7 +14,6 @@ class NewsletterController extends Controller
     public function store(StoreNewsletterRequest $request)
     {
         try {
-
             SubscribeToNewsletter::dispatch($request->email);
 
             alert()->success(Lang::get('frontend/components/newsletter.form.notification.success.title'), Lang::get('frontend/components/newsletter.form.notification.success.description'));

@@ -2,9 +2,8 @@
 
 namespace App\Domain\Jobs;
 
-use App\Domain\Models\Enquiry;
-use App\Domain\Models\Note;
 use Newsletter;
+use App\Domain\Models\Note;
 use Illuminate\Bus\Queueable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
@@ -34,12 +33,11 @@ class SubscribeToNewsletter implements ShouldQueue
      */
     public function handle()
     {
-
         Note::create([
             'email' => $this->email,
-            'tag' => 'Newsletter'
+            'tag' => 'Newsletter',
         ]);
 
-/*        Newsletter::subscribePending($this->email, ['EMAIL' => $this->email, 'TYPE' => 'Newsletter'], 'baselhack');*/
+        /*        Newsletter::subscribePending($this->email, ['EMAIL' => $this->email, 'TYPE' => 'Newsletter'], 'baselhack');*/
     }
 }
