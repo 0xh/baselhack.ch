@@ -82,18 +82,6 @@
         "laravel/nova": {
             "type": "path",
             "url": "./nova"
-        },
-        "0": {
-            "type": "path",
-            "url": "./nova-components/Count"
-        },
-        "1": {
-            "type": "path",
-            "url": "./nova-components/CountActiveParticipants"
-        },
-        "2": {
-            "type": "path",
-            "url": "./nova-components/CountInactiveParticipants"
         }
     }
 }
