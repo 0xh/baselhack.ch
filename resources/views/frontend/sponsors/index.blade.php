@@ -76,7 +76,11 @@
                     </div>
 
 
-                    @if(!empty($sponsors) AND $sponsors->count())
+                    <h1 style="margin-top: 50px;" class="title"><a target="_blank" href="{{ asset('frontend/pdf/how_to_become_a_sponsor.pdf') }}">How to become a sponsor <i class="fal fa-file-pdf"></i></a></h1>
+                    <hr>
+                    
+
+                @if(!empty($sponsors) AND $sponsors->count())
 
                         <h1 style="margin-top: 50px;" class="title">Our Sponsors</h1>
                         <hr>
