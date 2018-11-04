@@ -19,7 +19,6 @@ class PendingRouteRegistration
      * Register the Nova authentication routes.
      *
      * @param  array  $middleware
-     *
      * @return $this
      */
     public function withAuthenticationRoutes($middleware = ['web'])
@@ -41,7 +40,6 @@ class PendingRouteRegistration
      * Register the Nova password reset routes.
      *
      * @param  array  $middleware
-     *
      * @return $this
      */
     public function withPasswordResetRoutes($middleware = ['web'])

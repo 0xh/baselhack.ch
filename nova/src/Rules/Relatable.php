@@ -29,7 +29,6 @@ class Relatable implements Rule
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
      * @param  \Illuminate\Database\Eloquent\Builder  $query
-     *
      * @return void
      */
     public function __construct(NovaRequest $request, $query)
@@ -43,7 +42,6 @@ class Relatable implements Rule
      *
      * @param  string  $attribute
      * @param  mixed  $value
-     *
      * @return bool
      */
     public function passes($attribute, $value)
@@ -71,7 +69,6 @@ class Relatable implements Rule
      * @param  \Illuminate\Database\Eloquent\Model  $model
      * @param  string  $attribute
      * @param  mixed  $value
-     *
      * @return bool
      */
     protected function relationshipIsFull($model, $attribute, $value)
@@ -84,7 +81,7 @@ class Relatable implements Rule
         if ($inverseRelation && $this->request->resourceId) {
             $modelBeingUpdated = $this->request->findModelOrFail();
 
-            if ($modelBeingUpdated->{$attribute}->getKey() === $value) {
+            if ($modelBeingUpdated->{$attribute}->getKey() == $value) {
                 return false;
             }
         }
@@ -98,7 +95,6 @@ class Relatable implements Rule
      *
      * @param  string  $resource
      * @param  \Illuminate\Database\Eloquent\Model  $model
-     *
      * @return bool
      */
     protected function authorize($resource, $model)

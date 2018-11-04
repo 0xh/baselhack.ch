@@ -19,7 +19,6 @@ class PasswordConfirmation extends Password
      * @param  string  $name
      * @param  string|null  $attribute
      * @param  mixed|null  $resolveCallback
-     *
      * @return void
      */
     public function __construct($name, $attribute = null, $resolveCallback = null)
@@ -36,10 +35,10 @@ class PasswordConfirmation extends Password
      * @param  string  $requestAttribute
      * @param  object  $model
      * @param  string  $attribute
-     *
      * @return void
      */
     protected function fillAttribute(NovaRequest $request, $requestAttribute, $model, $attribute)
     {
+        return;
     }
 }

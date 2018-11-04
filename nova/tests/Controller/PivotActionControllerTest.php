@@ -314,7 +314,6 @@ class PivotActionControllerTest extends IntegrationTest
      * Get a pivot action URL for the given action.
      *
      * @param  string  $action
-     *
      * @return string
      */
     protected function pivotActionUriFor($action)

@@ -39,7 +39,6 @@ class Code extends Field
      *
      * @param  mixed  $resource
      * @param  string  $attribute
-     *
      * @return mixed
      */
     protected function resolveAttribute($resource, $attribute)
@@ -62,7 +61,6 @@ class Code extends Field
      * @param  string  $requestAttribute
      * @param  object  $model
      * @param  string  $attribute
-     *
      * @return void
      */
     protected function fillAttributeFromRequest(NovaRequest $request, $requestAttribute, $model, $attribute)
@@ -78,7 +76,6 @@ class Code extends Field
      * Indicate that the code field is used to manipulate JSON.
      *
      * @param  int|null  $options
-     *
      * @return $this
      */
     public function json($options = null)
@@ -94,7 +91,6 @@ class Code extends Field
      * Define the language syntax highlighting mode for the field.
      *
      * @param  string  $language
-     *
      * @return $this
      */
     public function language($language)
@@ -106,7 +102,6 @@ class Code extends Field
      * Set configuration options for the code editor instance.
      *
      * @param  array  $options
-     *
      * @return $this
      */
     public function options($options)

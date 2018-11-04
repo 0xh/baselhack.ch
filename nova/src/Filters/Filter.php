@@ -33,7 +33,6 @@ abstract class Filter implements JsonSerializable
      * @param  \Illuminate\Http\Request  $request
      * @param  \Illuminate\Database\Eloquent\Builder  $query
      * @param  mixed  $value
-     *
      * @return \Illuminate\Database\Eloquent\Builder
      */
     abstract public function apply(Request $request, $query, $value);
@@ -42,7 +41,6 @@ abstract class Filter implements JsonSerializable
      * Get the filter's available options.
      *
      * @param  \Illuminate\Http\Request  $request
-     *
      * @return array
      */
     abstract public function options(Request $request);
@@ -51,7 +49,6 @@ abstract class Filter implements JsonSerializable
      * Determine if the filter should be available for the given request.
      *
      * @param  \Illuminate\Http\Request  $request
-     *
      * @return bool
      */
     public function authorizedToSee(Request $request)
@@ -63,7 +60,6 @@ abstract class Filter implements JsonSerializable
      * Set the callback to be run to authorize viewing the filter.
      *
      * @param  \Closure  $callback
-     *
      * @return $this
      */
     public function canSee(Closure $callback)
