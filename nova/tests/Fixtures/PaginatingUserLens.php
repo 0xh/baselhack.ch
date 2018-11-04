@@ -15,6 +15,7 @@ class PaginatingUserLens extends Lens
      *
      * @param  \Laravel\Nova\Http\Requests\LensRequest  $request
      * @param  \Illuminate\Database\Eloquent\Builder  $query
+     *
      * @return mixed
      */
     public static function query(LensRequest $request, $query)
@@ -26,6 +27,7 @@ class PaginatingUserLens extends Lens
      * Get the fields available to the lens.
      *
      * @param  \Illuminate\Http\Request  $request
+     *
      * @return array
      */
     public function fields(Request $request)

@@ -27,6 +27,7 @@ class NotAttached implements Rule
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
      * @param  \Illuminate\Database\Eloquent\Model  $model
+     *
      * @return void
      */
     public function __construct(NovaRequest $request, $model)
@@ -40,6 +41,7 @@ class NotAttached implements Rule
      *
      * @param  string  $attribute
      * @param  mixed  $value
+     *
      * @return bool
      */
     public function passes($attribute, $value)

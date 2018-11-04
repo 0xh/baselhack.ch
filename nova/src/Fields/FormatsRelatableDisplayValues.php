@@ -12,6 +12,7 @@ trait FormatsRelatableDisplayValues
      * Format the associatable display value.
      *
      * @param  mixed  $resource
+     *
      * @return string
      */
     protected function formatDisplayValue($resource)
@@ -31,6 +32,7 @@ trait FormatsRelatableDisplayValues
      * Set the column that should be displayed for the field.
      *
      * @param  \Closure|string  $display
+     *
      * @return $this
      */
     public function display($display)

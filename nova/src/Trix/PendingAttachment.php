@@ -28,6 +28,7 @@ class PendingAttachment extends Model
      * @param  string  $draftId
      * @param  \Laravel\Nova\Fields\Trix  $field
      * @param  mixed  $model
+     *
      * @return void
      */
     public static function persistDraft($draftId, Trix $field, $model)
@@ -40,6 +41,7 @@ class PendingAttachment extends Model
      *
      * @param  \Laravel\Nova\Fields\Trix  $field
      * @param  mixed  $model
+     *
      * @return void
      */
     public function persist(Trix $field, $model)
