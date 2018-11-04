@@ -26,7 +26,7 @@ class User extends Authenticatable
         'updated_at',
         'deleted_at',
         'published_at',
-        'last_authentication',
+        'last_authenticated',
 
         ];
 
