@@ -12,7 +12,6 @@ class MorphableController extends Controller
      * List the available morphable resources for a given resource.
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
-     *
      * @return \Illuminate\Http\Response
      */
     public function index(NovaRequest $request)
@@ -44,7 +43,6 @@ class MorphableController extends Controller
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
      * @param  string  $associatedResource
-     *
      * @return bool
      */
     protected function shouldIncludeTrashed(NovaRequest $request, $associatedResource)

@@ -13,7 +13,6 @@ class Transaction
      *
      * @param  callable  $callback
      * @param  callable|null  $finished
-     *
      * @return mixed
      */
     public static function run($callback, $finished = null)

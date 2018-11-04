@@ -11,7 +11,6 @@ trait ResolvesActions
      * Get the actions that are available for the given request.
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
-     *
      * @return \Illuminate\Support\Collection
      */
     public function availableActions(NovaRequest $request)
@@ -23,7 +22,6 @@ trait ResolvesActions
      * Get the actions for the given request.
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
-     *
      * @return \Illuminate\Support\Collection
      */
     public function resolveActions(NovaRequest $request)
@@ -35,7 +33,6 @@ trait ResolvesActions
      * Get the "pivot" actions that are available for the given request.
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
-     *
      * @return \Illuminate\Support\Collection
      */
     public function availablePivotActions(NovaRequest $request)
@@ -47,7 +44,6 @@ trait ResolvesActions
      * Get the "pivot" actions for the given request.
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
-     *
      * @return \Illuminate\Support\Collection
      */
     public function resolvePivotActions(NovaRequest $request)
@@ -63,14 +59,13 @@ trait ResolvesActions
      * Get the "pivot" actions for the given request.
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
-     *
      * @return array
      */
     protected function getPivotActions(NovaRequest $request)
     {
         $field = $this->availableFields($request)->first(function ($field) use ($request) {
             return isset($field->resourceName) &&
-                   $field->resourceName === $request->viaResource;
+                   $field->resourceName == $request->viaResource;
         });
 
         if ($field && isset($field->actionsCallback)) {
@@ -84,7 +79,6 @@ trait ResolvesActions
      * Get the actions available on the entity.
      *
      * @param  \Illuminate\Http\Request  $request
-     *
      * @return array
      */
     public function actions(Request $request)

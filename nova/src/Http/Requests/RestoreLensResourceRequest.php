@@ -12,7 +12,6 @@ class RestoreLensResourceRequest extends LensResourceDeletionRequest
      *
      * @param  int  $count
      * @param  \Closure  $callback
-     *
      * @return mixed
      */
     public function chunks($count, Closure $callback)
@@ -26,7 +25,6 @@ class RestoreLensResourceRequest extends LensResourceDeletionRequest
      * Get the models that may be restored.
      *
      * @param  \Illuminate\Support\Collection  $models
-     *
      * @return \Illuminate\Support\Collection
      */
     protected function restorableModels(Collection $models)

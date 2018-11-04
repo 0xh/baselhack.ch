@@ -91,7 +91,6 @@ class BelongsToMany extends Field implements DeletableContract, ListableField
      * @param  string  $name
      * @param  string|null  $attribute
      * @param  string|null  $resource
-     *
      * @return void
      */
     public function __construct($name, $attribute = null, $resource = null)
@@ -118,7 +117,6 @@ class BelongsToMany extends Field implements DeletableContract, ListableField
      * Determine if the field should be displayed for the given request.
      *
      * @param  \Illuminate\Http\Request  $request
-     *
      * @return bool
      */
     public function authorize(Request $request)
@@ -133,7 +131,6 @@ class BelongsToMany extends Field implements DeletableContract, ListableField
      *
      * @param  mixed  $resource
      * @param  string|null  $attribute
-     *
      * @return void
      */
     public function resolve($resource, $attribute = null)
@@ -145,7 +142,6 @@ class BelongsToMany extends Field implements DeletableContract, ListableField
      * Get the validation rules for this field.
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
-     *
      * @return array
      */
     public function getRules(NovaRequest $request)
@@ -163,7 +159,6 @@ class BelongsToMany extends Field implements DeletableContract, ListableField
      * Get the creation rules for this field.
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
-     *
      * @return array
      */
     public function getCreationRules(NovaRequest $request)
@@ -180,7 +175,6 @@ class BelongsToMany extends Field implements DeletableContract, ListableField
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
      * @param  bool  $withTrashed
-     *
      * @return \Illuminate\Database\Eloquent\Builder
      */
     public function buildAttachableQuery(NovaRequest $request, $withTrashed = false)
@@ -204,7 +198,6 @@ class BelongsToMany extends Field implements DeletableContract, ListableField
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
      * @param  \Illuminate\Database\Eloquent\Model  $model
-     *
      * @return array
      */
     protected function attachableQueryCallable(NovaRequest $request, $model)
@@ -219,7 +212,6 @@ class BelongsToMany extends Field implements DeletableContract, ListableField
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
      * @param  \Illuminate\Database\Eloquent\Model  $model
-     *
      * @return string
      */
     protected function attachableQueryMethod(NovaRequest $request, $model)
@@ -236,7 +228,6 @@ class BelongsToMany extends Field implements DeletableContract, ListableField
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
      * @param  mixed  $resource
-     *
      * @return array
      */
     public function formatAttachableResource(NovaRequest $request, $resource)
@@ -252,7 +243,6 @@ class BelongsToMany extends Field implements DeletableContract, ListableField
      * Specify the callback to be executed to retrieve the pivot fields.
      *
      * @param  callable  $callback
-     *
      * @return $this
      */
     public function fields($callback)
@@ -266,7 +256,6 @@ class BelongsToMany extends Field implements DeletableContract, ListableField
      * Specify the callback to be executed to retrieve the pivot actions.
      *
      * @param  callable  $callback
-     *
      * @return $this
      */
     public function actions($callback)
@@ -280,7 +269,6 @@ class BelongsToMany extends Field implements DeletableContract, ListableField
      * Set the displayable name that should be used to refer to the pivot class.
      *
      * @param  string  $pivotName
-     *
      * @return $this
      */
     public function referToPivotAs($pivotName)
@@ -294,7 +282,6 @@ class BelongsToMany extends Field implements DeletableContract, ListableField
      * Specify if the relationship should be searchable.
      *
      * @param  bool  $value
-     *
      * @return $this
      */
     public function searchable($value = true)

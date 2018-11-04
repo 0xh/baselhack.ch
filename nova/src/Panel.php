@@ -33,7 +33,6 @@ class Panel extends MergeValue implements JsonSerializable
      *
      * @param  string  $name
      * @param  \Closure|array  $fields
-     *
      * @return void
      */
     public function __construct($name, $fields = [])
@@ -47,7 +46,6 @@ class Panel extends MergeValue implements JsonSerializable
      * Prepare the given fields.
      *
      * @param  \Closure|array  $fields
-     *
      * @return array
      */
     protected function prepareFields($fields)
@@ -61,7 +59,6 @@ class Panel extends MergeValue implements JsonSerializable
      * Get the default panel name for the given resource.
      *
      * @param  \Laravel\Nova\Resource  $resource
-     *
      * @return string
      */
     public static function defaultNameFor(Resource $resource)

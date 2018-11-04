@@ -33,7 +33,6 @@ class PostResource extends Resource
      * Get the fields displayed by the resource.
      *
      * @param  \Illuminate\Http\Request  $request
-     *
      * @return array
      */
     public function fields(Request $request)
@@ -59,7 +58,6 @@ class PostResource extends Resource
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
      * @param  \Illuminate\Database\Eloquent\Builder  $query
-     *
      * @return \Illuminate\Database\Eloquent\Builder
      */
     public static function relatableQuery(NovaRequest $request, $query)
@@ -72,7 +70,6 @@ class PostResource extends Resource
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
      * @param  \Illuminate\Database\Eloquent\Builder  $query
-     *
      * @return \Illuminate\Database\Eloquent\Builder
      */
     public static function relatableUsers(NovaRequest $request, $query)
@@ -91,7 +88,6 @@ class PostResource extends Resource
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
      * @param  \Illuminate\Database\Eloquent\Builder  $query
-     *
      * @return \Illuminate\Database\Eloquent\Builder
      */
     public static function relatableTags(NovaRequest $request, $query)
@@ -109,7 +105,6 @@ class PostResource extends Resource
      * Get the cards available for the request.
      *
      * @param  \Illuminate\Http\Request  $request
-     *
      * @return array
      */
     public function cards(Request $request)

@@ -32,7 +32,6 @@ class CommentResource extends Resource
      * Get the fields displayed by the resource.
      *
      * @param  \Illuminate\Http\Request  $request
-     *
      * @return array
      */
     public function fields(Request $request)
@@ -53,7 +52,6 @@ class CommentResource extends Resource
      * Get the filters available for the resource.
      *
      * @param  \Illuminate\Http\Request  $request
-     *
      * @return array
      */
     public function filters(Request $request)
@@ -65,7 +63,6 @@ class CommentResource extends Resource
      * Get the actions available for the resource.
      *
      * @param  \Illuminate\Http\Request  $request
-     *
      * @return array
      */
     public function actions(Request $request)
@@ -78,7 +75,6 @@ class CommentResource extends Resource
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
      * @param  \Illuminate\Database\Eloquent\Builder  $query
-     *
      * @return \Illuminate\Database\Eloquent\Builder
      */
     public static function relatablePosts(NovaRequest $request, $query)

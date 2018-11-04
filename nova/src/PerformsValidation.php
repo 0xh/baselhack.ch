@@ -11,7 +11,6 @@ trait PerformsValidation
      * Validate a resource creation request.
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
-     *
      * @return void
      */
     public static function validateForCreation(NovaRequest $request)
@@ -23,7 +22,6 @@ trait PerformsValidation
      * Create a validator instance for a resource creation request.
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
-     *
      * @return \Illuminate\Validation\Validator
      */
     public static function validatorForCreation(NovaRequest $request)
@@ -39,7 +37,6 @@ trait PerformsValidation
      * Get the validation rules for a resource creation request.
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
-     *
      * @return array
      */
     public static function rulesForCreation(NovaRequest $request)
@@ -56,7 +53,6 @@ trait PerformsValidation
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
      * @param  string  $field
-     *
      * @return array
      */
     public static function creationRulesFor(NovaRequest $request, $field)
@@ -73,7 +69,6 @@ trait PerformsValidation
      * Validate a resource update request.
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
-     *
      * @return void
      */
     public static function validateForUpdate(NovaRequest $request)
@@ -85,7 +80,6 @@ trait PerformsValidation
      * Create a validator instance for a resource update request.
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
-     *
      * @return \Illuminate\Validation\Validator
      */
     public static function validatorForUpdate(NovaRequest $request)
@@ -101,7 +95,6 @@ trait PerformsValidation
      * Get the validation rules for a resource update request.
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
-     *
      * @return array
      */
     public static function rulesForUpdate(NovaRequest $request)
@@ -118,7 +111,6 @@ trait PerformsValidation
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
      * @param  string  $field
-     *
      * @return array
      */
     public static function updateRulesFor(NovaRequest $request, $field)
@@ -135,7 +127,6 @@ trait PerformsValidation
      * Validate a resource attachment request.
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
-     *
      * @return void
      */
     public static function validateForAttachment(NovaRequest $request)
@@ -147,7 +138,6 @@ trait PerformsValidation
      * Create a validator instance for a resource attachment request.
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
-     *
      * @return \Illuminate\Validation\Validator
      */
     public static function validatorForAttachment(NovaRequest $request)
@@ -159,7 +149,6 @@ trait PerformsValidation
      * Get the validation rules for a resource attachment request.
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
-     *
      * @return array
      */
     public static function rulesForAttachment(NovaRequest $request)
@@ -175,7 +164,6 @@ trait PerformsValidation
      * Validate a resource attachment update request.
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
-     *
      * @return void
      */
     public static function validateForAttachmentUpdate(NovaRequest $request)
@@ -187,7 +175,6 @@ trait PerformsValidation
      * Create a validator instance for a resource attachment update request.
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
-     *
      * @return \Illuminate\Validation\Validator
      */
     public static function validatorForAttachmentUpdate(NovaRequest $request)
@@ -199,7 +186,6 @@ trait PerformsValidation
      * Get the validation rules for a resource attachment update request.
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
-     *
      * @return array
      */
     public static function rulesForAttachmentUpdate(NovaRequest $request)
@@ -216,7 +202,6 @@ trait PerformsValidation
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
      * @param  array  $rules
-     *
      * @return array
      */
     protected static function formatRules(NovaRequest $request, array $rules)
@@ -243,7 +228,6 @@ trait PerformsValidation
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
      * @param  string  $field
-     *
      * @return string
      */
     public static function validationAttributeFor(NovaRequest $request, $field)
@@ -259,7 +243,6 @@ trait PerformsValidation
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
      * @param  \Illuminate\Validation\Validator  $validator
-     *
      * @return void
      */
     protected static function afterValidation(NovaRequest $request, $validator)
@@ -272,7 +255,6 @@ trait PerformsValidation
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
      * @param  \Illuminate\Validation\Validator  $validator
-     *
      * @return void
      */
     protected static function afterCreationValidation(NovaRequest $request, $validator)
@@ -285,7 +267,6 @@ trait PerformsValidation
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
      * @param  \Illuminate\Validation\Validator  $validator
-     *
      * @return void
      */
     protected static function afterUpdateValidation(NovaRequest $request, $validator)

@@ -19,7 +19,6 @@ class FailingPivotAction extends Action implements ShouldQueue
      *
      * @param  \Laravel\Nova\Fields\ActionFields  $fields
      * @param  \Illuminate\Support\Collection  $models
-     *
      * @return string|void
      */
     public function handle(ActionFields $fields, Collection $models)
@@ -33,7 +32,6 @@ class FailingPivotAction extends Action implements ShouldQueue
      * @param  \Laravel\Nova\Fields\ActionFields  $fields
      * @param  \Illuminate\Support\Collection  $models
      * @param  \Throwable  $e
-     *
      * @return string|void
      */
     public function failedForRoleAssignments(ActionFields $fields, Collection $models, $e)

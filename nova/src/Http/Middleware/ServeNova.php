@@ -13,7 +13,6 @@ class ServeNova
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \Closure  $next
-     *
      * @return \Illuminate\Http\Response
      */
     public function handle($request, $next)
@@ -31,7 +30,6 @@ class ServeNova
      * Determine if the given request is intended for Nova.
      *
      * @param  \Illuminate\Http\Request  $request
-     *
      * @return bool
      */
     protected function isNovaRequest($request)

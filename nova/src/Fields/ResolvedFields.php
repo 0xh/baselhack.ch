@@ -19,7 +19,6 @@ class ResolvedFields extends Fluent
      *
      * @param  \Illuminate\Support\Collection  $attributes
      * @param  \Illuminate\Support\Collection  $callbacks
-     *
      * @return void
      */
     public function __construct(Collection $attributes, Collection $callbacks)

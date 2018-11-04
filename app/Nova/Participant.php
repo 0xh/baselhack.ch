@@ -39,39 +39,39 @@ class Participant extends Resource
     {
         return [
 
-            Text::make('Company', 'company')
+            Text::make('Company','company')
                 ->sortable()
                 ->rules('nullable', 'max:255'),
 
-            Text::make('Firstname', 'firstname')
+            Text::make('Firstname','firstname')
                 ->sortable()
                 ->rules('required', 'max:255'),
 
-            Text::make('Lastname', 'lastname')
+            Text::make('Lastname','lastname')
                 ->sortable()
                 ->rules('required', 'max:255'),
 
-            Text::make('E-Mail', 'email')
+            Text::make('E-Mail','email')
                 ->sortable()
                 ->hideFromIndex()
                 ->creationRules('required', 'email', 'unique:participants,email', 'max:255')
                 ->updateRules('required', 'email', 'max:255'),
 
-            Boolean::make('Confirmed E-Mail', 'confirmed_email')
+            Boolean::make('Confirmed E-Mail','confirmed_email')
                 ->sortable()
                 ->exceptOnForms()
-                ->rules('nullable', 'boolean'),
+                ->rules('nullable','boolean'),
 
-            Boolean::make('18+', 'over_eighteen')
+            Boolean::make('18+','over_eighteen')
                 ->sortable()
-                ->rules('nullable', 'boolean'),
+                ->rules('nullable','boolean'),
 
-            Boolean::make('Accepted Policy', 'accepted_policy')
+            Boolean::make('Accepted Policy','accepted_policy')
                 ->sortable()
                 ->exceptOnForms()
-                ->rules('required'),
+                ->rules('required','boolean'),
 
-            DateTime::make('Created at', 'created_at')
+            DateTime::make('Created at','created_at')
                 ->sortable()
                 ->onlyOnDetail(),
 

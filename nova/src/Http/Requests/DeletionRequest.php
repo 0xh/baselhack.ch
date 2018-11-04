@@ -14,7 +14,6 @@ class DeletionRequest extends NovaRequest
      * @param  int  $count
      * @param  \Closure  $callback
      * @param  \Closure  $authCallback
-     *
      * @return mixed
      */
     protected function chunkWithAuthorization($count, Closure $callback, Closure $authCallback)

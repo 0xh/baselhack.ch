@@ -16,7 +16,6 @@ class DispatchAction
      * @param  \Laravel\Nova\Actions\Action  $action
      * @param  string  $method
      * @param  \Illuminate\Support\Collection  $models
-     *
      * @return mixed
      */
     public static function forModels(ActionRequest $request, Action $action, $method, Collection $models)
@@ -45,7 +44,6 @@ class DispatchAction
      * @param  \Laravel\Nova\Actions\Action  $action
      * @param  string  $method
      * @param  \Illuminate\Support\Collection  $models
-     *
      * @return void
      */
     protected static function queueForModels(ActionRequest $request, Action $action, $method, Collection $models)
@@ -66,7 +64,6 @@ class DispatchAction
      * Extract the queue connection for the action.
      *
      * @param  \Laravel\Nova\Actions\Action  $action
-     *
      * @return string|null
      */
     protected static function connection($action)
@@ -78,7 +75,6 @@ class DispatchAction
      * Extract the queue name for the action.
      *
      * @param  \Laravel\Nova\Actions\Action  $action
-     *
      * @return string|null
      */
     protected static function queue($action)

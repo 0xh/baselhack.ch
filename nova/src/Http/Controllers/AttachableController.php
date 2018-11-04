@@ -11,7 +11,6 @@ class AttachableController extends Controller
      * List the available related resources for a given resource.
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
-     *
      * @return \Illuminate\Http\Response
      */
     public function index(NovaRequest $request)
@@ -45,7 +44,6 @@ class AttachableController extends Controller
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
      * @param  string  $associatedResource
-     *
      * @return bool
      */
     protected function shouldIncludeTrashed(NovaRequest $request, $associatedResource)
