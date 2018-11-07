@@ -3,10 +3,10 @@
 namespace App\Domain\Models;
 
 use App\App\Traits\HasUuid;
+use Laravel\Nova\Actions\Actionable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Laravel\Nova\Actions\Actionable;
 
 class User extends Authenticatable
 {
