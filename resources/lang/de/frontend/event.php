@@ -41,10 +41,24 @@ return [
                     'description' => 'We\'ve successfully confirmed your participation!',
                 ],
 
+                'restored' => [
+
+                    'title' => 'Thank you!',
+                    'description' => 'We\'ve successfully restored your participation!',
+                ],
+
+
                 'success' => [
 
                     'title' => 'Thank you!',
                     'description' => 'We\'ve successfully received your registration!',
+                ],
+
+                'registered' => [
+
+                    'title' => 'Sorry =(',
+                    'description' => 'You\'re already registered, we guess once is enough!',
+
                 ],
 
                 'fully_booked' => [

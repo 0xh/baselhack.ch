@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Frontend\Events;
 
+
 use Carbon\Carbon;
 use App\Domain\Models\Participant;
 use App\App\Controllers\Controller;
@@ -27,6 +28,27 @@ class SignUpController extends Controller
 
     public function store(StoreSignUpRequest $request)
     {
+
+        $existing_user = Participant::where('email', $request->email)->get();
+
+        if($existing_user->count())
+        {
+            alert()->error(Lang::get('frontend/event.signup.form.notification.registered.title'), Lang::get('frontend/event.signup.form.notification.registered.description'));
+            return back();
+        }
+
+        $deleted_user = Participant::withTrashed()->where('email', $request->email)->get();
+
+        if($deleted_user->count())
+        {
+            $deleted_user->first()->restore();
+
+            alert()->success(Lang::get('frontend/event.signup.form.notification.restored.title'), Lang::get('frontend/event.signup.form.notification.restored.description'));
+
+            return back();
+        }
+
+
         if (Participant::all()->count() >= config('baselhack.maximum_participants')) {
             alert()->error(Lang::get('frontend/event.signup.form.notification.fully_booked.title'), Lang::get('frontend/event.signup.form.notification.fully_booked.description'));
 

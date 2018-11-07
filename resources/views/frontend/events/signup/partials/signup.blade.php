@@ -89,7 +89,7 @@
 
 
     <div class="content">
-        <p>Participation is limited to <b>100 Hackers.</b> Anyone can take part. Minors will only be
+        <p>Participation is limited to <b>120 Hackers.</b> Anyone can take part. Minors will only be
             allowed entry if accompanied by a parent who also registers. Team participation is
             possible, although not a requirement, as teams will be formed on site. Every person in a
             team must register individually.</p>

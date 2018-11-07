@@ -27,7 +27,7 @@ class StoreSignUpRequest extends FormRequest
             'firstname' => 'required|string|max:255',
             'lastname' => 'required|string|max:255',
             'company' => 'nullable|string|max:255',
-            'email' => 'required|string|email|max:255|unique:participants',
+            'email' => 'required|string|email|max:255',
             'over_eighteen' => 'required|boolean',
             'privacy' => 'accepted',
             'g-recaptcha-response' => 'required|recaptcha',
