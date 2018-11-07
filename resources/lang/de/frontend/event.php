@@ -47,7 +47,6 @@ return [
                     'description' => 'We\'ve successfully restored your participation!',
                 ],
 
-
                 'success' => [
 
                     'title' => 'Thank you!',
