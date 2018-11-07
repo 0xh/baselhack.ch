@@ -8,7 +8,7 @@ return [
         'de', 'en',
     ],
 
-    'maximum_participants' => 125,
+    'maximum_participants' => 135,
 
     'enquiry' => [
 

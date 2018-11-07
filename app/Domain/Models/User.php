@@ -6,10 +6,11 @@ use App\App\Traits\HasUuid;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Laravel\Nova\Actions\Actionable;
 
 class User extends Authenticatable
 {
-    use Notifiable, SoftDeletes, HasUuid;
+    use Actionable, Notifiable, SoftDeletes, HasUuid;
 
     protected $fillable = [
          'uuid', 'name',  'email', 'password', 'published_at', 'last_authenticated',
